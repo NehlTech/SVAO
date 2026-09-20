@@ -1,0 +1,7 @@
+Station,Zone,Predicted,Observed,delta,wins,Agrees
+KIAMO-Accra,Coastal savannah,none,none,-0.00016,1/5,Yes
+Koforidua,Forest,benefit,benefit,0.001217,3/5,Yes
+Kumasi,Transitional,benefit,benefit,0.001064,3/5,Yes
+Navrongo,Sudan savannah,benefit,none,-0.000518,1/5,No
+Tamale,Interior (Guinea) savannah,benefit,none,-0.001158,1/5,No
+Wa,Interior (Guinea) savannah,none,benefit,0.00025,3/5,No
