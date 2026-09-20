@@ -1,0 +1,13 @@
+Station,variant,n,nan,mean_abs_arima_adj,mean_abs_lstm_contrib,component_ratio,ensemble_sd,fc_min,fc_max,plausible
+KIAMO-Accra,uniform,48,0,1.076,0.1689,0.157,0.1292,26.16,30.72,True
+KIAMO-Accra,svao,48,0,1.076,0.1704,0.1583,0.1505,26.25,30.66,True
+Koforidua,uniform,48,0,0.8618,0.1013,0.1175,0.1535,25.58,29.5,True
+Koforidua,svao,48,0,0.8618,0.2349,0.2726,0.1912,25.57,29.64,True
+Kumasi,uniform,48,0,0.8806,0.2789,0.3168,0.0933,25.86,29.53,True
+Kumasi,svao,48,0,0.8806,0.3055,0.347,0.1769,25.89,29.41,True
+Navrongo,uniform,48,0,1.4237,0.6188,0.4346,0.3002,26.53,34.08,True
+Navrongo,svao,48,0,1.4237,0.5714,0.4014,0.3451,26.63,33.85,True
+Tamale,uniform,48,0,1.3568,0.5302,0.3908,0.4616,25.19,33.71,True
+Tamale,svao,48,0,1.3568,0.4902,0.3613,0.4189,25.29,33.85,True
+Wa,uniform,41,0,1.2279,0.7976,0.6495,0.3558,25.33,32.17,True
+Wa,svao,41,0,1.2279,0.7695,0.6267,0.306,25.21,32.71,True

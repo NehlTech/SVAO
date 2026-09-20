@@ -1,0 +1,226 @@
+{
+  "module": "Module 4 \u2014 Forecast Recombination",
+  "rule": "y_hat = arima_forecast + lstm_residual_forecast",
+  "lambda": 0.5,
+  "ensemble": "mean of 5 restarts per variant",
+  "test_period": [
+    "2021-01",
+    "2024-12"
+  ],
+  "leakage_audit": [
+    {
+      "Station": "KIAMO-Accra",
+      "test_sequences": 48,
+      "windows_backward_only": true,
+      "scaler_train_only": true,
+      "arima_index_exact": true,
+      "checkpoints_present": true,
+      "PASS": true
+    },
+    {
+      "Station": "Koforidua",
+      "test_sequences": 48,
+      "windows_backward_only": true,
+      "scaler_train_only": true,
+      "arima_index_exact": true,
+      "checkpoints_present": true,
+      "PASS": true
+    },
+    {
+      "Station": "Kumasi",
+      "test_sequences": 48,
+      "windows_backward_only": true,
+      "scaler_train_only": true,
+      "arima_index_exact": true,
+      "checkpoints_present": true,
+      "PASS": true
+    },
+    {
+      "Station": "Navrongo",
+      "test_sequences": 48,
+      "windows_backward_only": true,
+      "scaler_train_only": true,
+      "arima_index_exact": true,
+      "checkpoints_present": true,
+      "PASS": true
+    },
+    {
+      "Station": "Tamale",
+      "test_sequences": 48,
+      "windows_backward_only": true,
+      "scaler_train_only": true,
+      "arima_index_exact": true,
+      "checkpoints_present": true,
+      "PASS": true
+    },
+    {
+      "Station": "Wa",
+      "test_sequences": 41,
+      "windows_backward_only": true,
+      "scaler_train_only": true,
+      "arima_index_exact": true,
+      "checkpoints_present": true,
+      "PASS": true
+    }
+  ],
+  "construction_checks": [
+    {
+      "Station": "KIAMO-Accra",
+      "variant": "uniform",
+      "n": 48,
+      "nan": 0,
+      "mean_abs_arima_adj": 1.076,
+      "mean_abs_lstm_contrib": 0.1689,
+      "component_ratio": 0.157,
+      "ensemble_sd": 0.1292,
+      "fc_min": 26.16,
+      "fc_max": 30.72,
+      "plausible": true
+    },
+    {
+      "Station": "KIAMO-Accra",
+      "variant": "svao",
+      "n": 48,
+      "nan": 0,
+      "mean_abs_arima_adj": 1.076,
+      "mean_abs_lstm_contrib": 0.1704,
+      "component_ratio": 0.1583,
+      "ensemble_sd": 0.1505,
+      "fc_min": 26.25,
+      "fc_max": 30.66,
+      "plausible": true
+    },
+    {
+      "Station": "Koforidua",
+      "variant": "uniform",
+      "n": 48,
+      "nan": 0,
+      "mean_abs_arima_adj": 0.8618,
+      "mean_abs_lstm_contrib": 0.1013,
+      "component_ratio": 0.1175,
+      "ensemble_sd": 0.1535,
+      "fc_min": 25.58,
+      "fc_max": 29.5,
+      "plausible": true
+    },
+    {
+      "Station": "Koforidua",
+      "variant": "svao",
+      "n": 48,
+      "nan": 0,
+      "mean_abs_arima_adj": 0.8618,
+      "mean_abs_lstm_contrib": 0.2349,
+      "component_ratio": 0.2726,
+      "ensemble_sd": 0.1912,
+      "fc_min": 25.57,
+      "fc_max": 29.64,
+      "plausible": true
+    },
+    {
+      "Station": "Kumasi",
+      "variant": "uniform",
+      "n": 48,
+      "nan": 0,
+      "mean_abs_arima_adj": 0.8806,
+      "mean_abs_lstm_contrib": 0.2789,
+      "component_ratio": 0.3168,
+      "ensemble_sd": 0.0933,
+      "fc_min": 25.86,
+      "fc_max": 29.53,
+      "plausible": true
+    },
+    {
+      "Station": "Kumasi",
+      "variant": "svao",
+      "n": 48,
+      "nan": 0,
+      "mean_abs_arima_adj": 0.8806,
+      "mean_abs_lstm_contrib": 0.3055,
+      "component_ratio": 0.347,
+      "ensemble_sd": 0.1769,
+      "fc_min": 25.89,
+      "fc_max": 29.41,
+      "plausible": true
+    },
+    {
+      "Station": "Navrongo",
+      "variant": "uniform",
+      "n": 48,
+      "nan": 0,
+      "mean_abs_arima_adj": 1.4237,
+      "mean_abs_lstm_contrib": 0.6188,
+      "component_ratio": 0.4346,
+      "ensemble_sd": 0.3002,
+      "fc_min": 26.53,
+      "fc_max": 34.08,
+      "plausible": true
+    },
+    {
+      "Station": "Navrongo",
+      "variant": "svao",
+      "n": 48,
+      "nan": 0,
+      "mean_abs_arima_adj": 1.4237,
+      "mean_abs_lstm_contrib": 0.5714,
+      "component_ratio": 0.4014,
+      "ensemble_sd": 0.3451,
+      "fc_min": 26.63,
+      "fc_max": 33.85,
+      "plausible": true
+    },
+    {
+      "Station": "Tamale",
+      "variant": "uniform",
+      "n": 48,
+      "nan": 0,
+      "mean_abs_arima_adj": 1.3568,
+      "mean_abs_lstm_contrib": 0.5302,
+      "component_ratio": 0.3908,
+      "ensemble_sd": 0.4616,
+      "fc_min": 25.19,
+      "fc_max": 33.71,
+      "plausible": true
+    },
+    {
+      "Station": "Tamale",
+      "variant": "svao",
+      "n": 48,
+      "nan": 0,
+      "mean_abs_arima_adj": 1.3568,
+      "mean_abs_lstm_contrib": 0.4902,
+      "component_ratio": 0.3613,
+      "ensemble_sd": 0.4189,
+      "fc_min": 25.29,
+      "fc_max": 33.85,
+      "plausible": true
+    },
+    {
+      "Station": "Wa",
+      "variant": "uniform",
+      "n": 41,
+      "nan": 0,
+      "mean_abs_arima_adj": 1.2279,
+      "mean_abs_lstm_contrib": 0.7976,
+      "component_ratio": 0.6495,
+      "ensemble_sd": 0.3558,
+      "fc_min": 25.33,
+      "fc_max": 32.17,
+      "plausible": true
+    },
+    {
+      "Station": "Wa",
+      "variant": "svao",
+      "n": 41,
+      "nan": 0,
+      "mean_abs_arima_adj": 1.2279,
+      "mean_abs_lstm_contrib": 0.7695,
+      "component_ratio": 0.6267,
+      "ensemble_sd": 0.306,
+      "fc_min": 25.21,
+      "fc_max": 32.71,
+      "plausible": true
+    }
+  ],
+  "documented_compromise": "Validation-period residuals are in-sample, extracted from a model fitted on training plus validation. No future data is used, but the residuals are fitted rather than predicted.",
+  "scoring": "deferred to notebooks 08 and 09; no test metric computed here"
+}

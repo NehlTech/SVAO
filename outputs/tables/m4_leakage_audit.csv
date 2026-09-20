@@ -1,0 +1,7 @@
+Station,test_sequences,windows_backward_only,scaler_train_only,arima_index_exact,checkpoints_present,PASS
+KIAMO-Accra,48,True,True,True,True,True
+Koforidua,48,True,True,True,True,True
+Kumasi,48,True,True,True,True,True
+Navrongo,48,True,True,True,True,True
+Tamale,48,True,True,True,True,True
+Wa,41,True,True,True,True,True
