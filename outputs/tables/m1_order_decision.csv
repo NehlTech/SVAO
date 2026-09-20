@@ -1,0 +1,7 @@
+Station,Uniform_order,Uniform_val_RMSE,PerStation_order,PerStation_val_RMSE,Delta,Better
+KIAMO-Accra,"(1, 1, 1)",0.642,"(3, 1, 2)",0.4861,-0.1559,per-station
+Koforidua,"(1, 1, 1)",0.7616,"(2, 1, 2)",0.5959,-0.1657,per-station
+Kumasi,"(1, 1, 1)",0.903,"(3, 1, 2)",0.642,-0.2609,per-station
+Navrongo,"(1, 1, 1)",1.3653,"(3, 0, 1)",1.0807,-0.2846,per-station
+Tamale,"(1, 1, 1)",1.4841,"(2, 1, 2)",1.3491,-0.1349,per-station
+Wa,"(1, 1, 1)",1.4398,"(1, 0, 3)",1.2188,-0.221,per-station

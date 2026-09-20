@@ -1,0 +1,7 @@
+Station,Zone,Order,Raw_BF_p,Resid_ratio,Resid_peak_month,Resid_Levene_p,Resid_BF_p,Signal_retained
+KIAMO-Accra,Coastal savannah,"(3, 1, 2)",0.9564,1.62,Jun,0.5626,0.6543,No
+Koforidua,Forest,"(2, 1, 2)",1.19e-05,3.47,Feb,4.701e-10,2.095e-07,Yes
+Kumasi,Transitional,"(3, 1, 2)",0.01166,2.15,Feb,0.01934,0.08472,No
+Navrongo,Sudan savannah,"(3, 0, 1)",1.337e-05,4.73,Feb,6.854e-07,3.232e-05,Yes
+Tamale,Interior (Guinea) savannah,"(2, 1, 2)",0.01304,4.02,Feb,9.926e-05,0.002223,Yes
+Wa,Interior (Guinea) savannah,"(1, 0, 3)",0.01032,3.73,Feb,1.991e-06,4.613e-05,Yes

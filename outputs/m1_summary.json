@@ -1,0 +1,579 @@
+{
+  "module": "Module 1 \u2014 Linear Trend Estimator",
+  "orders": {
+    "KIAMO-Accra": [
+      3,
+      1,
+      2
+    ],
+    "Koforidua": [
+      2,
+      1,
+      2
+    ],
+    "Kumasi": [
+      3,
+      1,
+      2
+    ],
+    "Navrongo": [
+      3,
+      0,
+      1
+    ],
+    "Tamale": [
+      2,
+      1,
+      2
+    ],
+    "Wa": [
+      1,
+      0,
+      3
+    ]
+  },
+  "order_decision": "per-station",
+  "uniform_order": [
+    1,
+    1,
+    1
+  ],
+  "validation_comparison": [
+    {
+      "Station": "KIAMO-Accra",
+      "Uniform_order": "(1, 1, 1)",
+      "Uniform_val_RMSE": 0.642,
+      "PerStation_order": "(3, 1, 2)",
+      "PerStation_val_RMSE": 0.4861,
+      "Delta": -0.1559,
+      "Better": "per-station"
+    },
+    {
+      "Station": "Koforidua",
+      "Uniform_order": "(1, 1, 1)",
+      "Uniform_val_RMSE": 0.7616,
+      "PerStation_order": "(2, 1, 2)",
+      "PerStation_val_RMSE": 0.5959,
+      "Delta": -0.1657,
+      "Better": "per-station"
+    },
+    {
+      "Station": "Kumasi",
+      "Uniform_order": "(1, 1, 1)",
+      "Uniform_val_RMSE": 0.903,
+      "PerStation_order": "(3, 1, 2)",
+      "PerStation_val_RMSE": 0.642,
+      "Delta": -0.2609,
+      "Better": "per-station"
+    },
+    {
+      "Station": "Navrongo",
+      "Uniform_order": "(1, 1, 1)",
+      "Uniform_val_RMSE": 1.3653,
+      "PerStation_order": "(3, 0, 1)",
+      "PerStation_val_RMSE": 1.0807,
+      "Delta": -0.2846,
+      "Better": "per-station"
+    },
+    {
+      "Station": "Tamale",
+      "Uniform_order": "(1, 1, 1)",
+      "Uniform_val_RMSE": 1.4841,
+      "PerStation_order": "(2, 1, 2)",
+      "PerStation_val_RMSE": 1.3491,
+      "Delta": -0.1349,
+      "Better": "per-station"
+    },
+    {
+      "Station": "Wa",
+      "Uniform_order": "(1, 1, 1)",
+      "Uniform_val_RMSE": 1.4398,
+      "PerStation_order": "(1, 0, 3)",
+      "PerStation_val_RMSE": 1.2188,
+      "Delta": -0.221,
+      "Better": "per-station"
+    }
+  ],
+  "burn_in": 12,
+  "burn_in_sweep": [
+    {
+      "Station": "KIAMO-Accra",
+      "Burnin": 0,
+      "N": 253,
+      "Ratio": 1.81,
+      "BF_p": 0.5388,
+      "Max_abs_resid": 1.759
+    },
+    {
+      "Station": "KIAMO-Accra",
+      "Burnin": 3,
+      "N": 251,
+      "Ratio": 1.54,
+      "BF_p": 0.7008,
+      "Max_abs_resid": 1.759
+    },
+    {
+      "Station": "KIAMO-Accra",
+      "Burnin": 6,
+      "N": 248,
+      "Ratio": 1.5,
+      "BF_p": 0.796,
+      "Max_abs_resid": 1.759
+    },
+    {
+      "Station": "KIAMO-Accra",
+      "Burnin": 12,
+      "N": 242,
+      "Ratio": 1.47,
+      "BF_p": 0.7858,
+      "Max_abs_resid": 1.759
+    },
+    {
+      "Station": "KIAMO-Accra",
+      "Burnin": 18,
+      "N": 236,
+      "Ratio": 1.51,
+      "BF_p": 0.7128,
+      "Max_abs_resid": 1.759
+    },
+    {
+      "Station": "KIAMO-Accra",
+      "Burnin": 24,
+      "N": 230,
+      "Ratio": 1.56,
+      "BF_p": 0.7616,
+      "Max_abs_resid": 1.759
+    },
+    {
+      "Station": "Koforidua",
+      "Burnin": 0,
+      "N": 244,
+      "Ratio": 3.71,
+      "BF_p": 8.037e-08,
+      "Max_abs_resid": 3.298
+    },
+    {
+      "Station": "Koforidua",
+      "Burnin": 3,
+      "N": 242,
+      "Ratio": 3.69,
+      "BF_p": 6.451e-07,
+      "Max_abs_resid": 3.298
+    },
+    {
+      "Station": "Koforidua",
+      "Burnin": 6,
+      "N": 239,
+      "Ratio": 3.69,
+      "BF_p": 7.675e-07,
+      "Max_abs_resid": 3.298
+    },
+    {
+      "Station": "Koforidua",
+      "Burnin": 12,
+      "N": 233,
+      "Ratio": 3.62,
+      "BF_p": 2.045e-06,
+      "Max_abs_resid": 3.298
+    },
+    {
+      "Station": "Koforidua",
+      "Burnin": 18,
+      "N": 227,
+      "Ratio": 3.66,
+      "BF_p": 6.675e-07,
+      "Max_abs_resid": 3.298
+    },
+    {
+      "Station": "Koforidua",
+      "Burnin": 24,
+      "N": 221,
+      "Ratio": 3.58,
+      "BF_p": 1.866e-06,
+      "Max_abs_resid": 3.298
+    },
+    {
+      "Station": "Kumasi",
+      "Burnin": 0,
+      "N": 263,
+      "Ratio": 2.46,
+      "BF_p": 0.0158,
+      "Max_abs_resid": 2.849
+    },
+    {
+      "Station": "Kumasi",
+      "Burnin": 3,
+      "N": 261,
+      "Ratio": 2.16,
+      "BF_p": 0.04841,
+      "Max_abs_resid": 2.261
+    },
+    {
+      "Station": "Kumasi",
+      "Burnin": 6,
+      "N": 258,
+      "Ratio": 2.16,
+      "BF_p": 0.05956,
+      "Max_abs_resid": 2.261
+    },
+    {
+      "Station": "Kumasi",
+      "Burnin": 12,
+      "N": 252,
+      "Ratio": 2.23,
+      "BF_p": 0.06323,
+      "Max_abs_resid": 2.261
+    },
+    {
+      "Station": "Kumasi",
+      "Burnin": 18,
+      "N": 246,
+      "Ratio": 2.29,
+      "BF_p": 0.03263,
+      "Max_abs_resid": 2.261
+    },
+    {
+      "Station": "Kumasi",
+      "Burnin": 24,
+      "N": 240,
+      "Ratio": 2.23,
+      "BF_p": 0.03601,
+      "Max_abs_resid": 2.261
+    },
+    {
+      "Station": "Navrongo",
+      "Burnin": 0,
+      "N": 264,
+      "Ratio": 16.46,
+      "BF_p": 0.06854,
+      "Max_abs_resid": 26.335
+    },
+    {
+      "Station": "Navrongo",
+      "Burnin": 3,
+      "N": 261,
+      "Ratio": 4.82,
+      "BF_p": 2.134e-05,
+      "Max_abs_resid": 5.503
+    },
+    {
+      "Station": "Navrongo",
+      "Burnin": 6,
+      "N": 258,
+      "Ratio": 4.82,
+      "BF_p": 3.174e-05,
+      "Max_abs_resid": 5.503
+    },
+    {
+      "Station": "Navrongo",
+      "Burnin": 12,
+      "N": 252,
+      "Ratio": 4.76,
+      "BF_p": 2.965e-05,
+      "Max_abs_resid": 5.503
+    },
+    {
+      "Station": "Navrongo",
+      "Burnin": 18,
+      "N": 246,
+      "Ratio": 4.88,
+      "BF_p": 4.889e-06,
+      "Max_abs_resid": 5.503
+    },
+    {
+      "Station": "Navrongo",
+      "Burnin": 24,
+      "N": 240,
+      "Ratio": 5.17,
+      "BF_p": 3.511e-06,
+      "Max_abs_resid": 5.503
+    },
+    {
+      "Station": "Tamale",
+      "Burnin": 0,
+      "N": 232,
+      "Ratio": 3.08,
+      "BF_p": 0.001329,
+      "Max_abs_resid": 4.028
+    },
+    {
+      "Station": "Tamale",
+      "Burnin": 3,
+      "N": 230,
+      "Ratio": 3.13,
+      "BF_p": 0.001824,
+      "Max_abs_resid": 4.028
+    },
+    {
+      "Station": "Tamale",
+      "Burnin": 6,
+      "N": 227,
+      "Ratio": 3.13,
+      "BF_p": 0.002065,
+      "Max_abs_resid": 4.028
+    },
+    {
+      "Station": "Tamale",
+      "Burnin": 12,
+      "N": 221,
+      "Ratio": 3.62,
+      "BF_p": 0.002181,
+      "Max_abs_resid": 4.028
+    },
+    {
+      "Station": "Tamale",
+      "Burnin": 18,
+      "N": 215,
+      "Ratio": 3.67,
+      "BF_p": 0.002328,
+      "Max_abs_resid": 4.028
+    },
+    {
+      "Station": "Tamale",
+      "Burnin": 24,
+      "N": 209,
+      "Ratio": 3.62,
+      "BF_p": 0.002573,
+      "Max_abs_resid": 4.028
+    },
+    {
+      "Station": "Wa",
+      "Burnin": 0,
+      "N": 264,
+      "Ratio": 14.06,
+      "BF_p": 0.0772,
+      "Max_abs_resid": 26.581
+    },
+    {
+      "Station": "Wa",
+      "Burnin": 3,
+      "N": 261,
+      "Ratio": 3.63,
+      "BF_p": 2.143e-05,
+      "Max_abs_resid": 4.634
+    },
+    {
+      "Station": "Wa",
+      "Burnin": 6,
+      "N": 258,
+      "Ratio": 3.63,
+      "BF_p": 2.831e-05,
+      "Max_abs_resid": 4.634
+    },
+    {
+      "Station": "Wa",
+      "Burnin": 12,
+      "N": 252,
+      "Ratio": 3.73,
+      "BF_p": 3.658e-05,
+      "Max_abs_resid": 4.634
+    },
+    {
+      "Station": "Wa",
+      "Burnin": 18,
+      "N": 246,
+      "Ratio": 3.83,
+      "BF_p": 4.074e-06,
+      "Max_abs_resid": 4.634
+    },
+    {
+      "Station": "Wa",
+      "Burnin": 24,
+      "N": 240,
+      "Ratio": 3.81,
+      "BF_p": 7.229e-06,
+      "Max_abs_resid": 4.634
+    }
+  ],
+  "fitted_models": [
+    {
+      "Station": "KIAMO-Accra",
+      "Order": "(3, 1, 2)",
+      "N": 254,
+      "AIC": 457.56,
+      "BIC": 478.76,
+      "LogLik": -222.78,
+      "LjungBox_12": 1.751,
+      "LjungBox_p": 0.9997,
+      "Residual_autocorr": "none",
+      "Converged": true,
+      "coef_ar.L1": 1.5907,
+      "coef_ar.L2": -0.8254,
+      "coef_ar.L3": -0.0389,
+      "coef_ma.L1": -1.699,
+      "coef_ma.L2": 0.7114,
+      "coef_sigma2": 0.334,
+      "coef_ma.L3": NaN
+    },
+    {
+      "Station": "Koforidua",
+      "Order": "(2, 1, 2)",
+      "N": 245,
+      "AIC": 517.17,
+      "BIC": 534.66,
+      "LogLik": -253.59,
+      "LjungBox_12": 2.329,
+      "LjungBox_p": 0.9987,
+      "Residual_autocorr": "none",
+      "Converged": true,
+      "coef_ar.L1": 1.5425,
+      "coef_ar.L2": -0.7953,
+      "coef_ar.L3": NaN,
+      "coef_ma.L1": -1.7437,
+      "coef_ma.L2": 0.7517,
+      "coef_sigma2": 0.4596,
+      "coef_ma.L3": NaN
+    },
+    {
+      "Station": "Kumasi",
+      "Order": "(3, 1, 2)",
+      "N": 264,
+      "AIC": 558.22,
+      "BIC": 579.66,
+      "LogLik": -273.11,
+      "LjungBox_12": 5.571,
+      "LjungBox_p": 0.9362,
+      "Residual_autocorr": "none",
+      "Converged": true,
+      "coef_ar.L1": 1.516,
+      "coef_ar.L2": -0.6872,
+      "coef_ar.L3": -0.1242,
+      "coef_ma.L1": -1.7964,
+      "coef_ma.L2": 0.8495,
+      "coef_sigma2": 0.4597,
+      "coef_ma.L3": NaN
+    },
+    {
+      "Station": "Navrongo",
+      "Order": "(3, 0, 1)",
+      "N": 264,
+      "AIC": 886.66,
+      "BIC": 904.54,
+      "LogLik": -438.33,
+      "LjungBox_12": 24.246,
+      "LjungBox_p": 0.0188,
+      "Residual_autocorr": "remains",
+      "Converged": true,
+      "coef_ar.L1": 2.094,
+      "coef_ar.L2": -1.6864,
+      "coef_ar.L3": 0.5924,
+      "coef_ma.L1": -0.9944,
+      "coef_ma.L2": NaN,
+      "coef_sigma2": 1.5953,
+      "coef_ma.L3": NaN
+    },
+    {
+      "Station": "Tamale",
+      "Order": "(2, 1, 2)",
+      "N": 233,
+      "AIC": 779.33,
+      "BIC": 796.57,
+      "LogLik": -384.67,
+      "LjungBox_12": 15.795,
+      "LjungBox_p": 0.2008,
+      "Residual_autocorr": "none",
+      "Converged": true,
+      "coef_ar.L1": 1.4712,
+      "coef_ar.L2": -0.7709,
+      "coef_ar.L3": NaN,
+      "coef_ma.L1": -1.7778,
+      "coef_ma.L2": 0.7778,
+      "coef_sigma2": 1.5609,
+      "coef_ma.L3": NaN
+    },
+    {
+      "Station": "Wa",
+      "Order": "(1, 0, 3)",
+      "N": 264,
+      "AIC": 875.23,
+      "BIC": 893.11,
+      "LogLik": -432.61,
+      "LjungBox_12": 33.733,
+      "LjungBox_p": 0.0007,
+      "Residual_autocorr": "remains",
+      "Converged": true,
+      "coef_ar.L1": 1.0,
+      "coef_ar.L2": NaN,
+      "coef_ar.L3": NaN,
+      "coef_ma.L1": -0.0338,
+      "coef_ma.L2": -0.4786,
+      "coef_sigma2": 1.4898,
+      "coef_ma.L3": -0.4821
+    }
+  ],
+  "residual_viability": [
+    {
+      "Station": "KIAMO-Accra",
+      "Zone": "Coastal savannah",
+      "Order": "(3, 1, 2)",
+      "Raw_BF_p": 0.9564,
+      "Resid_ratio": 1.62,
+      "Resid_peak_month": "Jun",
+      "Resid_Levene_p": 0.5626,
+      "Resid_BF_p": 0.6543,
+      "Signal_retained": "No"
+    },
+    {
+      "Station": "Koforidua",
+      "Zone": "Forest",
+      "Order": "(2, 1, 2)",
+      "Raw_BF_p": 1.19e-05,
+      "Resid_ratio": 3.47,
+      "Resid_peak_month": "Feb",
+      "Resid_Levene_p": 4.701e-10,
+      "Resid_BF_p": 2.095e-07,
+      "Signal_retained": "Yes"
+    },
+    {
+      "Station": "Kumasi",
+      "Zone": "Transitional",
+      "Order": "(3, 1, 2)",
+      "Raw_BF_p": 0.01166,
+      "Resid_ratio": 2.15,
+      "Resid_peak_month": "Feb",
+      "Resid_Levene_p": 0.01934,
+      "Resid_BF_p": 0.08472,
+      "Signal_retained": "No"
+    },
+    {
+      "Station": "Navrongo",
+      "Zone": "Sudan savannah",
+      "Order": "(3, 0, 1)",
+      "Raw_BF_p": 1.337e-05,
+      "Resid_ratio": 4.73,
+      "Resid_peak_month": "Feb",
+      "Resid_Levene_p": 6.854e-07,
+      "Resid_BF_p": 3.232e-05,
+      "Signal_retained": "Yes"
+    },
+    {
+      "Station": "Tamale",
+      "Zone": "Interior (Guinea) savannah",
+      "Order": "(2, 1, 2)",
+      "Raw_BF_p": 0.01304,
+      "Resid_ratio": 4.02,
+      "Resid_peak_month": "Feb",
+      "Resid_Levene_p": 9.926e-05,
+      "Resid_BF_p": 0.002223,
+      "Signal_retained": "Yes"
+    },
+    {
+      "Station": "Wa",
+      "Zone": "Interior (Guinea) savannah",
+      "Order": "(1, 0, 3)",
+      "Raw_BF_p": 0.01032,
+      "Resid_ratio": 3.73,
+      "Resid_peak_month": "Feb",
+      "Resid_Levene_p": 1.991e-06,
+      "Resid_BF_p": 4.613e-05,
+      "Signal_retained": "Yes"
+    }
+  ],
+  "svao_expected_benefit": [
+    "Koforidua",
+    "Navrongo",
+    "Tamale",
+    "Wa"
+  ],
+  "gate_passed": true
+}
