@@ -1,0 +1,7 @@
+Station,n_train,variance_ratio,ESS,ESS_loss_pct,sequences_lost
+KIAMO-Accra,230,1.02,230.0,0.0,0.0
+Koforidua,221,2.81,215.5,2.49,5.5
+Kumasi,240,2.26,236.0,1.66,4.0
+Navrongo,240,4.94,228.6,4.74,11.4
+Tamale,209,7.06,196.2,6.14,12.8
+Wa,240,2.64,235.6,1.85,4.4

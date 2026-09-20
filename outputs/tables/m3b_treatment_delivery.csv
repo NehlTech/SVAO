@@ -1,0 +1,7 @@
+Station,treatment_divergence,restart_divergence,ratio,weight_spread
+KIAMO-Accra,0.012363,0.035607,0.347,1.007
+Koforidua,0.052356,0.034764,1.506,1.4
+Kumasi,0.034806,0.024967,1.394,1.311
+Navrongo,0.044405,0.041084,1.081,1.615
+Tamale,0.050442,0.059683,0.845,1.753
+Wa,0.029606,0.042755,0.692,1.333

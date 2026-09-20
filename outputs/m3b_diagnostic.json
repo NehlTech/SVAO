@@ -1,0 +1,173 @@
+{
+  "notebook": "05b \u2014 Diagnostic (exploratory, post-hoc)",
+  "status": "EXPLORATORY \u2014 not pre-registered; Module 3's verdict stands",
+  "lambda": 0.5,
+  "module3_verdict": "within_noise",
+  "treatment_delivery": [
+    {
+      "Station": "KIAMO-Accra",
+      "treatment_divergence": 0.012363,
+      "restart_divergence": 0.035607,
+      "ratio": 0.347,
+      "weight_spread": 1.007
+    },
+    {
+      "Station": "Koforidua",
+      "treatment_divergence": 0.052356,
+      "restart_divergence": 0.034764,
+      "ratio": 1.506,
+      "weight_spread": 1.4
+    },
+    {
+      "Station": "Kumasi",
+      "treatment_divergence": 0.034806,
+      "restart_divergence": 0.024967,
+      "ratio": 1.394,
+      "weight_spread": 1.311
+    },
+    {
+      "Station": "Navrongo",
+      "treatment_divergence": 0.044405,
+      "restart_divergence": 0.041084,
+      "ratio": 1.081,
+      "weight_spread": 1.615
+    },
+    {
+      "Station": "Tamale",
+      "treatment_divergence": 0.050442,
+      "restart_divergence": 0.059683,
+      "ratio": 0.845,
+      "weight_spread": 1.753
+    },
+    {
+      "Station": "Wa",
+      "treatment_divergence": 0.029606,
+      "restart_divergence": 0.042755,
+      "ratio": 0.692,
+      "weight_spread": 1.333
+    }
+  ],
+  "median_treatment_restart_ratio": 0.963,
+  "seasonal_signature": [
+    {
+      "Station": "KIAMO-Accra",
+      "dry_uniform": 0.014361,
+      "dry_svao": 0.014029,
+      "dry_change_pct": -2.31,
+      "rainy_uniform": 0.015959,
+      "rainy_svao": 0.016471,
+      "rainy_change_pct": 3.2,
+      "signature": "not as theorised"
+    },
+    {
+      "Station": "Koforidua",
+      "dry_uniform": 0.016811,
+      "dry_svao": 0.014821,
+      "dry_change_pct": -11.84,
+      "rainy_uniform": 0.008619,
+      "rainy_svao": 0.007955,
+      "rainy_change_pct": -7.71,
+      "signature": "not as theorised"
+    },
+    {
+      "Station": "Kumasi",
+      "dry_uniform": 0.034849,
+      "dry_svao": 0.031392,
+      "dry_change_pct": -9.92,
+      "rainy_uniform": 0.008179,
+      "rainy_svao": 0.008825,
+      "rainy_change_pct": 7.89,
+      "signature": "not as theorised"
+    },
+    {
+      "Station": "Navrongo",
+      "dry_uniform": 0.00699,
+      "dry_svao": 0.009009,
+      "dry_change_pct": 28.89,
+      "rainy_uniform": 0.00326,
+      "rainy_svao": 0.002706,
+      "rainy_change_pct": -16.99,
+      "signature": "as theorised"
+    },
+    {
+      "Station": "Tamale",
+      "dry_uniform": 0.018645,
+      "dry_svao": 0.020642,
+      "dry_change_pct": 10.71,
+      "rainy_uniform": 0.006465,
+      "rainy_svao": 0.007024,
+      "rainy_change_pct": 8.63,
+      "signature": "not as theorised"
+    },
+    {
+      "Station": "Wa",
+      "dry_uniform": 0.008015,
+      "dry_svao": 0.007828,
+      "dry_change_pct": -2.33,
+      "rainy_uniform": 0.016389,
+      "rainy_svao": 0.01609,
+      "rainy_change_pct": -1.83,
+      "signature": "not as theorised"
+    }
+  ],
+  "signature_agreement": "1/6",
+  "weighted_stopping": {
+    "delta_mean": 0.00011581618109757285,
+    "delta_sd": 0.0017264311802516125,
+    "dz": 0.06708415743551019,
+    "wilcoxon_p": 0.8235769439488649,
+    "wins": 12,
+    "n": 30
+  },
+  "effective_sample_size": [
+    {
+      "Station": "KIAMO-Accra",
+      "n_train": 230,
+      "variance_ratio": 1.02,
+      "ESS": 230.0,
+      "ESS_loss_pct": 0.0,
+      "sequences_lost": 0.0
+    },
+    {
+      "Station": "Koforidua",
+      "n_train": 221,
+      "variance_ratio": 2.81,
+      "ESS": 215.5,
+      "ESS_loss_pct": 2.49,
+      "sequences_lost": 5.5
+    },
+    {
+      "Station": "Kumasi",
+      "n_train": 240,
+      "variance_ratio": 2.26,
+      "ESS": 236.0,
+      "ESS_loss_pct": 1.66,
+      "sequences_lost": 4.0
+    },
+    {
+      "Station": "Navrongo",
+      "n_train": 240,
+      "variance_ratio": 4.94,
+      "ESS": 228.6,
+      "ESS_loss_pct": 4.74,
+      "sequences_lost": 11.4
+    },
+    {
+      "Station": "Tamale",
+      "n_train": 209,
+      "variance_ratio": 7.06,
+      "ESS": 196.2,
+      "ESS_loss_pct": 6.14,
+      "sequences_lost": 12.8
+    },
+    {
+      "Station": "Wa",
+      "n_train": 240,
+      "variance_ratio": 2.64,
+      "ESS": 235.6,
+      "ESS_loss_pct": 1.85,
+      "sequences_lost": 4.4
+    }
+  ],
+  "ess_ratio_collinearity_r": 0.9892706527394008
+}

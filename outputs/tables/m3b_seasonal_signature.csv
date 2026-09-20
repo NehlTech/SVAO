@@ -1,0 +1,7 @@
+Station,dry_uniform,dry_svao,dry_change_pct,rainy_uniform,rainy_svao,rainy_change_pct,signature
+KIAMO-Accra,0.014361,0.014029,-2.31,0.015959,0.016471,3.2,not as theorised
+Koforidua,0.016811,0.014821,-11.84,0.008619,0.007955,-7.71,not as theorised
+Kumasi,0.034849,0.031392,-9.92,0.008179,0.008825,7.89,not as theorised
+Navrongo,0.00699,0.009009,28.89,0.00326,0.002706,-16.99,as theorised
+Tamale,0.018645,0.020642,10.71,0.006465,0.007024,8.63,not as theorised
+Wa,0.008015,0.007828,-2.33,0.016389,0.01609,-1.83,not as theorised
