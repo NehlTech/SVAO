@@ -1,0 +1,7 @@
+Station,H1_peak,H2_peak,SplitHalf_r,SplitHalf_p,Spearman_r,LOYO_CV,Stable
+KIAMO-Accra,Mar,Jun,0.194,0.5454,0.28,0.0653,No
+Koforidua,Feb,Jan,0.821,0.0011,0.483,0.0812,Yes
+Kumasi,Mar,Jan,0.378,0.2261,0.448,0.0761,No
+Navrongo,Feb,Jan,0.528,0.0778,0.818,0.0664,No
+Tamale,Feb,Jan,0.272,0.3917,0.49,0.0774,No
+Wa,Feb,Jan,0.392,0.2074,0.734,0.0663,No

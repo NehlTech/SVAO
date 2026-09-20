@@ -1,0 +1,7 @@
+Station,Null,A_month,B_season,C1_harmonic,C2_harmonic,Winner,Beats_Null
+KIAMO-Accra,-33.27,-31.73,-33.24,-31.55,-31.65,C1_harmonic,Yes
+Koforidua,-42.33,-35.77,-40.03,-36.16,-35.78,A_month,Yes
+Kumasi,-46.42,-46.99,-42.96,-45.66,-46.36,B_season,Yes
+Navrongo,-72.69,-68.81,-65.29,-64.88,-64.32,C2_harmonic,Yes
+Tamale,-78.11,-73.2,-64.1,-70.75,-70.63,B_season,Yes
+Wa,-54.88,-86.86,-56.14,-86.62,-83.91,Null,No
