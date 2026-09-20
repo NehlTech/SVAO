@@ -1,0 +1,480 @@
+{
+  "config_digest": "99ffc70ff7a8bb490c429384574d2022086c70e85b76acd0c9d9fa7fe9740fde",
+  "stations_analysed": [
+    "KIAMO-Accra",
+    "Koforidua",
+    "Kumasi",
+    "Navrongo",
+    "Tamale",
+    "Wa"
+  ],
+  "stations_retained": [
+    "KIAMO-Accra",
+    "Koforidua",
+    "Kumasi",
+    "Navrongo",
+    "Tamale",
+    "Wa"
+  ],
+  "alpha": 0.05,
+  "normality": [
+    {
+      "Station": "KIAMO-Accra",
+      "N": 350,
+      "Mean": 27.997,
+      "SD": 1.346,
+      "Skew": -0.295,
+      "Kurtosis": -0.86,
+      "Shapiro_W": 0.9696,
+      "Shapiro_p": 1.06e-06,
+      "DAgostino_p": 2.545e-09,
+      "KS_p": 0.0165,
+      "Normal": "No"
+    },
+    {
+      "Station": "Koforidua",
+      "N": 341,
+      "Mean": 27.596,
+      "SD": 1.171,
+      "Skew": 0.005,
+      "Kurtosis": -0.654,
+      "Shapiro_W": 0.9886,
+      "Shapiro_p": 0.00909,
+      "DAgostino_p": 0.001681,
+      "KS_p": 0.7018,
+      "Normal": "No"
+    },
+    {
+      "Station": "Kumasi",
+      "N": 360,
+      "Mean": 27.151,
+      "SD": 1.304,
+      "Skew": -0.048,
+      "Kurtosis": -0.543,
+      "Shapiro_W": 0.9924,
+      "Shapiro_p": 0.06479,
+      "DAgostino_p": 0.0203,
+      "KS_p": 0.3506,
+      "Normal": "No"
+    },
+    {
+      "Station": "Navrongo",
+      "N": 360,
+      "Mean": 29.28,
+      "SD": 2.113,
+      "Skew": 0.668,
+      "Kurtosis": -0.647,
+      "Shapiro_W": 0.9253,
+      "Shapiro_p": 2.032e-12,
+      "DAgostino_p": 1.18e-08,
+      "KS_p": 0.0002008,
+      "Normal": "No"
+    },
+    {
+      "Station": "Tamale",
+      "N": 329,
+      "Mean": 29.039,
+      "SD": 2.045,
+      "Skew": 0.529,
+      "Kurtosis": -0.612,
+      "Shapiro_W": 0.9551,
+      "Shapiro_p": 1.744e-08,
+      "DAgostino_p": 5.638e-06,
+      "KS_p": 0.00776,
+      "Normal": "No"
+    },
+    {
+      "Station": "Wa",
+      "N": 346,
+      "Mean": 28.444,
+      "SD": 1.93,
+      "Skew": 0.357,
+      "Kurtosis": -0.726,
+      "Shapiro_W": 0.9694,
+      "Shapiro_p": 1.123e-06,
+      "DAgostino_p": 2.818e-06,
+      "KS_p": 0.212,
+      "Normal": "No"
+    }
+  ],
+  "trend": [
+    {
+      "Station": "KIAMO-Accra",
+      "Zone": "Coastal savannah",
+      "MK_S": 11721,
+      "MK_Z": 5.358,
+      "MK_p": 8.403e-08,
+      "Sen_C_per_decade": 0.4476,
+      "Trend": "increasing"
+    },
+    {
+      "Station": "Koforidua",
+      "Zone": "Forest",
+      "MK_S": 7731,
+      "MK_Z": 3.675,
+      "MK_p": 0.0002381,
+      "Sen_C_per_decade": 0.2989,
+      "Trend": "increasing"
+    },
+    {
+      "Station": "Kumasi",
+      "Zone": "Transitional",
+      "MK_S": 11635,
+      "MK_Z": 5.099,
+      "MK_p": 3.412e-07,
+      "Sen_C_per_decade": 0.415,
+      "Trend": "increasing"
+    },
+    {
+      "Station": "Navrongo",
+      "Zone": "Sudan savannah",
+      "MK_S": 1855,
+      "MK_Z": 0.813,
+      "MK_p": 0.4164,
+      "Sen_C_per_decade": 0.0915,
+      "Trend": "none"
+    },
+    {
+      "Station": "Tamale",
+      "Zone": "Interior (Guinea) savannah",
+      "MK_S": 5940,
+      "MK_Z": 2.979,
+      "MK_p": 0.002893,
+      "Sen_C_per_decade": 0.4112,
+      "Trend": "increasing"
+    },
+    {
+      "Station": "Wa",
+      "Zone": "Interior (Guinea) savannah",
+      "MK_S": -591,
+      "MK_Z": -0.274,
+      "MK_p": 0.7838,
+      "Sen_C_per_decade": -0.0363,
+      "Trend": "none"
+    }
+  ],
+  "stl_strength": [
+    {
+      "Station": "KIAMO-Accra",
+      "Seasonal_amplitude_C": 4.946,
+      "Seasonal_strength": 0.885,
+      "Trend_strength": 0.474,
+      "Remainder_SD": 0.43
+    },
+    {
+      "Station": "Koforidua",
+      "Seasonal_amplitude_C": 4.553,
+      "Seasonal_strength": 0.868,
+      "Trend_strength": 0.492,
+      "Remainder_SD": 0.398
+    },
+    {
+      "Station": "Kumasi",
+      "Seasonal_amplitude_C": 5.118,
+      "Seasonal_strength": 0.903,
+      "Trend_strength": 0.578,
+      "Remainder_SD": 0.384
+    },
+    {
+      "Station": "Navrongo",
+      "Seasonal_amplitude_C": 7.384,
+      "Seasonal_strength": 0.921,
+      "Trend_strength": 0.15,
+      "Remainder_SD": 0.587
+    },
+    {
+      "Station": "Tamale",
+      "Seasonal_amplitude_C": 7.93,
+      "Seasonal_strength": 0.849,
+      "Trend_strength": 0.363,
+      "Remainder_SD": 0.739
+    },
+    {
+      "Station": "Wa",
+      "Seasonal_amplitude_C": 6.431,
+      "Seasonal_strength": 0.824,
+      "Trend_strength": 0.193,
+      "Remainder_SD": 0.782
+    }
+  ],
+  "heteroscedasticity": [
+    {
+      "Station": "KIAMO-Accra",
+      "Zone": "Coastal savannah",
+      "SD_min": 0.463,
+      "SD_max": 0.706,
+      "Ratio": 1.52,
+      "Peak_month": "Oct",
+      "Levene_p": 0.9279,
+      "BrownForsythe_p": 0.9564,
+      "Bartlett_p": 0.6098,
+      "ARCH_LM_p": 3.659e-32,
+      "Heteroscedastic": "No"
+    },
+    {
+      "Station": "Koforidua",
+      "Zone": "Forest",
+      "SD_min": 0.28,
+      "SD_max": 0.772,
+      "Ratio": 2.76,
+      "Peak_month": "Feb",
+      "Levene_p": 5.274e-06,
+      "BrownForsythe_p": 1.19e-05,
+      "Bartlett_p": 3.085e-08,
+      "ARCH_LM_p": 1.75e-25,
+      "Heteroscedastic": "Yes"
+    },
+    {
+      "Station": "Kumasi",
+      "Zone": "Transitional",
+      "SD_min": 0.439,
+      "SD_max": 0.82,
+      "Ratio": 1.87,
+      "Peak_month": "Feb",
+      "Levene_p": 0.00126,
+      "BrownForsythe_p": 0.01166,
+      "Bartlett_p": 0.003642,
+      "ARCH_LM_p": 1.034e-30,
+      "Heteroscedastic": "Yes"
+    },
+    {
+      "Station": "Navrongo",
+      "Zone": "Sudan savannah",
+      "SD_min": 0.316,
+      "SD_max": 0.924,
+      "Ratio": 2.93,
+      "Peak_month": "Feb",
+      "Levene_p": 1.364e-06,
+      "BrownForsythe_p": 1.337e-05,
+      "Bartlett_p": 7.214e-12,
+      "ARCH_LM_p": 2.429e-38,
+      "Heteroscedastic": "Yes"
+    },
+    {
+      "Station": "Tamale",
+      "Zone": "Interior (Guinea) savannah",
+      "SD_min": 0.583,
+      "SD_max": 1.129,
+      "Ratio": 1.94,
+      "Peak_month": "Jan",
+      "Levene_p": 0.005443,
+      "BrownForsythe_p": 0.01304,
+      "Bartlett_p": 0.0009346,
+      "ARCH_LM_p": 9.949e-26,
+      "Heteroscedastic": "Yes"
+    },
+    {
+      "Station": "Wa",
+      "Zone": "Interior (Guinea) savannah",
+      "SD_min": 0.496,
+      "SD_max": 1.016,
+      "Ratio": 2.05,
+      "Peak_month": "Jan",
+      "Levene_p": 0.006254,
+      "BrownForsythe_p": 0.01032,
+      "Bartlett_p": 0.0001516,
+      "ARCH_LM_p": 1.222e-32,
+      "Heteroscedastic": "Yes"
+    }
+  ],
+  "stationarity": [
+    {
+      "Station": "KIAMO-Accra",
+      "ADF_stat": -2.221,
+      "ADF_p": 0.1988,
+      "ADF_lags": 14,
+      "KPSS_stat": 1.1585,
+      "KPSS_p": 0.01,
+      "ADF_p_diff": 0.0,
+      "KPSS_p_diff": 0.1,
+      "Verdict": "non-stationary",
+      "Recommended_d": 1
+    },
+    {
+      "Station": "Koforidua",
+      "ADF_stat": -2.73,
+      "ADF_p": 0.069,
+      "ADF_lags": 13,
+      "KPSS_stat": 0.7808,
+      "KPSS_p": 0.01,
+      "ADF_p_diff": 0.0,
+      "KPSS_p_diff": 0.1,
+      "Verdict": "non-stationary",
+      "Recommended_d": 1
+    },
+    {
+      "Station": "Kumasi",
+      "ADF_stat": -1.29,
+      "ADF_p": 0.6336,
+      "ADF_lags": 13,
+      "KPSS_stat": 1.6466,
+      "KPSS_p": 0.01,
+      "ADF_p_diff": 0.0,
+      "KPSS_p_diff": 0.1,
+      "Verdict": "non-stationary",
+      "Recommended_d": 1
+    },
+    {
+      "Station": "Navrongo",
+      "ADF_stat": -4.476,
+      "ADF_p": 0.0002,
+      "ADF_lags": 16,
+      "KPSS_stat": 0.029,
+      "KPSS_p": 0.1,
+      "ADF_p_diff": 0.0,
+      "KPSS_p_diff": 0.1,
+      "Verdict": "stationary",
+      "Recommended_d": 0
+    },
+    {
+      "Station": "Tamale",
+      "ADF_stat": -2.589,
+      "ADF_p": 0.0953,
+      "ADF_lags": 12,
+      "KPSS_stat": 0.4782,
+      "KPSS_p": 0.0466,
+      "ADF_p_diff": 0.0,
+      "KPSS_p_diff": 0.1,
+      "Verdict": "non-stationary",
+      "Recommended_d": 1
+    },
+    {
+      "Station": "Wa",
+      "ADF_stat": -3.571,
+      "ADF_p": 0.0063,
+      "ADF_lags": 16,
+      "KPSS_stat": 0.0558,
+      "KPSS_p": 0.1,
+      "ADF_p_diff": 0.0,
+      "KPSS_p_diff": 0.1,
+      "Verdict": "stationary",
+      "Recommended_d": 0
+    }
+  ],
+  "acf_lag12": [
+    {
+      "Station": "KIAMO-Accra",
+      "ACF_lag12": 0.659,
+      "PACF_lag12": 0.038,
+      "CI_95": 0.105,
+      "Lag12_significant": "Yes"
+    },
+    {
+      "Station": "Koforidua",
+      "ACF_lag12": 0.56,
+      "PACF_lag12": 0.057,
+      "CI_95": 0.106,
+      "Lag12_significant": "Yes"
+    },
+    {
+      "Station": "Kumasi",
+      "ACF_lag12": 0.665,
+      "PACF_lag12": 0.039,
+      "CI_95": 0.103,
+      "Lag12_significant": "Yes"
+    },
+    {
+      "Station": "Navrongo",
+      "ACF_lag12": 0.785,
+      "PACF_lag12": 0.243,
+      "CI_95": 0.103,
+      "Lag12_significant": "Yes"
+    },
+    {
+      "Station": "Tamale",
+      "ACF_lag12": 0.659,
+      "PACF_lag12": 0.184,
+      "CI_95": 0.108,
+      "Lag12_significant": "Yes"
+    },
+    {
+      "Station": "Wa",
+      "ACF_lag12": 0.693,
+      "PACF_lag12": 0.082,
+      "CI_95": 0.106,
+      "Lag12_significant": "Yes"
+    }
+  ],
+  "missingness": [
+    {
+      "Station": "KIAMO-Accra",
+      "Missing": 10,
+      "Worst_month": "Jan",
+      "Worst_month_n": 1.0,
+      "Chi2": 2.0,
+      "p": 0.9985,
+      "Pattern": "uniform",
+      "Retain": "Yes"
+    },
+    {
+      "Station": "Koforidua",
+      "Missing": 19,
+      "Worst_month": "Jan",
+      "Worst_month_n": 2.0,
+      "Chi2": 1.842,
+      "p": 0.999,
+      "Pattern": "uniform",
+      "Retain": "Yes"
+    },
+    {
+      "Station": "Kumasi",
+      "Missing": 0,
+      "Worst_month": NaN,
+      "Worst_month_n": NaN,
+      "Chi2": NaN,
+      "p": NaN,
+      "Pattern": "complete",
+      "Retain": "Yes"
+    },
+    {
+      "Station": "Navrongo",
+      "Missing": 0,
+      "Worst_month": NaN,
+      "Worst_month_n": NaN,
+      "Chi2": NaN,
+      "p": NaN,
+      "Pattern": "complete",
+      "Retain": "Yes"
+    },
+    {
+      "Station": "Tamale",
+      "Missing": 31,
+      "Worst_month": "Nov",
+      "Worst_month_n": 4.0,
+      "Chi2": 2.677,
+      "p": 0.9943,
+      "Pattern": "uniform",
+      "Retain": "Yes"
+    },
+    {
+      "Station": "Wa",
+      "Missing": 14,
+      "Worst_month": "Jun",
+      "Worst_month_n": 2.0,
+      "Chi2": 1.429,
+      "p": 0.9997,
+      "Pattern": "uniform",
+      "Retain": "Yes"
+    }
+  ],
+  "station_correlation": {
+    "min": 0.672,
+    "median": 0.809,
+    "max": 0.945
+  },
+  "headline": {
+    "n_heteroscedastic": 5,
+    "control_stations": [
+      "KIAMO-Accra"
+    ],
+    "n_significant_trend": 4,
+    "recommended_d": {
+      "KIAMO-Accra": 1,
+      "Koforidua": 1,
+      "Kumasi": 1,
+      "Navrongo": 0,
+      "Tamale": 1,
+      "Wa": 0
+    }
+  }
+}

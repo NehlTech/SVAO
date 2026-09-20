@@ -1,0 +1,7 @@
+Station,Missing,Worst_month,Worst_month_n,Chi2,p,Pattern,Retain
+KIAMO-Accra,10,Jan,1.0,2.0,0.9985,uniform,Yes
+Koforidua,19,Jan,2.0,1.842,0.999,uniform,Yes
+Kumasi,0,,,,,complete,Yes
+Navrongo,0,,,,,complete,Yes
+Tamale,31,Nov,4.0,2.677,0.9943,uniform,Yes
+Wa,14,Jun,2.0,1.429,0.9997,uniform,Yes

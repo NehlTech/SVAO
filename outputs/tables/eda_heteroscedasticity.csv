@@ -1,0 +1,7 @@
+Station,Zone,SD_min,SD_max,Ratio,Peak_month,Levene_p,BrownForsythe_p,Bartlett_p,ARCH_LM_p,Heteroscedastic
+KIAMO-Accra,Coastal savannah,0.463,0.706,1.52,Oct,0.9279,0.9564,0.6098,3.659e-32,No
+Koforidua,Forest,0.28,0.772,2.76,Feb,5.274e-06,1.19e-05,3.085e-08,1.75e-25,Yes
+Kumasi,Transitional,0.439,0.82,1.87,Feb,0.00126,0.01166,0.003642,1.034e-30,Yes
+Navrongo,Sudan savannah,0.316,0.924,2.93,Feb,1.364e-06,1.337e-05,7.214e-12,2.429e-38,Yes
+Tamale,Interior (Guinea) savannah,0.583,1.129,1.94,Jan,0.005443,0.01304,0.0009346,9.949e-26,Yes
+Wa,Interior (Guinea) savannah,0.496,1.016,2.05,Jan,0.006254,0.01032,0.0001516,1.222e-32,Yes

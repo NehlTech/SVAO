@@ -1,0 +1,7 @@
+Station,Zone,MK_S,MK_Z,MK_p,Sen_C_per_decade,Trend
+KIAMO-Accra,Coastal savannah,11721,5.358,8.403e-08,0.4476,increasing
+Koforidua,Forest,7731,3.675,0.0002381,0.2989,increasing
+Kumasi,Transitional,11635,5.099,3.412e-07,0.415,increasing
+Navrongo,Sudan savannah,1855,0.813,0.4164,0.0915,none
+Tamale,Interior (Guinea) savannah,5940,2.979,0.002893,0.4112,increasing
+Wa,Interior (Guinea) savannah,-591,-0.274,0.7838,-0.0363,none
