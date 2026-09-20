@@ -22,7 +22,7 @@ class LSTMRegressor(nn.Module):
         return self.head(out[:, -1]).squeeze(-1)
 
 
-def train_model(X_tr, y_tr, w_tr, X_va, y_va, seed,
+def train_model(X_tr, y_tr, w_tr, X_va, y_va, seed, w_va=None,
                 hidden_size=32, epochs=300, batch_size=16, lr=0.01,
                 grad_clip=5.0, patience=30, device="cpu"):
     """Train one network and return it with its history.
@@ -45,6 +45,8 @@ def train_model(X_tr, y_tr, w_tr, X_va, y_va, seed,
     wt = torch.as_tensor(w_tr, dtype=torch.float32, device=device)
     Xv = torch.as_tensor(X_va, dtype=torch.float32, device=device)
     yv = torch.as_tensor(y_va, dtype=torch.float32, device=device)
+    wv = (torch.ones_like(yv) if w_va is None
+          else torch.as_tensor(w_va, dtype=torch.float32, device=device))
 
     gen = torch.Generator().manual_seed(seed)
     n = Xt.shape[0]
@@ -68,7 +70,8 @@ def train_model(X_tr, y_tr, w_tr, X_va, y_va, seed,
 
         net.eval()
         with torch.no_grad():
-            vl = float(((net(Xv) - yv) ** 2).mean())
+            ev = (net(Xv) - yv) ** 2
+            vl = float((wv * ev).sum() / wv.sum())
         hist["train"].append(total / seen)
         hist["val"].append(vl)
 
