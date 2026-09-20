@@ -1,0 +1,7 @@
+station,station_id,daily_rows,sentinels_removed,out_of_range_removed,order_violations,tmin_missing,tmax_missing,usable_days
+KIAMO-Accra,23016ACC,10744,0,0,0,71,82,10603
+Koforidua,22050KDA,11078,0,0,0,1,642,10435
+Kumasi,17009KSI,11169,0,2,5,18,15,11145
+Navrongo,04003NAV,11171,0,0,2,3,2,11168
+Tamale,07006TLE,10989,0,0,0,92,847,10050
+Wa,01013WA-,10498,0,0,1,13,10,10480

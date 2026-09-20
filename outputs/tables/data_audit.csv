@@ -1,0 +1,7 @@
+station,months_expected,below_day_threshold,missing_before_interp,interpolated,still_missing,months_usable,coverage_pct
+KIAMO-Accra,360,3,20,10,10,350,97.2
+Koforidua,360,0,25,6,19,341,94.7
+Kumasi,360,0,2,2,0,360,100.0
+Navrongo,360,0,1,1,0,360,100.0
+Tamale,360,4,40,9,31,329,91.4
+Wa,360,1,21,7,14,346,96.1

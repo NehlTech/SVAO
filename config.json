@@ -1,0 +1,45 @@
+{
+  "start_year": 1995,
+  "end_year": 2024,
+  "train_end": 2016,
+  "val_end": 2020,
+  "lookback": 12,
+  "min_days_per_month": 20,
+  "max_interp_gap": 2,
+  "sentinels": [
+    -99,
+    -99.9,
+    -999,
+    999,
+    99.9,
+    -9999
+  ],
+  "tmin_bounds": [
+    8.0,
+    40.0
+  ],
+  "tmax_bounds": [
+    15.0,
+    50.0
+  ],
+  "stations": [
+    "KIAMO-Accra",
+    "Koforidua",
+    "Kumasi",
+    "Navrongo",
+    "Tamale",
+    "Wa"
+  ],
+  "zones": {
+    "KIAMO-Accra": "Coastal savannah",
+    "Koforidua": "Forest",
+    "Kumasi": "Transitional",
+    "Tamale": "Interior (Guinea) savannah",
+    "Wa": "Interior (Guinea) savannah",
+    "Navrongo": "Sudan savannah"
+  },
+  "seed": 42,
+  "source_file": "REGINA_ABABIO.xlsx",
+  "source_sha256": "99ffc70ff7a8bb490c429384574d2022086c70e85b76acd0c9d9fa7fe9740fde",
+  "source_bytes": 789758
+}

@@ -1,0 +1,7 @@
+Station,Zone,N,Min,Max,Mean,SD,Skewness,Kurtosis
+KIAMO-Accra,Coastal savannah,350,24.59,30.84,28.0,1.346,-0.297,-0.855
+Koforidua,Forest,341,25.2,30.46,27.6,1.171,0.005,-0.646
+Kumasi,Transitional,360,23.87,30.63,27.15,1.304,-0.048,-0.534
+Navrongo,Sudan savannah,360,25.45,34.46,29.28,2.113,0.671,-0.639
+Tamale,Interior (Guinea) savannah,329,24.42,34.38,29.04,2.045,0.531,-0.603
+Wa,Interior (Guinea) savannah,346,24.42,33.04,28.44,1.93,0.358,-0.719

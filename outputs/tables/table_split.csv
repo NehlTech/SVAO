@@ -1,0 +1,5 @@
+Partition,Period,Years,Months,Share
+Training,1995-2016,22,264,73.3%
+Validation,2017-2020,4,48,13.3%
+Test,2021-2024,4,48,13.3%
+Total,1995-2024,30,360,100.0%
