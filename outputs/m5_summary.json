@@ -1,0 +1,176 @@
+{
+  "notebook": "07 \u2014 Baselines",
+  "models": [
+    "Persistence",
+    "Climatology",
+    "ARIMA",
+    "LSTM",
+    "ARIMA-LSTM",
+    "ARIMA-LSTM-SVAO"
+  ],
+  "persistence_rule": "y_hat(t) = observed y(t-1)",
+  "climatology_rule": "training-period mean for the calendar month",
+  "standalone_lstm": {
+    "input": "normalised temperature series",
+    "identical_to_hybrid_network_except_input": true,
+    "restarts": 5,
+    "hyperparameters": {
+      "hidden_size": 32,
+      "epochs": 300,
+      "batch_size": 16,
+      "lr": 0.01,
+      "patience": 30,
+      "lookback": 12,
+      "n_restarts": 5,
+      "seed_base": 42,
+      "paired_seeds": true,
+      "loss": "sample-weighted MSE",
+      "early_stopping_on": "unweighted validation MSE"
+    }
+  },
+  "coverage": {
+    "Persistence": {
+      "KIAMO-Accra": 48,
+      "Koforidua": 48,
+      "Kumasi": 48,
+      "Navrongo": 48,
+      "Tamale": 48,
+      "Wa": 48
+    },
+    "Climatology": {
+      "KIAMO-Accra": 48,
+      "Koforidua": 48,
+      "Kumasi": 48,
+      "Navrongo": 48,
+      "Tamale": 48,
+      "Wa": 48
+    },
+    "ARIMA": {
+      "KIAMO-Accra": 48,
+      "Koforidua": 48,
+      "Kumasi": 48,
+      "Navrongo": 48,
+      "Tamale": 48,
+      "Wa": 41
+    },
+    "LSTM": {
+      "KIAMO-Accra": 48,
+      "Koforidua": 48,
+      "Kumasi": 48,
+      "Navrongo": 48,
+      "Tamale": 48,
+      "Wa": 48
+    },
+    "ARIMA-LSTM": {
+      "KIAMO-Accra": 48,
+      "Koforidua": 48,
+      "Kumasi": 48,
+      "Navrongo": 48,
+      "Tamale": 48,
+      "Wa": 41
+    },
+    "ARIMA-LSTM-SVAO": {
+      "KIAMO-Accra": 48,
+      "Koforidua": 48,
+      "Kumasi": 48,
+      "Navrongo": 48,
+      "Tamale": 48,
+      "Wa": 41
+    },
+    "observed": {
+      "KIAMO-Accra": 48,
+      "Koforidua": 48,
+      "Kumasi": 48,
+      "Navrongo": 48,
+      "Tamale": 48,
+      "Wa": 48
+    }
+  },
+  "signal_to_noise": [
+    {
+      "Station": "KIAMO-Accra",
+      "model": "LSTM",
+      "mean_departure_from_clim": 0.6912,
+      "ensemble_sd": 0.107,
+      "signal_to_noise": 6.46
+    },
+    {
+      "Station": "KIAMO-Accra",
+      "model": "ARIMA-LSTM-SVAO",
+      "mean_departure_from_clim": 0.8779,
+      "ensemble_sd": 0.1505,
+      "signal_to_noise": 5.83
+    },
+    {
+      "Station": "Koforidua",
+      "model": "LSTM",
+      "mean_departure_from_clim": 0.4686,
+      "ensemble_sd": 0.194,
+      "signal_to_noise": 2.42
+    },
+    {
+      "Station": "Koforidua",
+      "model": "ARIMA-LSTM-SVAO",
+      "mean_departure_from_clim": 0.5614,
+      "ensemble_sd": 0.1912,
+      "signal_to_noise": 2.94
+    },
+    {
+      "Station": "Kumasi",
+      "model": "LSTM",
+      "mean_departure_from_clim": 0.7144,
+      "ensemble_sd": 0.1901,
+      "signal_to_noise": 3.76
+    },
+    {
+      "Station": "Kumasi",
+      "model": "ARIMA-LSTM-SVAO",
+      "mean_departure_from_clim": 0.8144,
+      "ensemble_sd": 0.1769,
+      "signal_to_noise": 4.6
+    },
+    {
+      "Station": "Navrongo",
+      "model": "LSTM",
+      "mean_departure_from_clim": 0.2606,
+      "ensemble_sd": 0.1558,
+      "signal_to_noise": 1.67
+    },
+    {
+      "Station": "Navrongo",
+      "model": "ARIMA-LSTM-SVAO",
+      "mean_departure_from_clim": 0.4386,
+      "ensemble_sd": 0.3451,
+      "signal_to_noise": 1.27
+    },
+    {
+      "Station": "Tamale",
+      "model": "LSTM",
+      "mean_departure_from_clim": 0.7316,
+      "ensemble_sd": 0.3027,
+      "signal_to_noise": 2.42
+    },
+    {
+      "Station": "Tamale",
+      "model": "ARIMA-LSTM-SVAO",
+      "mean_departure_from_clim": 1.1717,
+      "ensemble_sd": 0.4189,
+      "signal_to_noise": 2.8
+    },
+    {
+      "Station": "Wa",
+      "model": "LSTM",
+      "mean_departure_from_clim": 0.5669,
+      "ensemble_sd": 0.3098,
+      "signal_to_noise": 1.83
+    },
+    {
+      "Station": "Wa",
+      "model": "ARIMA-LSTM-SVAO",
+      "mean_departure_from_clim": 0.511,
+      "ensemble_sd": 0.306,
+      "signal_to_noise": 1.67
+    }
+  ],
+  "scoring": "deferred to notebook 08"
+}
