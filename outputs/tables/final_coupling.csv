@@ -1,0 +1,7 @@
+Station,feature_augmented,fa_sd,residual_hybrid,standalone_LSTM,ARIMA,beats_residual,beats_standalone
+KIAMO-Accra,0.6803,0.0234,0.749,0.6834,0.7988,True,True
+Koforidua,0.601,0.0362,0.5954,0.5584,0.6353,False,False
+Kumasi,0.5327,0.0344,0.5588,0.5138,0.6722,True,False
+Navrongo,0.7076,0.0348,0.715,0.651,1.2155,True,False
+Tamale,1.046,0.0681,1.1096,0.9411,1.4024,True,False
+Wa,1.193,0.0671,1.014,1.1271,1.3332,False,False

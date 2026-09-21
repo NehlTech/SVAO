@@ -1,0 +1,25 @@
+\begin{table}[H]
+\centering
+\caption{Weight normalisation by optimiser}
+\label{tab:normalisation}
+\begin{singlespace}
+\begin{tabular}{llrrrrr}
+\toprule
+Station & optimizer & normalised & unnormalised & delta & restart\_sd & exceeds\_noise \\
+\midrule
+KIAMO-Accra & adam & 0.7540 & 0.7540 & 0.0000 & 0.0287 & False \\
+KIAMO-Accra & sgd & 0.7952 & 0.7952 & -0.0000 & 0.0005 & False \\
+Koforidua & adam & 0.6101 & 0.6101 & 0.0000 & 0.0340 & False \\
+Koforidua & sgd & 0.6350 & 0.6350 & -0.0000 & 0.0004 & False \\
+Kumasi & adam & 0.5978 & 0.5824 & -0.0154 & 0.0477 & False \\
+Kumasi & sgd & 0.6711 & 0.6711 & -0.0000 & 0.0012 & False \\
+Navrongo & adam & 0.8206 & 0.8288 & 0.0082 & 0.0634 & False \\
+Navrongo & sgd & 1.2150 & 1.2150 & -0.0000 & 0.0014 & False \\
+Tamale & adam & 1.2246 & 1.2635 & 0.0389 & 0.0964 & False \\
+Tamale & sgd & 1.4148 & 1.4148 & 0.0000 & 0.0012 & False \\
+Wa & adam & 1.0519 & 1.0539 & 0.0020 & 0.0369 & False \\
+Wa & sgd & 1.3527 & 1.3527 & 0.0000 & 0.0089 & False \\
+\bottomrule
+\end{tabular}
+\end{singlespace}
+\end{table}

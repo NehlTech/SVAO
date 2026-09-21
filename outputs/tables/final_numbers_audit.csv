@@ -1,0 +1,9 @@
+check,result,detail
+best model matches evaluation summary,PASS,LSTM
+all six models scored at every station,PASS,36 rows
+no NaN in reported metrics,PASS,
+SVAO not significant anywhere,PASS,
+per-station ARIMA beats uniform at all stations,PASS,
+lambda zero best on test,PASS,0.0
+provenance digest recorded,PASS,
+all paper numbers file written,PASS,

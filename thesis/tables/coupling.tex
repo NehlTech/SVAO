@@ -1,0 +1,19 @@
+\begin{table}[H]
+\centering
+\caption{Hybrid coupling comparison}
+\label{tab:coupling}
+\begin{singlespace}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Station & feature\_augmented & fa\_sd & residual\_hybrid & standalone\_LSTM & ARIMA & beats\_residual & beats\_standalone \\
+\midrule
+KIAMO-Accra & 0.6803 & 0.0234 & 0.7490 & 0.6834 & 0.7988 & True & True \\
+Koforidua & 0.6010 & 0.0362 & 0.5954 & 0.5584 & 0.6353 & False & False \\
+Kumasi & 0.5327 & 0.0344 & 0.5588 & 0.5138 & 0.6722 & True & False \\
+Navrongo & 0.7076 & 0.0348 & 0.7150 & 0.6510 & 1.2155 & True & False \\
+Tamale & 1.0460 & 0.0681 & 1.1096 & 0.9411 & 1.4024 & True & False \\
+Wa & 1.1930 & 0.0671 & 1.0140 & 1.1271 & 1.3332 & False & False \\
+\bottomrule
+\end{tabular}
+\end{singlespace}
+\end{table}

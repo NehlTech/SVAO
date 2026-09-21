@@ -1,0 +1,19 @@
+\begin{table}[H]
+\centering
+\caption{Average accuracy across stations}
+\label{tab:average}
+\begin{singlespace}
+\begin{tabular}{lrrrrr}
+\toprule
+Model & RMSE & MAE & MAPE & R2 & rank\_RMSE \\
+\midrule
+Persistence & 1.2850 & 1.0458 & 3.6318 & 0.4397 & 6 \\
+Climatology & 0.9823 & 0.8218 & 2.8654 & 0.5932 & 4 \\
+ARIMA & 1.0096 & 0.7988 & 2.7832 & 0.6536 & 5 \\
+LSTM & 0.7458 & 0.5850 & 2.0588 & 0.7956 & 1 \\
+ARIMA-LSTM & 0.7903 & 0.6371 & 2.2283 & 0.7724 & 2 \\
+ARIMA-LSTM-SVAO & 0.7995 & 0.6432 & 2.2445 & 0.7694 & 3 \\
+\bottomrule
+\end{tabular}
+\end{singlespace}
+\end{table}

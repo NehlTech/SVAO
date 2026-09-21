@@ -24,6 +24,7 @@ class LSTMRegressor(nn.Module):
 
 def train_model(X_tr, y_tr, w_tr, X_va, y_va, seed, w_va=None,
                 input_size=1, hidden_size=32, epochs=300, batch_size=16, lr=0.01,
+                optimizer='adam',
                 grad_clip=5.0, patience=30, device="cpu"):
     """Train one network and return it with its history.
 
@@ -38,7 +39,8 @@ def train_model(X_tr, y_tr, w_tr, X_va, y_va, seed, w_va=None,
     np.random.seed(seed)
 
     net = LSTMRegressor(hidden_size, input_size).to(device)
-    opt = torch.optim.Adam(net.parameters(), lr=lr)
+    opt = (torch.optim.Adam(net.parameters(), lr=lr) if optimizer == 'adam'
+           else torch.optim.SGD(net.parameters(), lr=lr))
 
     Xt = torch.as_tensor(X_tr, dtype=torch.float32, device=device)
     yt = torch.as_tensor(y_tr, dtype=torch.float32, device=device)
