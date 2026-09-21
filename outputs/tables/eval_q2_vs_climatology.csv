@@ -1,0 +1,7 @@
+Station,Climatology,Persistence,ARIMA,LSTM,ARIMA-LSTM,ARIMA-LSTM-SVAO
+KIAMO-Accra,1.0761,True,True,True,True,True
+Koforidua,0.7705,False,True,True,True,True
+Kumasi,1.0307,True,True,True,True,True
+Navrongo,0.7055,False,False,True,False,False
+Tamale,1.2737,False,False,True,True,True
+Wa,1.0372,False,False,False,True,True

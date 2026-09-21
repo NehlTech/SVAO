@@ -1,0 +1,7 @@
+Station,uniform,svao,svao_better,delta
+KIAMO-Accra,0.749,0.7405,True,0.0085
+Koforidua,0.5954,0.5789,True,0.0165
+Kumasi,0.5588,0.574,False,-0.0152
+Navrongo,0.715,0.7474,False,-0.0324
+Tamale,1.1096,1.1458,False,-0.0362
+Wa,1.014,1.0105,True,0.0035

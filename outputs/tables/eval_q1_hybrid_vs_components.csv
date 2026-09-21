@@ -1,0 +1,7 @@
+Station,hybrid_best,ARIMA,LSTM,beats_ARIMA,beats_LSTM,beats_both
+KIAMO-Accra,0.7405,0.7988,0.6834,True,False,False
+Koforidua,0.5789,0.6353,0.5584,True,False,False
+Kumasi,0.5588,0.6722,0.5138,True,False,False
+Navrongo,0.715,1.2155,0.651,True,False,False
+Tamale,1.1096,1.4024,0.9411,True,False,False
+Wa,1.0105,1.3332,1.1271,True,True,True

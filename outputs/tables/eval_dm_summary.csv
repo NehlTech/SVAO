@@ -1,0 +1,9 @@
+A,B,n,A_wins,B_wins,significant,sig_favouring_A,sig_favouring_B,median_p
+ARIMA-LSTM-SVAO,ARIMA-LSTM,6,3,3,0,0,0,0.2652
+ARIMA-LSTM-SVAO,LSTM,6,1,5,0,0,0,0.159
+ARIMA-LSTM-SVAO,ARIMA,6,6,0,4,4,0,0.0373
+ARIMA-LSTM-SVAO,Climatology,6,5,1,3,3,0,0.18
+LSTM,ARIMA,6,6,0,4,4,0,0.0132
+LSTM,Climatology,6,5,1,4,4,0,0.006
+ARIMA,Climatology,6,3,3,3,2,1,0.0527
+Climatology,Persistence,6,4,2,2,2,0,0.0819

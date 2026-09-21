@@ -1,0 +1,37 @@
+Station,Zone,Model,RMSE,MAE,MAPE,R2
+KIAMO-Accra,Coastal savannah,Persistence,1.005,0.7663,2.6949,0.4837
+KIAMO-Accra,Coastal savannah,Climatology,1.0761,0.923,3.1795,0.408
+KIAMO-Accra,Coastal savannah,ARIMA,0.7988,0.6136,2.1303,0.6738
+KIAMO-Accra,Coastal savannah,LSTM,0.6834,0.4764,1.6571,0.7613
+KIAMO-Accra,Coastal savannah,ARIMA-LSTM,0.749,0.5896,2.0515,0.7132
+KIAMO-Accra,Coastal savannah,ARIMA-LSTM-SVAO,0.7405,0.5812,2.0244,0.7196
+Koforidua,Forest,Persistence,0.8636,0.7204,2.5969,0.5109
+Koforidua,Forest,Climatology,0.7705,0.6468,2.2805,0.6107
+Koforidua,Forest,ARIMA,0.6353,0.5551,1.9859,0.7353
+Koforidua,Forest,LSTM,0.5584,0.4804,1.7203,0.7955
+Koforidua,Forest,ARIMA-LSTM,0.5954,0.5124,1.8341,0.7675
+Koforidua,Forest,ARIMA-LSTM-SVAO,0.5789,0.4727,1.6914,0.7802
+Kumasi,Transitional,Persistence,0.8447,0.7067,2.5442,0.505
+Kumasi,Transitional,Climatology,1.0307,0.9124,3.2621,0.2631
+Kumasi,Transitional,ARIMA,0.6722,0.5641,2.0165,0.6865
+Kumasi,Transitional,LSTM,0.5138,0.4439,1.5833,0.8169
+Kumasi,Transitional,ARIMA-LSTM,0.5588,0.4771,1.7088,0.7834
+Kumasi,Transitional,ARIMA-LSTM-SVAO,0.574,0.4868,1.7405,0.7715
+Navrongo,Sudan savannah,Persistence,1.6479,1.3463,4.5171,0.4495
+Navrongo,Sudan savannah,Climatology,0.7055,0.5332,1.761,0.8991
+Navrongo,Sudan savannah,ARIMA,1.2155,0.8498,2.8482,0.7005
+Navrongo,Sudan savannah,LSTM,0.651,0.4946,1.6588,0.9141
+Navrongo,Sudan savannah,ARIMA-LSTM,0.715,0.5269,1.7546,0.8964
+Navrongo,Sudan savannah,ARIMA-LSTM-SVAO,0.7474,0.5556,1.85,0.8868
+Tamale,Interior (Guinea) savannah,Persistence,1.7197,1.4437,4.8498,0.3699
+Tamale,Interior (Guinea) savannah,Climatology,1.2737,1.1098,3.7108,0.6543
+Tamale,Interior (Guinea) savannah,ARIMA,1.4024,1.1434,3.8319,0.581
+Tamale,Interior (Guinea) savannah,LSTM,0.9411,0.7153,2.4033,0.8113
+Tamale,Interior (Guinea) savannah,ARIMA-LSTM,1.1096,0.9019,3.0406,0.7377
+Tamale,Interior (Guinea) savannah,ARIMA-LSTM-SVAO,1.1458,0.9437,3.1787,0.7203
+Wa,Interior (Guinea) savannah,Persistence,1.6291,1.2913,4.5881,0.3194
+Wa,Interior (Guinea) savannah,Climatology,1.0372,0.8059,2.9983,0.7241
+Wa,Interior (Guinea) savannah,ARIMA,1.3332,1.0671,3.8866,0.5442
+Wa,Interior (Guinea) savannah,LSTM,1.1271,0.8992,3.3303,0.6742
+Wa,Interior (Guinea) savannah,ARIMA-LSTM,1.014,0.8149,2.98,0.7363
+Wa,Interior (Guinea) savannah,ARIMA-LSTM-SVAO,1.0105,0.8195,2.9819,0.7381
