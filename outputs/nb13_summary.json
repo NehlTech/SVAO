@@ -1,0 +1,1717 @@
+{
+  "notebook": "13_Stronger_Baselines_Anomaly_Models_Pooling_Ensembles",
+  "quick_run": false,
+  "design": {
+    "lookback": 12,
+    "first_baseline_month_index": 36,
+    "restarts": 5,
+    "lambdas": [
+      0.0,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "selected_hybrid_lambda": 0.0,
+    "pooled_lambda": 0.5,
+    "rolling_origin_networks": true,
+    "bootstrap": {
+      "reps": 2000,
+      "block": 6
+    },
+    "horizons": [
+      3,
+      6
+    ]
+  },
+  "months_scored": {
+    "KIAMO-Accra": 48,
+    "Koforidua": 48,
+    "Kumasi": 48,
+    "Navrongo": 48,
+    "Tamale": 48,
+    "Wa": 41
+  },
+  "months_common_to_all_stations": 41,
+  "sarima": {
+    "KIAMO-Accra": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic": 226.31,
+      "failed_fits": 0
+    },
+    "Koforidua": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        1,
+        12
+      ],
+      "aic": 296.49,
+      "failed_fits": 0
+    },
+    "Kumasi": {
+      "order": [
+        2,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic": 316.17,
+      "failed_fits": 0
+    },
+    "Navrongo": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic": 504.83,
+      "failed_fits": 0
+    },
+    "Tamale": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic": 463.72,
+      "failed_fits": 0
+    },
+    "Wa": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic": 470.89,
+      "failed_fits": 0
+    }
+  },
+  "seasonal_mann_kendall": {
+    "KIAMO-Accra": {
+      "S": 2377.0,
+      "Z": 12.755,
+      "p": 0.0,
+      "Sen_slope_per_decade": 0.402,
+      "trend": "increasing"
+    },
+    "Koforidua": {
+      "S": 1805.0,
+      "Z": 10.0628,
+      "p": 0.0,
+      "Sen_slope_per_decade": 0.2774,
+      "trend": "increasing"
+    },
+    "Kumasi": {
+      "S": 2375.0,
+      "Z": 12.2269,
+      "p": 0.0,
+      "Sen_slope_per_decade": 0.4274,
+      "trend": "increasing"
+    },
+    "Navrongo": {
+      "S": 597.0,
+      "Z": 3.0698,
+      "p": 0.0021,
+      "Sen_slope_per_decade": 0.1076,
+      "trend": "increasing"
+    },
+    "Tamale": {
+      "S": 1314.0,
+      "Z": 7.7165,
+      "p": 0.0,
+      "Sen_slope_per_decade": 0.3871,
+      "trend": "increasing"
+    },
+    "Wa": {
+      "S": -77.0,
+      "Z": -0.415,
+      "p": 0.6781,
+      "Sen_slope_per_decade": -0.015,
+      "trend": "none"
+    }
+  },
+  "ml_settings": {
+    "KIAMO-Accra|Ridge-raw": 0.1,
+    "KIAMO-Accra|SVR-raw": {
+      "C": 1.0,
+      "epsilon": 0.05,
+      "gamma": "scale"
+    },
+    "KIAMO-Accra|XGBoost-raw": {
+      "max_depth": 3,
+      "n_estimators": 100,
+      "learning_rate": 0.1
+    },
+    "KIAMO-Accra|Ridge-anom": 10.0,
+    "KIAMO-Accra|SVR-anom": {
+      "C": 0.1,
+      "epsilon": 0.01,
+      "gamma": 0.1
+    },
+    "Koforidua|Ridge-raw": 1.0,
+    "Koforidua|SVR-raw": {
+      "C": 1.0,
+      "epsilon": 0.05,
+      "gamma": "scale"
+    },
+    "Koforidua|XGBoost-raw": {
+      "max_depth": 2,
+      "n_estimators": 300,
+      "learning_rate": 0.03
+    },
+    "Koforidua|Ridge-anom": 100.0,
+    "Koforidua|SVR-anom": {
+      "C": 0.1,
+      "epsilon": 0.05,
+      "gamma": "scale"
+    },
+    "Kumasi|Ridge-raw": 1.0,
+    "Kumasi|SVR-raw": {
+      "C": 10.0,
+      "epsilon": 0.05,
+      "gamma": 0.1
+    },
+    "Kumasi|XGBoost-raw": {
+      "max_depth": 3,
+      "n_estimators": 300,
+      "learning_rate": 0.1
+    },
+    "Kumasi|Ridge-anom": 100.0,
+    "Kumasi|SVR-anom": {
+      "C": 0.1,
+      "epsilon": 0.01,
+      "gamma": "scale"
+    },
+    "Navrongo|Ridge-raw": 10.0,
+    "Navrongo|SVR-raw": {
+      "C": 1.0,
+      "epsilon": 0.05,
+      "gamma": "scale"
+    },
+    "Navrongo|XGBoost-raw": {
+      "max_depth": 4,
+      "n_estimators": 100,
+      "learning_rate": 0.03
+    },
+    "Navrongo|Ridge-anom": 100.0,
+    "Navrongo|SVR-anom": {
+      "C": 0.1,
+      "epsilon": 0.05,
+      "gamma": "scale"
+    },
+    "Tamale|Ridge-raw": 0.01,
+    "Tamale|SVR-raw": {
+      "C": 1.0,
+      "epsilon": 0.05,
+      "gamma": "scale"
+    },
+    "Tamale|XGBoost-raw": {
+      "max_depth": 2,
+      "n_estimators": 100,
+      "learning_rate": 0.03
+    },
+    "Tamale|Ridge-anom": 0.01,
+    "Tamale|SVR-anom": {
+      "C": 1.0,
+      "epsilon": 0.05,
+      "gamma": "scale"
+    },
+    "Wa|Ridge-raw": 1.0,
+    "Wa|SVR-raw": {
+      "C": 1.0,
+      "epsilon": 0.01,
+      "gamma": "scale"
+    },
+    "Wa|XGBoost-raw": {
+      "max_depth": 3,
+      "n_estimators": 300,
+      "learning_rate": 0.1
+    },
+    "Wa|Ridge-anom": 0.01,
+    "Wa|SVR-anom": {
+      "C": 0.1,
+      "epsilon": 0.05,
+      "gamma": "scale"
+    }
+  },
+  "average": {
+    "Persistence": {
+      "RMSE": 1.285,
+      "MAE": 1.0458,
+      "MAPE": 3.6318,
+      "R2": 0.4397
+    },
+    "Climatology": {
+      "RMSE": 0.9823,
+      "MAE": 0.8218,
+      "MAPE": 2.8654,
+      "R2": 0.5932
+    },
+    "ARIMA": {
+      "RMSE": 1.0096,
+      "MAE": 0.7988,
+      "MAPE": 2.7832,
+      "R2": 0.6536
+    },
+    "LSTM": {
+      "RMSE": 0.7458,
+      "MAE": 0.585,
+      "MAPE": 2.0588,
+      "R2": 0.7955
+    },
+    "ARIMA-LSTM": {
+      "RMSE": 0.7903,
+      "MAE": 0.6371,
+      "MAPE": 2.2283,
+      "R2": 0.7724
+    },
+    "ClimTrend": {
+      "RMSE": 0.7293,
+      "MAE": 0.5668,
+      "MAPE": 1.9985,
+      "R2": 0.8062
+    },
+    "AnomPersist": {
+      "RMSE": 0.6855,
+      "MAE": 0.5021,
+      "MAPE": 1.7499,
+      "R2": 0.8288
+    },
+    "AnomAR1": {
+      "RMSE": 0.6307,
+      "MAE": 0.4831,
+      "MAPE": 1.6992,
+      "R2": 0.8557
+    },
+    "Clim10y": {
+      "RMSE": 0.7822,
+      "MAE": 0.6146,
+      "MAPE": 2.1591,
+      "R2": 0.7745
+    },
+    "SARIMA": {
+      "RMSE": 0.6276,
+      "MAE": 0.4695,
+      "MAPE": 1.65,
+      "R2": 0.8594
+    },
+    "Ridge-raw": {
+      "RMSE": 0.7728,
+      "MAE": 0.6172,
+      "MAPE": 2.1501,
+      "R2": 0.7881
+    },
+    "SVR-raw": {
+      "RMSE": 0.8901,
+      "MAE": 0.6967,
+      "MAPE": 2.4299,
+      "R2": 0.7069
+    },
+    "XGBoost-raw": {
+      "RMSE": 0.8475,
+      "MAE": 0.6726,
+      "MAPE": 2.3418,
+      "R2": 0.7392
+    },
+    "Ridge-anom": {
+      "RMSE": 0.6428,
+      "MAE": 0.4918,
+      "MAPE": 1.7283,
+      "R2": 0.8517
+    },
+    "SVR-anom": {
+      "RMSE": 0.6862,
+      "MAE": 0.5219,
+      "MAPE": 1.8427,
+      "R2": 0.83
+    },
+    "LSTM-A": {
+      "RMSE": 0.6639,
+      "MAE": 0.5033,
+      "MAPE": 1.7795,
+      "R2": 0.8429
+    },
+    "Hybrid-A": {
+      "RMSE": 0.6539,
+      "MAE": 0.4949,
+      "MAPE": 1.7481,
+      "R2": 0.8477
+    },
+    "Hybrid-A+SVAO": {
+      "RMSE": 0.6539,
+      "MAE": 0.4949,
+      "MAPE": 1.7481,
+      "R2": 0.8477
+    },
+    "GRU-A": {
+      "RMSE": 0.6483,
+      "MAE": 0.4843,
+      "MAPE": 1.7141,
+      "R2": 0.8489
+    },
+    "LSTM-NLL": {
+      "RMSE": 0.6585,
+      "MAE": 0.5012,
+      "MAPE": 1.7696,
+      "R2": 0.8446
+    },
+    "Pooled-A": {
+      "RMSE": 0.6353,
+      "MAE": 0.4786,
+      "MAPE": 1.6946,
+      "R2": 0.8547
+    },
+    "Pooled-Hybrid-A": {
+      "RMSE": 0.6307,
+      "MAE": 0.4724,
+      "MAPE": 1.6735,
+      "R2": 0.8572
+    },
+    "Pooled-Hybrid-A+SVAO": {
+      "RMSE": 0.6324,
+      "MAE": 0.4722,
+      "MAPE": 1.6738,
+      "R2": 0.8565
+    },
+    "ENS-top3": {
+      "RMSE": 0.6426,
+      "MAE": 0.4817,
+      "MAPE": 1.7036,
+      "R2": 0.8528
+    },
+    "ENS-season": {
+      "RMSE": 0.6386,
+      "MAE": 0.4781,
+      "MAPE": 1.6896,
+      "R2": 0.8551
+    },
+    "ENS-nnls": {
+      "RMSE": 0.6445,
+      "MAE": 0.4888,
+      "MAPE": 1.723,
+      "R2": 0.8525
+    },
+    "GRU-A (rolling)": {
+      "RMSE": 0.6492,
+      "MAE": 0.4946,
+      "MAPE": 1.7394,
+      "R2": 0.8468
+    },
+    "Hybrid-A (rolling)": {
+      "RMSE": 0.6544,
+      "MAE": 0.4907,
+      "MAPE": 1.7256,
+      "R2": 0.8462
+    },
+    "Hybrid-A+SVAO (rolling)": {
+      "RMSE": 0.6544,
+      "MAE": 0.4907,
+      "MAPE": 1.7256,
+      "R2": 0.8462
+    },
+    "LSTM-A (rolling)": {
+      "RMSE": 0.6482,
+      "MAE": 0.4892,
+      "MAPE": 1.72,
+      "R2": 0.8498
+    },
+    "Ridge-anom (rolling)": {
+      "RMSE": 0.63,
+      "MAE": 0.4763,
+      "MAPE": 1.6761,
+      "R2": 0.8581
+    },
+    "Ridge-raw (rolling)": {
+      "RMSE": 0.7132,
+      "MAE": 0.5487,
+      "MAPE": 1.9256,
+      "R2": 0.8207
+    },
+    "SVR-anom (rolling)": {
+      "RMSE": 0.6733,
+      "MAE": 0.5104,
+      "MAPE": 1.8042,
+      "R2": 0.8368
+    },
+    "SVR-raw (rolling)": {
+      "RMSE": 0.7707,
+      "MAE": 0.5975,
+      "MAPE": 2.1063,
+      "R2": 0.7835
+    },
+    "XGBoost-raw (rolling)": {
+      "RMSE": 0.7716,
+      "MAE": 0.6059,
+      "MAPE": 2.1228,
+      "R2": 0.7881
+    }
+  },
+  "per_station_rmse": {
+    "KIAMO-Accra": {
+      "Persistence": 1.005,
+      "Climatology": 1.0761,
+      "ARIMA": 0.7988,
+      "LSTM": 0.6834,
+      "ARIMA-LSTM": 0.749,
+      "ClimTrend": 0.6461,
+      "AnomPersist": 0.6497,
+      "AnomAR1": 0.5724,
+      "Clim10y": 0.7457,
+      "SARIMA": 0.5497,
+      "Ridge-raw": 0.5997,
+      "SVR-raw": 0.9053,
+      "XGBoost-raw": 0.7335,
+      "Ridge-anom": 0.5431,
+      "SVR-anom": 0.6187,
+      "LSTM-A": 0.5553,
+      "Hybrid-A": 0.5501,
+      "Hybrid-A+SVAO": 0.5501,
+      "GRU-A": 0.5487,
+      "LSTM-NLL": 0.5502,
+      "Pooled-A": 0.5477,
+      "Pooled-Hybrid-A": 0.5404,
+      "Pooled-Hybrid-A+SVAO": 0.5401,
+      "ENS-top3": 0.5415,
+      "ENS-season": 0.5466,
+      "ENS-nnls": 0.5479,
+      "GRU-A (rolling)": 0.5694,
+      "Hybrid-A (rolling)": 0.5594,
+      "Hybrid-A+SVAO (rolling)": 0.5594,
+      "LSTM-A (rolling)": 0.5535,
+      "Ridge-anom (rolling)": 0.5341,
+      "Ridge-raw (rolling)": 0.5811,
+      "SVR-anom (rolling)": 0.6057,
+      "SVR-raw (rolling)": 0.7894,
+      "XGBoost-raw (rolling)": 0.7328
+    },
+    "Koforidua": {
+      "Persistence": 0.8636,
+      "Climatology": 0.7705,
+      "ARIMA": 0.6353,
+      "LSTM": 0.5584,
+      "ARIMA-LSTM": 0.5954,
+      "ClimTrend": 0.5198,
+      "AnomPersist": 0.535,
+      "AnomAR1": 0.4731,
+      "Clim10y": 0.5454,
+      "SARIMA": 0.4817,
+      "Ridge-raw": 0.59,
+      "SVR-raw": 0.7155,
+      "XGBoost-raw": 0.7025,
+      "Ridge-anom": 0.5145,
+      "SVR-anom": 0.5123,
+      "LSTM-A": 0.4842,
+      "Hybrid-A": 0.4827,
+      "Hybrid-A+SVAO": 0.4827,
+      "GRU-A": 0.4832,
+      "LSTM-NLL": 0.5045,
+      "Pooled-A": 0.4664,
+      "Pooled-Hybrid-A": 0.4728,
+      "Pooled-Hybrid-A+SVAO": 0.475,
+      "ENS-top3": 0.4707,
+      "ENS-season": 0.4637,
+      "ENS-nnls": 0.4646,
+      "GRU-A (rolling)": 0.4667,
+      "Hybrid-A (rolling)": 0.478,
+      "Hybrid-A+SVAO (rolling)": 0.478,
+      "LSTM-A (rolling)": 0.4708,
+      "Ridge-anom (rolling)": 0.4936,
+      "Ridge-raw (rolling)": 0.5278,
+      "SVR-anom (rolling)": 0.4994,
+      "SVR-raw (rolling)": 0.5705,
+      "XGBoost-raw (rolling)": 0.5839
+    },
+    "Kumasi": {
+      "Persistence": 0.8447,
+      "Climatology": 1.0307,
+      "ARIMA": 0.6722,
+      "LSTM": 0.5138,
+      "ARIMA-LSTM": 0.5588,
+      "ClimTrend": 0.5218,
+      "AnomPersist": 0.506,
+      "AnomAR1": 0.4545,
+      "Clim10y": 0.5956,
+      "SARIMA": 0.4322,
+      "Ridge-raw": 0.5429,
+      "SVR-raw": 0.5588,
+      "XGBoost-raw": 0.5842,
+      "Ridge-anom": 0.4433,
+      "SVR-anom": 0.4569,
+      "LSTM-A": 0.446,
+      "Hybrid-A": 0.4503,
+      "Hybrid-A+SVAO": 0.4503,
+      "GRU-A": 0.4577,
+      "LSTM-NLL": 0.4232,
+      "Pooled-A": 0.4454,
+      "Pooled-Hybrid-A": 0.4234,
+      "Pooled-Hybrid-A+SVAO": 0.4244,
+      "ENS-top3": 0.4466,
+      "ENS-season": 0.4397,
+      "ENS-nnls": 0.4483,
+      "GRU-A (rolling)": 0.4982,
+      "Hybrid-A (rolling)": 0.4411,
+      "Hybrid-A+SVAO (rolling)": 0.4411,
+      "LSTM-A (rolling)": 0.4334,
+      "Ridge-anom (rolling)": 0.4357,
+      "Ridge-raw (rolling)": 0.4995,
+      "SVR-anom (rolling)": 0.4525,
+      "SVR-raw (rolling)": 0.4963,
+      "XGBoost-raw (rolling)": 0.4977
+    },
+    "Navrongo": {
+      "Persistence": 1.6479,
+      "Climatology": 0.7055,
+      "ARIMA": 1.2155,
+      "LSTM": 0.651,
+      "ARIMA-LSTM": 0.715,
+      "ClimTrend": 0.6781,
+      "AnomPersist": 0.6908,
+      "AnomAR1": 0.6071,
+      "Clim10y": 0.7218,
+      "SARIMA": 0.6361,
+      "Ridge-raw": 0.7477,
+      "SVR-raw": 0.7634,
+      "XGBoost-raw": 0.7907,
+      "Ridge-anom": 0.6469,
+      "SVR-anom": 0.6789,
+      "LSTM-A": 0.6538,
+      "Hybrid-A": 0.6492,
+      "Hybrid-A+SVAO": 0.6492,
+      "GRU-A": 0.6327,
+      "LSTM-NLL": 0.624,
+      "Pooled-A": 0.6034,
+      "Pooled-Hybrid-A": 0.6041,
+      "Pooled-Hybrid-A+SVAO": 0.605,
+      "ENS-top3": 0.6449,
+      "ENS-season": 0.6553,
+      "ENS-nnls": 0.6622,
+      "GRU-A (rolling)": 0.6218,
+      "Hybrid-A (rolling)": 0.616,
+      "Hybrid-A+SVAO (rolling)": 0.616,
+      "LSTM-A (rolling)": 0.6269,
+      "Ridge-anom (rolling)": 0.6413,
+      "Ridge-raw (rolling)": 0.7549,
+      "SVR-anom (rolling)": 0.676,
+      "SVR-raw (rolling)": 0.7791,
+      "XGBoost-raw (rolling)": 0.8093
+    },
+    "Tamale": {
+      "Persistence": 1.7197,
+      "Climatology": 1.2737,
+      "ARIMA": 1.4024,
+      "LSTM": 0.9411,
+      "ARIMA-LSTM": 1.1096,
+      "ClimTrend": 0.8934,
+      "AnomPersist": 0.9178,
+      "AnomAR1": 0.8023,
+      "Clim10y": 0.9527,
+      "SARIMA": 0.8411,
+      "Ridge-raw": 1.1548,
+      "SVR-raw": 1.2866,
+      "XGBoost-raw": 1.2893,
+      "Ridge-anom": 0.8393,
+      "SVR-anom": 0.8285,
+      "LSTM-A": 0.856,
+      "Hybrid-A": 0.8582,
+      "Hybrid-A+SVAO": 0.8582,
+      "GRU-A": 0.8215,
+      "LSTM-NLL": 0.8685,
+      "Pooled-A": 0.8212,
+      "Pooled-Hybrid-A": 0.8131,
+      "Pooled-Hybrid-A+SVAO": 0.8204,
+      "ENS-top3": 0.8233,
+      "ENS-season": 0.8168,
+      "ENS-nnls": 0.8256,
+      "GRU-A (rolling)": 0.8198,
+      "Hybrid-A (rolling)": 0.851,
+      "Hybrid-A+SVAO (rolling)": 0.851,
+      "LSTM-A (rolling)": 0.8387,
+      "Ridge-anom (rolling)": 0.8234,
+      "Ridge-raw (rolling)": 0.9437,
+      "SVR-anom (rolling)": 0.8158,
+      "SVR-raw (rolling)": 0.9218,
+      "XGBoost-raw (rolling)": 1.0635
+    },
+    "Wa": {
+      "Persistence": 1.6291,
+      "Climatology": 1.0372,
+      "ARIMA": 1.3332,
+      "LSTM": 1.1271,
+      "ARIMA-LSTM": 1.014,
+      "ClimTrend": 1.1165,
+      "AnomPersist": 0.814,
+      "AnomAR1": 0.8747,
+      "Clim10y": 1.1321,
+      "SARIMA": 0.8249,
+      "Ridge-raw": 1.0013,
+      "SVR-raw": 1.1109,
+      "XGBoost-raw": 0.9849,
+      "Ridge-anom": 0.8697,
+      "SVR-anom": 1.022,
+      "LSTM-A": 0.9882,
+      "Hybrid-A": 0.9329,
+      "Hybrid-A+SVAO": 0.9329,
+      "GRU-A": 0.9459,
+      "LSTM-NLL": 0.9806,
+      "Pooled-A": 0.9274,
+      "Pooled-Hybrid-A": 0.9302,
+      "Pooled-Hybrid-A+SVAO": 0.9295,
+      "ENS-top3": 0.9287,
+      "ENS-season": 0.9094,
+      "ENS-nnls": 0.918,
+      "GRU-A (rolling)": 0.9191,
+      "Hybrid-A (rolling)": 0.9812,
+      "Hybrid-A+SVAO (rolling)": 0.9812,
+      "LSTM-A (rolling)": 0.9659,
+      "Ridge-anom (rolling)": 0.8517,
+      "Ridge-raw (rolling)": 0.9722,
+      "SVR-anom (rolling)": 0.9904,
+      "SVR-raw (rolling)": 1.067,
+      "XGBoost-raw (rolling)": 0.9422
+    }
+  },
+  "skill_vs_trend_climatology_mean": {
+    "Persistence": -2.2565,
+    "Climatology": -1.1416,
+    "ARIMA": -0.9639,
+    "LSTM": -0.0487,
+    "ARIMA-LSTM": -0.2136,
+    "ClimTrend": 0.0,
+    "AnomPersist": 0.0608,
+    "AnomAR1": 0.2344,
+    "Clim10y": -0.1722,
+    "SARIMA": 0.2365,
+    "Ridge-raw": -0.1539,
+    "SVR-raw": -0.5558,
+    "XGBoost-raw": -0.4314,
+    "Ridge-anom": 0.1988,
+    "SVR-anom": 0.1076,
+    "LSTM-A": 0.1721,
+    "Hybrid-A": 0.1885,
+    "Hybrid-A+SVAO": 0.1885,
+    "GRU-A": 0.2019,
+    "LSTM-NLL": 0.1854,
+    "Pooled-A": 0.2369,
+    "Pooled-Hybrid-A": 0.2498,
+    "Pooled-Hybrid-A+SVAO": 0.2454,
+    "ENS-top3": 0.2167,
+    "ENS-season": 0.2243,
+    "ENS-nnls": 0.21,
+    "GRU-A (rolling)": 0.1909,
+    "Hybrid-A (rolling)": 0.1976,
+    "Hybrid-A+SVAO (rolling)": 0.1976,
+    "LSTM-A (rolling)": 0.2119,
+    "Ridge-anom (rolling)": 0.232,
+    "Ridge-raw (rolling)": 0.0219,
+    "SVR-anom (rolling)": 0.1386,
+    "SVR-raw (rolling)": -0.1499,
+    "XGBoost-raw (rolling)": -0.1685
+  },
+  "skill_vs_train_climatology_mean": {
+    "Persistence": -1.0909,
+    "Climatology": 0.0,
+    "ARIMA": -0.2481,
+    "LSTM": 0.3741,
+    "ARIMA-LSTM": 0.3138,
+    "ClimTrend": 0.3922,
+    "AnomPersist": 0.4698,
+    "AnomAR1": 0.5495,
+    "Clim10y": 0.3146,
+    "SARIMA": 0.5485,
+    "Ridge-raw": 0.3247,
+    "SVR-raw": 0.133,
+    "XGBoost-raw": 0.2001,
+    "Ridge-anom": 0.5227,
+    "SVR-anom": 0.4518,
+    "LSTM-A": 0.4889,
+    "Hybrid-A": 0.5076,
+    "Hybrid-A+SVAO": 0.5076,
+    "GRU-A": 0.5163,
+    "LSTM-NLL": 0.5,
+    "Pooled-A": 0.5402,
+    "Pooled-Hybrid-A": 0.5429,
+    "Pooled-Hybrid-A+SVAO": 0.5409,
+    "ENS-top3": 0.5218,
+    "ENS-season": 0.5259,
+    "ENS-nnls": 0.5172,
+    "GRU-A (rolling)": 0.5239,
+    "Hybrid-A (rolling)": 0.5097,
+    "Hybrid-A+SVAO (rolling)": 0.5097,
+    "LSTM-A (rolling)": 0.5158,
+    "Ridge-anom (rolling)": 0.541,
+    "Ridge-raw (rolling)": 0.4053,
+    "SVR-anom (rolling)": 0.4717,
+    "SVR-raw (rolling)": 0.3134,
+    "XGBoost-raw (rolling)": 0.3151
+  },
+  "skill_vs_trend_climatology_by_station": {
+    "KIAMO-Accra": {
+      "Hybrid-A+SVAO": 0.2751,
+      "SARIMA": 0.2761,
+      "SVR-raw": -0.963,
+      "ENS-top3": 0.2977
+    },
+    "Koforidua": {
+      "Hybrid-A+SVAO": 0.1379,
+      "SARIMA": 0.1411,
+      "SVR-raw": -0.8946,
+      "ENS-top3": 0.1802
+    },
+    "Kumasi": {
+      "Hybrid-A+SVAO": 0.2554,
+      "SARIMA": 0.3141,
+      "SVR-raw": -0.1466,
+      "ENS-top3": 0.2676
+    },
+    "Navrongo": {
+      "Hybrid-A+SVAO": 0.0835,
+      "SARIMA": 0.1201,
+      "SVR-raw": -0.2671,
+      "ENS-top3": 0.0957
+    },
+    "Tamale": {
+      "Hybrid-A+SVAO": 0.0774,
+      "SARIMA": 0.1138,
+      "SVR-raw": -1.0738,
+      "ENS-top3": 0.1508
+    },
+    "Wa": {
+      "Hybrid-A+SVAO": 0.3019,
+      "SARIMA": 0.4541,
+      "SVR-raw": 0.01,
+      "ENS-top3": 0.3082
+    }
+  },
+  "tests": [
+    {
+      "A": "Hybrid-A+SVAO",
+      "B": "ClimTrend",
+      "RMSE_A": 0.6539,
+      "RMSE_B": 0.7293,
+      "diff_A_minus_B": -0.0754,
+      "ci_low": -0.1196,
+      "ci_high": -0.0121,
+      "boot_P(A<B)": 0.993,
+      "station_wins_A": 6,
+      "sig_stations_A": 2,
+      "sig_stations_B": 0,
+      "dm_network": -3.321,
+      "p_raw": 0.0019,
+      "p_holm": 0.0327
+    },
+    {
+      "A": "Hybrid-A+SVAO",
+      "B": "AnomAR1",
+      "RMSE_A": 0.6539,
+      "RMSE_B": 0.6307,
+      "diff_A_minus_B": 0.0232,
+      "ci_low": -0.0168,
+      "ci_high": 0.0481,
+      "boot_P(A<B)": 0.1745,
+      "station_wins_A": 2,
+      "sig_stations_A": 0,
+      "sig_stations_B": 0,
+      "dm_network": 1.3637,
+      "p_raw": 0.1803,
+      "p_holm": 1.0
+    },
+    {
+      "A": "Hybrid-A+SVAO",
+      "B": "Climatology",
+      "RMSE_A": 0.6539,
+      "RMSE_B": 0.9823,
+      "diff_A_minus_B": -0.3284,
+      "ci_low": -0.4655,
+      "ci_high": -0.145,
+      "boot_P(A<B)": 1.0,
+      "station_wins_A": 6,
+      "sig_stations_A": 5,
+      "sig_stations_B": 0,
+      "dm_network": -5.4279,
+      "p_raw": 0.0,
+      "p_holm": 0.0001
+    },
+    {
+      "A": "Hybrid-A+SVAO",
+      "B": "SARIMA",
+      "RMSE_A": 0.6539,
+      "RMSE_B": 0.6276,
+      "diff_A_minus_B": 0.0263,
+      "ci_low": -0.0081,
+      "ci_high": 0.0417,
+      "boot_P(A<B)": 0.0835,
+      "station_wins_A": 0,
+      "sig_stations_A": 0,
+      "sig_stations_B": 0,
+      "dm_network": 1.3776,
+      "p_raw": 0.176,
+      "p_holm": 1.0
+    },
+    {
+      "A": "Hybrid-A+SVAO",
+      "B": "Ridge-raw",
+      "RMSE_A": 0.6539,
+      "RMSE_B": 0.7728,
+      "diff_A_minus_B": -0.1189,
+      "ci_low": -0.2241,
+      "ci_high": -0.0339,
+      "boot_P(A<B)": 0.9935,
+      "station_wins_A": 6,
+      "sig_stations_A": 2,
+      "sig_stations_B": 0,
+      "dm_network": -2.9263,
+      "p_raw": 0.0056,
+      "p_holm": 0.0845
+    },
+    {
+      "A": "Hybrid-A+SVAO",
+      "B": "SVR-raw",
+      "RMSE_A": 0.6539,
+      "RMSE_B": 0.8901,
+      "diff_A_minus_B": -0.2362,
+      "ci_low": -0.325,
+      "ci_high": -0.1451,
+      "boot_P(A<B)": 1.0,
+      "station_wins_A": 6,
+      "sig_stations_A": 5,
+      "sig_stations_B": 0,
+      "dm_network": -4.604,
+      "p_raw": 0.0,
+      "p_holm": 0.0008
+    },
+    {
+      "A": "Hybrid-A",
+      "B": "LSTM-A",
+      "RMSE_A": 0.6539,
+      "RMSE_B": 0.6639,
+      "diff_A_minus_B": -0.01,
+      "ci_low": -0.0176,
+      "ci_high": 0.0044,
+      "boot_P(A<B)": 0.9025,
+      "station_wins_A": 4,
+      "sig_stations_A": 1,
+      "sig_stations_B": 0,
+      "dm_network": -1.4388,
+      "p_raw": 0.158,
+      "p_holm": 1.0
+    },
+    {
+      "A": "Hybrid-A+SVAO",
+      "B": "Hybrid-A",
+      "RMSE_A": 0.6539,
+      "RMSE_B": 0.6539,
+      "diff_A_minus_B": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "boot_P(A<B)": 0.0,
+      "station_wins_A": 0,
+      "sig_stations_A": 0,
+      "sig_stations_B": 0,
+      "dm_network": null,
+      "p_raw": null,
+      "p_holm": 1.0
+    },
+    {
+      "A": "Hybrid-A+SVAO",
+      "B": "LSTM-A",
+      "RMSE_A": 0.6539,
+      "RMSE_B": 0.6639,
+      "diff_A_minus_B": -0.01,
+      "ci_low": -0.0169,
+      "ci_high": 0.0037,
+      "boot_P(A<B)": 0.912,
+      "station_wins_A": 4,
+      "sig_stations_A": 1,
+      "sig_stations_B": 0,
+      "dm_network": -1.4388,
+      "p_raw": 0.158,
+      "p_holm": 1.0
+    },
+    {
+      "A": "Pooled-Hybrid-A",
+      "B": "Hybrid-A",
+      "RMSE_A": 0.6307,
+      "RMSE_B": 0.6539,
+      "diff_A_minus_B": -0.0232,
+      "ci_low": -0.0243,
+      "ci_high": -0.007,
+      "boot_P(A<B)": 1.0,
+      "station_wins_A": 6,
+      "sig_stations_A": 0,
+      "sig_stations_B": 0,
+      "dm_network": -1.4615,
+      "p_raw": 0.1517,
+      "p_holm": 1.0
+    },
+    {
+      "A": "Pooled-A",
+      "B": "LSTM-A",
+      "RMSE_A": 0.6353,
+      "RMSE_B": 0.6639,
+      "diff_A_minus_B": -0.0287,
+      "ci_low": -0.032,
+      "ci_high": -0.0063,
+      "boot_P(A<B)": 0.997,
+      "station_wins_A": 6,
+      "sig_stations_A": 2,
+      "sig_stations_B": 0,
+      "dm_network": -1.4632,
+      "p_raw": 0.1512,
+      "p_holm": 1.0
+    },
+    {
+      "A": "ENS-top3",
+      "B": "ClimTrend",
+      "RMSE_A": 0.6426,
+      "RMSE_B": 0.7293,
+      "diff_A_minus_B": -0.0867,
+      "ci_low": -0.1307,
+      "ci_high": -0.0285,
+      "boot_P(A<B)": 0.9995,
+      "station_wins_A": 6,
+      "sig_stations_A": 4,
+      "sig_stations_B": 0,
+      "dm_network": -4.5095,
+      "p_raw": 0.0001,
+      "p_holm": 0.0011
+    },
+    {
+      "A": "ENS-top3",
+      "B": "SVR-raw",
+      "RMSE_A": 0.6426,
+      "RMSE_B": 0.8901,
+      "diff_A_minus_B": -0.2475,
+      "ci_low": -0.3338,
+      "ci_high": -0.1509,
+      "boot_P(A<B)": 1.0,
+      "station_wins_A": 6,
+      "sig_stations_A": 5,
+      "sig_stations_B": 0,
+      "dm_network": -4.9608,
+      "p_raw": 0.0,
+      "p_holm": 0.0003
+    },
+    {
+      "A": "ENS-top3",
+      "B": "Hybrid-A+SVAO",
+      "RMSE_A": 0.6426,
+      "RMSE_B": 0.6539,
+      "diff_A_minus_B": -0.0113,
+      "ci_low": -0.0186,
+      "ci_high": -0.0031,
+      "boot_P(A<B)": 0.9985,
+      "station_wins_A": 6,
+      "sig_stations_A": 1,
+      "sig_stations_B": 0,
+      "dm_network": -1.7368,
+      "p_raw": 0.0901,
+      "p_holm": 1.0
+    },
+    {
+      "A": "SVR-raw",
+      "B": "ClimTrend",
+      "RMSE_A": 0.8901,
+      "RMSE_B": 0.7293,
+      "diff_A_minus_B": 0.1608,
+      "ci_low": 0.1013,
+      "ci_high": 0.2214,
+      "boot_P(A<B)": 0.0,
+      "station_wins_A": 1,
+      "sig_stations_A": 0,
+      "sig_stations_B": 4,
+      "dm_network": 3.7647,
+      "p_raw": 0.0005,
+      "p_holm": 0.0097
+    },
+    {
+      "A": "SARIMA",
+      "B": "ClimTrend",
+      "RMSE_A": 0.6276,
+      "RMSE_B": 0.7293,
+      "diff_A_minus_B": -0.1017,
+      "ci_low": -0.1452,
+      "ci_high": -0.021,
+      "boot_P(A<B)": 0.995,
+      "station_wins_A": 6,
+      "sig_stations_A": 3,
+      "sig_stations_B": 0,
+      "dm_network": -3.0113,
+      "p_raw": 0.0045,
+      "p_holm": 0.0719
+    },
+    {
+      "A": "LSTM-A",
+      "B": "ClimTrend",
+      "RMSE_A": 0.6639,
+      "RMSE_B": 0.7293,
+      "diff_A_minus_B": -0.0654,
+      "ci_low": -0.112,
+      "ci_high": -0.0108,
+      "boot_P(A<B)": 0.9925,
+      "station_wins_A": 6,
+      "sig_stations_A": 3,
+      "sig_stations_B": 0,
+      "dm_network": -2.4793,
+      "p_raw": 0.0175,
+      "p_holm": 0.2447
+    },
+    {
+      "A": "Hybrid-A+SVAO (rolling)",
+      "B": "ClimTrend",
+      "RMSE_A": 0.6544,
+      "RMSE_B": 0.7293,
+      "diff_A_minus_B": -0.0749,
+      "ci_low": -0.1363,
+      "ci_high": 0.0215,
+      "boot_P(A<B)": 0.9305,
+      "station_wins_A": 6,
+      "sig_stations_A": 1,
+      "sig_stations_B": 0,
+      "dm_network": -1.626,
+      "p_raw": 0.1118,
+      "p_holm": 1.0
+    },
+    {
+      "A": "Hybrid-A+SVAO (rolling)",
+      "B": "SARIMA",
+      "RMSE_A": 0.6544,
+      "RMSE_B": 0.6276,
+      "diff_A_minus_B": 0.0268,
+      "ci_low": -0.0071,
+      "ci_high": 0.0576,
+      "boot_P(A<B)": 0.0785,
+      "station_wins_A": 2,
+      "sig_stations_A": 0,
+      "sig_stations_B": 0,
+      "dm_network": 1.5749,
+      "p_raw": 0.1232,
+      "p_holm": 1.0
+    },
+    {
+      "A": "Hybrid-A (rolling)",
+      "B": "LSTM-A (rolling)",
+      "RMSE_A": 0.6544,
+      "RMSE_B": 0.6482,
+      "diff_A_minus_B": 0.0062,
+      "ci_low": -0.0014,
+      "ci_high": 0.0239,
+      "boot_P(A<B)": 0.047,
+      "station_wins_A": 1,
+      "sig_stations_A": 0,
+      "sig_stations_B": 0,
+      "dm_network": 0.7643,
+      "p_raw": 0.4492,
+      "p_holm": 1.0
+    },
+    {
+      "A": "Hybrid-A+SVAO (rolling)",
+      "B": "Hybrid-A (rolling)",
+      "RMSE_A": 0.6544,
+      "RMSE_B": 0.6544,
+      "diff_A_minus_B": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "boot_P(A<B)": 0.0,
+      "station_wins_A": 0,
+      "sig_stations_A": 0,
+      "sig_stations_B": 0,
+      "dm_network": null,
+      "p_raw": null,
+      "p_holm": 1.0
+    },
+    {
+      "A": "SVR-raw (rolling)",
+      "B": "ClimTrend",
+      "RMSE_A": 0.7707,
+      "RMSE_B": 0.7293,
+      "diff_A_minus_B": 0.0414,
+      "ci_low": 0.0086,
+      "ci_high": 0.108,
+      "boot_P(A<B)": 0.0115,
+      "station_wins_A": 2,
+      "sig_stations_A": 0,
+      "sig_stations_B": 2,
+      "dm_network": 1.742,
+      "p_raw": 0.0892,
+      "p_holm": 1.0
+    }
+  ],
+  "decisions": {
+    "Q1 trend climatology": {
+      "A": "Hybrid-A+SVAO",
+      "B": "ClimTrend",
+      "rmse_A": 0.6539,
+      "rmse_B": 0.7293,
+      "lower_average": true,
+      "station_wins": 6,
+      "direction_rule": true,
+      "ci95": [
+        -0.1196,
+        -0.0121
+      ],
+      "p_holm": 0.0327,
+      "passes": true
+    },
+    "Q1 anomaly AR1": {
+      "A": "Hybrid-A+SVAO",
+      "B": "AnomAR1",
+      "rmse_A": 0.6539,
+      "rmse_B": 0.6307,
+      "lower_average": false,
+      "station_wins": 2,
+      "direction_rule": false,
+      "ci95": [
+        -0.0168,
+        0.0481
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "Q1 train climatology": {
+      "A": "Hybrid-A+SVAO",
+      "B": "Climatology",
+      "rmse_A": 0.6539,
+      "rmse_B": 0.9823,
+      "lower_average": true,
+      "station_wins": 6,
+      "direction_rule": true,
+      "ci95": [
+        -0.4655,
+        -0.145
+      ],
+      "p_holm": 0.0001,
+      "passes": true
+    },
+    "Q2": {
+      "A": "Hybrid-A",
+      "B": "LSTM-A",
+      "rmse_A": 0.6539,
+      "rmse_B": 0.6639,
+      "lower_average": true,
+      "station_wins": 4,
+      "direction_rule": true,
+      "ci95": [
+        -0.0176,
+        0.0044
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "Q3": {
+      "A": "Hybrid-A+SVAO",
+      "B": "Hybrid-A",
+      "rmse_A": 0.6539,
+      "rmse_B": 0.6539,
+      "lower_average": false,
+      "station_wins": 0,
+      "direction_rule": false,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "Q3 contrast": {
+      "gain_by_station": {
+        "KIAMO-Accra": 0.0,
+        "Koforidua": 0.0,
+        "Kumasi": 0.0,
+        "Navrongo": 0.0,
+        "Tamale": 0.0,
+        "Wa": 0.0
+      },
+      "dry_rainy_variance_ratio": {
+        "KIAMO-Accra": 1.031,
+        "Koforidua": 2.472,
+        "Kumasi": 1.919,
+        "Navrongo": 2.097,
+        "Tamale": 2.362,
+        "Wa": 2.38
+      },
+      "spearman_rho": NaN,
+      "p": NaN,
+      "n": 6
+    },
+    "Q4": {
+      "A": "Pooled-Hybrid-A",
+      "B": "Hybrid-A",
+      "rmse_A": 0.6307,
+      "rmse_B": 0.6539,
+      "lower_average": true,
+      "station_wins": 6,
+      "direction_rule": true,
+      "ci95": [
+        -0.0243,
+        -0.007
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "Q4 plain": {
+      "A": "Pooled-A",
+      "B": "LSTM-A",
+      "rmse_A": 0.6353,
+      "rmse_B": 0.6639,
+      "lower_average": true,
+      "station_wins": 6,
+      "direction_rule": true,
+      "ci95": [
+        -0.032,
+        -0.0063
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "Q5 SVR": {
+      "A": "ENS-top3",
+      "B": "SVR-raw",
+      "rmse_A": 0.6426,
+      "rmse_B": 0.8901,
+      "lower_average": true,
+      "station_wins": 6,
+      "direction_rule": true,
+      "ci95": [
+        -0.3338,
+        -0.1509
+      ],
+      "p_holm": 0.0003,
+      "passes": true
+    },
+    "Q5 proposed": {
+      "A": "ENS-top3",
+      "B": "Hybrid-A+SVAO",
+      "rmse_A": 0.6426,
+      "rmse_B": 0.6539,
+      "lower_average": true,
+      "station_wins": 6,
+      "direction_rule": true,
+      "ci95": [
+        -0.0186,
+        -0.0031
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "Q6 SARIMA": {
+      "A": "Hybrid-A+SVAO",
+      "B": "SARIMA",
+      "rmse_A": 0.6539,
+      "rmse_B": 0.6276,
+      "lower_average": false,
+      "station_wins": 0,
+      "direction_rule": false,
+      "ci95": [
+        -0.0081,
+        0.0417
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "Q6 Ridge-raw": {
+      "A": "Hybrid-A+SVAO",
+      "B": "Ridge-raw",
+      "rmse_A": 0.6539,
+      "rmse_B": 0.7728,
+      "lower_average": true,
+      "station_wins": 6,
+      "direction_rule": true,
+      "ci95": [
+        -0.2241,
+        -0.0339
+      ],
+      "p_holm": 0.0845,
+      "passes": false
+    },
+    "Q6 SVR-raw": {
+      "A": "Hybrid-A+SVAO",
+      "B": "SVR-raw",
+      "rmse_A": 0.6539,
+      "rmse_B": 0.8901,
+      "lower_average": true,
+      "station_wins": 6,
+      "direction_rule": true,
+      "ci95": [
+        -0.325,
+        -0.1451
+      ],
+      "p_holm": 0.0008,
+      "passes": true
+    },
+    "Q7 trend": {
+      "A": "Hybrid-A+SVAO (rolling)",
+      "B": "ClimTrend",
+      "rmse_A": 0.6544,
+      "rmse_B": 0.7293,
+      "lower_average": true,
+      "station_wins": 6,
+      "direction_rule": true,
+      "ci95": [
+        -0.1363,
+        0.0215
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "Q7 sarima": {
+      "A": "Hybrid-A+SVAO (rolling)",
+      "B": "SARIMA",
+      "rmse_A": 0.6544,
+      "rmse_B": 0.6276,
+      "lower_average": false,
+      "station_wins": 2,
+      "direction_rule": false,
+      "ci95": [
+        -0.0071,
+        0.0576
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "Q7 sarima input": {
+      "A": "Hybrid-A (rolling)",
+      "B": "LSTM-A (rolling)",
+      "rmse_A": 0.6544,
+      "rmse_B": 0.6482,
+      "lower_average": false,
+      "station_wins": 1,
+      "direction_rule": false,
+      "ci95": [
+        -0.0014,
+        0.0239
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "Q7 svao": {
+      "A": "Hybrid-A+SVAO (rolling)",
+      "B": "Hybrid-A (rolling)",
+      "rmse_A": 0.6544,
+      "rmse_B": 0.6544,
+      "lower_average": false,
+      "station_wins": 0,
+      "direction_rule": false,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "p_holm": 1.0,
+      "passes": false
+    }
+  },
+  "interval_check": {
+    "coverage80_dry": 0.783,
+    "coverage80_rainy": 0.66,
+    "passes": false
+  },
+  "seasonal_rmse": {
+    "ClimTrend": {
+      "Dry": 0.7567,
+      "Rainy": 0.6997
+    },
+    "AnomAR1": {
+      "Dry": 0.6499,
+      "Rainy": 0.5967
+    },
+    "SARIMA": {
+      "Dry": 0.6279,
+      "Rainy": 0.6015
+    },
+    "SVR-raw": {
+      "Dry": 1.0066,
+      "Rainy": 0.7916
+    },
+    "LSTM-A": {
+      "Dry": 0.6547,
+      "Rainy": 0.6537
+    },
+    "Hybrid-A": {
+      "Dry": 0.6437,
+      "Rainy": 0.6426
+    },
+    "Hybrid-A+SVAO": {
+      "Dry": 0.6437,
+      "Rainy": 0.6426
+    },
+    "Pooled-Hybrid-A": {
+      "Dry": 0.6228,
+      "Rainy": 0.6152
+    },
+    "ENS-top3": {
+      "Dry": 0.6315,
+      "Rainy": 0.6321
+    }
+  },
+  "horizons": [
+    {
+      "Horizon": 3,
+      "Model": "AnomAR1",
+      "RMSE": 0.7168,
+      "Skill_vs_trend_clim": 0.0363,
+      "Skill_vs_train_clim": 0.4055
+    },
+    {
+      "Horizon": 3,
+      "Model": "ClimTrend",
+      "RMSE": 0.7307,
+      "Skill_vs_trend_clim": 0.0,
+      "Skill_vs_train_clim": 0.3857
+    },
+    {
+      "Horizon": 3,
+      "Model": "Climatology (train mean)",
+      "RMSE": 0.9796,
+      "Skill_vs_trend_clim": -1.1123,
+      "Skill_vs_train_clim": 0.0
+    },
+    {
+      "Horizon": 3,
+      "Model": "LSTM-A",
+      "RMSE": 0.7232,
+      "Skill_vs_trend_clim": 0.0166,
+      "Skill_vs_train_clim": 0.3907
+    },
+    {
+      "Horizon": 3,
+      "Model": "Ridge-raw",
+      "RMSE": 0.8858,
+      "Skill_vs_trend_clim": -0.5468,
+      "Skill_vs_train_clim": 0.1201
+    },
+    {
+      "Horizon": 3,
+      "Model": "SVR-raw",
+      "RMSE": 0.9781,
+      "Skill_vs_trend_clim": -0.981,
+      "Skill_vs_train_clim": -0.0226
+    },
+    {
+      "Horizon": 6,
+      "Model": "AnomAR1",
+      "RMSE": 0.7166,
+      "Skill_vs_trend_clim": 0.0019,
+      "Skill_vs_train_clim": 0.3844
+    },
+    {
+      "Horizon": 6,
+      "Model": "ClimTrend",
+      "RMSE": 0.7172,
+      "Skill_vs_trend_clim": 0.0,
+      "Skill_vs_train_clim": 0.3836
+    },
+    {
+      "Horizon": 6,
+      "Model": "Climatology (train mean)",
+      "RMSE": 0.9649,
+      "Skill_vs_trend_clim": -1.0877,
+      "Skill_vs_train_clim": 0.0
+    },
+    {
+      "Horizon": 6,
+      "Model": "LSTM-A",
+      "RMSE": 0.726,
+      "Skill_vs_trend_clim": -0.0193,
+      "Skill_vs_train_clim": 0.3679
+    },
+    {
+      "Horizon": 6,
+      "Model": "Ridge-raw",
+      "RMSE": 0.915,
+      "Skill_vs_trend_clim": -0.6481,
+      "Skill_vs_train_clim": 0.0343
+    },
+    {
+      "Horizon": 6,
+      "Model": "SVR-raw",
+      "RMSE": 0.9835,
+      "Skill_vs_trend_clim": -1.1098,
+      "Skill_vs_train_clim": -0.0596
+    }
+  ],
+  "ensembles": {
+    "KIAMO-Accra": {
+      "top3": [
+        "Ridge-anom",
+        "LSTM-A",
+        "Pooled-Hybrid-A"
+      ],
+      "season": {
+        "dry": [
+          "Ridge-anom",
+          "AnomAR1",
+          "GRU-A"
+        ],
+        "rainy": [
+          "Ridge-anom",
+          "LSTM-A",
+          "Hybrid-A+SVAO"
+        ]
+      },
+      "nnls_weights": {
+        "AnomAR1": 0.494,
+        "Ridge-anom": 0.506
+      }
+    },
+    "Koforidua": {
+      "top3": [
+        "Pooled-A",
+        "Pooled-Hybrid-A",
+        "Pooled-Hybrid-A+SVAO"
+      ],
+      "season": {
+        "dry": [
+          "Pooled-A",
+          "Pooled-Hybrid-A",
+          "Pooled-Hybrid-A+SVAO"
+        ],
+        "rainy": [
+          "LSTM-A",
+          "Ridge-anom",
+          "SARIMA"
+        ]
+      },
+      "nnls_weights": {
+        "AnomAR1": 0.449,
+        "Pooled-A": 0.551
+      }
+    },
+    "Kumasi": {
+      "top3": [
+        "GRU-A",
+        "LSTM-A",
+        "Hybrid-A+SVAO"
+      ],
+      "season": {
+        "dry": [
+          "LSTM-A",
+          "GRU-A",
+          "Hybrid-A+SVAO"
+        ],
+        "rainy": [
+          "SVR-anom",
+          "Hybrid-A+SVAO",
+          "GRU-A"
+        ]
+      },
+      "nnls_weights": {
+        "ClimTrend": 0.156,
+        "LSTM-A": 0.523,
+        "GRU-A": 0.318
+      }
+    },
+    "Navrongo": {
+      "top3": [
+        "GRU-A",
+        "Hybrid-A+SVAO",
+        "LSTM-A"
+      ],
+      "season": {
+        "dry": [
+          "ClimTrend",
+          "LSTM-A",
+          "Hybrid-A+SVAO"
+        ],
+        "rainy": [
+          "SARIMA",
+          "Pooled-A",
+          "SVR-raw"
+        ]
+      },
+      "nnls_weights": {
+        "ClimTrend": 0.376,
+        "AnomAR1": 0.209,
+        "SARIMA": 0.145,
+        "Ridge-anom": 0.023,
+        "SVR-raw": 0.248
+      }
+    },
+    "Tamale": {
+      "top3": [
+        "GRU-A",
+        "Hybrid-A+SVAO",
+        "Pooled-A"
+      ],
+      "season": {
+        "dry": [
+          "GRU-A",
+          "Hybrid-A+SVAO",
+          "LSTM-A"
+        ],
+        "rainy": [
+          "GRU-A",
+          "Pooled-Hybrid-A+SVAO",
+          "Pooled-A"
+        ]
+      },
+      "nnls_weights": {
+        "SVR-anom": 0.366,
+        "SVR-raw": 0.095,
+        "Pooled-A": 0.539
+      }
+    },
+    "Wa": {
+      "top3": [
+        "Pooled-Hybrid-A+SVAO",
+        "Pooled-Hybrid-A",
+        "Pooled-A"
+      ],
+      "season": {
+        "dry": [
+          "Pooled-A",
+          "GRU-A",
+          "Pooled-Hybrid-A"
+        ],
+        "rainy": [
+          "Pooled-Hybrid-A+SVAO",
+          "Pooled-Hybrid-A",
+          "AnomAR1"
+        ]
+      },
+      "nnls_weights": {
+        "AnomAR1": 0.171,
+        "Pooled-Hybrid-A+SVAO": 0.82
+      }
+    }
+  },
+  "best_model": "SARIMA",
+  "rank_of_proposed": 11,
+  "n_main_models": 26
+}
