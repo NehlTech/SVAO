@@ -1,0 +1,45 @@
+{
+  "project": "SEAS5_SARIMA_CP",
+  "stations": [
+    "KIAMO-Accra",
+    "Koforidua",
+    "Kumasi",
+    "Navrongo",
+    "Tamale",
+    "Wa"
+  ],
+  "station_obs_years": [
+    1995,
+    2025
+  ],
+  "seas5": {
+    "main_system": "51",
+    "sensitivity_system": "5",
+    "years": [
+      1993,
+      2025
+    ],
+    "lead_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "members_hindcast": 25,
+    "members_realtime": 51
+  },
+  "monthly_min_days": 20,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "reference_forecasts": [
+    "trend_climatology",
+    "seasonal_arima"
+  ]
+}

@@ -11,3 +11,13 @@ __pycache__/
 *.lot
 *.bbl
 *.blg
+
+# --- SEAS5_SARIMA_CP: raw and large files stay off GitHub ---
+SEAS5_SARIMA_CP/data/raw/
+SEAS5_SARIMA_CP/models/
+SEAS5_SARIMA_CP/**/*.nc
+SEAS5_SARIMA_CP/**/*.grib
+SEAS5_SARIMA_CP/**/*.zip
+SEAS5_SARIMA_CP/**/*.xlsx
+SEAS5_SARIMA_CP/data/processed/seas5_station_forecasts.csv
+SEAS5_SARIMA_CP/data/processed/era5land_station_daily.csv
