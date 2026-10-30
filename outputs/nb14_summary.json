@@ -1,0 +1,1890 @@
+{
+  "notebook": "14_TSO_Net_Ocean_Residual_Learning_Conformal",
+  "quick_run": false,
+  "design": {
+    "lookback": 12,
+    "restarts": 5,
+    "horizons": [
+      1,
+      3,
+      6
+    ],
+    "kappas": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "optimizer_learning_rates": {
+      "Adam": [
+        0.003,
+        0.01,
+        0.03
+      ],
+      "AdamW": [
+        0.003,
+        0.01,
+        0.03
+      ],
+      "NAdam": [
+        0.003,
+        0.01,
+        0.03
+      ],
+      "RMSprop": [
+        0.001,
+        0.003,
+        0.01
+      ],
+      "SGD-momentum": [
+        0.01,
+        0.03,
+        0.1
+      ],
+      "Lion": [
+        0.0003,
+        0.001,
+        0.003
+      ],
+      "SAM-Adam": [
+        0.003,
+        0.01,
+        0.03
+      ]
+    },
+    "opt_restarts": 3
+  },
+  "ocean_data": {
+    "Nino34": {
+      "source": "https://www.cpc.ncep.noaa.gov/data/indices/ersst5.nino.mth.91-20.ascii",
+      "how": "repository copy (notebook 12)",
+      "sha256": "bedcd0683c07f7ccb2ae358a90cb39d57413dcc8881027e0c30a1811f6d58012",
+      "first": "1950-01",
+      "last": "2026-06"
+    },
+    "TSA": {
+      "source": "https://psl.noaa.gov/data/correlation/tsa.data",
+      "how": "downloaded",
+      "sha256": "700c0dffda0f19c1254ba482808b345eaa0538f5bf09fc3bc025f46a5fbe3a69",
+      "first": "1948-01",
+      "last": "2026-12"
+    },
+    "TNA": {
+      "source": "https://psl.noaa.gov/data/correlation/tna.data",
+      "how": "downloaded",
+      "sha256": "387c4125f377e57bcb683a849aefcd76da7d7f3cdcb2ac68ab086ceadf300e8b",
+      "first": "1948-01",
+      "last": "2026-12"
+    },
+    "AMM": {
+      "source": "https://psl.noaa.gov/data/timeseries/monthly/AMM/ammsst.data",
+      "how": "downloaded",
+      "sha256": "40a569402b9dea36338614b4b55489e7b1df1e2bd934367f4a6f7a70eff10d27",
+      "first": "1948-01",
+      "last": "2024-12"
+    }
+  },
+  "screen_selected": {
+    "1": [
+      "Nino34",
+      "TSA"
+    ],
+    "3": [
+      "Nino34"
+    ],
+    "6": [
+      "Nino34",
+      "TNA"
+    ]
+  },
+  "screen": [
+    {
+      "h": 1,
+      "index": "Nino34",
+      "lag": 1,
+      "r": 0.2509,
+      "p": 0.0,
+      "n_eff": 267.6952,
+      "p_holm": 0.0005
+    },
+    {
+      "h": 1,
+      "index": "Nino34",
+      "lag": 2,
+      "r": 0.2712,
+      "p": 0.0,
+      "n_eff": 267.7452,
+      "p_holm": 0.0001
+    },
+    {
+      "h": 1,
+      "index": "Nino34",
+      "lag": 3,
+      "r": 0.2513,
+      "p": 0.0,
+      "n_eff": 267.7947,
+      "p_holm": 0.0005
+    },
+    {
+      "h": 1,
+      "index": "Nino34",
+      "lag": 4,
+      "r": 0.2354,
+      "p": 0.0001,
+      "n_eff": 267.8262,
+      "p_holm": 0.0015
+    },
+    {
+      "h": 1,
+      "index": "Nino34",
+      "lag": 5,
+      "r": 0.23,
+      "p": 0.0001,
+      "n_eff": 267.8531,
+      "p_holm": 0.0019
+    },
+    {
+      "h": 1,
+      "index": "Nino34",
+      "lag": 6,
+      "r": 0.2272,
+      "p": 0.0002,
+      "n_eff": 267.8891,
+      "p_holm": 0.0021
+    },
+    {
+      "h": 1,
+      "index": "TSA",
+      "lag": 1,
+      "r": 0.2355,
+      "p": 0.0001,
+      "n_eff": 260.2055,
+      "p_holm": 0.0018
+    },
+    {
+      "h": 1,
+      "index": "TSA",
+      "lag": 2,
+      "r": 0.1811,
+      "p": 0.0034,
+      "n_eff": 260.4666,
+      "p_holm": 0.037
+    },
+    {
+      "h": 1,
+      "index": "TSA",
+      "lag": 3,
+      "r": 0.1215,
+      "p": 0.0501,
+      "n_eff": 260.6252,
+      "p_holm": 0.5015
+    },
+    {
+      "h": 1,
+      "index": "TSA",
+      "lag": 4,
+      "r": 0.0845,
+      "p": 0.1741,
+      "n_eff": 260.4983,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "index": "TSA",
+      "lag": 5,
+      "r": 0.024,
+      "p": 0.6999,
+      "n_eff": 260.315,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "index": "TSA",
+      "lag": 6,
+      "r": -0.02,
+      "p": 0.7479,
+      "n_eff": 260.2871,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "index": "TNA",
+      "lag": 1,
+      "r": 0.1186,
+      "p": 0.0542,
+      "n_eff": 264.1932,
+      "p_holm": 0.5015
+    },
+    {
+      "h": 1,
+      "index": "TNA",
+      "lag": 2,
+      "r": 0.0423,
+      "p": 0.4933,
+      "n_eff": 264.1963,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "index": "TNA",
+      "lag": 3,
+      "r": 0.0913,
+      "p": 0.1388,
+      "n_eff": 264.2064,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "index": "TNA",
+      "lag": 4,
+      "r": 0.0854,
+      "p": 0.1665,
+      "n_eff": 264.1499,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "index": "TNA",
+      "lag": 5,
+      "r": 0.0474,
+      "p": 0.443,
+      "n_eff": 264.1461,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "index": "TNA",
+      "lag": 6,
+      "r": -0.0028,
+      "p": 0.964,
+      "n_eff": 264.0915,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "Nino34",
+      "lag": 3,
+      "r": 0.3644,
+      "p": 0.0,
+      "n_eff": 138.8229,
+      "p_holm": 0.0002
+    },
+    {
+      "h": 3,
+      "index": "Nino34",
+      "lag": 4,
+      "r": 0.3432,
+      "p": 0.0,
+      "n_eff": 138.7382,
+      "p_holm": 0.0006
+    },
+    {
+      "h": 3,
+      "index": "Nino34",
+      "lag": 5,
+      "r": 0.3296,
+      "p": 0.0001,
+      "n_eff": 138.6542,
+      "p_holm": 0.0012
+    },
+    {
+      "h": 3,
+      "index": "Nino34",
+      "lag": 6,
+      "r": 0.3257,
+      "p": 0.0001,
+      "n_eff": 138.564,
+      "p_holm": 0.0014
+    },
+    {
+      "h": 3,
+      "index": "Nino34",
+      "lag": 7,
+      "r": 0.299,
+      "p": 0.0004,
+      "n_eff": 138.5035,
+      "p_holm": 0.005
+    },
+    {
+      "h": 3,
+      "index": "Nino34",
+      "lag": 8,
+      "r": 0.2794,
+      "p": 0.0009,
+      "n_eff": 138.4202,
+      "p_holm": 0.0115
+    },
+    {
+      "h": 3,
+      "index": "TSA",
+      "lag": 3,
+      "r": 0.1748,
+      "p": 0.0315,
+      "n_eff": 151.5802,
+      "p_holm": 0.3778
+    },
+    {
+      "h": 3,
+      "index": "TSA",
+      "lag": 4,
+      "r": 0.1292,
+      "p": 0.1138,
+      "n_eff": 151.0482,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "TSA",
+      "lag": 5,
+      "r": 0.0551,
+      "p": 0.5017,
+      "n_eff": 150.872,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "TSA",
+      "lag": 6,
+      "r": -0.0123,
+      "p": 0.881,
+      "n_eff": 151.294,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "TSA",
+      "lag": 7,
+      "r": -0.0837,
+      "p": 0.3067,
+      "n_eff": 151.2702,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "TSA",
+      "lag": 8,
+      "r": -0.0647,
+      "p": 0.4298,
+      "n_eff": 151.2171,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "TNA",
+      "lag": 3,
+      "r": 0.1012,
+      "p": 0.2263,
+      "n_eff": 144.6574,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "TNA",
+      "lag": 4,
+      "r": 0.101,
+      "p": 0.2271,
+      "n_eff": 144.6309,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "TNA",
+      "lag": 5,
+      "r": 0.0758,
+      "p": 0.3652,
+      "n_eff": 144.6198,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "TNA",
+      "lag": 6,
+      "r": 0.0277,
+      "p": 0.7413,
+      "n_eff": 144.7367,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "TNA",
+      "lag": 7,
+      "r": -0.0318,
+      "p": 0.7047,
+      "n_eff": 144.7423,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "index": "TNA",
+      "lag": 8,
+      "r": -0.0652,
+      "p": 0.4365,
+      "n_eff": 144.8347,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "index": "Nino34",
+      "lag": 6,
+      "r": 0.3465,
+      "p": 0.0,
+      "n_eff": 136.5246,
+      "p_holm": 0.0006
+    },
+    {
+      "h": 6,
+      "index": "Nino34",
+      "lag": 7,
+      "r": 0.3182,
+      "p": 0.0002,
+      "n_eff": 136.4187,
+      "p_holm": 0.0027
+    },
+    {
+      "h": 6,
+      "index": "Nino34",
+      "lag": 8,
+      "r": 0.2974,
+      "p": 0.0004,
+      "n_eff": 136.2784,
+      "p_holm": 0.0069
+    },
+    {
+      "h": 6,
+      "index": "Nino34",
+      "lag": 9,
+      "r": 0.2587,
+      "p": 0.0023,
+      "n_eff": 136.1644,
+      "p_holm": 0.0351
+    },
+    {
+      "h": 6,
+      "index": "Nino34",
+      "lag": 10,
+      "r": 0.2258,
+      "p": 0.0082,
+      "n_eff": 136.0951,
+      "p_holm": 0.1066
+    },
+    {
+      "h": 6,
+      "index": "Nino34",
+      "lag": 11,
+      "r": 0.1833,
+      "p": 0.0326,
+      "n_eff": 136.1222,
+      "p_holm": 0.3587
+    },
+    {
+      "h": 6,
+      "index": "TSA",
+      "lag": 6,
+      "r": -0.0419,
+      "p": 0.6116,
+      "n_eff": 149.2917,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "index": "TSA",
+      "lag": 7,
+      "r": -0.0825,
+      "p": 0.3179,
+      "n_eff": 148.5514,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "index": "TSA",
+      "lag": 8,
+      "r": -0.0419,
+      "p": 0.6124,
+      "n_eff": 148.2901,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "index": "TSA",
+      "lag": 9,
+      "r": -0.0478,
+      "p": 0.5632,
+      "n_eff": 148.5669,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "index": "TSA",
+      "lag": 10,
+      "r": -0.0458,
+      "p": 0.579,
+      "n_eff": 148.8606,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "index": "TSA",
+      "lag": 11,
+      "r": -0.081,
+      "p": 0.3265,
+      "n_eff": 148.8543,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "index": "TNA",
+      "lag": 6,
+      "r": 0.021,
+      "p": 0.8039,
+      "n_eff": 142.3258,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "index": "TNA",
+      "lag": 7,
+      "r": -0.0298,
+      "p": 0.7244,
+      "n_eff": 142.3187,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "index": "TNA",
+      "lag": 8,
+      "r": -0.0719,
+      "p": 0.3945,
+      "n_eff": 142.3076,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "index": "TNA",
+      "lag": 9,
+      "r": -0.1754,
+      "p": 0.0365,
+      "n_eff": 142.4099,
+      "p_holm": 0.365
+    },
+    {
+      "h": 6,
+      "index": "TNA",
+      "lag": 10,
+      "r": -0.2114,
+      "p": 0.0114,
+      "n_eff": 142.41,
+      "p_holm": 0.1372
+    },
+    {
+      "h": 6,
+      "index": "TNA",
+      "lag": 11,
+      "r": -0.2508,
+      "p": 0.0026,
+      "n_eff": 142.4976,
+      "p_holm": 0.0359
+    }
+  ],
+  "kappa": {
+    "TSO-noOcean|1": 1.0,
+    "TSO-Net|1": 1.0,
+    "TSO-allOcean|1": 1.0,
+    "TSO-noOcean|3": 1.0,
+    "TSO-Net|3": 1.0,
+    "TSO-allOcean|3": 1.0,
+    "TSO-noOcean|6": 1.0,
+    "TSO-Net|6": 1.0,
+    "TSO-allOcean|6": 1.0
+  },
+  "kappa_validation_rmse": {
+    "TSO-noOcean|1": {
+      "0.0": 0.4958,
+      "0.25": 0.4907,
+      "0.5": 0.4862,
+      "0.75": 0.4825,
+      "1.0": 0.4795
+    },
+    "TSO-Net|1": {
+      "0.0": 0.4958,
+      "0.25": 0.4872,
+      "0.5": 0.4809,
+      "0.75": 0.4768,
+      "1.0": 0.4752
+    },
+    "TSO-allOcean|1": {
+      "0.0": 0.4958,
+      "0.25": 0.4855,
+      "0.5": 0.4783,
+      "0.75": 0.4746,
+      "1.0": 0.4743
+    },
+    "TSO-noOcean|3": {
+      "0.0": 0.5745,
+      "0.25": 0.5604,
+      "0.5": 0.5482,
+      "0.75": 0.5379,
+      "1.0": 0.5297
+    },
+    "TSO-Net|3": {
+      "0.0": 0.5745,
+      "0.25": 0.5554,
+      "0.5": 0.54,
+      "0.75": 0.5287,
+      "1.0": 0.5218
+    },
+    "TSO-allOcean|3": {
+      "0.0": 0.5745,
+      "0.25": 0.5512,
+      "0.5": 0.5321,
+      "0.75": 0.5177,
+      "1.0": 0.5083
+    },
+    "TSO-noOcean|6": {
+      "0.0": 0.6178,
+      "0.25": 0.5845,
+      "0.5": 0.5567,
+      "0.75": 0.5351,
+      "1.0": 0.5205
+    },
+    "TSO-Net|6": {
+      "0.0": 0.6178,
+      "0.25": 0.5837,
+      "0.5": 0.5559,
+      "0.75": 0.5355,
+      "1.0": 0.5234
+    },
+    "TSO-allOcean|6": {
+      "0.0": 0.6178,
+      "0.25": 0.5827,
+      "0.5": 0.5544,
+      "0.75": 0.5342,
+      "1.0": 0.5229
+    }
+  },
+  "blend_weights": {
+    "1": {
+      "SARIMA": 0.0,
+      "TSO-Net": 0.494,
+      "AnomAR1": 0.506
+    },
+    "3": {
+      "SARIMA": 0.0,
+      "TSO-Net": 0.55,
+      "AnomAR1": 0.45
+    },
+    "6": {
+      "SARIMA": 0.0,
+      "TSO-Net": 0.52,
+      "AnomAR1": 0.48
+    }
+  },
+  "months_common": {
+    "1": 41,
+    "3": 39,
+    "6": 36
+  },
+  "average_rmse": {
+    "1": {
+      "SARIMA": 0.6276,
+      "ClimTrend": 0.7293,
+      "AnomAR1": 0.6307,
+      "TSO-noOcean": 0.6285,
+      "TSO-Net": 0.635,
+      "TSO-allOcean": 0.6368,
+      "Blend-eq": 0.625,
+      "Blend-val": 0.6211,
+      "Opt-Adam": 0.6369,
+      "Opt-AdamW": 0.6281,
+      "Opt-NAdam": 0.6408,
+      "Opt-RMSprop": 0.6545,
+      "Opt-SGD-momentum": 0.6544,
+      "Opt-Lion": 0.6393,
+      "Opt-SAM-Adam": 0.6316
+    },
+    "3": {
+      "SARIMA": 0.7087,
+      "ClimTrend": 0.7307,
+      "AnomAR1": 0.7168,
+      "TSO-noOcean": 0.7069,
+      "TSO-Net": 0.7164,
+      "TSO-allOcean": 0.701,
+      "Blend-eq": 0.7016,
+      "Blend-val": 0.6999
+    },
+    "6": {
+      "SARIMA": 0.7454,
+      "ClimTrend": 0.7172,
+      "AnomAR1": 0.7166,
+      "TSO-noOcean": 0.7485,
+      "TSO-Net": 0.7481,
+      "TSO-allOcean": 0.7345,
+      "Blend-eq": 0.7434,
+      "Blend-val": 0.7273
+    }
+  },
+  "per_station_rmse": {
+    "1": {
+      "KIAMO-Accra": {
+        "SARIMA": 0.5497,
+        "ClimTrend": 0.6461,
+        "AnomAR1": 0.5724,
+        "TSO-noOcean": 0.5365,
+        "TSO-Net": 0.5369,
+        "TSO-allOcean": 0.5326,
+        "Blend-eq": 0.5391,
+        "Blend-val": 0.5385,
+        "Opt-Adam": 0.5362,
+        "Opt-AdamW": 0.5308,
+        "Opt-NAdam": 0.5318,
+        "Opt-RMSprop": 0.5444,
+        "Opt-SGD-momentum": 0.5371,
+        "Opt-Lion": 0.535,
+        "Opt-SAM-Adam": 0.5342
+      },
+      "Koforidua": {
+        "SARIMA": 0.4817,
+        "ClimTrend": 0.5198,
+        "AnomAR1": 0.4731,
+        "TSO-noOcean": 0.4734,
+        "TSO-Net": 0.4652,
+        "TSO-allOcean": 0.4652,
+        "Blend-eq": 0.4674,
+        "Blend-val": 0.4548,
+        "Opt-Adam": 0.4664,
+        "Opt-AdamW": 0.4594,
+        "Opt-NAdam": 0.4596,
+        "Opt-RMSprop": 0.4679,
+        "Opt-SGD-momentum": 0.4498,
+        "Opt-Lion": 0.4666,
+        "Opt-SAM-Adam": 0.4515
+      },
+      "Kumasi": {
+        "SARIMA": 0.4322,
+        "ClimTrend": 0.5218,
+        "AnomAR1": 0.4545,
+        "TSO-noOcean": 0.4193,
+        "TSO-Net": 0.4009,
+        "TSO-allOcean": 0.4019,
+        "Blend-eq": 0.4078,
+        "Blend-val": 0.4145,
+        "Opt-Adam": 0.401,
+        "Opt-AdamW": 0.4017,
+        "Opt-NAdam": 0.3986,
+        "Opt-RMSprop": 0.4049,
+        "Opt-SGD-momentum": 0.4066,
+        "Opt-Lion": 0.4011,
+        "Opt-SAM-Adam": 0.4032
+      },
+      "Navrongo": {
+        "SARIMA": 0.6361,
+        "ClimTrend": 0.6781,
+        "AnomAR1": 0.6071,
+        "TSO-noOcean": 0.6341,
+        "TSO-Net": 0.623,
+        "TSO-allOcean": 0.6329,
+        "Blend-eq": 0.6223,
+        "Blend-val": 0.6079,
+        "Opt-Adam": 0.6219,
+        "Opt-AdamW": 0.621,
+        "Opt-NAdam": 0.6393,
+        "Opt-RMSprop": 0.6386,
+        "Opt-SGD-momentum": 0.6347,
+        "Opt-Lion": 0.6322,
+        "Opt-SAM-Adam": 0.6301
+      },
+      "Tamale": {
+        "SARIMA": 0.8411,
+        "ClimTrend": 0.8934,
+        "AnomAR1": 0.8023,
+        "TSO-noOcean": 0.844,
+        "TSO-Net": 0.8445,
+        "TSO-allOcean": 0.8522,
+        "Blend-eq": 0.8377,
+        "Blend-val": 0.8112,
+        "Opt-Adam": 0.8447,
+        "Opt-AdamW": 0.8511,
+        "Opt-NAdam": 0.8474,
+        "Opt-RMSprop": 0.849,
+        "Opt-SGD-momentum": 0.846,
+        "Opt-Lion": 0.8491,
+        "Opt-SAM-Adam": 0.8486
+      },
+      "Wa": {
+        "SARIMA": 0.8249,
+        "ClimTrend": 1.1165,
+        "AnomAR1": 0.8747,
+        "TSO-noOcean": 0.8638,
+        "TSO-Net": 0.9392,
+        "TSO-allOcean": 0.9362,
+        "Blend-eq": 0.8755,
+        "Blend-val": 0.8997,
+        "Opt-Adam": 0.9512,
+        "Opt-AdamW": 0.9048,
+        "Opt-NAdam": 0.9681,
+        "Opt-RMSprop": 1.0222,
+        "Opt-SGD-momentum": 1.0522,
+        "Opt-Lion": 0.9521,
+        "Opt-SAM-Adam": 0.9221
+      }
+    },
+    "3": {
+      "KIAMO-Accra": {
+        "SARIMA": 0.6274,
+        "ClimTrend": 0.6519,
+        "AnomAR1": 0.6256,
+        "TSO-noOcean": 0.614,
+        "TSO-Net": 0.6174,
+        "TSO-allOcean": 0.5975,
+        "Blend-eq": 0.612,
+        "Blend-val": 0.5925
+      },
+      "Koforidua": {
+        "SARIMA": 0.5293,
+        "ClimTrend": 0.5226,
+        "AnomAR1": 0.5206,
+        "TSO-noOcean": 0.5139,
+        "TSO-Net": 0.5001,
+        "TSO-allOcean": 0.4927,
+        "Blend-eq": 0.4974,
+        "Blend-val": 0.4824
+      },
+      "Kumasi": {
+        "SARIMA": 0.512,
+        "ClimTrend": 0.5258,
+        "AnomAR1": 0.5109,
+        "TSO-noOcean": 0.4556,
+        "TSO-Net": 0.419,
+        "TSO-allOcean": 0.4896,
+        "Blend-eq": 0.4453,
+        "Blend-val": 0.4365
+      },
+      "Navrongo": {
+        "SARIMA": 0.7218,
+        "ClimTrend": 0.6832,
+        "AnomAR1": 0.6838,
+        "TSO-noOcean": 0.7117,
+        "TSO-Net": 0.7416,
+        "TSO-allOcean": 0.721,
+        "Blend-eq": 0.7248,
+        "Blend-val": 0.7098
+      },
+      "Tamale": {
+        "SARIMA": 0.8846,
+        "ClimTrend": 0.8992,
+        "AnomAR1": 0.8887,
+        "TSO-noOcean": 0.8856,
+        "TSO-Net": 0.9049,
+        "TSO-allOcean": 0.8756,
+        "Blend-eq": 0.8895,
+        "Blend-val": 0.8872
+      },
+      "Wa": {
+        "SARIMA": 0.977,
+        "ClimTrend": 1.1012,
+        "AnomAR1": 1.0715,
+        "TSO-noOcean": 1.0604,
+        "TSO-Net": 1.1153,
+        "TSO-allOcean": 1.0297,
+        "Blend-eq": 1.0407,
+        "Blend-val": 1.0911
+      }
+    },
+    "6": {
+      "KIAMO-Accra": {
+        "SARIMA": 0.7447,
+        "ClimTrend": 0.6585,
+        "AnomAR1": 0.6573,
+        "TSO-noOcean": 0.7184,
+        "TSO-Net": 0.7219,
+        "TSO-allOcean": 0.7007,
+        "Blend-eq": 0.73,
+        "Blend-val": 0.68
+      },
+      "Koforidua": {
+        "SARIMA": 0.5414,
+        "ClimTrend": 0.5231,
+        "AnomAR1": 0.5231,
+        "TSO-noOcean": 0.5363,
+        "TSO-Net": 0.5215,
+        "TSO-allOcean": 0.5242,
+        "Blend-eq": 0.5289,
+        "Blend-val": 0.5171
+      },
+      "Kumasi": {
+        "SARIMA": 0.5623,
+        "ClimTrend": 0.5306,
+        "AnomAR1": 0.5289,
+        "TSO-noOcean": 0.5264,
+        "TSO-Net": 0.5398,
+        "TSO-allOcean": 0.5534,
+        "Blend-eq": 0.5433,
+        "Blend-val": 0.5246
+      },
+      "Navrongo": {
+        "SARIMA": 0.7214,
+        "ClimTrend": 0.6827,
+        "AnomAR1": 0.6829,
+        "TSO-noOcean": 0.7199,
+        "TSO-Net": 0.7216,
+        "TSO-allOcean": 0.7064,
+        "Blend-eq": 0.7188,
+        "Blend-val": 0.7006
+      },
+      "Tamale": {
+        "SARIMA": 0.9416,
+        "ClimTrend": 0.905,
+        "AnomAR1": 0.9051,
+        "TSO-noOcean": 0.9736,
+        "TSO-Net": 0.9552,
+        "TSO-allOcean": 0.9135,
+        "Blend-eq": 0.946,
+        "Blend-val": 0.9265
+      },
+      "Wa": {
+        "SARIMA": 0.9611,
+        "ClimTrend": 1.0035,
+        "AnomAR1": 1.0024,
+        "TSO-noOcean": 1.0161,
+        "TSO-Net": 1.0287,
+        "TSO-allOcean": 1.0086,
+        "Blend-eq": 0.9935,
+        "Blend-val": 1.015
+      }
+    }
+  },
+  "skill_vs_trend_climatology": {
+    "1": {
+      "SARIMA": 0.1293,
+      "ClimTrend": 0.0,
+      "AnomAR1": 0.1261,
+      "TSO-noOcean": 0.1337,
+      "TSO-Net": 0.1334,
+      "TSO-allOcean": 0.1308,
+      "Blend-eq": 0.1409,
+      "Blend-val": 0.1479,
+      "Opt-Adam": 0.1317,
+      "Opt-AdamW": 0.141,
+      "Opt-NAdam": 0.1284,
+      "Opt-RMSprop": 0.1123,
+      "Opt-SGD-momentum": 0.1165,
+      "Opt-Lion": 0.1284,
+      "Opt-SAM-Adam": 0.1379
+    },
+    "3": {
+      "SARIMA": 0.0206,
+      "ClimTrend": 0.0,
+      "AnomAR1": 0.0184,
+      "TSO-noOcean": 0.0365,
+      "TSO-Net": 0.0324,
+      "TSO-allOcean": 0.0409,
+      "Blend-eq": 0.0446,
+      "Blend-val": 0.0536
+    },
+    "6": {
+      "SARIMA": -0.0468,
+      "ClimTrend": 0.0,
+      "AnomAR1": 0.001,
+      "TSO-noOcean": -0.0419,
+      "TSO-Net": -0.0413,
+      "TSO-allOcean": -0.0264,
+      "Blend-eq": -0.0386,
+      "Blend-val": -0.0118
+    }
+  },
+  "skill_vs_sarima": {
+    "1": {
+      "SARIMA": 0.0,
+      "ClimTrend": -0.1573,
+      "AnomAR1": -0.0073,
+      "TSO-noOcean": 0.004,
+      "TSO-Net": 0.0013,
+      "TSO-allOcean": -0.0012,
+      "Blend-eq": 0.0116,
+      "Blend-val": 0.0178,
+      "Opt-Adam": -0.001,
+      "Opt-AdamW": 0.0111,
+      "Opt-NAdam": -0.005,
+      "Opt-RMSprop": -0.0252,
+      "Opt-SGD-momentum": -0.0218,
+      "Opt-Lion": -0.0045,
+      "Opt-SAM-Adam": 0.0069
+    },
+    "3": {
+      "SARIMA": 0.0,
+      "ClimTrend": -0.0239,
+      "AnomAR1": -0.0045,
+      "TSO-noOcean": 0.0147,
+      "TSO-Net": 0.0101,
+      "TSO-allOcean": 0.0196,
+      "Blend-eq": 0.0233,
+      "Blend-val": 0.0314
+    },
+    "6": {
+      "SARIMA": 0.0,
+      "ClimTrend": 0.0424,
+      "AnomAR1": 0.0433,
+      "TSO-noOcean": 0.0033,
+      "TSO-Net": 0.0038,
+      "TSO-allOcean": 0.018,
+      "Blend-eq": 0.007,
+      "Blend-val": 0.0313
+    }
+  },
+  "tests": [
+    {
+      "h": 1,
+      "A": "TSO-Net",
+      "B": "SARIMA",
+      "RMSE_A": 0.635,
+      "RMSE_B": 0.6276,
+      "diff_A_minus_B": 0.0073,
+      "ci_low": -0.0283,
+      "ci_high": 0.0257,
+      "boot_P(A<B)": 0.488,
+      "station_wins_A": 4,
+      "dm_network": 0.6722,
+      "p_raw": 0.5053,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "A": "TSO-Net",
+      "B": "ClimTrend",
+      "RMSE_A": 0.635,
+      "RMSE_B": 0.7293,
+      "diff_A_minus_B": -0.0944,
+      "ci_low": -0.159,
+      "ci_high": -0.014,
+      "boot_P(A<B)": 0.994,
+      "station_wins_A": 6,
+      "dm_network": -2.8809,
+      "p_raw": 0.0063,
+      "p_holm": 0.1396
+    },
+    {
+      "h": 1,
+      "A": "TSO-Net",
+      "B": "TSO-noOcean",
+      "RMSE_A": 0.635,
+      "RMSE_B": 0.6285,
+      "diff_A_minus_B": 0.0064,
+      "ci_low": -0.0226,
+      "ci_high": 0.0117,
+      "boot_P(A<B)": 0.6815,
+      "station_wins_A": 3,
+      "dm_network": 0.3724,
+      "p_raw": 0.7116,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "A": "TSO-allOcean",
+      "B": "TSO-noOcean",
+      "RMSE_A": 0.6368,
+      "RMSE_B": 0.6285,
+      "diff_A_minus_B": 0.0083,
+      "ci_low": -0.0208,
+      "ci_high": 0.0168,
+      "boot_P(A<B)": 0.496,
+      "station_wins_A": 4,
+      "dm_network": 0.6991,
+      "p_raw": 0.4885,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "A": "Blend-eq",
+      "B": "SARIMA",
+      "RMSE_A": 0.625,
+      "RMSE_B": 0.6276,
+      "diff_A_minus_B": -0.0027,
+      "ci_low": -0.0253,
+      "ci_high": 0.0077,
+      "boot_P(A<B)": 0.8085,
+      "station_wins_A": 5,
+      "dm_network": -0.1463,
+      "p_raw": 0.8844,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "A": "Blend-val",
+      "B": "SARIMA",
+      "RMSE_A": 0.6211,
+      "RMSE_B": 0.6276,
+      "diff_A_minus_B": -0.0065,
+      "ci_low": -0.0284,
+      "ci_high": 0.0038,
+      "boot_P(A<B)": 0.9405,
+      "station_wins_A": 5,
+      "dm_network": -0.3621,
+      "p_raw": 0.7192,
+      "p_holm": 1.0
+    },
+    {
+      "h": 1,
+      "A": "SARIMA",
+      "B": "ClimTrend",
+      "RMSE_A": 0.6276,
+      "RMSE_B": 0.7293,
+      "diff_A_minus_B": -0.1017,
+      "ci_low": -0.1444,
+      "ci_high": -0.0197,
+      "boot_P(A<B)": 0.9925,
+      "station_wins_A": 6,
+      "dm_network": -3.0113,
+      "p_raw": 0.0045,
+      "p_holm": 0.1033
+    },
+    {
+      "h": 1,
+      "A": "AnomAR1",
+      "B": "SARIMA",
+      "RMSE_A": 0.6307,
+      "RMSE_B": 0.6276,
+      "diff_A_minus_B": 0.0031,
+      "ci_low": -0.0242,
+      "ci_high": 0.0278,
+      "boot_P(A<B)": 0.47,
+      "station_wins_A": 3,
+      "dm_network": 0.2684,
+      "p_raw": 0.7898,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "A": "TSO-Net",
+      "B": "SARIMA",
+      "RMSE_A": 0.7164,
+      "RMSE_B": 0.7087,
+      "diff_A_minus_B": 0.0077,
+      "ci_low": -0.0551,
+      "ci_high": 0.0418,
+      "boot_P(A<B)": 0.561,
+      "station_wins_A": 3,
+      "dm_network": 0.6227,
+      "p_raw": 0.5372,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "A": "TSO-Net",
+      "B": "ClimTrend",
+      "RMSE_A": 0.7164,
+      "RMSE_B": 0.7307,
+      "diff_A_minus_B": -0.0143,
+      "ci_low": -0.0887,
+      "ci_high": 0.0301,
+      "boot_P(A<B)": 0.742,
+      "station_wins_A": 3,
+      "dm_network": -0.5867,
+      "p_raw": 0.5608,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "A": "TSO-Net",
+      "B": "TSO-noOcean",
+      "RMSE_A": 0.7164,
+      "RMSE_B": 0.7069,
+      "diff_A_minus_B": 0.0095,
+      "ci_low": -0.039,
+      "ci_high": 0.0148,
+      "boot_P(A<B)": 0.7955,
+      "station_wins_A": 2,
+      "dm_network": 0.1053,
+      "p_raw": 0.9167,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "A": "TSO-allOcean",
+      "B": "TSO-noOcean",
+      "RMSE_A": 0.701,
+      "RMSE_B": 0.7069,
+      "diff_A_minus_B": -0.0058,
+      "ci_low": -0.0343,
+      "ci_high": -0.0017,
+      "boot_P(A<B)": 0.986,
+      "station_wins_A": 4,
+      "dm_network": -1.485,
+      "p_raw": 0.1458,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "A": "Blend-eq",
+      "B": "SARIMA",
+      "RMSE_A": 0.7016,
+      "RMSE_B": 0.7087,
+      "diff_A_minus_B": -0.007,
+      "ci_low": -0.0453,
+      "ci_high": 0.0106,
+      "boot_P(A<B)": 0.8205,
+      "station_wins_A": 3,
+      "dm_network": -0.2114,
+      "p_raw": 0.8337,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "A": "Blend-val",
+      "B": "SARIMA",
+      "RMSE_A": 0.6999,
+      "RMSE_B": 0.7087,
+      "diff_A_minus_B": -0.0088,
+      "ci_low": -0.0551,
+      "ci_high": 0.0116,
+      "boot_P(A<B)": 0.8785,
+      "station_wins_A": 4,
+      "dm_network": 0.0531,
+      "p_raw": 0.9579,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "A": "SARIMA",
+      "B": "ClimTrend",
+      "RMSE_A": 0.7087,
+      "RMSE_B": 0.7307,
+      "diff_A_minus_B": -0.022,
+      "ci_low": -0.0428,
+      "ci_high": 0.0105,
+      "boot_P(A<B)": 0.8815,
+      "station_wins_A": 4,
+      "dm_network": -1.5962,
+      "p_raw": 0.1187,
+      "p_holm": 1.0
+    },
+    {
+      "h": 3,
+      "A": "AnomAR1",
+      "B": "SARIMA",
+      "RMSE_A": 0.7168,
+      "RMSE_B": 0.7087,
+      "diff_A_minus_B": 0.0082,
+      "ci_low": -0.0218,
+      "ci_high": 0.0281,
+      "boot_P(A<B)": 0.353,
+      "station_wins_A": 4,
+      "dm_network": 0.9626,
+      "p_raw": 0.3418,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "A": "TSO-Net",
+      "B": "SARIMA",
+      "RMSE_A": 0.7481,
+      "RMSE_B": 0.7454,
+      "diff_A_minus_B": 0.0027,
+      "ci_low": -0.0363,
+      "ci_high": 0.0584,
+      "boot_P(A<B)": 0.4045,
+      "station_wins_A": 3,
+      "dm_network": 0.5081,
+      "p_raw": 0.6146,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "A": "TSO-Net",
+      "B": "ClimTrend",
+      "RMSE_A": 0.7481,
+      "RMSE_B": 0.7172,
+      "diff_A_minus_B": 0.0309,
+      "ci_low": 0.0021,
+      "ci_high": 0.07,
+      "boot_P(A<B)": 0.018,
+      "station_wins_A": 1,
+      "dm_network": 2.1269,
+      "p_raw": 0.0405,
+      "p_holm": 0.811
+    },
+    {
+      "h": 6,
+      "A": "TSO-Net",
+      "B": "TSO-noOcean",
+      "RMSE_A": 0.7481,
+      "RMSE_B": 0.7485,
+      "diff_A_minus_B": -0.0003,
+      "ci_low": -0.0315,
+      "ci_high": -0.0129,
+      "boot_P(A<B)": 1.0,
+      "station_wins_A": 2,
+      "dm_network": -4.4392,
+      "p_raw": 0.0001,
+      "p_holm": 0.0021
+    },
+    {
+      "h": 6,
+      "A": "TSO-allOcean",
+      "B": "TSO-noOcean",
+      "RMSE_A": 0.7345,
+      "RMSE_B": 0.7485,
+      "diff_A_minus_B": -0.014,
+      "ci_low": -0.0425,
+      "ci_high": -0.0144,
+      "boot_P(A<B)": 1.0,
+      "station_wins_A": 5,
+      "dm_network": -2.5663,
+      "p_raw": 0.0147,
+      "p_holm": 0.309
+    },
+    {
+      "h": 6,
+      "A": "Blend-eq",
+      "B": "SARIMA",
+      "RMSE_A": 0.7434,
+      "RMSE_B": 0.7454,
+      "diff_A_minus_B": -0.002,
+      "ci_low": -0.0204,
+      "ci_high": 0.0247,
+      "boot_P(A<B)": 0.518,
+      "station_wins_A": 4,
+      "dm_network": 0.2718,
+      "p_raw": 0.7874,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "A": "Blend-val",
+      "B": "SARIMA",
+      "RMSE_A": 0.7273,
+      "RMSE_B": 0.7454,
+      "diff_A_minus_B": -0.0182,
+      "ci_low": -0.0473,
+      "ci_high": 0.0218,
+      "boot_P(A<B)": 0.7845,
+      "station_wins_A": 5,
+      "dm_network": -0.3237,
+      "p_raw": 0.7481,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "A": "SARIMA",
+      "B": "ClimTrend",
+      "RMSE_A": 0.7454,
+      "RMSE_B": 0.7172,
+      "diff_A_minus_B": 0.0282,
+      "ci_low": -0.0023,
+      "ci_high": 0.054,
+      "boot_P(A<B)": 0.0365,
+      "station_wins_A": 1,
+      "dm_network": 1.0939,
+      "p_raw": 0.2815,
+      "p_holm": 1.0
+    },
+    {
+      "h": 6,
+      "A": "AnomAR1",
+      "B": "SARIMA",
+      "RMSE_A": 0.7166,
+      "RMSE_B": 0.7454,
+      "diff_A_minus_B": -0.0288,
+      "ci_low": -0.0549,
+      "ci_high": 0.0028,
+      "boot_P(A<B)": 0.9595,
+      "station_wins_A": 5,
+      "dm_network": -1.1156,
+      "p_raw": 0.2722,
+      "p_holm": 1.0
+    }
+  ],
+  "optimizer_tests": [
+    {
+      "h": 1,
+      "A": "Opt-AdamW",
+      "B": "Opt-Adam",
+      "RMSE_A": 0.6281,
+      "RMSE_B": 0.6369,
+      "diff_A_minus_B": -0.0088,
+      "ci_low": -0.013,
+      "ci_high": 0.0037,
+      "boot_P(A<B)": 0.8245,
+      "station_wins_A": 4,
+      "dm_network": -1.2503,
+      "p_raw": 0.2185,
+      "p_holm": 0.6554
+    },
+    {
+      "h": 1,
+      "A": "Opt-NAdam",
+      "B": "Opt-Adam",
+      "RMSE_A": 0.6408,
+      "RMSE_B": 0.6369,
+      "diff_A_minus_B": 0.0039,
+      "ci_low": -0.0001,
+      "ci_high": 0.0068,
+      "boot_P(A<B)": 0.027,
+      "station_wins_A": 3,
+      "dm_network": 2.1883,
+      "p_raw": 0.0346,
+      "p_holm": 0.1382
+    },
+    {
+      "h": 1,
+      "A": "Opt-RMSprop",
+      "B": "Opt-Adam",
+      "RMSE_A": 0.6545,
+      "RMSE_B": 0.6369,
+      "diff_A_minus_B": 0.0176,
+      "ci_low": 0.0037,
+      "ci_high": 0.0278,
+      "boot_P(A<B)": 0.0035,
+      "station_wins_A": 0,
+      "dm_network": 3.4494,
+      "p_raw": 0.0013,
+      "p_holm": 0.0067
+    },
+    {
+      "h": 1,
+      "A": "Opt-SGD-momentum",
+      "B": "Opt-Adam",
+      "RMSE_A": 0.6544,
+      "RMSE_B": 0.6369,
+      "diff_A_minus_B": 0.0175,
+      "ci_low": 0.0099,
+      "ci_high": 0.035,
+      "boot_P(A<B)": 0.0,
+      "station_wins_A": 1,
+      "dm_network": 3.614,
+      "p_raw": 0.0008,
+      "p_holm": 0.005
+    },
+    {
+      "h": 1,
+      "A": "Opt-Lion",
+      "B": "Opt-Adam",
+      "RMSE_A": 0.6393,
+      "RMSE_B": 0.6369,
+      "diff_A_minus_B": 0.0024,
+      "ci_low": -0.0108,
+      "ci_high": 0.012,
+      "boot_P(A<B)": 0.451,
+      "station_wins_A": 1,
+      "dm_network": 0.4218,
+      "p_raw": 0.6754,
+      "p_holm": 0.6754
+    },
+    {
+      "h": 1,
+      "A": "Opt-SAM-Adam",
+      "B": "Opt-Adam",
+      "RMSE_A": 0.6316,
+      "RMSE_B": 0.6369,
+      "diff_A_minus_B": -0.0053,
+      "ci_low": -0.0107,
+      "ci_high": 0.0042,
+      "boot_P(A<B)": 0.7965,
+      "station_wins_A": 3,
+      "dm_network": -1.0588,
+      "p_raw": 0.296,
+      "p_holm": 0.6554
+    }
+  ],
+  "optimizer_lr": {
+    "Adam": 0.01,
+    "AdamW": 0.03,
+    "NAdam": 0.003,
+    "RMSprop": 0.003,
+    "SGD-momentum": 0.1,
+    "Lion": 0.001,
+    "SAM-Adam": 0.03
+  },
+  "decisions": {
+    "R1: TSO-Net beats SARIMA at h=1": {
+      "h": 1,
+      "A": "TSO-Net",
+      "B": "SARIMA",
+      "RMSE_A": 0.6349526909555357,
+      "RMSE_B": 0.6276285802944738,
+      "diff_A_minus_B": 0.007324110661061978,
+      "ci_low": -0.02833771706679799,
+      "ci_high": 0.0256994229862363,
+      "boot_P(A<B)": 0.488,
+      "station_wins_A": 4,
+      "dm_network": 0.6721973679788408,
+      "p_raw": 0.5053225310959943,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "R2: TSO-Net beats SARIMA at h=3": {
+      "h": 3,
+      "A": "TSO-Net",
+      "B": "SARIMA",
+      "RMSE_A": 0.7163873991982,
+      "RMSE_B": 0.7086742906686384,
+      "diff_A_minus_B": 0.007713108529561641,
+      "ci_low": -0.055051326465042835,
+      "ci_high": 0.041845459450587416,
+      "boot_P(A<B)": 0.561,
+      "station_wins_A": 3,
+      "dm_network": 0.6227018632266261,
+      "p_raw": 0.5371997163032756,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "R3: TSO-Net beats SARIMA at h=6": {
+      "h": 6,
+      "A": "TSO-Net",
+      "B": "SARIMA",
+      "RMSE_A": 0.7481036001555679,
+      "RMSE_B": 0.7454297184964228,
+      "diff_A_minus_B": 0.002673881659145061,
+      "ci_low": -0.03630319193559464,
+      "ci_high": 0.05841090224236518,
+      "boot_P(A<B)": 0.4045,
+      "station_wins_A": 3,
+      "dm_network": 0.5081015963758096,
+      "p_raw": 0.6145696551887658,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "R4: ocean indices help (TSO-Net beats TSO-noOcean at some horizon)": {
+      "passes": false,
+      "detail": [
+        {
+          "h": 1,
+          "A": "TSO-Net",
+          "B": "TSO-noOcean",
+          "RMSE_A": 0.6349526909555357,
+          "RMSE_B": 0.6285082501575654,
+          "diff_A_minus_B": 0.006444440797970352,
+          "ci_low": -0.02259866720636344,
+          "ci_high": 0.011705957888142169,
+          "boot_P(A<B)": 0.6815,
+          "station_wins_A": 3,
+          "dm_network": 0.37236196537135086,
+          "p_raw": 0.7115890388194797,
+          "p_holm": 1.0
+        },
+        {
+          "h": 3,
+          "A": "TSO-Net",
+          "B": "TSO-noOcean",
+          "RMSE_A": 0.7163873991982,
+          "RMSE_B": 0.7068502923651315,
+          "diff_A_minus_B": 0.00953710683306852,
+          "ci_low": -0.038950733007367816,
+          "ci_high": 0.014806486619104777,
+          "boot_P(A<B)": 0.7955,
+          "station_wins_A": 2,
+          "dm_network": 0.10533454146989164,
+          "p_raw": 0.9166644217481608,
+          "p_holm": 1.0
+        },
+        {
+          "h": 6,
+          "A": "TSO-Net",
+          "B": "TSO-noOcean",
+          "RMSE_A": 0.7481036001555679,
+          "RMSE_B": 0.748452485880415,
+          "diff_A_minus_B": -0.00034888572484714775,
+          "ci_low": -0.0314595736984521,
+          "ci_high": -0.012935727572327717,
+          "boot_P(A<B)": 1.0,
+          "station_wins_A": 2,
+          "dm_network": -4.439178210872273,
+          "p_raw": 8.61330355508283e-05,
+          "p_holm": 0.002067192853219879
+        }
+      ]
+    },
+    "R5: equal blend beats SARIMA at h=1": {
+      "h": 1,
+      "A": "Blend-eq",
+      "B": "SARIMA",
+      "RMSE_A": 0.624971904202598,
+      "RMSE_B": 0.6276285802944738,
+      "diff_A_minus_B": -0.0026566760918758092,
+      "ci_low": -0.025340537174137964,
+      "ci_high": 0.007732656911389633,
+      "boot_P(A<B)": 0.8085,
+      "station_wins_A": 5,
+      "dm_network": -0.14629573183976666,
+      "p_raw": 0.8844227533063962,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    "R6: some optimizer beats Adam": {
+      "h": 1,
+      "A": "Opt-AdamW",
+      "B": "Opt-Adam",
+      "RMSE_A": 0.6281296047760992,
+      "RMSE_B": 0.6368837632316845,
+      "diff_A_minus_B": -0.008754158455585248,
+      "ci_low": -0.012975269428567797,
+      "ci_high": 0.00370714248775139,
+      "boot_P(A<B)": 0.8245,
+      "station_wins_A": 4,
+      "dm_network": -1.2502902504166722,
+      "p_raw": 0.21845867639218586,
+      "p_holm": 0.6553760291765576,
+      "passes": false
+    },
+    "R7: season-conditional online conformal gives 75-85% coverage (nominal 80%) in both seasons": {
+      "coverage_dry": 0.7692307692307693,
+      "coverage_rainy": 0.725609756097561,
+      "passes": false
+    }
+  },
+  "conformal": [
+    {
+      "alpha": 0.2,
+      "model": "SARIMA",
+      "calibration": "season-blind",
+      "coverage_dry": 0.7179,
+      "coverage_rainy": 0.7134,
+      "coverage_all": 0.7153,
+      "width": 1.1861,
+      "interval_score": 2.3702
+    },
+    {
+      "alpha": 0.2,
+      "model": "SARIMA",
+      "calibration": "seasonal",
+      "coverage_dry": 0.7778,
+      "coverage_rainy": 0.6768,
+      "coverage_all": 0.7189,
+      "width": 1.2433,
+      "interval_score": 2.3716
+    },
+    {
+      "alpha": 0.2,
+      "model": "SARIMA",
+      "calibration": "seasonal+online",
+      "coverage_dry": 0.7863,
+      "coverage_rainy": 0.7134,
+      "coverage_all": 0.7438,
+      "width": 1.3261,
+      "interval_score": 2.3495
+    },
+    {
+      "alpha": 0.2,
+      "model": "TSO-Net",
+      "calibration": "season-blind",
+      "coverage_dry": 0.735,
+      "coverage_rainy": 0.7378,
+      "coverage_all": 0.7367,
+      "width": 1.2239,
+      "interval_score": 2.4334
+    },
+    {
+      "alpha": 0.2,
+      "model": "TSO-Net",
+      "calibration": "seasonal",
+      "coverage_dry": 0.7778,
+      "coverage_rainy": 0.6585,
+      "coverage_all": 0.7082,
+      "width": 1.1519,
+      "interval_score": 2.4784
+    },
+    {
+      "alpha": 0.2,
+      "model": "TSO-Net",
+      "calibration": "seasonal+online",
+      "coverage_dry": 0.7692,
+      "coverage_rainy": 0.7256,
+      "coverage_all": 0.7438,
+      "width": 1.2641,
+      "interval_score": 2.4497
+    },
+    {
+      "alpha": 0.2,
+      "model": "Blend-eq",
+      "calibration": "season-blind",
+      "coverage_dry": 0.7265,
+      "coverage_rainy": 0.7317,
+      "coverage_all": 0.7295,
+      "width": 1.1753,
+      "interval_score": 2.3873
+    },
+    {
+      "alpha": 0.2,
+      "model": "Blend-eq",
+      "calibration": "seasonal",
+      "coverage_dry": 0.7949,
+      "coverage_rainy": 0.689,
+      "coverage_all": 0.7331,
+      "width": 1.2321,
+      "interval_score": 2.3845
+    },
+    {
+      "alpha": 0.2,
+      "model": "Blend-eq",
+      "calibration": "seasonal+online",
+      "coverage_dry": 0.7949,
+      "coverage_rainy": 0.7256,
+      "coverage_all": 0.7544,
+      "width": 1.3022,
+      "interval_score": 2.3814
+    },
+    {
+      "alpha": 0.1,
+      "model": "SARIMA",
+      "calibration": "season-blind",
+      "coverage_dry": 0.8803,
+      "coverage_rainy": 0.878,
+      "coverage_all": 0.879,
+      "width": 1.8533,
+      "interval_score": 2.8607
+    },
+    {
+      "alpha": 0.1,
+      "model": "SARIMA",
+      "calibration": "seasonal",
+      "coverage_dry": 0.9145,
+      "coverage_rainy": 0.7988,
+      "coverage_all": 0.847,
+      "width": 1.7977,
+      "interval_score": 2.9155
+    },
+    {
+      "alpha": 0.1,
+      "model": "SARIMA",
+      "calibration": "seasonal+online",
+      "coverage_dry": 0.906,
+      "coverage_rainy": 0.8415,
+      "coverage_all": 0.8683,
+      "width": 1.8953,
+      "interval_score": 2.8842
+    },
+    {
+      "alpha": 0.1,
+      "model": "TSO-Net",
+      "calibration": "season-blind",
+      "coverage_dry": 0.8291,
+      "coverage_rainy": 0.8049,
+      "coverage_all": 0.8149,
+      "width": 1.6418,
+      "interval_score": 3.1339
+    },
+    {
+      "alpha": 0.1,
+      "model": "TSO-Net",
+      "calibration": "seasonal",
+      "coverage_dry": 0.8889,
+      "coverage_rainy": 0.7622,
+      "coverage_all": 0.8149,
+      "width": 1.5961,
+      "interval_score": 3.2168
+    },
+    {
+      "alpha": 0.1,
+      "model": "TSO-Net",
+      "calibration": "seasonal+online",
+      "coverage_dry": 0.8889,
+      "coverage_rainy": 0.8171,
+      "coverage_all": 0.847,
+      "width": 1.7784,
+      "interval_score": 3.1037
+    },
+    {
+      "alpha": 0.1,
+      "model": "Blend-eq",
+      "calibration": "season-blind",
+      "coverage_dry": 0.8718,
+      "coverage_rainy": 0.872,
+      "coverage_all": 0.8719,
+      "width": 1.8019,
+      "interval_score": 2.9207
+    },
+    {
+      "alpha": 0.1,
+      "model": "Blend-eq",
+      "calibration": "seasonal",
+      "coverage_dry": 0.8889,
+      "coverage_rainy": 0.7744,
+      "coverage_all": 0.8221,
+      "width": 1.6246,
+      "interval_score": 3.0627
+    },
+    {
+      "alpha": 0.1,
+      "model": "Blend-eq",
+      "calibration": "seasonal+online",
+      "coverage_dry": 0.8974,
+      "coverage_rainy": 0.8476,
+      "coverage_all": 0.8683,
+      "width": 1.8047,
+      "interval_score": 2.9748
+    }
+  ],
+  "enso_phase": [
+    {
+      "h": 1,
+      "phase": "El Nino",
+      "n": 66,
+      "SARIMA": 0.6244,
+      "TSO_Net": 0.6112,
+      "ClimTrend": 0.7736
+    },
+    {
+      "h": 1,
+      "phase": "La Nina",
+      "n": 132,
+      "SARIMA": 0.6105,
+      "TSO_Net": 0.6248,
+      "ClimTrend": 0.6876
+    },
+    {
+      "h": 1,
+      "phase": "Neutral",
+      "n": 83,
+      "SARIMA": 0.7025,
+      "TSO_Net": 0.7345,
+      "ClimTrend": 0.819
+    },
+    {
+      "h": 3,
+      "phase": "El Nino",
+      "n": 66,
+      "SARIMA": 0.9375,
+      "TSO_Net": 0.9512,
+      "ClimTrend": 0.949
+    },
+    {
+      "h": 3,
+      "phase": "La Nina",
+      "n": 142,
+      "SARIMA": 0.6115,
+      "TSO_Net": 0.6396,
+      "ClimTrend": 0.6257
+    },
+    {
+      "h": 3,
+      "phase": "Neutral",
+      "n": 71,
+      "SARIMA": 0.6881,
+      "TSO_Net": 0.7035,
+      "ClimTrend": 0.7529
+    },
+    {
+      "h": 6,
+      "phase": "El Nino",
+      "n": 66,
+      "SARIMA": 0.9553,
+      "TSO_Net": 0.958,
+      "ClimTrend": 0.9404
+    },
+    {
+      "h": 6,
+      "phase": "La Nina",
+      "n": 147,
+      "SARIMA": 0.6023,
+      "TSO_Net": 0.6318,
+      "ClimTrend": 0.5705
+    },
+    {
+      "h": 6,
+      "phase": "Neutral",
+      "n": 63,
+      "SARIMA": 0.8271,
+      "TSO_Net": 0.7937,
+      "ClimTrend": 0.7887
+    }
+  ]
+}
