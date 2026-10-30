@@ -1,0 +1,945 @@
+{
+  "notebook": "02_Reference_Forecasts",
+  "seed": 0,
+  "leads": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "first_start": "2005-01-01",
+  "last_start": "2025-12-01",
+  "training_only_years": "1995-2004",
+  "target": "Tmean = (Tmax + Tmin) / 2",
+  "sarima_orders": {
+    "KIAMO-Accra": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic_train": 117.83,
+      "failed_fits": 0,
+      "refits_rejected_by_guard": 0
+    },
+    "Koforidua": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic_train": 146.1,
+      "failed_fits": 0,
+      "refits_rejected_by_guard": 0
+    },
+    "Kumasi": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic_train": 165.51,
+      "failed_fits": 0,
+      "refits_rejected_by_guard": 0
+    },
+    "Navrongo": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic_train": 251.04,
+      "failed_fits": 0,
+      "refits_rejected_by_guard": 0
+    },
+    "Tamale": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic_train": 262.99,
+      "failed_fits": 0,
+      "refits_rejected_by_guard": 0
+    },
+    "Wa": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        12
+      ],
+      "aic_train": 228.31,
+      "failed_fits": 0,
+      "refits_rejected_by_guard": 0
+    }
+  },
+  "independence_check": {
+    "start_months_checked": 18,
+    "passed": true
+  },
+  "dm_tests": [
+    {
+      "lead": 1,
+      "model_a": "sarima",
+      "model_b": "trend_clim",
+      "n_months": 248,
+      "mean_sq_err_diff": -0.05482,
+      "dm": -3.7398,
+      "p": 0.00023,
+      "p_holm": 0.00389
+    },
+    {
+      "lead": 1,
+      "model_a": "sarima",
+      "model_b": "climatology",
+      "n_months": 248,
+      "mean_sq_err_diff": -0.17116,
+      "dm": -3.93499,
+      "p": 0.00011,
+      "p_holm": 0.00195
+    },
+    {
+      "lead": 1,
+      "model_a": "trend_clim",
+      "model_b": "climatology",
+      "n_months": 248,
+      "mean_sq_err_diff": -0.11634,
+      "dm": -3.28051,
+      "p": 0.00119,
+      "p_holm": 0.01778
+    },
+    {
+      "lead": 2,
+      "model_a": "sarima",
+      "model_b": "trend_clim",
+      "n_months": 247,
+      "mean_sq_err_diff": -0.00444,
+      "dm": -0.42831,
+      "p": 0.6688,
+      "p_holm": 0.6688
+    },
+    {
+      "lead": 2,
+      "model_a": "sarima",
+      "model_b": "climatology",
+      "n_months": 247,
+      "mean_sq_err_diff": -0.11717,
+      "dm": -3.32445,
+      "p": 0.00102,
+      "p_holm": 0.01634
+    },
+    {
+      "lead": 2,
+      "model_a": "trend_clim",
+      "model_b": "climatology",
+      "n_months": 247,
+      "mean_sq_err_diff": -0.11272,
+      "dm": -3.17115,
+      "p": 0.00171,
+      "p_holm": 0.02396
+    },
+    {
+      "lead": 3,
+      "model_a": "sarima",
+      "model_b": "trend_clim",
+      "n_months": 246,
+      "mean_sq_err_diff": 0.01351,
+      "dm": 1.01059,
+      "p": 0.31321,
+      "p_holm": 0.62642
+    },
+    {
+      "lead": 3,
+      "model_a": "sarima",
+      "model_b": "climatology",
+      "n_months": 246,
+      "mean_sq_err_diff": -0.09537,
+      "dm": -3.04258,
+      "p": 0.0026,
+      "p_holm": 0.03246
+    },
+    {
+      "lead": 3,
+      "model_a": "trend_clim",
+      "model_b": "climatology",
+      "n_months": 246,
+      "mean_sq_err_diff": -0.10888,
+      "dm": -3.05533,
+      "p": 0.0025,
+      "p_holm": 0.03246
+    },
+    {
+      "lead": 4,
+      "model_a": "sarima",
+      "model_b": "trend_clim",
+      "n_months": 245,
+      "mean_sq_err_diff": 0.02118,
+      "dm": 1.43824,
+      "p": 0.15165,
+      "p_holm": 0.49779
+    },
+    {
+      "lead": 4,
+      "model_a": "sarima",
+      "model_b": "climatology",
+      "n_months": 245,
+      "mean_sq_err_diff": -0.08528,
+      "dm": -2.91407,
+      "p": 0.0039,
+      "p_holm": 0.03899
+    },
+    {
+      "lead": 4,
+      "model_a": "trend_clim",
+      "model_b": "climatology",
+      "n_months": 245,
+      "mean_sq_err_diff": -0.10646,
+      "dm": -2.97737,
+      "p": 0.0032,
+      "p_holm": 0.0352
+    },
+    {
+      "lead": 5,
+      "model_a": "sarima",
+      "model_b": "trend_clim",
+      "n_months": 244,
+      "mean_sq_err_diff": 0.02517,
+      "dm": 1.64539,
+      "p": 0.10118,
+      "p_holm": 0.49779
+    },
+    {
+      "lead": 5,
+      "model_a": "sarima",
+      "model_b": "climatology",
+      "n_months": 244,
+      "mean_sq_err_diff": -0.07892,
+      "dm": -2.82257,
+      "p": 0.00516,
+      "p_holm": 0.03947
+    },
+    {
+      "lead": 5,
+      "model_a": "trend_clim",
+      "model_b": "climatology",
+      "n_months": 244,
+      "mean_sq_err_diff": -0.10409,
+      "dm": -2.89492,
+      "p": 0.00414,
+      "p_holm": 0.03899
+    },
+    {
+      "lead": 6,
+      "model_a": "sarima",
+      "model_b": "trend_clim",
+      "n_months": 243,
+      "mean_sq_err_diff": 0.02614,
+      "dm": 1.65334,
+      "p": 0.09956,
+      "p_holm": 0.49779
+    },
+    {
+      "lead": 6,
+      "model_a": "sarima",
+      "model_b": "climatology",
+      "n_months": 243,
+      "mean_sq_err_diff": -0.07654,
+      "dm": -2.78493,
+      "p": 0.00578,
+      "p_holm": 0.03947
+    },
+    {
+      "lead": 6,
+      "model_a": "trend_clim",
+      "model_b": "climatology",
+      "n_months": 243,
+      "mean_sq_err_diff": -0.10268,
+      "dm": -2.8374,
+      "p": 0.00493,
+      "p_holm": 0.03947
+    }
+  ],
+  "n_scored_forecasts": 8226,
+  "rmse_by_lead_station_mean": [
+    {
+      "lead": 1,
+      "model": "climatology",
+      "rmse_mean": 0.7099,
+      "KIAMO-Accra": 0.6393,
+      "Koforidua": 0.5735,
+      "Kumasi": 0.6956,
+      "Navrongo": 0.6842,
+      "Tamale": 0.9101,
+      "Wa": 0.7564
+    },
+    {
+      "lead": 1,
+      "model": "trend_clim",
+      "rmse_mean": 0.6155,
+      "KIAMO-Accra": 0.474,
+      "Koforidua": 0.4879,
+      "Kumasi": 0.5223,
+      "Navrongo": 0.6771,
+      "Tamale": 0.7686,
+      "Wa": 0.7633
+    },
+    {
+      "lead": 1,
+      "model": "sarima",
+      "rmse_mean": 0.5713,
+      "KIAMO-Accra": 0.4457,
+      "Koforidua": 0.4774,
+      "Kumasi": 0.4713,
+      "Navrongo": 0.6374,
+      "Tamale": 0.7186,
+      "Wa": 0.6771
+    },
+    {
+      "lead": 2,
+      "model": "climatology",
+      "rmse_mean": 0.7085,
+      "KIAMO-Accra": 0.6407,
+      "Koforidua": 0.5688,
+      "Kumasi": 0.6906,
+      "Navrongo": 0.6841,
+      "Tamale": 0.9106,
+      "Wa": 0.756
+    },
+    {
+      "lead": 2,
+      "model": "trend_clim",
+      "rmse_mean": 0.6165,
+      "KIAMO-Accra": 0.4774,
+      "Koforidua": 0.4839,
+      "Kumasi": 0.5182,
+      "Navrongo": 0.6801,
+      "Tamale": 0.7731,
+      "Wa": 0.7666
+    },
+    {
+      "lead": 2,
+      "model": "sarima",
+      "rmse_mean": 0.6142,
+      "KIAMO-Accra": 0.4802,
+      "Koforidua": 0.5041,
+      "Kumasi": 0.5152,
+      "Navrongo": 0.6703,
+      "Tamale": 0.7882,
+      "Wa": 0.7272
+    },
+    {
+      "lead": 3,
+      "model": "climatology",
+      "rmse_mean": 0.7008,
+      "KIAMO-Accra": 0.6408,
+      "Koforidua": 0.563,
+      "Kumasi": 0.692,
+      "Navrongo": 0.6623,
+      "Tamale": 0.9025,
+      "Wa": 0.7442
+    },
+    {
+      "lead": 3,
+      "model": "trend_clim",
+      "rmse_mean": 0.6116,
+      "KIAMO-Accra": 0.4796,
+      "Koforidua": 0.4787,
+      "Kumasi": 0.5217,
+      "Navrongo": 0.6614,
+      "Tamale": 0.7685,
+      "Wa": 0.7596
+    },
+    {
+      "lead": 3,
+      "model": "sarima",
+      "rmse_mean": 0.6252,
+      "KIAMO-Accra": 0.5138,
+      "Koforidua": 0.512,
+      "Kumasi": 0.5402,
+      "Navrongo": 0.6593,
+      "Tamale": 0.7943,
+      "Wa": 0.7318
+    },
+    {
+      "lead": 4,
+      "model": "climatology",
+      "rmse_mean": 0.7004,
+      "KIAMO-Accra": 0.6422,
+      "Koforidua": 0.5642,
+      "Kumasi": 0.6921,
+      "Navrongo": 0.6544,
+      "Tamale": 0.9046,
+      "Wa": 0.7447
+    },
+    {
+      "lead": 4,
+      "model": "trend_clim",
+      "rmse_mean": 0.6132,
+      "KIAMO-Accra": 0.4826,
+      "Koforidua": 0.4808,
+      "Kumasi": 0.5229,
+      "Navrongo": 0.6552,
+      "Tamale": 0.7747,
+      "Wa": 0.7631
+    },
+    {
+      "lead": 4,
+      "model": "sarima",
+      "rmse_mean": 0.6336,
+      "KIAMO-Accra": 0.5341,
+      "Koforidua": 0.5175,
+      "Kumasi": 0.5503,
+      "Navrongo": 0.6514,
+      "Tamale": 0.8045,
+      "Wa": 0.7436
+    },
+    {
+      "lead": 5,
+      "model": "climatology",
+      "rmse_mean": 0.7002,
+      "KIAMO-Accra": 0.6416,
+      "Koforidua": 0.5644,
+      "Kumasi": 0.6929,
+      "Navrongo": 0.6492,
+      "Tamale": 0.9068,
+      "Wa": 0.7462
+    },
+    {
+      "lead": 5,
+      "model": "trend_clim",
+      "rmse_mean": 0.6149,
+      "KIAMO-Accra": 0.4834,
+      "Koforidua": 0.4818,
+      "Kumasi": 0.5247,
+      "Navrongo": 0.6516,
+      "Tamale": 0.7809,
+      "Wa": 0.7669
+    },
+    {
+      "lead": 5,
+      "model": "sarima",
+      "rmse_mean": 0.6384,
+      "KIAMO-Accra": 0.5413,
+      "Koforidua": 0.5192,
+      "Kumasi": 0.5555,
+      "Navrongo": 0.6471,
+      "Tamale": 0.811,
+      "Wa": 0.7561
+    },
+    {
+      "lead": 6,
+      "model": "climatology",
+      "rmse_mean": 0.7013,
+      "KIAMO-Accra": 0.643,
+      "Koforidua": 0.5652,
+      "Kumasi": 0.6941,
+      "Navrongo": 0.6488,
+      "Tamale": 0.9089,
+      "Wa": 0.7479
+    },
+    {
+      "lead": 6,
+      "model": "trend_clim",
+      "rmse_mean": 0.6173,
+      "KIAMO-Accra": 0.4863,
+      "Koforidua": 0.4832,
+      "Kumasi": 0.5268,
+      "Navrongo": 0.6517,
+      "Tamale": 0.786,
+      "Wa": 0.7698
+    },
+    {
+      "lead": 6,
+      "model": "sarima",
+      "rmse_mean": 0.6417,
+      "KIAMO-Accra": 0.5488,
+      "Koforidua": 0.5213,
+      "Kumasi": 0.5588,
+      "Navrongo": 0.6463,
+      "Tamale": 0.8145,
+      "Wa": 0.7602
+    }
+  ],
+  "skill_pooled_by_lead": [
+    {
+      "lead": 1,
+      "sarima_vs_trend": 0.1427,
+      "sarima_vs_clim": 0.3432,
+      "trend_vs_clim": 0.2339
+    },
+    {
+      "lead": 2,
+      "sarima_vs_trend": 0.0132,
+      "sarima_vs_clim": 0.2378,
+      "trend_vs_clim": 0.2276
+    },
+    {
+      "lead": 3,
+      "sarima_vs_trend": -0.0348,
+      "sarima_vs_clim": 0.1977,
+      "trend_vs_clim": 0.2247
+    },
+    {
+      "lead": 4,
+      "sarima_vs_trend": -0.0552,
+      "sarima_vs_clim": 0.1769,
+      "trend_vs_clim": 0.22
+    },
+    {
+      "lead": 5,
+      "sarima_vs_trend": -0.0653,
+      "sarima_vs_clim": 0.164,
+      "trend_vs_clim": 0.2153
+    },
+    {
+      "lead": 6,
+      "sarima_vs_trend": -0.0674,
+      "sarima_vs_clim": 0.1587,
+      "trend_vs_clim": 0.2118
+    }
+  ],
+  "skill_sarima_vs_trend_by_season_lead": [
+    {
+      "season": "DJF",
+      "lead": 1,
+      "n": 348,
+      "sarima_vs_trend": 0.0895,
+      "sarima_vs_clim": 0.2928,
+      "rmse_sarima": 0.7558,
+      "rmse_trend": 0.7921,
+      "rmse_clim": 0.8988
+    },
+    {
+      "season": "DJF",
+      "lead": 2,
+      "n": 342,
+      "sarima_vs_trend": 0.0054,
+      "sarima_vs_clim": 0.2278,
+      "rmse_sarima": 0.7887,
+      "rmse_trend": 0.7908,
+      "rmse_clim": 0.8975
+    },
+    {
+      "season": "DJF",
+      "lead": 3,
+      "n": 336,
+      "sarima_vs_trend": -0.0528,
+      "sarima_vs_clim": 0.1864,
+      "rmse_sarima": 0.7892,
+      "rmse_trend": 0.7692,
+      "rmse_clim": 0.875
+    },
+    {
+      "season": "DJF",
+      "lead": 4,
+      "n": 336,
+      "sarima_vs_trend": -0.0533,
+      "sarima_vs_clim": 0.1841,
+      "rmse_sarima": 0.7903,
+      "rmse_trend": 0.7701,
+      "rmse_clim": 0.875
+    },
+    {
+      "season": "DJF",
+      "lead": 5,
+      "n": 336,
+      "sarima_vs_trend": -0.0576,
+      "sarima_vs_clim": 0.1775,
+      "rmse_sarima": 0.7935,
+      "rmse_trend": 0.7716,
+      "rmse_clim": 0.875
+    },
+    {
+      "season": "DJF",
+      "lead": 6,
+      "n": 336,
+      "sarima_vs_trend": -0.0568,
+      "sarima_vs_clim": 0.1759,
+      "rmse_sarima": 0.7943,
+      "rmse_trend": 0.7727,
+      "rmse_clim": 0.875
+    },
+    {
+      "season": "MAM",
+      "lead": 1,
+      "n": 359,
+      "sarima_vs_trend": 0.1875,
+      "sarima_vs_clim": 0.364,
+      "rmse_sarima": 0.5741,
+      "rmse_trend": 0.6369,
+      "rmse_clim": 0.7198
+    },
+    {
+      "season": "MAM",
+      "lead": 2,
+      "n": 359,
+      "sarima_vs_trend": 0.0155,
+      "sarima_vs_clim": 0.2169,
+      "rmse_sarima": 0.637,
+      "rmse_trend": 0.642,
+      "rmse_clim": 0.7198
+    },
+    {
+      "season": "MAM",
+      "lead": 3,
+      "n": 359,
+      "sarima_vs_trend": -0.0241,
+      "sarima_vs_clim": 0.1768,
+      "rmse_sarima": 0.6531,
+      "rmse_trend": 0.6454,
+      "rmse_clim": 0.7198
+    },
+    {
+      "season": "MAM",
+      "lead": 4,
+      "n": 353,
+      "sarima_vs_trend": -0.0633,
+      "sarima_vs_clim": 0.1364,
+      "rmse_sarima": 0.6677,
+      "rmse_trend": 0.6475,
+      "rmse_clim": 0.7184
+    },
+    {
+      "season": "MAM",
+      "lead": 5,
+      "n": 347,
+      "sarima_vs_trend": -0.0789,
+      "sarima_vs_clim": 0.1176,
+      "rmse_sarima": 0.6747,
+      "rmse_trend": 0.6496,
+      "rmse_clim": 0.7183
+    },
+    {
+      "season": "MAM",
+      "lead": 6,
+      "n": 341,
+      "sarima_vs_trend": -0.0863,
+      "sarima_vs_clim": 0.1072,
+      "rmse_sarima": 0.6832,
+      "rmse_trend": 0.6555,
+      "rmse_clim": 0.723
+    },
+    {
+      "season": "JJA",
+      "lead": 1,
+      "n": 348,
+      "sarima_vs_trend": 0.1996,
+      "sarima_vs_clim": 0.4003,
+      "rmse_sarima": 0.4554,
+      "rmse_trend": 0.5091,
+      "rmse_clim": 0.5881
+    },
+    {
+      "season": "JJA",
+      "lead": 2,
+      "n": 348,
+      "sarima_vs_trend": -0.0099,
+      "sarima_vs_clim": 0.2332,
+      "rmse_sarima": 0.515,
+      "rmse_trend": 0.5125,
+      "rmse_clim": 0.5881
+    },
+    {
+      "season": "JJA",
+      "lead": 3,
+      "n": 348,
+      "sarima_vs_trend": -0.0434,
+      "sarima_vs_clim": 0.2027,
+      "rmse_sarima": 0.5252,
+      "rmse_trend": 0.5141,
+      "rmse_clim": 0.5881
+    },
+    {
+      "season": "JJA",
+      "lead": 4,
+      "n": 348,
+      "sarima_vs_trend": -0.0567,
+      "sarima_vs_clim": 0.187,
+      "rmse_sarima": 0.5303,
+      "rmse_trend": 0.5159,
+      "rmse_clim": 0.5881
+    },
+    {
+      "season": "JJA",
+      "lead": 5,
+      "n": 348,
+      "sarima_vs_trend": -0.0706,
+      "sarima_vs_clim": 0.1695,
+      "rmse_sarima": 0.536,
+      "rmse_trend": 0.518,
+      "rmse_clim": 0.5881
+    },
+    {
+      "season": "JJA",
+      "lead": 6,
+      "n": 348,
+      "sarima_vs_trend": -0.0705,
+      "sarima_vs_clim": 0.1655,
+      "rmse_sarima": 0.5373,
+      "rmse_trend": 0.5193,
+      "rmse_clim": 0.5881
+    },
+    {
+      "season": "SON",
+      "lead": 1,
+      "n": 331,
+      "sarima_vs_trend": 0.1422,
+      "sarima_vs_clim": 0.3716,
+      "rmse_sarima": 0.4785,
+      "rmse_trend": 0.5166,
+      "rmse_clim": 0.6036
+    },
+    {
+      "season": "SON",
+      "lead": 2,
+      "n": 331,
+      "sarima_vs_trend": 0.0518,
+      "sarima_vs_clim": 0.2975,
+      "rmse_sarima": 0.5059,
+      "rmse_trend": 0.5195,
+      "rmse_clim": 0.6036
+    },
+    {
+      "season": "SON",
+      "lead": 3,
+      "n": 331,
+      "sarima_vs_trend": -0.004,
+      "sarima_vs_clim": 0.2492,
+      "rmse_sarima": 0.523,
+      "rmse_trend": 0.522,
+      "rmse_clim": 0.6036
+    },
+    {
+      "season": "SON",
+      "lead": 4,
+      "n": 331,
+      "sarima_vs_trend": -0.0446,
+      "sarima_vs_clim": 0.2127,
+      "rmse_sarima": 0.5356,
+      "rmse_trend": 0.524,
+      "rmse_clim": 0.6036
+    },
+    {
+      "season": "SON",
+      "lead": 5,
+      "n": 331,
+      "sarima_vs_trend": -0.0551,
+      "sarima_vs_clim": 0.1987,
+      "rmse_sarima": 0.5403,
+      "rmse_trend": 0.526,
+      "rmse_clim": 0.6036
+    },
+    {
+      "season": "SON",
+      "lead": 6,
+      "n": 331,
+      "sarima_vs_trend": -0.0571,
+      "sarima_vs_clim": 0.1913,
+      "rmse_sarima": 0.5428,
+      "rmse_trend": 0.5279,
+      "rmse_clim": 0.6036
+    }
+  ],
+  "by_station": [
+    {
+      "station": "KIAMO-Accra",
+      "lead": 1,
+      "n": 231,
+      "rmse_clim": 0.6393,
+      "rmse_trend": 0.474,
+      "rmse_sarima": 0.4457,
+      "skill_sarima_vs_trend": 0.1161
+    },
+    {
+      "station": "KIAMO-Accra",
+      "lead": 3,
+      "n": 229,
+      "rmse_clim": 0.6408,
+      "rmse_trend": 0.4796,
+      "rmse_sarima": 0.5138,
+      "skill_sarima_vs_trend": -0.1477
+    },
+    {
+      "station": "KIAMO-Accra",
+      "lead": 6,
+      "n": 226,
+      "rmse_clim": 0.643,
+      "rmse_trend": 0.4863,
+      "rmse_sarima": 0.5488,
+      "skill_sarima_vs_trend": -0.2734
+    },
+    {
+      "station": "Koforidua",
+      "lead": 1,
+      "n": 223,
+      "rmse_clim": 0.5735,
+      "rmse_trend": 0.4879,
+      "rmse_sarima": 0.4774,
+      "skill_sarima_vs_trend": 0.0427
+    },
+    {
+      "station": "Koforidua",
+      "lead": 3,
+      "n": 221,
+      "rmse_clim": 0.563,
+      "rmse_trend": 0.4787,
+      "rmse_sarima": 0.512,
+      "skill_sarima_vs_trend": -0.1441
+    },
+    {
+      "station": "Koforidua",
+      "lead": 6,
+      "n": 218,
+      "rmse_clim": 0.5652,
+      "rmse_trend": 0.4832,
+      "rmse_sarima": 0.5213,
+      "skill_sarima_vs_trend": -0.1639
+    },
+    {
+      "station": "Kumasi",
+      "lead": 1,
+      "n": 247,
+      "rmse_clim": 0.6956,
+      "rmse_trend": 0.5223,
+      "rmse_sarima": 0.4713,
+      "skill_sarima_vs_trend": 0.1857
+    },
+    {
+      "station": "Kumasi",
+      "lead": 3,
+      "n": 245,
+      "rmse_clim": 0.692,
+      "rmse_trend": 0.5217,
+      "rmse_sarima": 0.5402,
+      "skill_sarima_vs_trend": -0.0719
+    },
+    {
+      "station": "Kumasi",
+      "lead": 6,
+      "n": 242,
+      "rmse_clim": 0.6941,
+      "rmse_trend": 0.5268,
+      "rmse_sarima": 0.5588,
+      "skill_sarima_vs_trend": -0.1253
+    },
+    {
+      "station": "Navrongo",
+      "lead": 1,
+      "n": 247,
+      "rmse_clim": 0.6842,
+      "rmse_trend": 0.6771,
+      "rmse_sarima": 0.6374,
+      "skill_sarima_vs_trend": 0.1137
+    },
+    {
+      "station": "Navrongo",
+      "lead": 3,
+      "n": 245,
+      "rmse_clim": 0.6623,
+      "rmse_trend": 0.6614,
+      "rmse_sarima": 0.6593,
+      "skill_sarima_vs_trend": 0.0063
+    },
+    {
+      "station": "Navrongo",
+      "lead": 6,
+      "n": 242,
+      "rmse_clim": 0.6488,
+      "rmse_trend": 0.6517,
+      "rmse_sarima": 0.6463,
+      "skill_sarima_vs_trend": 0.0165
+    },
+    {
+      "station": "Tamale",
+      "lead": 1,
+      "n": 213,
+      "rmse_clim": 0.9101,
+      "rmse_trend": 0.7686,
+      "rmse_sarima": 0.7186,
+      "skill_sarima_vs_trend": 0.1258
+    },
+    {
+      "station": "Tamale",
+      "lead": 3,
+      "n": 211,
+      "rmse_clim": 0.9025,
+      "rmse_trend": 0.7685,
+      "rmse_sarima": 0.7943,
+      "skill_sarima_vs_trend": -0.0684
+    },
+    {
+      "station": "Tamale",
+      "lead": 6,
+      "n": 208,
+      "rmse_clim": 0.9089,
+      "rmse_trend": 0.786,
+      "rmse_sarima": 0.8145,
+      "skill_sarima_vs_trend": -0.0737
+    },
+    {
+      "station": "Wa",
+      "lead": 1,
+      "n": 225,
+      "rmse_clim": 0.7564,
+      "rmse_trend": 0.7633,
+      "rmse_sarima": 0.6771,
+      "skill_sarima_vs_trend": 0.213
+    },
+    {
+      "station": "Wa",
+      "lead": 3,
+      "n": 223,
+      "rmse_clim": 0.7442,
+      "rmse_trend": 0.7596,
+      "rmse_sarima": 0.7318,
+      "skill_sarima_vs_trend": 0.0719
+    },
+    {
+      "station": "Wa",
+      "lead": 6,
+      "n": 220,
+      "rmse_clim": 0.7479,
+      "rmse_trend": 0.7698,
+      "rmse_sarima": 0.7602,
+      "skill_sarima_vs_trend": 0.0247
+    }
+  ]
+}
