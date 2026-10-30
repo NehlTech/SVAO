@@ -1,0 +1,2382 @@
+{
+  "notebook": "04_Post_Processing",
+  "seed": 0,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "members_used": 25,
+  "test_years": [
+    2005,
+    2025
+  ],
+  "tune_years": [
+    2005,
+    2010,
+    2015,
+    2020
+  ],
+  "configs_per_family": 12,
+  "lambdas": [
+    0.0,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "independence_check": {
+    "start_months_checked": 18,
+    "test_years_checked": 21,
+    "passed": true
+  },
+  "tuned_settings": {
+    "2005": {
+      "year": 2005,
+      "n_train": 2046,
+      "n_val": 1272,
+      "ridge_alpha": 2848.035868435799,
+      "gbm_cfg": {
+        "n_estimators": 25,
+        "max_depth": 1,
+        "learning_rate": 0.03
+      },
+      "nn_cfg": {
+        "hidden_layer_sizes": [
+          8
+        ],
+        "alpha": 0.1
+      },
+      "lambda_ridge": 0.0,
+      "lambda_gbm": 0.0
+    },
+    "2010": {
+      "year": 2010,
+      "n_train": 4182,
+      "n_val": 1170,
+      "ridge_alpha": 811.1308307896855,
+      "gbm_cfg": {
+        "n_estimators": 25,
+        "max_depth": 2,
+        "learning_rate": 0.1
+      },
+      "nn_cfg": {
+        "hidden_layer_sizes": [
+          8
+        ],
+        "alpha": 0.1
+      },
+      "lambda_ridge": 0.0,
+      "lambda_gbm": 0.0
+    },
+    "2015": {
+      "year": 2015,
+      "n_train": 6126,
+      "n_val": 1146,
+      "ridge_alpha": 811.1308307896855,
+      "gbm_cfg": {
+        "n_estimators": 100,
+        "max_depth": 1,
+        "learning_rate": 0.1
+      },
+      "nn_cfg": {
+        "hidden_layer_sizes": [
+          4
+        ],
+        "alpha": 0.001
+      },
+      "lambda_ridge": 0.0,
+      "lambda_gbm": 2.0
+    },
+    "2020": {
+      "year": 2020,
+      "n_train": 8052,
+      "n_val": 1212,
+      "ridge_alpha": 2848.035868435799,
+      "gbm_cfg": {
+        "n_estimators": 50,
+        "max_depth": 1,
+        "learning_rate": 0.1
+      },
+      "nn_cfg": {
+        "hidden_layer_sizes": [
+          8
+        ],
+        "alpha": 0.001
+      },
+      "lambda_ridge": 0.0,
+      "lambda_gbm": 0.0
+    }
+  },
+  "scored_pairs": 8226,
+  "best_reference_by_lead": {
+    "1": "Seasonal ARIMA",
+    "2": "Seasonal ARIMA",
+    "3": "Trend climatology",
+    "4": "Trend climatology",
+    "5": "Trend climatology",
+    "6": "Trend climatology"
+  },
+  "rmse_by_lead_model": [
+    {
+      "lead": 1,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6155,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.5713,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "SEAS5-BC",
+      "key": "bc",
+      "rmse": 0.5873,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.5426,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "rmse": 0.5442,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.5229,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.5657,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "rmse": 0.5229,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "rmse": 0.5243,
+      "sd_over_seeds": 0.001
+    },
+    {
+      "lead": 1,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "rmse": 0.5244,
+      "sd_over_seeds": 0.0013
+    },
+    {
+      "lead": 1,
+      "model": "Neural network",
+      "key": "nn",
+      "rmse": 0.5419,
+      "sd_over_seeds": 0.0059
+    },
+    {
+      "lead": 2,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6165,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6142,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "SEAS5-BC",
+      "key": "bc",
+      "rmse": 0.6312,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.5826,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "rmse": 0.5889,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.568,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.5877,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "rmse": 0.568,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "rmse": 0.577,
+      "sd_over_seeds": 0.0006
+    },
+    {
+      "lead": 2,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "rmse": 0.5777,
+      "sd_over_seeds": 0.0006
+    },
+    {
+      "lead": 2,
+      "model": "Neural network",
+      "key": "nn",
+      "rmse": 0.5872,
+      "sd_over_seeds": 0.006
+    },
+    {
+      "lead": 3,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6116,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6252,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "SEAS5-BC",
+      "key": "bc",
+      "rmse": 0.6475,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.5958,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "rmse": 0.6028,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.5786,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.5927,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "rmse": 0.5786,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "rmse": 0.5957,
+      "sd_over_seeds": 0.0012
+    },
+    {
+      "lead": 3,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "rmse": 0.5959,
+      "sd_over_seeds": 0.0012
+    },
+    {
+      "lead": 3,
+      "model": "Neural network",
+      "key": "nn",
+      "rmse": 0.6032,
+      "sd_over_seeds": 0.0039
+    },
+    {
+      "lead": 4,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6132,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6336,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "SEAS5-BC",
+      "key": "bc",
+      "rmse": 0.6419,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.5951,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "rmse": 0.6034,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.5831,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.5988,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "rmse": 0.5831,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "rmse": 0.5936,
+      "sd_over_seeds": 0.0013
+    },
+    {
+      "lead": 4,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "rmse": 0.5944,
+      "sd_over_seeds": 0.0014
+    },
+    {
+      "lead": 4,
+      "model": "Neural network",
+      "key": "nn",
+      "rmse": 0.6005,
+      "sd_over_seeds": 0.0056
+    },
+    {
+      "lead": 5,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6149,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6384,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "SEAS5-BC",
+      "key": "bc",
+      "rmse": 0.6449,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.5992,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "rmse": 0.6035,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.5905,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.6066,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "rmse": 0.5905,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "rmse": 0.6037,
+      "sd_over_seeds": 0.0008
+    },
+    {
+      "lead": 5,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "rmse": 0.6041,
+      "sd_over_seeds": 0.0013
+    },
+    {
+      "lead": 5,
+      "model": "Neural network",
+      "key": "nn",
+      "rmse": 0.6074,
+      "sd_over_seeds": 0.0027
+    },
+    {
+      "lead": 6,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6173,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6417,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "SEAS5-BC",
+      "key": "bc",
+      "rmse": 0.6349,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.6002,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "rmse": 0.6024,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.5894,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.612,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "rmse": 0.5894,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "rmse": 0.6044,
+      "sd_over_seeds": 0.0008
+    },
+    {
+      "lead": 6,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "rmse": 0.604,
+      "sd_over_seeds": 0.0007
+    },
+    {
+      "lead": 6,
+      "model": "Neural network",
+      "key": "nn",
+      "rmse": 0.6094,
+      "sd_over_seeds": 0.0024
+    }
+  ],
+  "skill_and_tests_vs_best_reference": [
+    {
+      "lead": 1,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.06291,
+      "mean_sq_err_diff": -0.02162,
+      "dm": -0.91349,
+      "p": 0.36188,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.06103,
+      "mean_sq_err_diff": -0.02142,
+      "dm": -0.87893,
+      "p": 0.38029,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "Ridge",
+      "key": "ridge",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.14019,
+      "mean_sq_err_diff": -0.04701,
+      "dm": -2.98069,
+      "p": 0.00316,
+      "p_holm": 0.14234,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.01005,
+      "mean_sq_err_diff": -0.00277,
+      "dm": -0.26964,
+      "p": 0.78766,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.14019,
+      "mean_sq_err_diff": -0.04701,
+      "dm": -2.98069,
+      "p": 0.00316,
+      "p_holm": 0.14234,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.12814,
+      "mean_sq_err_diff": -0.04324,
+      "dm": -2.38701,
+      "p": 0.01774,
+      "p_holm": 0.63861,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.12825,
+      "mean_sq_err_diff": -0.04331,
+      "dm": -2.38694,
+      "p": 0.01774,
+      "p_holm": 0.63861,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "Neural network",
+      "key": "nn",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.07729,
+      "mean_sq_err_diff": -0.02708,
+      "dm": -1.0417,
+      "p": 0.29857,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.07038,
+      "mean_sq_err_diff": -0.02731,
+      "dm": -1.35156,
+      "p": 0.17776,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.05423,
+      "mean_sq_err_diff": -0.02205,
+      "dm": -1.05511,
+      "p": 0.29241,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Ridge",
+      "key": "ridge",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.1226,
+      "mean_sq_err_diff": -0.04697,
+      "dm": -2.77866,
+      "p": 0.00588,
+      "p_holm": 0.25282,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.07434,
+      "mean_sq_err_diff": -0.02838,
+      "dm": -2.06161,
+      "p": 0.0403,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.1226,
+      "mean_sq_err_diff": -0.04697,
+      "dm": -2.77866,
+      "p": 0.00588,
+      "p_holm": 0.25282,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.09188,
+      "mean_sq_err_diff": -0.03535,
+      "dm": -1.94571,
+      "p": 0.05283,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.08994,
+      "mean_sq_err_diff": -0.03466,
+      "dm": -1.93594,
+      "p": 0.05402,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Neural network",
+      "key": "nn",
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": 0.06146,
+      "mean_sq_err_diff": -0.02495,
+      "dm": -1.14888,
+      "p": 0.25172,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.027,
+      "mean_sq_err_diff": -0.01013,
+      "dm": -0.64617,
+      "p": 0.51877,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.00811,
+      "mean_sq_err_diff": -0.00368,
+      "dm": -0.22285,
+      "p": 0.82384,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Ridge",
+      "key": "ridge",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.08976,
+      "mean_sq_err_diff": -0.03349,
+      "dm": -3.30133,
+      "p": 0.00111,
+      "p_holm": 0.05307,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.0565,
+      "mean_sq_err_diff": -0.02115,
+      "dm": -3.0968,
+      "p": 0.00218,
+      "p_holm": 0.10046,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.08976,
+      "mean_sq_err_diff": -0.03349,
+      "dm": -3.30133,
+      "p": 0.00111,
+      "p_holm": 0.05307,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.03319,
+      "mean_sq_err_diff": -0.01224,
+      "dm": -1.55327,
+      "p": 0.12165,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.03281,
+      "mean_sq_err_diff": -0.01207,
+      "dm": -1.54674,
+      "p": 0.12322,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Neural network",
+      "key": "nn",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.01309,
+      "mean_sq_err_diff": -0.00606,
+      "dm": -0.41436,
+      "p": 0.67897,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.03019,
+      "mean_sq_err_diff": -0.0115,
+      "dm": -0.67724,
+      "p": 0.49889,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.00559,
+      "mean_sq_err_diff": -0.00264,
+      "dm": -0.14632,
+      "p": 0.88379,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Ridge",
+      "key": "ridge",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.07901,
+      "mean_sq_err_diff": -0.02977,
+      "dm": -2.74847,
+      "p": 0.00643,
+      "p_holm": 0.26383,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.04224,
+      "mean_sq_err_diff": -0.01593,
+      "dm": -2.5171,
+      "p": 0.01247,
+      "p_holm": 0.48651,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.07901,
+      "mean_sq_err_diff": -0.02977,
+      "dm": -2.74847,
+      "p": 0.00643,
+      "p_holm": 0.26383,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.04247,
+      "mean_sq_err_diff": -0.01676,
+      "dm": -1.98681,
+      "p": 0.04806,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.04036,
+      "mean_sq_err_diff": -0.01598,
+      "dm": -1.93431,
+      "p": 0.05423,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Neural network",
+      "key": "nn",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.01581,
+      "mean_sq_err_diff": -0.00688,
+      "dm": -0.4851,
+      "p": 0.62804,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.02284,
+      "mean_sq_err_diff": -0.00973,
+      "dm": -0.53969,
+      "p": 0.5899,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.01067,
+      "mean_sq_err_diff": -0.00594,
+      "dm": -0.31211,
+      "p": 0.75522,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Ridge",
+      "key": "ridge",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.06017,
+      "mean_sq_err_diff": -0.02328,
+      "dm": -2.23045,
+      "p": 0.02663,
+      "p_holm": 0.90545,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.02178,
+      "mean_sq_err_diff": -0.00815,
+      "dm": -1.39614,
+      "p": 0.16395,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.06017,
+      "mean_sq_err_diff": -0.02328,
+      "dm": -2.23045,
+      "p": 0.02663,
+      "p_holm": 0.90545,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.01209,
+      "mean_sq_err_diff": -0.00532,
+      "dm": -0.56197,
+      "p": 0.57465,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.01103,
+      "mean_sq_err_diff": -0.00495,
+      "dm": -0.5126,
+      "p": 0.6087,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Neural network",
+      "key": "nn",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": -0.00189,
+      "mean_sq_err_diff": -0.00095,
+      "dm": -0.05767,
+      "p": 0.95406,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.0231,
+      "mean_sq_err_diff": -0.00923,
+      "dm": -0.52389,
+      "p": 0.60083,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Linear, by season",
+      "key": "ols_season",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.01708,
+      "mean_sq_err_diff": -0.00803,
+      "dm": -0.44922,
+      "p": 0.65367,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Ridge",
+      "key": "ridge",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.06923,
+      "mean_sq_err_diff": -0.02674,
+      "dm": -2.50361,
+      "p": 0.01295,
+      "p_holm": 0.49221,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.01269,
+      "mean_sq_err_diff": -0.00471,
+      "dm": -0.79033,
+      "p": 0.43011,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Ridge, season-weighted",
+      "key": "ridge_w",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.06923,
+      "mean_sq_err_diff": -0.02674,
+      "dm": -2.50361,
+      "p": 0.01295,
+      "p_holm": 0.49221,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Gradient boosting",
+      "key": "gbm",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.01613,
+      "mean_sq_err_diff": -0.00678,
+      "dm": -0.69175,
+      "p": 0.48976,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Gradient boosting, season-weighted",
+      "key": "gbm_w",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": 0.01856,
+      "mean_sq_err_diff": -0.00771,
+      "dm": -0.78551,
+      "p": 0.43293,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Neural network",
+      "key": "nn",
+      "best_reference": "Trend climatology",
+      "skill_vs_best": -0.0022,
+      "mean_sq_err_diff": -0.00068,
+      "dm": -0.03988,
+      "p": 0.96822,
+      "p_holm": 1.0,
+      "passes": false
+    }
+  ],
+  "models_passing_decision_rule": [],
+  "contrasts": [
+    {
+      "contrast": "SEAS5 adds to ridge",
+      "lead": 1,
+      "rmse_a": 0.53714,
+      "rmse_b": 0.57635,
+      "mean_sq_err_diff": -0.04424,
+      "dm": -5.46069,
+      "p": 0.0,
+      "p_holm": 0.0
+    },
+    {
+      "contrast": "SEAS5 adds to ridge",
+      "lead": 2,
+      "rmse_a": 0.58346,
+      "rmse_b": 0.59929,
+      "mean_sq_err_diff": -0.01859,
+      "dm": -2.59779,
+      "p": 0.00995,
+      "p_holm": 0.04974
+    },
+    {
+      "contrast": "SEAS5 adds to ridge",
+      "lead": 3,
+      "rmse_a": 0.59281,
+      "rmse_b": 0.60355,
+      "mean_sq_err_diff": -0.01234,
+      "dm": -1.60288,
+      "p": 0.11025,
+      "p_holm": 0.22756
+    },
+    {
+      "contrast": "SEAS5 adds to ridge",
+      "lead": 4,
+      "rmse_a": 0.59775,
+      "rmse_b": 0.60956,
+      "mean_sq_err_diff": -0.01384,
+      "dm": -1.60884,
+      "p": 0.10894,
+      "p_holm": 0.22756
+    },
+    {
+      "contrast": "SEAS5 adds to ridge",
+      "lead": 5,
+      "rmse_a": 0.60555,
+      "rmse_b": 0.6178,
+      "mean_sq_err_diff": -0.01513,
+      "dm": -1.78288,
+      "p": 0.07585,
+      "p_holm": 0.22756
+    },
+    {
+      "contrast": "SEAS5 adds to ridge",
+      "lead": 6,
+      "rmse_a": 0.60497,
+      "rmse_b": 0.62307,
+      "mean_sq_err_diff": -0.02203,
+      "dm": -2.47888,
+      "p": 0.01386,
+      "p_holm": 0.05545
+    },
+    {
+      "contrast": "Weighting, ridge",
+      "lead": 1,
+      "rmse_a": 0.53714,
+      "rmse_b": 0.53714,
+      "mean_sq_err_diff": 0.0,
+      "dm": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, ridge",
+      "lead": 2,
+      "rmse_a": 0.58346,
+      "rmse_b": 0.58346,
+      "mean_sq_err_diff": 0.0,
+      "dm": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, ridge",
+      "lead": 3,
+      "rmse_a": 0.59281,
+      "rmse_b": 0.59281,
+      "mean_sq_err_diff": 0.0,
+      "dm": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, ridge",
+      "lead": 4,
+      "rmse_a": 0.59775,
+      "rmse_b": 0.59775,
+      "mean_sq_err_diff": 0.0,
+      "dm": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, ridge",
+      "lead": 5,
+      "rmse_a": 0.60555,
+      "rmse_b": 0.60555,
+      "mean_sq_err_diff": 0.0,
+      "dm": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, ridge",
+      "lead": 6,
+      "rmse_a": 0.60497,
+      "rmse_b": 0.60497,
+      "mean_sq_err_diff": 0.0,
+      "dm": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, gradient boosting",
+      "lead": 1,
+      "rmse_a": 0.54085,
+      "rmse_b": 0.54089,
+      "mean_sq_err_diff": -6e-05,
+      "dm": -0.36517,
+      "p": 0.7153,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, gradient boosting",
+      "lead": 2,
+      "rmse_a": 0.59422,
+      "rmse_b": 0.59359,
+      "mean_sq_err_diff": 0.00069,
+      "dm": 1.5278,
+      "p": 0.12785,
+      "p_holm": 0.62641
+    },
+    {
+      "contrast": "Weighting, gradient boosting",
+      "lead": 3,
+      "rmse_a": 0.61107,
+      "rmse_b": 0.61095,
+      "mean_sq_err_diff": 0.00017,
+      "dm": 0.39422,
+      "p": 0.69376,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, gradient boosting",
+      "lead": 4,
+      "rmse_a": 0.61016,
+      "rmse_b": 0.60949,
+      "mean_sq_err_diff": 0.00078,
+      "dm": 1.53826,
+      "p": 0.12528,
+      "p_holm": 0.62641
+    },
+    {
+      "contrast": "Weighting, gradient boosting",
+      "lead": 5,
+      "rmse_a": 0.62118,
+      "rmse_b": 0.62085,
+      "mean_sq_err_diff": 0.00037,
+      "dm": 0.86556,
+      "p": 0.38758,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, gradient boosting",
+      "lead": 6,
+      "rmse_a": 0.62122,
+      "rmse_b": 0.62198,
+      "mean_sq_err_diff": -0.00093,
+      "dm": -1.65272,
+      "p": 0.09968,
+      "p_holm": 0.59811
+    },
+    {
+      "contrast": "Gradient boosting vs ridge",
+      "lead": 1,
+      "rmse_a": 0.54089,
+      "rmse_b": 0.53714,
+      "mean_sq_err_diff": 0.00377,
+      "dm": 1.02045,
+      "p": 0.30851,
+      "p_holm": 0.30851
+    },
+    {
+      "contrast": "Gradient boosting vs ridge",
+      "lead": 2,
+      "rmse_a": 0.59359,
+      "rmse_b": 0.58346,
+      "mean_sq_err_diff": 0.01162,
+      "dm": 2.21215,
+      "p": 0.02788,
+      "p_holm": 0.13938
+    },
+    {
+      "contrast": "Gradient boosting vs ridge",
+      "lead": 3,
+      "rmse_a": 0.61095,
+      "rmse_b": 0.59281,
+      "mean_sq_err_diff": 0.02125,
+      "dm": 2.45606,
+      "p": 0.01474,
+      "p_holm": 0.08845
+    },
+    {
+      "contrast": "Gradient boosting vs ridge",
+      "lead": 4,
+      "rmse_a": 0.60949,
+      "rmse_b": 0.59775,
+      "mean_sq_err_diff": 0.01301,
+      "dm": 1.82779,
+      "p": 0.0688,
+      "p_holm": 0.20641
+    },
+    {
+      "contrast": "Gradient boosting vs ridge",
+      "lead": 5,
+      "rmse_a": 0.62085,
+      "rmse_b": 0.60555,
+      "mean_sq_err_diff": 0.01796,
+      "dm": 1.63239,
+      "p": 0.10389,
+      "p_holm": 0.20778
+    },
+    {
+      "contrast": "Gradient boosting vs ridge",
+      "lead": 6,
+      "rmse_a": 0.62198,
+      "rmse_b": 0.60497,
+      "mean_sq_err_diff": 0.01996,
+      "dm": 2.21068,
+      "p": 0.02799,
+      "p_holm": 0.13938
+    },
+    {
+      "contrast": "Neural network vs ridge",
+      "lead": 1,
+      "rmse_a": 0.55642,
+      "rmse_b": 0.53714,
+      "mean_sq_err_diff": 0.01993,
+      "dm": 1.28448,
+      "p": 0.20018,
+      "p_holm": 0.24915
+    },
+    {
+      "contrast": "Neural network vs ridge",
+      "lead": 2,
+      "rmse_a": 0.60343,
+      "rmse_b": 0.58346,
+      "mean_sq_err_diff": 0.02202,
+      "dm": 1.54112,
+      "p": 0.12457,
+      "p_holm": 0.24915
+    },
+    {
+      "contrast": "Neural network vs ridge",
+      "lead": 3,
+      "rmse_a": 0.61726,
+      "rmse_b": 0.59281,
+      "mean_sq_err_diff": 0.02743,
+      "dm": 2.24491,
+      "p": 0.02567,
+      "p_holm": 0.10267
+    },
+    {
+      "contrast": "Neural network vs ridge",
+      "lead": 4,
+      "rmse_a": 0.6179,
+      "rmse_b": 0.59775,
+      "mean_sq_err_diff": 0.02289,
+      "dm": 2.41708,
+      "p": 0.01638,
+      "p_holm": 0.09828
+    },
+    {
+      "contrast": "Neural network vs ridge",
+      "lead": 5,
+      "rmse_a": 0.62522,
+      "rmse_b": 0.60555,
+      "mean_sq_err_diff": 0.02233,
+      "dm": 2.09606,
+      "p": 0.03711,
+      "p_holm": 0.11133
+    },
+    {
+      "contrast": "Neural network vs ridge",
+      "lead": 6,
+      "rmse_a": 0.62775,
+      "rmse_b": 0.60497,
+      "mean_sq_err_diff": 0.02606,
+      "dm": 2.40245,
+      "p": 0.01704,
+      "p_holm": 0.09828
+    }
+  ],
+  "by_station": [
+    {
+      "model": "Ridge",
+      "station": "KIAMO-Accra",
+      "lead": 1,
+      "n": 231,
+      "rmse": 0.3768,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4457,
+      "skill_vs_best": 0.2852
+    },
+    {
+      "model": "Ridge",
+      "station": "KIAMO-Accra",
+      "lead": 3,
+      "n": 229,
+      "rmse": 0.4225,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4796,
+      "skill_vs_best": 0.2238
+    },
+    {
+      "model": "Ridge",
+      "station": "KIAMO-Accra",
+      "lead": 6,
+      "n": 226,
+      "rmse": 0.4432,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4863,
+      "skill_vs_best": 0.1695
+    },
+    {
+      "model": "Ridge",
+      "station": "Koforidua",
+      "lead": 1,
+      "n": 223,
+      "rmse": 0.3973,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4774,
+      "skill_vs_best": 0.3074
+    },
+    {
+      "model": "Ridge",
+      "station": "Koforidua",
+      "lead": 3,
+      "n": 221,
+      "rmse": 0.4412,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4787,
+      "skill_vs_best": 0.1504
+    },
+    {
+      "model": "Ridge",
+      "station": "Koforidua",
+      "lead": 6,
+      "n": 218,
+      "rmse": 0.4334,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4832,
+      "skill_vs_best": 0.1955
+    },
+    {
+      "model": "Ridge",
+      "station": "Kumasi",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.4047,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4713,
+      "skill_vs_best": 0.2625
+    },
+    {
+      "model": "Ridge",
+      "station": "Kumasi",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.4604,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.5217,
+      "skill_vs_best": 0.2213
+    },
+    {
+      "model": "Ridge",
+      "station": "Kumasi",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.4555,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.5268,
+      "skill_vs_best": 0.2525
+    },
+    {
+      "model": "Ridge",
+      "station": "Navrongo",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.5927,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6374,
+      "skill_vs_best": 0.1353
+    },
+    {
+      "model": "Ridge",
+      "station": "Navrongo",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.6626,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6593,
+      "skill_vs_best": -0.01
+    },
+    {
+      "model": "Ridge",
+      "station": "Navrongo",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.6541,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6463,
+      "skill_vs_best": -0.0242
+    },
+    {
+      "model": "Ridge",
+      "station": "Tamale",
+      "lead": 1,
+      "n": 213,
+      "rmse": 0.6702,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7186,
+      "skill_vs_best": 0.1303
+    },
+    {
+      "model": "Ridge",
+      "station": "Tamale",
+      "lead": 3,
+      "n": 211,
+      "rmse": 0.7322,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.7685,
+      "skill_vs_best": 0.0924
+    },
+    {
+      "model": "Ridge",
+      "station": "Tamale",
+      "lead": 6,
+      "n": 208,
+      "rmse": 0.7682,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.786,
+      "skill_vs_best": 0.0448
+    },
+    {
+      "model": "Ridge",
+      "station": "Wa",
+      "lead": 1,
+      "n": 225,
+      "rmse": 0.696,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6771,
+      "skill_vs_best": -0.0564
+    },
+    {
+      "model": "Ridge",
+      "station": "Wa",
+      "lead": 3,
+      "n": 223,
+      "rmse": 0.7527,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7318,
+      "skill_vs_best": -0.058
+    },
+    {
+      "model": "Ridge",
+      "station": "Wa",
+      "lead": 6,
+      "n": 220,
+      "rmse": 0.7817,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7602,
+      "skill_vs_best": -0.0573
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "KIAMO-Accra",
+      "lead": 1,
+      "n": 231,
+      "rmse": 0.3633,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4457,
+      "skill_vs_best": 0.3354
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "KIAMO-Accra",
+      "lead": 3,
+      "n": 229,
+      "rmse": 0.4321,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4796,
+      "skill_vs_best": 0.1879
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "KIAMO-Accra",
+      "lead": 6,
+      "n": 226,
+      "rmse": 0.4518,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4863,
+      "skill_vs_best": 0.1369
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Koforidua",
+      "lead": 1,
+      "n": 223,
+      "rmse": 0.3901,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4774,
+      "skill_vs_best": 0.3322
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Koforidua",
+      "lead": 3,
+      "n": 221,
+      "rmse": 0.4563,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4787,
+      "skill_vs_best": 0.0914
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Koforidua",
+      "lead": 6,
+      "n": 218,
+      "rmse": 0.4354,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4832,
+      "skill_vs_best": 0.1884
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Kumasi",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.4032,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4713,
+      "skill_vs_best": 0.2682
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Kumasi",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.4718,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.5217,
+      "skill_vs_best": 0.1822
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Kumasi",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.4639,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.5268,
+      "skill_vs_best": 0.2244
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Navrongo",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.5934,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6374,
+      "skill_vs_best": 0.1332
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Navrongo",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.6795,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6593,
+      "skill_vs_best": -0.0621
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Navrongo",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.6801,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6463,
+      "skill_vs_best": -0.1073
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Tamale",
+      "lead": 1,
+      "n": 213,
+      "rmse": 0.6752,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7186,
+      "skill_vs_best": 0.1172
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Tamale",
+      "lead": 3,
+      "n": 211,
+      "rmse": 0.7383,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.7685,
+      "skill_vs_best": 0.0772
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Tamale",
+      "lead": 6,
+      "n": 208,
+      "rmse": 0.7704,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.786,
+      "skill_vs_best": 0.0393
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Wa",
+      "lead": 1,
+      "n": 225,
+      "rmse": 0.7205,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6771,
+      "skill_vs_best": -0.1323
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Wa",
+      "lead": 3,
+      "n": 223,
+      "rmse": 0.7964,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7318,
+      "skill_vs_best": -0.1843
+    },
+    {
+      "model": "Gradient boosting",
+      "station": "Wa",
+      "lead": 6,
+      "n": 220,
+      "rmse": 0.8248,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7602,
+      "skill_vs_best": -0.177
+    },
+    {
+      "model": "Neural network",
+      "station": "KIAMO-Accra",
+      "lead": 1,
+      "n": 231,
+      "rmse": 0.3839,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4457,
+      "skill_vs_best": 0.2575
+    },
+    {
+      "model": "Neural network",
+      "station": "KIAMO-Accra",
+      "lead": 3,
+      "n": 229,
+      "rmse": 0.4583,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4796,
+      "skill_vs_best": 0.0865
+    },
+    {
+      "model": "Neural network",
+      "station": "KIAMO-Accra",
+      "lead": 6,
+      "n": 226,
+      "rmse": 0.4694,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4863,
+      "skill_vs_best": 0.0683
+    },
+    {
+      "model": "Neural network",
+      "station": "Koforidua",
+      "lead": 1,
+      "n": 223,
+      "rmse": 0.4212,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4774,
+      "skill_vs_best": 0.2209
+    },
+    {
+      "model": "Neural network",
+      "station": "Koforidua",
+      "lead": 3,
+      "n": 221,
+      "rmse": 0.4602,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4787,
+      "skill_vs_best": 0.0755
+    },
+    {
+      "model": "Neural network",
+      "station": "Koforidua",
+      "lead": 6,
+      "n": 218,
+      "rmse": 0.4248,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4832,
+      "skill_vs_best": 0.2268
+    },
+    {
+      "model": "Neural network",
+      "station": "Kumasi",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.4243,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4713,
+      "skill_vs_best": 0.1886
+    },
+    {
+      "model": "Neural network",
+      "station": "Kumasi",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.4737,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.5217,
+      "skill_vs_best": 0.1755
+    },
+    {
+      "model": "Neural network",
+      "station": "Kumasi",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.4589,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.5268,
+      "skill_vs_best": 0.2412
+    },
+    {
+      "model": "Neural network",
+      "station": "Navrongo",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.5971,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6374,
+      "skill_vs_best": 0.1224
+    },
+    {
+      "model": "Neural network",
+      "station": "Navrongo",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.6934,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6593,
+      "skill_vs_best": -0.1061
+    },
+    {
+      "model": "Neural network",
+      "station": "Navrongo",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.6843,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6463,
+      "skill_vs_best": -0.1214
+    },
+    {
+      "model": "Neural network",
+      "station": "Tamale",
+      "lead": 1,
+      "n": 213,
+      "rmse": 0.6898,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7186,
+      "skill_vs_best": 0.0783
+    },
+    {
+      "model": "Neural network",
+      "station": "Tamale",
+      "lead": 3,
+      "n": 211,
+      "rmse": 0.7449,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.7685,
+      "skill_vs_best": 0.0602
+    },
+    {
+      "model": "Neural network",
+      "station": "Tamale",
+      "lead": 6,
+      "n": 208,
+      "rmse": 0.7964,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.786,
+      "skill_vs_best": -0.0267
+    },
+    {
+      "model": "Neural network",
+      "station": "Wa",
+      "lead": 1,
+      "n": 225,
+      "rmse": 0.7348,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6771,
+      "skill_vs_best": -0.1777
+    },
+    {
+      "model": "Neural network",
+      "station": "Wa",
+      "lead": 3,
+      "n": 223,
+      "rmse": 0.7886,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7318,
+      "skill_vs_best": -0.1615
+    },
+    {
+      "model": "Neural network",
+      "station": "Wa",
+      "lead": 6,
+      "n": 220,
+      "rmse": 0.8228,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7602,
+      "skill_vs_best": -0.1714
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "KIAMO-Accra",
+      "lead": 1,
+      "n": 231,
+      "rmse": 0.4236,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4457,
+      "skill_vs_best": 0.0966
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "KIAMO-Accra",
+      "lead": 3,
+      "n": 229,
+      "rmse": 0.4517,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4796,
+      "skill_vs_best": 0.1127
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "KIAMO-Accra",
+      "lead": 6,
+      "n": 226,
+      "rmse": 0.4746,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4863,
+      "skill_vs_best": 0.0476
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Koforidua",
+      "lead": 1,
+      "n": 223,
+      "rmse": 0.4543,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4774,
+      "skill_vs_best": 0.0942
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Koforidua",
+      "lead": 3,
+      "n": 221,
+      "rmse": 0.4686,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4787,
+      "skill_vs_best": 0.0417
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Koforidua",
+      "lead": 6,
+      "n": 218,
+      "rmse": 0.4766,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.4832,
+      "skill_vs_best": 0.0271
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Kumasi",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.464,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.4713,
+      "skill_vs_best": 0.0306
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Kumasi",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.4893,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.5217,
+      "skill_vs_best": 0.1206
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Kumasi",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.5045,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.5268,
+      "skill_vs_best": 0.083
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Navrongo",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.6544,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6374,
+      "skill_vs_best": -0.054
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Navrongo",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.6684,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6593,
+      "skill_vs_best": -0.0278
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Navrongo",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.6623,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6463,
+      "skill_vs_best": -0.05
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Tamale",
+      "lead": 1,
+      "n": 213,
+      "rmse": 0.6988,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7186,
+      "skill_vs_best": 0.0545
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Tamale",
+      "lead": 3,
+      "n": 211,
+      "rmse": 0.7348,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.7685,
+      "skill_vs_best": 0.0858
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Tamale",
+      "lead": 6,
+      "n": 208,
+      "rmse": 0.7792,
+      "best_reference": "Trend climatology",
+      "rmse_best_ref": 0.786,
+      "skill_vs_best": 0.0172
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Wa",
+      "lead": 1,
+      "n": 225,
+      "rmse": 0.6991,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.6771,
+      "skill_vs_best": -0.0659
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Wa",
+      "lead": 3,
+      "n": 223,
+      "rmse": 0.7433,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7318,
+      "skill_vs_best": -0.0317
+    },
+    {
+      "model": "Ridge without SEAS5",
+      "station": "Wa",
+      "lead": 6,
+      "n": 220,
+      "rmse": 0.7745,
+      "best_reference": "Seasonal ARIMA",
+      "rmse_best_ref": 0.7602,
+      "skill_vs_best": -0.0379
+    }
+  ],
+  "ridge_by_season": [
+    {
+      "season": "DJF",
+      "lead": 1,
+      "n": 348,
+      "skill_ridge_vs_trend": 0.2578,
+      "skill_ridge_vs_best": 0.1848,
+      "skill_noseas5_vs_trend": 0.1127
+    },
+    {
+      "season": "DJF",
+      "lead": 2,
+      "n": 342,
+      "skill_ridge_vs_trend": 0.1243,
+      "skill_ridge_vs_best": 0.1196,
+      "skill_noseas5_vs_trend": 0.0711
+    },
+    {
+      "season": "DJF",
+      "lead": 3,
+      "n": 336,
+      "skill_ridge_vs_trend": 0.0712,
+      "skill_ridge_vs_best": 0.0712,
+      "skill_noseas5_vs_trend": 0.0406
+    },
+    {
+      "season": "DJF",
+      "lead": 4,
+      "n": 336,
+      "skill_ridge_vs_trend": 0.0837,
+      "skill_ridge_vs_best": 0.0837,
+      "skill_noseas5_vs_trend": 0.0434
+    },
+    {
+      "season": "DJF",
+      "lead": 5,
+      "n": 336,
+      "skill_ridge_vs_trend": 0.0822,
+      "skill_ridge_vs_best": 0.0822,
+      "skill_noseas5_vs_trend": 0.0317
+    },
+    {
+      "season": "DJF",
+      "lead": 6,
+      "n": 336,
+      "skill_ridge_vs_trend": 0.0995,
+      "skill_ridge_vs_best": 0.0995,
+      "skill_noseas5_vs_trend": 0.0258
+    },
+    {
+      "season": "MAM",
+      "lead": 1,
+      "n": 359,
+      "skill_ridge_vs_trend": 0.3081,
+      "skill_ridge_vs_best": 0.1484,
+      "skill_noseas5_vs_trend": 0.1928
+    },
+    {
+      "season": "MAM",
+      "lead": 2,
+      "n": 359,
+      "skill_ridge_vs_trend": 0.1926,
+      "skill_ridge_vs_best": 0.1799,
+      "skill_noseas5_vs_trend": 0.1059
+    },
+    {
+      "season": "MAM",
+      "lead": 3,
+      "n": 359,
+      "skill_ridge_vs_trend": 0.1677,
+      "skill_ridge_vs_best": 0.1677,
+      "skill_noseas5_vs_trend": 0.0692
+    },
+    {
+      "season": "MAM",
+      "lead": 4,
+      "n": 353,
+      "skill_ridge_vs_trend": 0.1244,
+      "skill_ridge_vs_best": 0.1244,
+      "skill_noseas5_vs_trend": 0.0343
+    },
+    {
+      "season": "MAM",
+      "lead": 5,
+      "n": 347,
+      "skill_ridge_vs_trend": 0.1032,
+      "skill_ridge_vs_best": 0.1032,
+      "skill_noseas5_vs_trend": 0.0024
+    },
+    {
+      "season": "MAM",
+      "lead": 6,
+      "n": 341,
+      "skill_ridge_vs_trend": 0.1017,
+      "skill_ridge_vs_best": 0.1017,
+      "skill_noseas5_vs_trend": -0.0069
+    },
+    {
+      "season": "JJA",
+      "lead": 1,
+      "n": 348,
+      "skill_ridge_vs_trend": 0.1977,
+      "skill_ridge_vs_best": -0.0024,
+      "skill_noseas5_vs_trend": 0.158
+    },
+    {
+      "season": "JJA",
+      "lead": 2,
+      "n": 348,
+      "skill_ridge_vs_trend": 0.057,
+      "skill_ridge_vs_best": 0.057,
+      "skill_noseas5_vs_trend": 0.0518
+    },
+    {
+      "season": "JJA",
+      "lead": 3,
+      "n": 348,
+      "skill_ridge_vs_trend": 0.0164,
+      "skill_ridge_vs_best": 0.0164,
+      "skill_noseas5_vs_trend": 0.036
+    },
+    {
+      "season": "JJA",
+      "lead": 4,
+      "n": 348,
+      "skill_ridge_vs_trend": 0.0423,
+      "skill_ridge_vs_best": 0.0423,
+      "skill_noseas5_vs_trend": 0.0371
+    },
+    {
+      "season": "JJA",
+      "lead": 5,
+      "n": 348,
+      "skill_ridge_vs_trend": 0.0172,
+      "skill_ridge_vs_best": 0.0172,
+      "skill_noseas5_vs_trend": 0.0184
+    },
+    {
+      "season": "JJA",
+      "lead": 6,
+      "n": 348,
+      "skill_ridge_vs_trend": 0.0293,
+      "skill_ridge_vs_best": 0.0293,
+      "skill_noseas5_vs_trend": 0.0161
+    },
+    {
+      "season": "SON",
+      "lead": 1,
+      "n": 331,
+      "skill_ridge_vs_trend": 0.2674,
+      "skill_ridge_vs_best": 0.146,
+      "skill_noseas5_vs_trend": 0.1716
+    },
+    {
+      "season": "SON",
+      "lead": 2,
+      "n": 331,
+      "skill_ridge_vs_trend": 0.14,
+      "skill_ridge_vs_best": 0.0931,
+      "skill_noseas5_vs_trend": 0.127
+    },
+    {
+      "season": "SON",
+      "lead": 3,
+      "n": 331,
+      "skill_ridge_vs_trend": 0.0763,
+      "skill_ridge_vs_best": 0.0763,
+      "skill_noseas5_vs_trend": 0.0914
+    },
+    {
+      "season": "SON",
+      "lead": 4,
+      "n": 331,
+      "skill_ridge_vs_trend": 0.0322,
+      "skill_ridge_vs_best": 0.0322,
+      "skill_noseas5_vs_trend": 0.0578
+    },
+    {
+      "season": "SON",
+      "lead": 5,
+      "n": 331,
+      "skill_ridge_vs_trend": -0.0129,
+      "skill_ridge_vs_best": -0.0129,
+      "skill_noseas5_vs_trend": 0.0344
+    },
+    {
+      "season": "SON",
+      "lead": 6,
+      "n": 331,
+      "skill_ridge_vs_trend": -0.0075,
+      "skill_ridge_vs_best": -0.0075,
+      "skill_noseas5_vs_trend": 0.0118
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+lead,model,key,rmse,sd_over_seeds
+1,Trend climatology,trend_clim,0.6155201599334642,0.0
+1,Seasonal ARIMA,sarima,0.5712514695810847,0.0
+1,SEAS5-BC,bc,0.58734532808137,0.0
+1,Linear (SEAS5 anomaly),ols,0.5426112861438036,0.0
+1,"Linear, by season",ols_season,0.5442171816994419,0.0
+1,Ridge,ridge,0.5229480778255491,0.0
+1,Ridge without SEAS5,ridge_noseas5,0.5657018970096902,0.0
+1,"Ridge, season-weighted",ridge_w,0.5229480778255491,0.0
+1,Gradient boosting,gbm,0.5242924285306036,0.0009865879076857438
+1,"Gradient boosting, season-weighted",gbm_w,0.5243522344043983,0.0012591435790399244
+1,Neural network,nn,0.5418531555304262,0.0059318865507846895
+2,Trend climatology,trend_clim,0.6165487342210709,0.0
+2,Seasonal ARIMA,sarima,0.6141961587963899,0.0
+2,SEAS5-BC,bc,0.6312367506960431,0.0
+2,Linear (SEAS5 anomaly),ols,0.5826290116490962,0.0
+2,"Linear, by season",ols_season,0.588906386940515,0.0
+2,Ridge,ridge,0.5680364028791068,0.0
+2,Ridge without SEAS5,ridge_noseas5,0.5876960701899548,0.0
+2,"Ridge, season-weighted",ridge_w,0.5680364028791068,0.0
+2,Gradient boosting,gbm,0.5770349687980433,0.0005856588288362474
+2,"Gradient boosting, season-weighted",gbm_w,0.5777420526133764,0.0006438122413453967
+2,Neural network,nn,0.5872222478676932,0.006024057986816444
+3,Trend climatology,trend_clim,0.6115885125762526,0.0
+3,Seasonal ARIMA,sarima,0.6252339538460173,0.0
+3,SEAS5-BC,bc,0.6475271623040634,0.0
+3,Linear (SEAS5 anomaly),ols,0.5957915256113568,0.0
+3,"Linear, by season",ols_season,0.6028187465242622,0.0
+3,Ridge,ridge,0.5785996835407438,0.0
+3,Ridge without SEAS5,ridge_noseas5,0.5926856269467246,0.0
+3,"Ridge, season-weighted",ridge_w,0.5785996835407438,0.0
+3,Gradient boosting,gbm,0.5957247331793031,0.0012167836601021595
+3,"Gradient boosting, season-weighted",gbm_w,0.5959438824019171,0.0011865919690239206
+3,Neural network,nn,0.6031962319093689,0.0039032469651248307
+4,Trend climatology,trend_clim,0.6132119355085087,0.0
+4,Seasonal ARIMA,sarima,0.6335570128420971,0.0
+4,SEAS5-BC,bc,0.6419431804115507,0.0
+4,Linear (SEAS5 anomaly),ols,0.5951185715854552,0.0
+4,"Linear, by season",ols_season,0.6033763627265143,0.0
+4,Ridge,ridge,0.5831333713586627,0.0
+4,Ridge without SEAS5,ridge_noseas5,0.5987525092087019,0.0
+4,"Ridge, season-weighted",ridge_w,0.5831333713586627,0.0
+4,Gradient boosting,gbm,0.5935823162082857,0.0012894976181750417
+4,"Gradient boosting, season-weighted",gbm_w,0.5944402043407225,0.001413017940305764
+4,Neural network,nn,0.6004999898057964,0.0056251831562931405
+5,Trend climatology,trend_clim,0.614899157402173,0.0
+5,Seasonal ARIMA,sarima,0.6383794835127393,0.0
+5,SEAS5-BC,bc,0.6449151037185468,0.0
+5,Linear (SEAS5 anomaly),ols,0.5992018920852237,0.0
+5,"Linear, by season",ols_season,0.6034707452326974,0.0
+5,Ridge,ridge,0.5905145508061334,0.0
+5,Ridge without SEAS5,ridge_noseas5,0.606552105039947,0.0
+5,"Ridge, season-weighted",ridge_w,0.5905145508061334,0.0
+5,Gradient boosting,gbm,0.6036897904910871,0.0008180187260892615
+5,"Gradient boosting, season-weighted",gbm_w,0.6040878006531191,0.0012542817576649753
+5,Neural network,nn,0.6074165993217691,0.002743889641513586
+6,Trend climatology,trend_clim,0.6173217577273141,0.0
+6,Seasonal ARIMA,sarima,0.6416641240983366,0.0
+6,SEAS5-BC,bc,0.6349010256288601,0.0
+6,Linear (SEAS5 anomaly),ols,0.6002100300118033,0.0
+6,"Linear, by season",ols_season,0.6024301876044187,0.0
+6,Ridge,ridge,0.5893567425957181,0.0
+6,Ridge without SEAS5,ridge_noseas5,0.6119510916081757,0.0
+6,"Ridge, season-weighted",ridge_w,0.5893567425957181,0.0
+6,Gradient boosting,gbm,0.6043995827462072,0.0007761444361943542
+6,"Gradient boosting, season-weighted",gbm_w,0.6039941012331117,0.0007080949925764758
+6,Neural network,nn,0.6094429402605812,0.002361316369084053
