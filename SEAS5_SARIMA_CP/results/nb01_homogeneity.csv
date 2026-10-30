@@ -1,0 +1,13 @@
+station,var,n,change_month,shift_C,p_raw,lag1,n_eff,p_adj,status
+KIAMO-Accra,tmax,350,2014-10,0.21,0.0,0.35,170.0,0.0046,ok
+KIAMO-Accra,tmin,351,2009-01,0.46,0.0,0.54,104.0,0.0,flagged
+Koforidua,tmax,343,2003-07,-0.19,0.0195,0.22,221.0,0.1017,ok
+Koforidua,tmin,364,2008-05,0.22,0.0,0.24,223.0,0.0001,ok
+Kumasi,tmax,367,2017-01,0.55,0.0,0.53,112.0,0.0004,flagged
+Kumasi,tmin,367,2012-01,0.36,0.0,0.61,89.0,0.0008,ok
+Navrongo,tmax,367,2014-04,0.24,0.0051,0.44,141.0,0.2011,ok
+Navrongo,tmin,367,2015-01,-0.54,0.0,0.5,121.0,0.0001,flagged
+Tamale,tmax,331,2016-04,0.42,0.0,0.43,133.0,0.0031,flagged
+Tamale,tmin,358,2017-02,1.01,0.0,0.64,78.0,0.0,flagged
+Wa,tmax,345,2009-10,0.14,0.0614,0.38,154.0,0.4231,ok
+Wa,tmin,345,2012-07,-0.91,0.0,0.76,47.0,0.0694,review

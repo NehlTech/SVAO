@@ -1,0 +1,13 @@
+station,var,n_months,bias_C,rmse_C,r_raw,r_anomaly
+KIAMO-Accra,tmax,350,-2.24,2.29,0.96,0.75
+KIAMO-Accra,tmin,351,0.06,0.48,0.9,0.77
+Koforidua,tmax,343,-2.16,2.25,0.95,0.77
+Koforidua,tmin,364,0.22,0.79,0.63,0.75
+Kumasi,tmax,367,-1.26,1.53,0.92,0.72
+Kumasi,tmin,367,0.24,0.63,0.78,0.7
+Navrongo,tmax,367,-0.95,1.38,0.96,0.71
+Navrongo,tmin,367,0.58,0.99,0.93,0.7
+Tamale,tmax,331,-0.8,1.4,0.94,0.56
+Tamale,tmin,358,0.33,1.07,0.9,0.61
+Wa,tmax,345,-0.95,1.32,0.96,0.72
+Wa,tmin,345,-0.15,1.21,0.8,0.28

@@ -1,0 +1,14 @@
+check,count
+rows read (tmax sheet),64398
+rows read (tmin sheet),65526
+duplicate station-dates (tmax),0
+duplicate station-dates (tmin),0
+non-missing tmax before cleaning,64059
+non-missing tmin before cleaning,65461
+"tmax outside (18, 47) set missing",0
+"tmin outside (8, 32) set missing",10
+"tmin >= tmax, both set missing",6
+"tmax more than 8 C from 31-day median (flagged, kept)",58
+"tmin more than 8 C from 31-day median (flagged, kept)",12
+non-missing tmax after cleaning,64053
+non-missing tmin after cleaning,65445
