@@ -1,0 +1,1416 @@
+{
+  "notebook": "03_SEAS5_Verification",
+  "seed": 0,
+  "main_system": 51,
+  "members_used": 25,
+  "min_bias_pairs": 8,
+  "first_start": "2005-01-01",
+  "last_start": "2025-12-01",
+  "independence_check": {
+    "start_months_checked": 18,
+    "passed": true
+  },
+  "n_scored_pairs": 8226,
+  "rmse_by_lead": [
+    {
+      "lead": 1,
+      "model": "SEAS5 raw",
+      "rmse_mean": 1.8262,
+      "KIAMO-Accra": 2.2333,
+      "Koforidua": 2.1023,
+      "Kumasi": 2.0621,
+      "Navrongo": 1.5497,
+      "Tamale": 1.5538,
+      "Wa": 1.4558
+    },
+    {
+      "lead": 1,
+      "model": "SEAS5-BC",
+      "rmse_mean": 0.5873,
+      "KIAMO-Accra": 0.3551,
+      "Koforidua": 0.3594,
+      "Kumasi": 0.3896,
+      "Navrongo": 0.6721,
+      "Tamale": 0.8114,
+      "Wa": 0.9366
+    },
+    {
+      "lead": 1,
+      "model": "Climatology",
+      "rmse_mean": 0.7099,
+      "KIAMO-Accra": 0.6393,
+      "Koforidua": 0.5735,
+      "Kumasi": 0.6956,
+      "Navrongo": 0.6842,
+      "Tamale": 0.9101,
+      "Wa": 0.7564
+    },
+    {
+      "lead": 1,
+      "model": "Trend climatology",
+      "rmse_mean": 0.6155,
+      "KIAMO-Accra": 0.474,
+      "Koforidua": 0.4879,
+      "Kumasi": 0.5223,
+      "Navrongo": 0.6771,
+      "Tamale": 0.7686,
+      "Wa": 0.7633
+    },
+    {
+      "lead": 1,
+      "model": "Seasonal ARIMA",
+      "rmse_mean": 0.5713,
+      "KIAMO-Accra": 0.4457,
+      "Koforidua": 0.4774,
+      "Kumasi": 0.4713,
+      "Navrongo": 0.6374,
+      "Tamale": 0.7186,
+      "Wa": 0.6771
+    },
+    {
+      "lead": 2,
+      "model": "SEAS5 raw",
+      "rmse_mean": 1.7371,
+      "KIAMO-Accra": 2.1396,
+      "Koforidua": 1.8829,
+      "Kumasi": 1.8832,
+      "Navrongo": 1.5477,
+      "Tamale": 1.5125,
+      "Wa": 1.4568
+    },
+    {
+      "lead": 2,
+      "model": "SEAS5-BC",
+      "rmse_mean": 0.6312,
+      "KIAMO-Accra": 0.4289,
+      "Koforidua": 0.4091,
+      "Kumasi": 0.4623,
+      "Navrongo": 0.7264,
+      "Tamale": 0.8459,
+      "Wa": 0.915
+    },
+    {
+      "lead": 2,
+      "model": "Climatology",
+      "rmse_mean": 0.7085,
+      "KIAMO-Accra": 0.6407,
+      "Koforidua": 0.5688,
+      "Kumasi": 0.6906,
+      "Navrongo": 0.6841,
+      "Tamale": 0.9106,
+      "Wa": 0.756
+    },
+    {
+      "lead": 2,
+      "model": "Trend climatology",
+      "rmse_mean": 0.6165,
+      "KIAMO-Accra": 0.4774,
+      "Koforidua": 0.4839,
+      "Kumasi": 0.5182,
+      "Navrongo": 0.6801,
+      "Tamale": 0.7731,
+      "Wa": 0.7666
+    },
+    {
+      "lead": 2,
+      "model": "Seasonal ARIMA",
+      "rmse_mean": 0.6142,
+      "KIAMO-Accra": 0.4802,
+      "Koforidua": 0.5041,
+      "Kumasi": 0.5152,
+      "Navrongo": 0.6703,
+      "Tamale": 0.7882,
+      "Wa": 0.7272
+    },
+    {
+      "lead": 3,
+      "model": "SEAS5 raw",
+      "rmse_mean": 1.64,
+      "KIAMO-Accra": 2.0472,
+      "Koforidua": 1.7753,
+      "Kumasi": 1.8036,
+      "Navrongo": 1.4289,
+      "Tamale": 1.4345,
+      "Wa": 1.3505
+    },
+    {
+      "lead": 3,
+      "model": "SEAS5-BC",
+      "rmse_mean": 0.6475,
+      "KIAMO-Accra": 0.4642,
+      "Koforidua": 0.4388,
+      "Kumasi": 0.518,
+      "Navrongo": 0.7238,
+      "Tamale": 0.8344,
+      "Wa": 0.906
+    },
+    {
+      "lead": 3,
+      "model": "Climatology",
+      "rmse_mean": 0.7008,
+      "KIAMO-Accra": 0.6408,
+      "Koforidua": 0.563,
+      "Kumasi": 0.692,
+      "Navrongo": 0.6623,
+      "Tamale": 0.9025,
+      "Wa": 0.7442
+    },
+    {
+      "lead": 3,
+      "model": "Trend climatology",
+      "rmse_mean": 0.6116,
+      "KIAMO-Accra": 0.4796,
+      "Koforidua": 0.4787,
+      "Kumasi": 0.5217,
+      "Navrongo": 0.6614,
+      "Tamale": 0.7685,
+      "Wa": 0.7596
+    },
+    {
+      "lead": 3,
+      "model": "Seasonal ARIMA",
+      "rmse_mean": 0.6252,
+      "KIAMO-Accra": 0.5138,
+      "Koforidua": 0.512,
+      "Kumasi": 0.5402,
+      "Navrongo": 0.6593,
+      "Tamale": 0.7943,
+      "Wa": 0.7318
+    },
+    {
+      "lead": 4,
+      "model": "SEAS5 raw",
+      "rmse_mean": 1.5588,
+      "KIAMO-Accra": 1.9487,
+      "Koforidua": 1.6948,
+      "Kumasi": 1.7392,
+      "Navrongo": 1.3357,
+      "Tamale": 1.355,
+      "Wa": 1.2797
+    },
+    {
+      "lead": 4,
+      "model": "SEAS5-BC",
+      "rmse_mean": 0.6419,
+      "KIAMO-Accra": 0.4567,
+      "Koforidua": 0.433,
+      "Kumasi": 0.5126,
+      "Navrongo": 0.7171,
+      "Tamale": 0.8301,
+      "Wa": 0.9022
+    },
+    {
+      "lead": 4,
+      "model": "Climatology",
+      "rmse_mean": 0.7004,
+      "KIAMO-Accra": 0.6422,
+      "Koforidua": 0.5642,
+      "Kumasi": 0.6921,
+      "Navrongo": 0.6544,
+      "Tamale": 0.9046,
+      "Wa": 0.7447
+    },
+    {
+      "lead": 4,
+      "model": "Trend climatology",
+      "rmse_mean": 0.6132,
+      "KIAMO-Accra": 0.4826,
+      "Koforidua": 0.4808,
+      "Kumasi": 0.5229,
+      "Navrongo": 0.6552,
+      "Tamale": 0.7747,
+      "Wa": 0.7631
+    },
+    {
+      "lead": 4,
+      "model": "Seasonal ARIMA",
+      "rmse_mean": 0.6336,
+      "KIAMO-Accra": 0.5341,
+      "Koforidua": 0.5175,
+      "Kumasi": 0.5503,
+      "Navrongo": 0.6514,
+      "Tamale": 0.8045,
+      "Wa": 0.7436
+    },
+    {
+      "lead": 5,
+      "model": "SEAS5 raw",
+      "rmse_mean": 1.4947,
+      "KIAMO-Accra": 1.8576,
+      "Koforidua": 1.6368,
+      "Kumasi": 1.6836,
+      "Navrongo": 1.2657,
+      "Tamale": 1.2973,
+      "Wa": 1.2273
+    },
+    {
+      "lead": 5,
+      "model": "SEAS5-BC",
+      "rmse_mean": 0.6449,
+      "KIAMO-Accra": 0.461,
+      "Koforidua": 0.4334,
+      "Kumasi": 0.4988,
+      "Navrongo": 0.7344,
+      "Tamale": 0.834,
+      "Wa": 0.9079
+    },
+    {
+      "lead": 5,
+      "model": "Climatology",
+      "rmse_mean": 0.7002,
+      "KIAMO-Accra": 0.6416,
+      "Koforidua": 0.5644,
+      "Kumasi": 0.6929,
+      "Navrongo": 0.6492,
+      "Tamale": 0.9068,
+      "Wa": 0.7462
+    },
+    {
+      "lead": 5,
+      "model": "Trend climatology",
+      "rmse_mean": 0.6149,
+      "KIAMO-Accra": 0.4834,
+      "Koforidua": 0.4818,
+      "Kumasi": 0.5247,
+      "Navrongo": 0.6516,
+      "Tamale": 0.7809,
+      "Wa": 0.7669
+    },
+    {
+      "lead": 5,
+      "model": "Seasonal ARIMA",
+      "rmse_mean": 0.6384,
+      "KIAMO-Accra": 0.5413,
+      "Koforidua": 0.5192,
+      "Kumasi": 0.5555,
+      "Navrongo": 0.6471,
+      "Tamale": 0.811,
+      "Wa": 0.7561
+    },
+    {
+      "lead": 6,
+      "model": "SEAS5 raw",
+      "rmse_mean": 1.4462,
+      "KIAMO-Accra": 1.7936,
+      "Koforidua": 1.5892,
+      "Kumasi": 1.6348,
+      "Navrongo": 1.2156,
+      "Tamale": 1.2491,
+      "Wa": 1.1947
+    },
+    {
+      "lead": 6,
+      "model": "SEAS5-BC",
+      "rmse_mean": 0.6349,
+      "KIAMO-Accra": 0.4671,
+      "Koforidua": 0.4235,
+      "Kumasi": 0.4965,
+      "Navrongo": 0.7113,
+      "Tamale": 0.8061,
+      "Wa": 0.9049
+    },
+    {
+      "lead": 6,
+      "model": "Climatology",
+      "rmse_mean": 0.7013,
+      "KIAMO-Accra": 0.643,
+      "Koforidua": 0.5652,
+      "Kumasi": 0.6941,
+      "Navrongo": 0.6488,
+      "Tamale": 0.9089,
+      "Wa": 0.7479
+    },
+    {
+      "lead": 6,
+      "model": "Trend climatology",
+      "rmse_mean": 0.6173,
+      "KIAMO-Accra": 0.4863,
+      "Koforidua": 0.4832,
+      "Kumasi": 0.5268,
+      "Navrongo": 0.6517,
+      "Tamale": 0.786,
+      "Wa": 0.7698
+    },
+    {
+      "lead": 6,
+      "model": "Seasonal ARIMA",
+      "rmse_mean": 0.6417,
+      "KIAMO-Accra": 0.5488,
+      "Koforidua": 0.5213,
+      "Kumasi": 0.5588,
+      "Navrongo": 0.6463,
+      "Tamale": 0.8145,
+      "Wa": 0.7602
+    }
+  ],
+  "raw_mean_error_by_lead": {
+    "1": -1.657,
+    "2": -1.523,
+    "3": -1.401,
+    "4": -1.306,
+    "5": -1.238,
+    "6": -1.189
+  },
+  "raw_mean_error_by_station": {
+    "KIAMO-Accra": -1.937,
+    "Koforidua": -1.697,
+    "Kumasi": -1.685,
+    "Navrongo": -1.167,
+    "Tamale": -1.046,
+    "Wa": -0.751
+  },
+  "skill_and_acc_by_lead": [
+    {
+      "lead": 1,
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": -0.1709,
+      "skill_vs_clim": 0.2309,
+      "skill_vs_trend": -0.0038,
+      "skill_vs_sarima": -0.1709,
+      "acc_vs_clim": 0.4799,
+      "acc_vs_trend": 0.4353,
+      "acc_sarima_vs_trend": 0.4037,
+      "spread": 0.3335,
+      "rmse_bc": 0.6268,
+      "spread_over_rmse": 0.532
+    },
+    {
+      "lead": 2,
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": -0.1225,
+      "skill_vs_clim": 0.1444,
+      "skill_vs_trend": -0.1077,
+      "skill_vs_sarima": -0.1225,
+      "acc_vs_clim": 0.3197,
+      "acc_vs_trend": 0.268,
+      "acc_sarima_vs_trend": 0.2433,
+      "spread": 0.4719,
+      "rmse_bc": 0.6599,
+      "spread_over_rmse": 0.7151
+    },
+    {
+      "lead": 3,
+      "best_reference": "Trend climatology",
+      "skill_vs_best": -0.1611,
+      "skill_vs_clim": 0.0998,
+      "skill_vs_trend": -0.1611,
+      "skill_vs_sarima": -0.122,
+      "acc_vs_clim": 0.2448,
+      "acc_vs_trend": 0.1948,
+      "acc_sarima_vs_trend": 0.159,
+      "spread": 0.4913,
+      "rmse_bc": 0.6695,
+      "spread_over_rmse": 0.7338
+    },
+    {
+      "lead": 4,
+      "best_reference": "Trend climatology",
+      "skill_vs_best": -0.1377,
+      "skill_vs_clim": 0.1126,
+      "skill_vs_trend": -0.1377,
+      "skill_vs_sarima": -0.0781,
+      "acc_vs_clim": 0.2352,
+      "acc_vs_trend": 0.1921,
+      "acc_sarima_vs_trend": 0.1192,
+      "spread": 0.5164,
+      "rmse_bc": 0.6643,
+      "spread_over_rmse": 0.7773
+    },
+    {
+      "lead": 5,
+      "best_reference": "Trend climatology",
+      "skill_vs_best": -0.1449,
+      "skill_vs_clim": 0.1016,
+      "skill_vs_trend": -0.1449,
+      "skill_vs_sarima": -0.0747,
+      "acc_vs_clim": 0.2213,
+      "acc_vs_trend": 0.1804,
+      "acc_sarima_vs_trend": 0.0946,
+      "spread": 0.5273,
+      "rmse_bc": 0.6684,
+      "spread_over_rmse": 0.7889
+    },
+    {
+      "lead": 6,
+      "best_reference": "Trend climatology",
+      "skill_vs_best": -0.0987,
+      "skill_vs_clim": 0.134,
+      "skill_vs_trend": -0.0987,
+      "skill_vs_sarima": -0.0293,
+      "acc_vs_clim": 0.2469,
+      "acc_vs_trend": 0.2067,
+      "acc_sarima_vs_trend": 0.0902,
+      "spread": 0.5289,
+      "rmse_bc": 0.6573,
+      "spread_over_rmse": 0.8046
+    }
+  ],
+  "skill_by_season_lead": [
+    {
+      "season": "DJF",
+      "lead": 1,
+      "n": 348,
+      "skill_vs_trend": 0.1388,
+      "skill_vs_sarima": 0.0541,
+      "acc_vs_trend": 0.4914,
+      "rmse_bc": 0.7351,
+      "rmse_trend": 0.7921,
+      "rmse_raw": 1.8785
+    },
+    {
+      "season": "DJF",
+      "lead": 2,
+      "n": 342,
+      "skill_vs_trend": -0.0343,
+      "skill_vs_sarima": -0.0399,
+      "acc_vs_trend": 0.2611,
+      "rmse_bc": 0.8043,
+      "rmse_trend": 0.7908,
+      "rmse_raw": 1.7904
+    },
+    {
+      "season": "DJF",
+      "lead": 3,
+      "n": 336,
+      "skill_vs_trend": -0.1403,
+      "skill_vs_sarima": -0.0831,
+      "acc_vs_trend": 0.1491,
+      "rmse_bc": 0.8214,
+      "rmse_trend": 0.7692,
+      "rmse_raw": 1.6443
+    },
+    {
+      "season": "DJF",
+      "lead": 4,
+      "n": 336,
+      "skill_vs_trend": -0.0733,
+      "skill_vs_sarima": -0.0189,
+      "acc_vs_trend": 0.1694,
+      "rmse_bc": 0.7978,
+      "rmse_trend": 0.7701,
+      "rmse_raw": 1.5608
+    },
+    {
+      "season": "DJF",
+      "lead": 5,
+      "n": 336,
+      "skill_vs_trend": -0.018,
+      "skill_vs_sarima": 0.0375,
+      "acc_vs_trend": 0.1954,
+      "rmse_bc": 0.7785,
+      "rmse_trend": 0.7716,
+      "rmse_raw": 1.4991
+    },
+    {
+      "season": "DJF",
+      "lead": 6,
+      "n": 336,
+      "skill_vs_trend": 0.0106,
+      "skill_vs_sarima": 0.0638,
+      "acc_vs_trend": 0.2171,
+      "rmse_bc": 0.7686,
+      "rmse_trend": 0.7727,
+      "rmse_raw": 1.4368
+    },
+    {
+      "season": "MAM",
+      "lead": 1,
+      "n": 359,
+      "skill_vs_trend": 0.1149,
+      "skill_vs_sarima": -0.0893,
+      "acc_vs_trend": 0.4926,
+      "rmse_bc": 0.5992,
+      "rmse_trend": 0.6369,
+      "rmse_raw": 1.6836
+    },
+    {
+      "season": "MAM",
+      "lead": 2,
+      "n": 359,
+      "skill_vs_trend": -0.0192,
+      "skill_vs_sarima": -0.0352,
+      "acc_vs_trend": 0.3505,
+      "rmse_bc": 0.6481,
+      "rmse_trend": 0.642,
+      "rmse_raw": 1.6414
+    },
+    {
+      "season": "MAM",
+      "lead": 3,
+      "n": 359,
+      "skill_vs_trend": -0.0606,
+      "skill_vs_sarima": -0.0356,
+      "acc_vs_trend": 0.3327,
+      "rmse_bc": 0.6646,
+      "rmse_trend": 0.6454,
+      "rmse_raw": 1.6139
+    },
+    {
+      "season": "MAM",
+      "lead": 4,
+      "n": 353,
+      "skill_vs_trend": -0.1046,
+      "skill_vs_sarima": -0.0388,
+      "acc_vs_trend": 0.3048,
+      "rmse_bc": 0.6805,
+      "rmse_trend": 0.6475,
+      "rmse_raw": 1.6038
+    },
+    {
+      "season": "MAM",
+      "lead": 5,
+      "n": 347,
+      "skill_vs_trend": -0.1088,
+      "skill_vs_sarima": -0.0277,
+      "acc_vs_trend": 0.3074,
+      "rmse_bc": 0.684,
+      "rmse_trend": 0.6496,
+      "rmse_raw": 1.5736
+    },
+    {
+      "season": "MAM",
+      "lead": 6,
+      "n": 341,
+      "skill_vs_trend": -0.0472,
+      "skill_vs_sarima": 0.036,
+      "acc_vs_trend": 0.3141,
+      "rmse_bc": 0.6708,
+      "rmse_trend": 0.6555,
+      "rmse_raw": 1.5206
+    },
+    {
+      "season": "JJA",
+      "lead": 1,
+      "n": 348,
+      "skill_vs_trend": -0.2241,
+      "skill_vs_sarima": -0.5294,
+      "acc_vs_trend": 0.2997,
+      "rmse_bc": 0.5632,
+      "rmse_trend": 0.5091,
+      "rmse_raw": 1.6156
+    },
+    {
+      "season": "JJA",
+      "lead": 2,
+      "n": 348,
+      "skill_vs_trend": -0.2197,
+      "skill_vs_sarima": -0.2077,
+      "acc_vs_trend": 0.1684,
+      "rmse_bc": 0.566,
+      "rmse_trend": 0.5125,
+      "rmse_raw": 1.4838
+    },
+    {
+      "season": "JJA",
+      "lead": 3,
+      "n": 348,
+      "skill_vs_trend": -0.2871,
+      "skill_vs_sarima": -0.2336,
+      "acc_vs_trend": 0.0705,
+      "rmse_bc": 0.5833,
+      "rmse_trend": 0.5141,
+      "rmse_raw": 1.3557
+    },
+    {
+      "season": "JJA",
+      "lead": 4,
+      "n": 348,
+      "skill_vs_trend": -0.1991,
+      "skill_vs_sarima": -0.1348,
+      "acc_vs_trend": 0.139,
+      "rmse_bc": 0.5649,
+      "rmse_trend": 0.5159,
+      "rmse_raw": 1.245
+    },
+    {
+      "season": "JJA",
+      "lead": 5,
+      "n": 348,
+      "skill_vs_trend": -0.2272,
+      "skill_vs_sarima": -0.1462,
+      "acc_vs_trend": 0.106,
+      "rmse_bc": 0.5738,
+      "rmse_trend": 0.518,
+      "rmse_raw": 1.2135
+    },
+    {
+      "season": "JJA",
+      "lead": 6,
+      "n": 348,
+      "skill_vs_trend": -0.1709,
+      "skill_vs_sarima": -0.0938,
+      "acc_vs_trend": 0.1447,
+      "rmse_bc": 0.5619,
+      "rmse_trend": 0.5193,
+      "rmse_raw": 1.2217
+    },
+    {
+      "season": "SON",
+      "lead": 1,
+      "n": 331,
+      "skill_vs_trend": -0.3273,
+      "skill_vs_sarima": -0.5473,
+      "acc_vs_trend": 0.3659,
+      "rmse_bc": 0.5952,
+      "rmse_trend": 0.5166,
+      "rmse_raw": 2.2111
+    },
+    {
+      "season": "SON",
+      "lead": 2,
+      "n": 331,
+      "skill_vs_trend": -0.3155,
+      "skill_vs_sarima": -0.3874,
+      "acc_vs_trend": 0.2113,
+      "rmse_bc": 0.5959,
+      "rmse_trend": 0.5195,
+      "rmse_raw": 2.0803
+    },
+    {
+      "season": "SON",
+      "lead": 3,
+      "n": 331,
+      "skill_vs_trend": -0.2449,
+      "skill_vs_sarima": -0.2399,
+      "acc_vs_trend": 0.1041,
+      "rmse_bc": 0.5824,
+      "rmse_trend": 0.522,
+      "rmse_raw": 1.9905
+    },
+    {
+      "season": "SON",
+      "lead": 4,
+      "n": 331,
+      "skill_vs_trend": -0.27,
+      "skill_vs_sarima": -0.2157,
+      "acc_vs_trend": 0.0423,
+      "rmse_bc": 0.5905,
+      "rmse_trend": 0.524,
+      "rmse_raw": 1.8674
+    },
+    {
+      "season": "SON",
+      "lead": 5,
+      "n": 331,
+      "skill_vs_trend": -0.3962,
+      "skill_vs_sarima": -0.3233,
+      "acc_vs_trend": -0.0145,
+      "rmse_bc": 0.6215,
+      "rmse_trend": 0.526,
+      "rmse_raw": 1.7432
+    },
+    {
+      "season": "SON",
+      "lead": 6,
+      "n": 331,
+      "skill_vs_trend": -0.3446,
+      "skill_vs_sarima": -0.272,
+      "acc_vs_trend": 0.0555,
+      "rmse_bc": 0.6122,
+      "rmse_trend": 0.5279,
+      "rmse_raw": 1.6663
+    }
+  ],
+  "by_station": [
+    {
+      "station": "KIAMO-Accra",
+      "lead": 1,
+      "n": 231,
+      "rmse_raw": 2.2333,
+      "rmse_bc": 0.3551,
+      "rmse_trend": 0.474,
+      "rmse_sarima": 0.4457,
+      "skill_vs_trend": 0.439,
+      "acc_vs_trend": 0.6815
+    },
+    {
+      "station": "KIAMO-Accra",
+      "lead": 3,
+      "n": 229,
+      "rmse_raw": 2.0472,
+      "rmse_bc": 0.4642,
+      "rmse_trend": 0.4796,
+      "rmse_sarima": 0.5138,
+      "skill_vs_trend": 0.063,
+      "acc_vs_trend": 0.432
+    },
+    {
+      "station": "KIAMO-Accra",
+      "lead": 6,
+      "n": 226,
+      "rmse_raw": 1.7936,
+      "rmse_bc": 0.4671,
+      "rmse_trend": 0.4863,
+      "rmse_sarima": 0.5488,
+      "skill_vs_trend": 0.0776,
+      "acc_vs_trend": 0.3577
+    },
+    {
+      "station": "Koforidua",
+      "lead": 1,
+      "n": 223,
+      "rmse_raw": 2.1023,
+      "rmse_bc": 0.3594,
+      "rmse_trend": 0.4879,
+      "rmse_sarima": 0.4774,
+      "skill_vs_trend": 0.4575,
+      "acc_vs_trend": 0.692
+    },
+    {
+      "station": "Koforidua",
+      "lead": 3,
+      "n": 221,
+      "rmse_raw": 1.7753,
+      "rmse_bc": 0.4388,
+      "rmse_trend": 0.4787,
+      "rmse_sarima": 0.512,
+      "skill_vs_trend": 0.1597,
+      "acc_vs_trend": 0.4255
+    },
+    {
+      "station": "Koforidua",
+      "lead": 6,
+      "n": 218,
+      "rmse_raw": 1.5892,
+      "rmse_bc": 0.4235,
+      "rmse_trend": 0.4832,
+      "rmse_sarima": 0.5213,
+      "skill_vs_trend": 0.2319,
+      "acc_vs_trend": 0.4682
+    },
+    {
+      "station": "Kumasi",
+      "lead": 1,
+      "n": 247,
+      "rmse_raw": 2.0621,
+      "rmse_bc": 0.3896,
+      "rmse_trend": 0.5223,
+      "rmse_sarima": 0.4713,
+      "skill_vs_trend": 0.4434,
+      "acc_vs_trend": 0.6468
+    },
+    {
+      "station": "Kumasi",
+      "lead": 3,
+      "n": 245,
+      "rmse_raw": 1.8036,
+      "rmse_bc": 0.518,
+      "rmse_trend": 0.5217,
+      "rmse_sarima": 0.5402,
+      "skill_vs_trend": 0.0142,
+      "acc_vs_trend": 0.3654
+    },
+    {
+      "station": "Kumasi",
+      "lead": 6,
+      "n": 242,
+      "rmse_raw": 1.6348,
+      "rmse_bc": 0.4965,
+      "rmse_trend": 0.5268,
+      "rmse_sarima": 0.5588,
+      "skill_vs_trend": 0.1118,
+      "acc_vs_trend": 0.3736
+    },
+    {
+      "station": "Navrongo",
+      "lead": 1,
+      "n": 247,
+      "rmse_raw": 1.5497,
+      "rmse_bc": 0.6721,
+      "rmse_trend": 0.6771,
+      "rmse_sarima": 0.6374,
+      "skill_vs_trend": 0.0147,
+      "acc_vs_trend": 0.5558
+    },
+    {
+      "station": "Navrongo",
+      "lead": 3,
+      "n": 245,
+      "rmse_raw": 1.4289,
+      "rmse_bc": 0.7238,
+      "rmse_trend": 0.6614,
+      "rmse_sarima": 0.6593,
+      "skill_vs_trend": -0.1974,
+      "acc_vs_trend": 0.2296
+    },
+    {
+      "station": "Navrongo",
+      "lead": 6,
+      "n": 242,
+      "rmse_raw": 1.2156,
+      "rmse_bc": 0.7113,
+      "rmse_trend": 0.6517,
+      "rmse_sarima": 0.6463,
+      "skill_vs_trend": -0.1911,
+      "acc_vs_trend": 0.2605
+    },
+    {
+      "station": "Tamale",
+      "lead": 1,
+      "n": 213,
+      "rmse_raw": 1.5538,
+      "rmse_bc": 0.8114,
+      "rmse_trend": 0.7686,
+      "rmse_sarima": 0.7186,
+      "skill_vs_trend": -0.1143,
+      "acc_vs_trend": 0.3581
+    },
+    {
+      "station": "Tamale",
+      "lead": 3,
+      "n": 211,
+      "rmse_raw": 1.4345,
+      "rmse_bc": 0.8344,
+      "rmse_trend": 0.7685,
+      "rmse_sarima": 0.7943,
+      "skill_vs_trend": -0.1789,
+      "acc_vs_trend": 0.1781
+    },
+    {
+      "station": "Tamale",
+      "lead": 6,
+      "n": 208,
+      "rmse_raw": 1.2491,
+      "rmse_bc": 0.8061,
+      "rmse_trend": 0.786,
+      "rmse_sarima": 0.8145,
+      "skill_vs_trend": -0.0519,
+      "acc_vs_trend": 0.2161
+    },
+    {
+      "station": "Wa",
+      "lead": 1,
+      "n": 225,
+      "rmse_raw": 1.4558,
+      "rmse_bc": 0.9366,
+      "rmse_trend": 0.7633,
+      "rmse_sarima": 0.6771,
+      "skill_vs_trend": -0.5058,
+      "acc_vs_trend": 0.2616
+    },
+    {
+      "station": "Wa",
+      "lead": 3,
+      "n": 223,
+      "rmse_raw": 1.3505,
+      "rmse_bc": 0.906,
+      "rmse_trend": 0.7596,
+      "rmse_sarima": 0.7318,
+      "skill_vs_trend": -0.4223,
+      "acc_vs_trend": 0.0688
+    },
+    {
+      "station": "Wa",
+      "lead": 6,
+      "n": 220,
+      "rmse_raw": 1.1947,
+      "rmse_bc": 0.9049,
+      "rmse_trend": 0.7698,
+      "rmse_sarima": 0.7602,
+      "skill_vs_trend": -0.3817,
+      "acc_vs_trend": 0.099
+    }
+  ],
+  "dm_tests": [
+    {
+      "lead": 1,
+      "reference": "Climatology",
+      "n_months": 248,
+      "mean_sq_err_diff": -0.11601,
+      "dm": -2.57153,
+      "p": 0.01071,
+      "p_holm": 0.1928
+    },
+    {
+      "lead": 1,
+      "reference": "Trend climatology",
+      "n_months": 248,
+      "mean_sq_err_diff": 0.00032,
+      "dm": 0.0114,
+      "p": 0.99091,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 1,
+      "reference": "Seasonal ARIMA",
+      "n_months": 248,
+      "mean_sq_err_diff": 0.05515,
+      "dm": 1.53616,
+      "p": 0.12578,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 2,
+      "reference": "Climatology",
+      "n_months": 247,
+      "mean_sq_err_diff": -0.07248,
+      "dm": -2.17703,
+      "p": 0.03043,
+      "p_holm": 0.5173
+    },
+    {
+      "lead": 2,
+      "reference": "Trend climatology",
+      "n_months": 247,
+      "mean_sq_err_diff": 0.04025,
+      "dm": 1.46097,
+      "p": 0.1453,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 2,
+      "reference": "Seasonal ARIMA",
+      "n_months": 247,
+      "mean_sq_err_diff": 0.04469,
+      "dm": 1.36321,
+      "p": 0.17406,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 3,
+      "reference": "Climatology",
+      "n_months": 246,
+      "mean_sq_err_diff": -0.04829,
+      "dm": -1.46174,
+      "p": 0.14509,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 3,
+      "reference": "Trend climatology",
+      "n_months": 246,
+      "mean_sq_err_diff": 0.06059,
+      "dm": 2.15549,
+      "p": 0.0321,
+      "p_holm": 0.5173
+    },
+    {
+      "lead": 3,
+      "reference": "Seasonal ARIMA",
+      "n_months": 246,
+      "mean_sq_err_diff": 0.04708,
+      "dm": 1.37183,
+      "p": 0.17137,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 4,
+      "reference": "Climatology",
+      "n_months": 245,
+      "mean_sq_err_diff": -0.05455,
+      "dm": -1.51478,
+      "p": 0.13112,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 4,
+      "reference": "Trend climatology",
+      "n_months": 245,
+      "mean_sq_err_diff": 0.05191,
+      "dm": 2.04286,
+      "p": 0.04214,
+      "p_holm": 0.6071
+    },
+    {
+      "lead": 4,
+      "reference": "Seasonal ARIMA",
+      "n_months": 245,
+      "mean_sq_err_diff": 0.03073,
+      "dm": 0.94189,
+      "p": 0.34718,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 5,
+      "reference": "Climatology",
+      "n_months": 244,
+      "mean_sq_err_diff": -0.05091,
+      "dm": -1.41536,
+      "p": 0.15824,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 5,
+      "reference": "Trend climatology",
+      "n_months": 244,
+      "mean_sq_err_diff": 0.05318,
+      "dm": 1.79665,
+      "p": 0.07363,
+      "p_holm": 0.95723
+    },
+    {
+      "lead": 5,
+      "reference": "Seasonal ARIMA",
+      "n_months": 244,
+      "mean_sq_err_diff": 0.02802,
+      "dm": 0.80036,
+      "p": 0.42429,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 6,
+      "reference": "Climatology",
+      "n_months": 243,
+      "mean_sq_err_diff": -0.06573,
+      "dm": -2.05994,
+      "p": 0.04047,
+      "p_holm": 0.6071
+    },
+    {
+      "lead": 6,
+      "reference": "Trend climatology",
+      "n_months": 243,
+      "mean_sq_err_diff": 0.03695,
+      "dm": 1.55277,
+      "p": 0.12178,
+      "p_holm": 1.0
+    },
+    {
+      "lead": 6,
+      "reference": "Seasonal ARIMA",
+      "n_months": 243,
+      "mean_sq_err_diff": 0.01081,
+      "dm": 0.37437,
+      "p": 0.70846,
+      "p_holm": 1.0
+    }
+  ],
+  "decision_rule": [
+    {
+      "lead": 1,
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": -0.171,
+      "p_holm": 1.0,
+      "skilful": false
+    },
+    {
+      "lead": 2,
+      "best_reference": "Seasonal ARIMA",
+      "skill_vs_best": -0.123,
+      "p_holm": 1.0,
+      "skilful": false
+    },
+    {
+      "lead": 3,
+      "best_reference": "Trend climatology",
+      "skill_vs_best": -0.161,
+      "p_holm": 0.5173,
+      "skilful": false
+    },
+    {
+      "lead": 4,
+      "best_reference": "Trend climatology",
+      "skill_vs_best": -0.138,
+      "p_holm": 0.6071,
+      "skilful": false
+    },
+    {
+      "lead": 5,
+      "best_reference": "Trend climatology",
+      "skill_vs_best": -0.145,
+      "p_holm": 0.9572,
+      "skilful": false
+    },
+    {
+      "lead": 6,
+      "best_reference": "Trend climatology",
+      "skill_vs_best": -0.099,
+      "p_holm": 1.0,
+      "skilful": false
+    }
+  ],
+  "sensitivity_ensemble_size": [
+    {
+      "variant": "25 members, starts 2017-2025",
+      "lead": 1,
+      "n": 597,
+      "rmse_bc": 0.6807,
+      "rmse_raw": 1.9221,
+      "acc_vs_clim": 0.4119
+    },
+    {
+      "variant": "25 members, starts 2017-2025",
+      "lead": 2,
+      "n": 592,
+      "rmse_bc": 0.7551,
+      "rmse_raw": 1.883,
+      "acc_vs_clim": 0.2069
+    },
+    {
+      "variant": "25 members, starts 2017-2025",
+      "lead": 3,
+      "n": 586,
+      "rmse_bc": 0.761,
+      "rmse_raw": 1.8132,
+      "acc_vs_clim": 0.161
+    },
+    {
+      "variant": "25 members, starts 2017-2025",
+      "lead": 4,
+      "n": 580,
+      "rmse_bc": 0.7393,
+      "rmse_raw": 1.7289,
+      "acc_vs_clim": 0.1864
+    },
+    {
+      "variant": "25 members, starts 2017-2025",
+      "lead": 5,
+      "n": 574,
+      "rmse_bc": 0.752,
+      "rmse_raw": 1.6641,
+      "acc_vs_clim": 0.1371
+    },
+    {
+      "variant": "25 members, starts 2017-2025",
+      "lead": 6,
+      "n": 568,
+      "rmse_bc": 0.7407,
+      "rmse_raw": 1.6128,
+      "acc_vs_clim": 0.1431
+    },
+    {
+      "variant": "all members (51), starts 2017-2025",
+      "lead": 1,
+      "n": 597,
+      "rmse_bc": 0.6897,
+      "rmse_raw": 1.927,
+      "acc_vs_clim": 0.4
+    },
+    {
+      "variant": "all members (51), starts 2017-2025",
+      "lead": 2,
+      "n": 592,
+      "rmse_bc": 0.7525,
+      "rmse_raw": 1.8891,
+      "acc_vs_clim": 0.2086
+    },
+    {
+      "variant": "all members (51), starts 2017-2025",
+      "lead": 3,
+      "n": 586,
+      "rmse_bc": 0.7566,
+      "rmse_raw": 1.8158,
+      "acc_vs_clim": 0.171
+    },
+    {
+      "variant": "all members (51), starts 2017-2025",
+      "lead": 4,
+      "n": 580,
+      "rmse_bc": 0.7387,
+      "rmse_raw": 1.7259,
+      "acc_vs_clim": 0.1829
+    },
+    {
+      "variant": "all members (51), starts 2017-2025",
+      "lead": 5,
+      "n": 574,
+      "rmse_bc": 0.7468,
+      "rmse_raw": 1.6628,
+      "acc_vs_clim": 0.1401
+    },
+    {
+      "variant": "all members (51), starts 2017-2025",
+      "lead": 6,
+      "n": 568,
+      "rmse_bc": 0.7347,
+      "rmse_raw": 1.618,
+      "acc_vs_clim": 0.1497
+    }
+  ],
+  "sensitivity_system": [
+    {
+      "variant": "system 51 (common starts)",
+      "lead": 1,
+      "n": 1186,
+      "rmse_bc": 0.5918,
+      "rmse_raw": 1.8536,
+      "acc_vs_clim": 0.4958
+    },
+    {
+      "variant": "system 51 (common starts)",
+      "lead": 2,
+      "n": 1186,
+      "rmse_bc": 0.624,
+      "rmse_raw": 1.7497,
+      "acc_vs_clim": 0.3253
+    },
+    {
+      "variant": "system 51 (common starts)",
+      "lead": 3,
+      "n": 1186,
+      "rmse_bc": 0.634,
+      "rmse_raw": 1.6542,
+      "acc_vs_clim": 0.2356
+    },
+    {
+      "variant": "system 51 (common starts)",
+      "lead": 4,
+      "n": 1186,
+      "rmse_bc": 0.6325,
+      "rmse_raw": 1.5707,
+      "acc_vs_clim": 0.2158
+    },
+    {
+      "variant": "system 51 (common starts)",
+      "lead": 5,
+      "n": 1186,
+      "rmse_bc": 0.6266,
+      "rmse_raw": 1.5039,
+      "acc_vs_clim": 0.2201
+    },
+    {
+      "variant": "system 51 (common starts)",
+      "lead": 6,
+      "n": 1186,
+      "rmse_bc": 0.6192,
+      "rmse_raw": 1.4531,
+      "acc_vs_clim": 0.2416
+    },
+    {
+      "variant": "system 5 (common starts)",
+      "lead": 1,
+      "n": 1186,
+      "rmse_bc": 0.6168,
+      "rmse_raw": 1.8521,
+      "acc_vs_clim": 0.4605
+    },
+    {
+      "variant": "system 5 (common starts)",
+      "lead": 2,
+      "n": 1186,
+      "rmse_bc": 0.6372,
+      "rmse_raw": 1.7348,
+      "acc_vs_clim": 0.2966
+    },
+    {
+      "variant": "system 5 (common starts)",
+      "lead": 3,
+      "n": 1186,
+      "rmse_bc": 0.6459,
+      "rmse_raw": 1.6253,
+      "acc_vs_clim": 0.2018
+    },
+    {
+      "variant": "system 5 (common starts)",
+      "lead": 4,
+      "n": 1186,
+      "rmse_bc": 0.6404,
+      "rmse_raw": 1.5338,
+      "acc_vs_clim": 0.1933
+    },
+    {
+      "variant": "system 5 (common starts)",
+      "lead": 5,
+      "n": 1186,
+      "rmse_bc": 0.6327,
+      "rmse_raw": 1.4646,
+      "acc_vs_clim": 0.2054
+    },
+    {
+      "variant": "system 5 (common starts)",
+      "lead": 6,
+      "n": 1186,
+      "rmse_bc": 0.6242,
+      "rmse_raw": 1.4107,
+      "acc_vs_clim": 0.2289
+    }
+  ],
+  "sensitivity_observation_source": [
+    {
+      "variant": "station observations",
+      "lead": 1,
+      "n": 1386,
+      "rmse_bc": 0.6268,
+      "rmse_raw": 1.8556,
+      "acc_vs_clim": 0.4799
+    },
+    {
+      "variant": "station observations",
+      "lead": 2,
+      "n": 1380,
+      "rmse_bc": 0.6599,
+      "rmse_raw": 1.7574,
+      "acc_vs_clim": 0.3197
+    },
+    {
+      "variant": "station observations",
+      "lead": 3,
+      "n": 1374,
+      "rmse_bc": 0.6695,
+      "rmse_raw": 1.6618,
+      "acc_vs_clim": 0.2448
+    },
+    {
+      "variant": "station observations",
+      "lead": 4,
+      "n": 1368,
+      "rmse_bc": 0.6643,
+      "rmse_raw": 1.5812,
+      "acc_vs_clim": 0.2352
+    },
+    {
+      "variant": "station observations",
+      "lead": 5,
+      "n": 1362,
+      "rmse_bc": 0.6684,
+      "rmse_raw": 1.5166,
+      "acc_vs_clim": 0.2213
+    },
+    {
+      "variant": "station observations",
+      "lead": 6,
+      "n": 1356,
+      "rmse_bc": 0.6573,
+      "rmse_raw": 1.4676,
+      "acc_vs_clim": 0.2469
+    },
+    {
+      "variant": "ERA5-Land as truth",
+      "lead": 1,
+      "n": 1512,
+      "rmse_bc": 0.4975,
+      "rmse_raw": 1.2056,
+      "acc_vs_clim": 0.6224
+    },
+    {
+      "variant": "ERA5-Land as truth",
+      "lead": 2,
+      "n": 1506,
+      "rmse_bc": 0.5142,
+      "rmse_raw": 1.1004,
+      "acc_vs_clim": 0.4834
+    },
+    {
+      "variant": "ERA5-Land as truth",
+      "lead": 3,
+      "n": 1500,
+      "rmse_bc": 0.5319,
+      "rmse_raw": 1.0208,
+      "acc_vs_clim": 0.3923
+    },
+    {
+      "variant": "ERA5-Land as truth",
+      "lead": 4,
+      "n": 1494,
+      "rmse_bc": 0.5398,
+      "rmse_raw": 0.9617,
+      "acc_vs_clim": 0.3442
+    },
+    {
+      "variant": "ERA5-Land as truth",
+      "lead": 5,
+      "n": 1488,
+      "rmse_bc": 0.5471,
+      "rmse_raw": 0.9144,
+      "acc_vs_clim": 0.327
+    },
+    {
+      "variant": "ERA5-Land as truth",
+      "lead": 6,
+      "n": 1482,
+      "rmse_bc": 0.5431,
+      "rmse_raw": 0.877,
+      "acc_vs_clim": 0.3297
+    }
+  ]
+}

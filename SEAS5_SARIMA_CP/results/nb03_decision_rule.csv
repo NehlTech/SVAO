@@ -1,0 +1,7 @@
+lead,best_reference,skill_vs_best,p_holm,skilful
+1,Seasonal ARIMA,-0.171,1.0,False
+2,Seasonal ARIMA,-0.123,1.0,False
+3,Trend climatology,-0.161,0.5173,False
+4,Trend climatology,-0.138,0.6071,False
+5,Trend climatology,-0.145,0.9572,False
+6,Trend climatology,-0.099,1.0,False
