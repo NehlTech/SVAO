@@ -1,0 +1,9 @@
+region,group,scope,n,rmse_trend,rmse_ridge,skill_ridge_vs_trend,residual_sd
+north,dry (Nov-Mar),all leads,1890,0.83154,0.81965,0.02838,0.83162
+north,dry (Nov-Mar),lead 1,315,0.84323,0.76817,0.17011,0.8442
+north,rainy (Apr-Oct),all leads,2646,0.65507,0.62338,0.09439,0.65225
+north,rainy (Apr-Oct),lead 1,441,0.64653,0.55447,0.26451,0.64438
+south,dry (Nov-Mar),all leads,1890,0.5624,0.47027,0.30079,0.53342
+south,dry (Nov-Mar),lead 1,315,0.56535,0.41718,0.45548,0.54174
+south,rainy (Apr-Oct),all leads,2646,0.44382,0.40515,0.16668,0.43342
+south,rainy (Apr-Oct),lead 1,441,0.43887,0.37516,0.26925,0.42922
