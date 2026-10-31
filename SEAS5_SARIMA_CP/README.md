@@ -23,3 +23,20 @@ Setup only. No results yet. Numbers will appear here after the notebooks are run
 - NOAA GSOD, used only as a small external check.
 
 The earlier ARIMA-LSTM and SVAO notebooks (01 to 14) are in the top level of this repository and are unchanged.
+
+## Notebook index and run order
+
+| Notebook | Purpose | Main outputs |
+|---|---|---|
+| 00 | GitHub and project setup | folder structure, config |
+| 01 | Data quality, homogeneity, SEAS5 file checks | gmet_monthly_clean.csv, nb01 results |
+| 02 | Reference forecasts (climatology, trend climatology, seasonal ARIMA) | reference_forecasts.csv |
+| 03 | Verification of SEAS5 | seas5_verification_table.csv |
+| 04 | Post-processing (linear, ridge, boosting, network, season weighting) | postprocessed_forecasts.csv |
+| 05 | Hybrid ARIMA-LSTM | hybrid_forecasts.csv |
+| 06 | Conformal prediction intervals | conformal_intervals.csv |
+| 07 | Data sensitivity (adjusted series, Tmax and Tmin, one station out) | sensitivity_forecasts.csv |
+| 08 | SEAS5 settings, trends, hybrid training size, station tests | nb08 results |
+| 09 | Final numbers, decision-rule register, repository check | results/all_paper_numbers.json |
+
+Run the notebooks in order. Raw data (GMet workbook, ERA5-Land and SEAS5 extracts) are kept in Google Drive and are not committed. Every number quoted in the manuscript is read from `results/all_paper_numbers.json`.

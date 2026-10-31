@@ -1,0 +1,38 @@
+{
+  "notebook": "09_Final_Numbers",
+  "seed": 0,
+  "recompute_checks": {
+    "n_checked": 90,
+    "all_ok": true,
+    "tolerance": 0.0005,
+    "largest_difference": 0.000280000000000058
+  },
+  "numbers_file_mb": 0.355,
+  "environment": {
+    "python": "3.13.18",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "statsmodels": "0.15.0",
+    "sklearn": "1.6.1",
+    "torch": "2.11.0+cpu",
+    "joblib": "1.6.0",
+    "matplotlib": "3.10.0",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "generated_utc": "2026-10-31 06:24"
+  },
+  "repository": {
+    "tracked_files": 84,
+    "manifest_files": 86,
+    "raw_files_tracked": 0,
+    "tracked_files_with_station_observations": [
+      "SEAS5_SARIMA_CP/data/processed/conformal_intervals.csv",
+      "SEAS5_SARIMA_CP/data/processed/gmet_daily_clean.csv",
+      "SEAS5_SARIMA_CP/data/processed/gmet_monthly_clean.csv",
+      "SEAS5_SARIMA_CP/data/processed/postprocessed_forecasts.csv",
+      "SEAS5_SARIMA_CP/data/processed/reference_forecasts.csv",
+      "SEAS5_SARIMA_CP/data/processed/seas5_verification_table.csv",
+      "SEAS5_SARIMA_CP/data/processed/sensitivity_forecasts.csv"
+    ]
+  }
+}

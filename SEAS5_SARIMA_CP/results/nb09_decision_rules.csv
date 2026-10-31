@@ -1,0 +1,27 @@
+notebook,rule,outcome,detail
+03,"Bias-corrected SEAS5 beats the best reference at a lead (Holm DM, 18 tests)",0 of 6 leads,"skill against the best reference -0.171, -0.123, -0.161, -0.138, -0.145, -0.099"
+04,"A post-processing model beats the best reference at a lead (Holm DM, 48 tests)",0 model-lead cells pass,"ridge skill +0.140, +0.123, +0.090, +0.079, +0.060, +0.069; smallest Holm p 0.053"
+05,"A hybrid variant beats seasonal ARIMA at a lead (Holm DM, 18 tests)",0 variant-lead cells pass,
+06,Rule 1: interval within 0.05 of its nominal level at every lead and level,"{""gauss"": false, ""pooled"": true, ""season"": true, ""season_station"": true}",
+06,Rule 2: season-aware interval recommended over pooled,pooled,smaller worst-season error: True; lower interval score and significant in 0 of 12 cells
+06,"Rule 3: ridge intervals better than both references (24 tests, Holm)",5 of 24 cells,"{""sarima"": [12, 0], ""trend"": [12, 5]}"
+07,Variant supports the main ridge result,main: True,mean skill 0.093; lead 1 Holm p 0.012
+07,Variant supports the main ridge result,adj: True,mean skill 0.085; lead 1 Holm p 0.044
+07,Variant supports the main ridge result,tmax: True,mean skill 0.099; lead 1 Holm p 0.018
+07,Variant supports the main ridge result,tmin: True,mean skill 0.055; lead 1 Holm p 0.290
+07,Variant supports the main ridge result,without KIAMO-Accra: True,mean skill 0.079; lead 1 Holm p 0.057
+07,Variant supports the main ridge result,without Koforidua: True,mean skill 0.081; lead 1 Holm p 0.023
+07,Variant supports the main ridge result,without Kumasi: True,mean skill 0.072; lead 1 Holm p 0.041
+07,Variant supports the main ridge result,without Navrongo: True,mean skill 0.113; lead 1 Holm p 0.007
+07,Variant supports the main ridge result,without Tamale: True,mean skill 0.094; lead 1 Holm p 0.031
+07,Variant supports the main ridge result,without Wa: True,mean skill 0.127; lead 1 Holm p 0.000
+07,SEAS5 adds skill at lead 1 for this variable (Holm p < 0.05),tmax: True,skill added 0.114; Holm p 0.0000
+07,SEAS5 adds skill at lead 1 for this variable (Holm p < 0.05),tmin: False,skill added 0.056; Holm p 0.8216
+08,SEAS5 setting equivalent to the main one,all51: True,mean skill difference -0.0003; any lead significant: False
+08,SEAS5 setting equivalent to the main one,m10: True,mean skill difference +0.0009; any lead significant: False
+08,SEAS5 setting equivalent to the main one,sys5: False,mean skill difference -0.0098; any lead significant: True
+08,Trend significant (Holm Kendall p < 0.05 and Sen interval excludes zero),15 of 18 series,
+08,More training data helps the hybrid,hyb: False,skill against seasonal ARIMA -0.005 (2005-2012) to -0.064 (2020-2025)
+08,More training data helps the hybrid,hybw: False,skill against seasonal ARIMA -0.005 (2005-2012) to -0.059 (2020-2025)
+08,More training data helps the hybrid,hybs5: False,skill against seasonal ARIMA +0.029 (2005-2012) to -0.079 (2020-2025)
+08,"Station-lead cell counted as a ridge gain (36 tests, Holm)",8 of 36 cells,"KIAMO-Accra, Koforidua, Kumasi"
