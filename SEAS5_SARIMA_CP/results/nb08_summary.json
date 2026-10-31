@@ -1,0 +1,1814 @@
+{
+  "notebook": "08_SEAS5_Trends_Hybrid_Stations",
+  "seed": 0,
+  "tolerance_skill": 0.02,
+  "tolerance_hybrid": 0.02,
+  "bootstrap_reps": 1000,
+  "periods": {
+    "2005-2012": [
+      2005,
+      2012
+    ],
+    "2013-2019": [
+      2013,
+      2019
+    ],
+    "2020-2025": [
+      2020,
+      2025
+    ]
+  },
+  "independence_check": {
+    "anomalies_checked": 72,
+    "passed": true
+  },
+  "reproduction_check": {
+    "rows": 9072,
+    "max_abs_difference": 7.105427357601002e-15
+  },
+  "common_pairs": 7116,
+  "pairs_main_setting": 9072,
+  "rule1_seas5_settings": {
+    "all51": {
+      "mean_skill_difference": -0.00028163822357193946,
+      "any_lead_significant": false,
+      "equivalent_to_main": true
+    },
+    "m10": {
+      "mean_skill_difference": 0.0009326278096474655,
+      "any_lead_significant": false,
+      "equivalent_to_main": true
+    },
+    "sys5": {
+      "mean_skill_difference": -0.009831619313254436,
+      "any_lead_significant": true,
+      "equivalent_to_main": false
+    }
+  },
+  "seas5_settings_table": [
+    {
+      "setting": "main",
+      "lead": 1,
+      "best_reference": "sarima",
+      "rmse": 0.50133,
+      "skill_vs_best": 0.17221,
+      "mse_diff_vs_main": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "all51",
+      "lead": 1,
+      "best_reference": "sarima",
+      "rmse": 0.50224,
+      "skill_vs_best": 0.16887,
+      "mse_diff_vs_main": 0.00101,
+      "p": 0.14744,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "m10",
+      "lead": 1,
+      "best_reference": "sarima",
+      "rmse": 0.49742,
+      "skill_vs_best": 0.18331,
+      "mse_diff_vs_main": -0.00337,
+      "p": 0.29628,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "sys5",
+      "lead": 1,
+      "best_reference": "sarima",
+      "rmse": 0.50697,
+      "skill_vs_best": 0.15366,
+      "mse_diff_vs_main": 0.00557,
+      "p": 0.0203,
+      "p_holm": 0.30451
+    },
+    {
+      "setting": "main",
+      "lead": 2,
+      "best_reference": "trend_clim",
+      "rmse": 0.54362,
+      "skill_vs_best": 0.14199,
+      "mse_diff_vs_main": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "all51",
+      "lead": 2,
+      "best_reference": "trend_clim",
+      "rmse": 0.54372,
+      "skill_vs_best": 0.14154,
+      "mse_diff_vs_main": 0.00024,
+      "p": 0.71928,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "m10",
+      "lead": 2,
+      "best_reference": "trend_clim",
+      "rmse": 0.54498,
+      "skill_vs_best": 0.13938,
+      "mse_diff_vs_main": 0.00077,
+      "p": 0.76333,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "sys5",
+      "lead": 2,
+      "best_reference": "trend_clim",
+      "rmse": 0.54689,
+      "skill_vs_best": 0.13135,
+      "mse_diff_vs_main": 0.00378,
+      "p": 0.00471,
+      "p_holm": 0.08007
+    },
+    {
+      "setting": "main",
+      "lead": 3,
+      "best_reference": "trend_clim",
+      "rmse": 0.55215,
+      "skill_vs_best": 0.09631,
+      "mse_diff_vs_main": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "all51",
+      "lead": 3,
+      "best_reference": "trend_clim",
+      "rmse": 0.55184,
+      "skill_vs_best": 0.09695,
+      "mse_diff_vs_main": -0.00029,
+      "p": 0.66495,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "m10",
+      "lead": 3,
+      "best_reference": "trend_clim",
+      "rmse": 0.55127,
+      "skill_vs_best": 0.09908,
+      "mse_diff_vs_main": -0.00128,
+      "p": 0.67666,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "sys5",
+      "lead": 3,
+      "best_reference": "trend_clim",
+      "rmse": 0.55548,
+      "skill_vs_best": 0.08379,
+      "mse_diff_vs_main": 0.0043,
+      "p": 0.00015,
+      "p_holm": 0.00274
+    },
+    {
+      "setting": "main",
+      "lead": 4,
+      "best_reference": "trend_clim",
+      "rmse": 0.55622,
+      "skill_vs_best": 0.08338,
+      "mse_diff_vs_main": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "all51",
+      "lead": 4,
+      "best_reference": "trend_clim",
+      "rmse": 0.55596,
+      "skill_vs_best": 0.08394,
+      "mse_diff_vs_main": -0.00024,
+      "p": 0.54668,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "m10",
+      "lead": 4,
+      "best_reference": "trend_clim",
+      "rmse": 0.55466,
+      "skill_vs_best": 0.0896,
+      "mse_diff_vs_main": -0.00205,
+      "p": 0.43076,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "sys5",
+      "lead": 4,
+      "best_reference": "trend_clim",
+      "rmse": 0.55826,
+      "skill_vs_best": 0.07611,
+      "mse_diff_vs_main": 0.00256,
+      "p": 0.01826,
+      "p_holm": 0.29212
+    },
+    {
+      "setting": "main",
+      "lead": 5,
+      "best_reference": "trend_clim",
+      "rmse": 0.56172,
+      "skill_vs_best": 0.06957,
+      "mse_diff_vs_main": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "all51",
+      "lead": 5,
+      "best_reference": "trend_clim",
+      "rmse": 0.56228,
+      "skill_vs_best": 0.06824,
+      "mse_diff_vs_main": 0.00047,
+      "p": 0.51895,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "m10",
+      "lead": 5,
+      "best_reference": "trend_clim",
+      "rmse": 0.56297,
+      "skill_vs_best": 0.06571,
+      "mse_diff_vs_main": 0.00119,
+      "p": 0.53855,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "sys5",
+      "lead": 5,
+      "best_reference": "trend_clim",
+      "rmse": 0.56296,
+      "skill_vs_best": 0.0652,
+      "mse_diff_vs_main": 0.00166,
+      "p": 0.21038,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "main",
+      "lead": 6,
+      "best_reference": "trend_clim",
+      "rmse": 0.56255,
+      "skill_vs_best": 0.07563,
+      "mse_diff_vs_main": 0.0,
+      "p": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "all51",
+      "lead": 6,
+      "best_reference": "trend_clim",
+      "rmse": 0.56211,
+      "skill_vs_best": 0.07786,
+      "mse_diff_vs_main": -0.00081,
+      "p": 0.25723,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "m10",
+      "lead": 6,
+      "best_reference": "trend_clim",
+      "rmse": 0.56529,
+      "skill_vs_best": 0.06761,
+      "mse_diff_vs_main": 0.0027,
+      "p": 0.5091,
+      "p_holm": 1.0
+    },
+    {
+      "setting": "sys5",
+      "lead": 6,
+      "best_reference": "trend_clim",
+      "rmse": 0.56425,
+      "skill_vs_best": 0.06999,
+      "mse_diff_vs_main": 0.00202,
+      "p": 0.1548,
+      "p_holm": 1.0
+    }
+  ],
+  "trends_adjusted": [
+    {
+      "variable": "tmax",
+      "station": "KIAMO-Accra",
+      "months_used": 12,
+      "z": 7.28163,
+      "p": 0.0,
+      "sen_per_decade": 0.25269,
+      "ci_lo": 0.11285,
+      "ci_hi": 0.39343,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmax",
+      "station": "Koforidua",
+      "months_used": 12,
+      "z": 4.35573,
+      "p": 1e-05,
+      "sen_per_decade": 0.16832,
+      "ci_lo": 0.00203,
+      "ci_hi": 0.30195,
+      "p_holm": 7e-05,
+      "significant": true
+    },
+    {
+      "variable": "tmax",
+      "station": "Kumasi",
+      "months_used": 12,
+      "z": 6.70875,
+      "p": 0.0,
+      "sen_per_decade": 0.26111,
+      "ci_lo": 0.1336,
+      "ci_hi": 0.40515,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmax",
+      "station": "Navrongo",
+      "months_used": 12,
+      "z": 3.4327,
+      "p": 0.0006,
+      "sen_per_decade": 0.16308,
+      "ci_lo": 0.07778,
+      "ci_hi": 0.26998,
+      "p_holm": 0.00239,
+      "significant": true
+    },
+    {
+      "variable": "tmax",
+      "station": "Tamale",
+      "months_used": 12,
+      "z": 3.31405,
+      "p": 0.00092,
+      "sen_per_decade": 0.13652,
+      "ci_lo": 0.00802,
+      "ci_hi": 0.24445,
+      "p_holm": 0.00276,
+      "significant": true
+    },
+    {
+      "variable": "tmax",
+      "station": "Wa",
+      "months_used": 12,
+      "z": 5.34858,
+      "p": 0.0,
+      "sen_per_decade": 0.23167,
+      "ci_lo": 0.08957,
+      "ci_hi": 0.35988,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmin",
+      "station": "KIAMO-Accra",
+      "months_used": 12,
+      "z": 9.99559,
+      "p": 0.0,
+      "sen_per_decade": 0.28763,
+      "ci_lo": 0.17555,
+      "ci_hi": 0.38244,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmin",
+      "station": "Koforidua",
+      "months_used": 12,
+      "z": 10.39097,
+      "p": 0.0,
+      "sen_per_decade": 0.33032,
+      "ci_lo": 0.22581,
+      "ci_hi": 0.43104,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmin",
+      "station": "Kumasi",
+      "months_used": 12,
+      "z": 11.19153,
+      "p": 0.0,
+      "sen_per_decade": 0.35215,
+      "ci_lo": 0.25684,
+      "ci_hi": 0.49032,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmin",
+      "station": "Navrongo",
+      "months_used": 12,
+      "z": 7.60089,
+      "p": 0.0,
+      "sen_per_decade": 0.32547,
+      "ci_lo": 0.19333,
+      "ci_hi": 0.43807,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmin",
+      "station": "Tamale",
+      "months_used": 12,
+      "z": 2.62574,
+      "p": 0.00865,
+      "sen_per_decade": 0.09465,
+      "ci_lo": -0.03227,
+      "ci_hi": 0.22554,
+      "p_holm": 0.01729,
+      "significant": false
+    },
+    {
+      "variable": "tmin",
+      "station": "Wa",
+      "months_used": 12,
+      "z": 5.22246,
+      "p": 0.0,
+      "sen_per_decade": 0.32239,
+      "ci_lo": -0.0281,
+      "ci_hi": 0.59324,
+      "p_holm": 0.0,
+      "significant": false
+    },
+    {
+      "variable": "tmean",
+      "station": "KIAMO-Accra",
+      "months_used": 12,
+      "z": 9.60065,
+      "p": 0.0,
+      "sen_per_decade": 0.27161,
+      "ci_lo": 0.14998,
+      "ci_hi": 0.38333,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmean",
+      "station": "Koforidua",
+      "months_used": 12,
+      "z": 9.88106,
+      "p": 0.0,
+      "sen_per_decade": 0.26978,
+      "ci_lo": 0.16319,
+      "ci_hi": 0.35004,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmean",
+      "station": "Kumasi",
+      "months_used": 12,
+      "z": 10.08525,
+      "p": 0.0,
+      "sen_per_decade": 0.30769,
+      "ci_lo": 0.20968,
+      "ci_hi": 0.42668,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmean",
+      "station": "Navrongo",
+      "months_used": 12,
+      "z": 5.81951,
+      "p": 0.0,
+      "sen_per_decade": 0.22205,
+      "ci_lo": 0.15067,
+      "ci_hi": 0.31894,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmean",
+      "station": "Tamale",
+      "months_used": 12,
+      "z": 2.42763,
+      "p": 0.0152,
+      "sen_per_decade": 0.10331,
+      "ci_lo": -0.04237,
+      "ci_hi": 0.22115,
+      "p_holm": 0.01729,
+      "significant": false
+    },
+    {
+      "variable": "tmean",
+      "station": "Wa",
+      "months_used": 12,
+      "z": 4.76755,
+      "p": 0.0,
+      "sen_per_decade": 0.2151,
+      "ci_lo": 0.02138,
+      "ci_hi": 0.42253,
+      "p_holm": 1e-05,
+      "significant": true
+    }
+  ],
+  "trends": [
+    {
+      "variable": "tmax",
+      "station": "KIAMO-Accra",
+      "months_used": 12,
+      "z": 7.28163,
+      "p": 0.0,
+      "sen_per_decade": 0.25269,
+      "ci_lo": 0.11734,
+      "ci_hi": 0.39231,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmax",
+      "station": "Koforidua",
+      "months_used": 12,
+      "z": 4.35573,
+      "p": 1e-05,
+      "sen_per_decade": 0.16832,
+      "ci_lo": 0.01984,
+      "ci_hi": 0.3037,
+      "p_holm": 8e-05,
+      "significant": true
+    },
+    {
+      "variable": "tmax",
+      "station": "Kumasi",
+      "months_used": 12,
+      "z": 10.69611,
+      "p": 0.0,
+      "sen_per_decade": 0.48182,
+      "ci_lo": 0.32622,
+      "ci_hi": 0.64516,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmax",
+      "station": "Navrongo",
+      "months_used": 12,
+      "z": 3.4327,
+      "p": 0.0006,
+      "sen_per_decade": 0.16308,
+      "ci_lo": 0.07973,
+      "ci_hi": 0.27892,
+      "p_holm": 0.00299,
+      "significant": true
+    },
+    {
+      "variable": "tmax",
+      "station": "Tamale",
+      "months_used": 12,
+      "z": 7.13974,
+      "p": 0.0,
+      "sen_per_decade": 0.30376,
+      "ci_lo": 0.1577,
+      "ci_hi": 0.45161,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmax",
+      "station": "Wa",
+      "months_used": 12,
+      "z": 5.34858,
+      "p": 0.0,
+      "sen_per_decade": 0.23167,
+      "ci_lo": 0.09048,
+      "ci_hi": 0.35196,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmin",
+      "station": "KIAMO-Accra",
+      "months_used": 12,
+      "z": 15.25292,
+      "p": 0.0,
+      "sen_per_decade": 0.51111,
+      "ci_lo": 0.40915,
+      "ci_hi": 0.6,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmin",
+      "station": "Koforidua",
+      "months_used": 12,
+      "z": 10.39097,
+      "p": 0.0,
+      "sen_per_decade": 0.33032,
+      "ci_lo": 0.22805,
+      "ci_hi": 0.42585,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmin",
+      "station": "Kumasi",
+      "months_used": 12,
+      "z": 11.19153,
+      "p": 0.0,
+      "sen_per_decade": 0.35215,
+      "ci_lo": 0.25442,
+      "ci_hi": 0.47834,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmin",
+      "station": "Navrongo",
+      "months_used": 12,
+      "z": 2.16181,
+      "p": 0.03063,
+      "sen_per_decade": 0.07312,
+      "ci_lo": -0.05163,
+      "ci_hi": 0.19355,
+      "p_holm": 0.0919,
+      "significant": false
+    },
+    {
+      "variable": "tmin",
+      "station": "Tamale",
+      "months_used": 12,
+      "z": 9.54307,
+      "p": 0.0,
+      "sen_per_decade": 0.5143,
+      "ci_lo": 0.3309,
+      "ci_hi": 0.673,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmin",
+      "station": "Wa",
+      "months_used": 12,
+      "z": -1.99494,
+      "p": 0.04605,
+      "sen_per_decade": -0.09217,
+      "ci_lo": -0.44,
+      "ci_hi": 0.15115,
+      "p_holm": 0.0921,
+      "significant": false
+    },
+    {
+      "variable": "tmean",
+      "station": "KIAMO-Accra",
+      "months_used": 12,
+      "z": 12.54176,
+      "p": 0.0,
+      "sen_per_decade": 0.38573,
+      "ci_lo": 0.26641,
+      "ci_hi": 0.49341,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmean",
+      "station": "Koforidua",
+      "months_used": 12,
+      "z": 9.88673,
+      "p": 0.0,
+      "sen_per_decade": 0.26978,
+      "ci_lo": 0.17119,
+      "ci_hi": 0.35108,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmean",
+      "station": "Kumasi",
+      "months_used": 12,
+      "z": 12.38645,
+      "p": 0.0,
+      "sen_per_decade": 0.42167,
+      "ci_lo": 0.29694,
+      "ci_hi": 0.56224,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmean",
+      "station": "Navrongo",
+      "months_used": 12,
+      "z": 2.99236,
+      "p": 0.00277,
+      "sen_per_decade": 0.10418,
+      "ci_lo": 0.02749,
+      "ci_hi": 0.18979,
+      "p_holm": 0.01107,
+      "significant": true
+    },
+    {
+      "variable": "tmean",
+      "station": "Tamale",
+      "months_used": 12,
+      "z": 8.23746,
+      "p": 0.0,
+      "sen_per_decade": 0.40748,
+      "ci_lo": 0.1777,
+      "ci_hi": 0.55686,
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "variable": "tmean",
+      "station": "Wa",
+      "months_used": 12,
+      "z": -0.03288,
+      "p": 0.97377,
+      "sen_per_decade": -0.00064,
+      "ci_lo": -0.16667,
+      "ci_hi": 0.1975,
+      "p_holm": 0.97377,
+      "significant": false
+    }
+  ],
+  "trends_by_season_tmean": [
+    {
+      "station": "KIAMO-Accra",
+      "season": "DJF",
+      "sen_per_decade": 0.4947,
+      "ci_lo": 0.3662,
+      "ci_hi": 0.6259
+    },
+    {
+      "station": "KIAMO-Accra",
+      "season": "MAM",
+      "sen_per_decade": 0.4,
+      "ci_lo": 0.2675,
+      "ci_hi": 0.5654
+    },
+    {
+      "station": "KIAMO-Accra",
+      "season": "JJA",
+      "sen_per_decade": 0.3206,
+      "ci_lo": 0.1581,
+      "ci_hi": 0.4954
+    },
+    {
+      "station": "KIAMO-Accra",
+      "season": "SON",
+      "sen_per_decade": 0.3255,
+      "ci_lo": 0.1725,
+      "ci_hi": 0.4605
+    },
+    {
+      "station": "Koforidua",
+      "season": "DJF",
+      "sen_per_decade": 0.4584,
+      "ci_lo": 0.3397,
+      "ci_hi": 0.6296
+    },
+    {
+      "station": "Koforidua",
+      "season": "MAM",
+      "sen_per_decade": 0.2845,
+      "ci_lo": 0.1479,
+      "ci_hi": 0.4497
+    },
+    {
+      "station": "Koforidua",
+      "season": "JJA",
+      "sen_per_decade": 0.1795,
+      "ci_lo": 0.0586,
+      "ci_hi": 0.3011
+    },
+    {
+      "station": "Koforidua",
+      "season": "SON",
+      "sen_per_decade": 0.1876,
+      "ci_lo": 0.0779,
+      "ci_hi": 0.312
+    },
+    {
+      "station": "Kumasi",
+      "season": "DJF",
+      "sen_per_decade": 0.604,
+      "ci_lo": 0.3856,
+      "ci_hi": 0.806
+    },
+    {
+      "station": "Kumasi",
+      "season": "MAM",
+      "sen_per_decade": 0.371,
+      "ci_lo": 0.1481,
+      "ci_hi": 0.5381
+    },
+    {
+      "station": "Kumasi",
+      "season": "JJA",
+      "sen_per_decade": 0.3562,
+      "ci_lo": 0.202,
+      "ci_hi": 0.5463
+    },
+    {
+      "station": "Kumasi",
+      "season": "SON",
+      "sen_per_decade": 0.4082,
+      "ci_lo": 0.2887,
+      "ci_hi": 0.5576
+    },
+    {
+      "station": "Navrongo",
+      "season": "DJF",
+      "sen_per_decade": 0.1452,
+      "ci_lo": -0.0475,
+      "ci_hi": 0.3457
+    },
+    {
+      "station": "Navrongo",
+      "season": "MAM",
+      "sen_per_decade": 0.0899,
+      "ci_lo": -0.1817,
+      "ci_hi": 0.4027
+    },
+    {
+      "station": "Navrongo",
+      "season": "JJA",
+      "sen_per_decade": 0.1036,
+      "ci_lo": -0.0012,
+      "ci_hi": 0.2137
+    },
+    {
+      "station": "Navrongo",
+      "season": "SON",
+      "sen_per_decade": 0.075,
+      "ci_lo": -0.1143,
+      "ci_hi": 0.2824
+    },
+    {
+      "station": "Tamale",
+      "season": "DJF",
+      "sen_per_decade": 0.4355,
+      "ci_lo": 0.1726,
+      "ci_hi": 0.7027
+    },
+    {
+      "station": "Tamale",
+      "season": "MAM",
+      "sen_per_decade": 0.4351,
+      "ci_lo": 0.1273,
+      "ci_hi": 0.7785
+    },
+    {
+      "station": "Tamale",
+      "season": "JJA",
+      "sen_per_decade": 0.3778,
+      "ci_lo": 0.2128,
+      "ci_hi": 0.5451
+    },
+    {
+      "station": "Tamale",
+      "season": "SON",
+      "sen_per_decade": 0.4096,
+      "ci_lo": 0.1021,
+      "ci_hi": 0.5864
+    },
+    {
+      "station": "Wa",
+      "season": "DJF",
+      "sen_per_decade": 0.0355,
+      "ci_lo": -0.237,
+      "ci_hi": 0.3044
+    },
+    {
+      "station": "Wa",
+      "season": "MAM",
+      "sen_per_decade": -0.0122,
+      "ci_lo": -0.2497,
+      "ci_hi": 0.2549
+    },
+    {
+      "station": "Wa",
+      "season": "JJA",
+      "sen_per_decade": -0.0121,
+      "ci_lo": -0.2619,
+      "ci_hi": 0.1978
+    },
+    {
+      "station": "Wa",
+      "season": "SON",
+      "sen_per_decade": -0.0006,
+      "ci_lo": -0.2803,
+      "ci_hi": 0.2385
+    }
+  ],
+  "rule2_significant_trends": 15,
+  "rule3_hybrid_training_size": {
+    "hyb": {
+      "first": -0.004934581465128633,
+      "last": -0.06401164840261937,
+      "training_size_matters": false
+    },
+    "hybw": {
+      "first": -0.004606260258507393,
+      "last": -0.05942012208944347,
+      "training_size_matters": false
+    },
+    "hybs5": {
+      "first": 0.029084547876707112,
+      "last": -0.07905502150618322,
+      "training_size_matters": false
+    }
+  },
+  "hybrid_skill_by_period": [
+    {
+      "period": "2005-2012",
+      "model": "hyb",
+      "lead": 1,
+      "skill_vs_sarima": 0.0019,
+      "n": 536
+    },
+    {
+      "period": "2005-2012",
+      "model": "hyb",
+      "lead": 2,
+      "skill_vs_sarima": -0.00603,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hyb",
+      "lead": 3,
+      "skill_vs_sarima": -0.0046,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hyb",
+      "lead": 4,
+      "skill_vs_sarima": -0.00571,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hyb",
+      "lead": 5,
+      "skill_vs_sarima": -0.00924,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hyb",
+      "lead": 6,
+      "skill_vs_sarima": -0.00592,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybw",
+      "lead": 1,
+      "skill_vs_sarima": 0.00185,
+      "n": 536
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybw",
+      "lead": 2,
+      "skill_vs_sarima": -0.00604,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybw",
+      "lead": 3,
+      "skill_vs_sarima": -0.00439,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybw",
+      "lead": 4,
+      "skill_vs_sarima": -0.00555,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybw",
+      "lead": 5,
+      "skill_vs_sarima": -0.00858,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybw",
+      "lead": 6,
+      "skill_vs_sarima": -0.00492,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybs5",
+      "lead": 1,
+      "skill_vs_sarima": 0.10197,
+      "n": 536
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybs5",
+      "lead": 2,
+      "skill_vs_sarima": 0.04529,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybs5",
+      "lead": 3,
+      "skill_vs_sarima": 0.0249,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybs5",
+      "lead": 4,
+      "skill_vs_sarima": 0.00141,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybs5",
+      "lead": 5,
+      "skill_vs_sarima": -0.00417,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "hybs5",
+      "lead": 6,
+      "skill_vs_sarima": 0.00512,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "ridge",
+      "lead": 1,
+      "skill_vs_sarima": 0.11397,
+      "n": 536
+    },
+    {
+      "period": "2005-2012",
+      "model": "ridge",
+      "lead": 2,
+      "skill_vs_sarima": 0.05481,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "ridge",
+      "lead": 3,
+      "skill_vs_sarima": 0.02918,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "ridge",
+      "lead": 4,
+      "skill_vs_sarima": 0.0138,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "ridge",
+      "lead": 5,
+      "skill_vs_sarima": -0.01563,
+      "n": 535
+    },
+    {
+      "period": "2005-2012",
+      "model": "ridge",
+      "lead": 6,
+      "skill_vs_sarima": -0.0082,
+      "n": 535
+    },
+    {
+      "period": "2013-2019",
+      "model": "hyb",
+      "lead": 1,
+      "skill_vs_sarima": 0.04803,
+      "n": 455
+    },
+    {
+      "period": "2013-2019",
+      "model": "hyb",
+      "lead": 2,
+      "skill_vs_sarima": 0.06433,
+      "n": 455
+    },
+    {
+      "period": "2013-2019",
+      "model": "hyb",
+      "lead": 3,
+      "skill_vs_sarima": 0.07806,
+      "n": 454
+    },
+    {
+      "period": "2013-2019",
+      "model": "hyb",
+      "lead": 4,
+      "skill_vs_sarima": 0.08422,
+      "n": 453
+    },
+    {
+      "period": "2013-2019",
+      "model": "hyb",
+      "lead": 5,
+      "skill_vs_sarima": 0.08892,
+      "n": 452
+    },
+    {
+      "period": "2013-2019",
+      "model": "hyb",
+      "lead": 6,
+      "skill_vs_sarima": 0.09128,
+      "n": 451
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybw",
+      "lead": 1,
+      "skill_vs_sarima": 0.04705,
+      "n": 455
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybw",
+      "lead": 2,
+      "skill_vs_sarima": 0.06424,
+      "n": 455
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybw",
+      "lead": 3,
+      "skill_vs_sarima": 0.07519,
+      "n": 454
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybw",
+      "lead": 4,
+      "skill_vs_sarima": 0.08088,
+      "n": 453
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybw",
+      "lead": 5,
+      "skill_vs_sarima": 0.0852,
+      "n": 452
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybw",
+      "lead": 6,
+      "skill_vs_sarima": 0.08786,
+      "n": 451
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybs5",
+      "lead": 1,
+      "skill_vs_sarima": 0.19054,
+      "n": 455
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybs5",
+      "lead": 2,
+      "skill_vs_sarima": 0.18709,
+      "n": 455
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybs5",
+      "lead": 3,
+      "skill_vs_sarima": 0.1936,
+      "n": 454
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybs5",
+      "lead": 4,
+      "skill_vs_sarima": 0.16828,
+      "n": 453
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybs5",
+      "lead": 5,
+      "skill_vs_sarima": 0.15606,
+      "n": 452
+    },
+    {
+      "period": "2013-2019",
+      "model": "hybs5",
+      "lead": 6,
+      "skill_vs_sarima": 0.16073,
+      "n": 451
+    },
+    {
+      "period": "2013-2019",
+      "model": "ridge",
+      "lead": 1,
+      "skill_vs_sarima": 0.30606,
+      "n": 455
+    },
+    {
+      "period": "2013-2019",
+      "model": "ridge",
+      "lead": 2,
+      "skill_vs_sarima": 0.28257,
+      "n": 455
+    },
+    {
+      "period": "2013-2019",
+      "model": "ridge",
+      "lead": 3,
+      "skill_vs_sarima": 0.2793,
+      "n": 454
+    },
+    {
+      "period": "2013-2019",
+      "model": "ridge",
+      "lead": 4,
+      "skill_vs_sarima": 0.28604,
+      "n": 453
+    },
+    {
+      "period": "2013-2019",
+      "model": "ridge",
+      "lead": 5,
+      "skill_vs_sarima": 0.2886,
+      "n": 452
+    },
+    {
+      "period": "2013-2019",
+      "model": "ridge",
+      "lead": 6,
+      "skill_vs_sarima": 0.3087,
+      "n": 451
+    },
+    {
+      "period": "2020-2025",
+      "model": "hyb",
+      "lead": 1,
+      "skill_vs_sarima": -0.06077,
+      "n": 395
+    },
+    {
+      "period": "2020-2025",
+      "model": "hyb",
+      "lead": 2,
+      "skill_vs_sarima": -0.04953,
+      "n": 390
+    },
+    {
+      "period": "2020-2025",
+      "model": "hyb",
+      "lead": 3,
+      "skill_vs_sarima": -0.06509,
+      "n": 385
+    },
+    {
+      "period": "2020-2025",
+      "model": "hyb",
+      "lead": 4,
+      "skill_vs_sarima": -0.05461,
+      "n": 380
+    },
+    {
+      "period": "2020-2025",
+      "model": "hyb",
+      "lead": 5,
+      "skill_vs_sarima": -0.07594,
+      "n": 375
+    },
+    {
+      "period": "2020-2025",
+      "model": "hyb",
+      "lead": 6,
+      "skill_vs_sarima": -0.07813,
+      "n": 370
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybw",
+      "lead": 1,
+      "skill_vs_sarima": -0.05454,
+      "n": 395
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybw",
+      "lead": 2,
+      "skill_vs_sarima": -0.04437,
+      "n": 390
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybw",
+      "lead": 3,
+      "skill_vs_sarima": -0.06254,
+      "n": 385
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybw",
+      "lead": 4,
+      "skill_vs_sarima": -0.04971,
+      "n": 380
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybw",
+      "lead": 5,
+      "skill_vs_sarima": -0.07338,
+      "n": 375
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybw",
+      "lead": 6,
+      "skill_vs_sarima": -0.07198,
+      "n": 370
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybs5",
+      "lead": 1,
+      "skill_vs_sarima": -0.065,
+      "n": 395
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybs5",
+      "lead": 2,
+      "skill_vs_sarima": -0.08967,
+      "n": 390
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybs5",
+      "lead": 3,
+      "skill_vs_sarima": -0.08385,
+      "n": 385
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybs5",
+      "lead": 4,
+      "skill_vs_sarima": -0.04268,
+      "n": 380
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybs5",
+      "lead": 5,
+      "skill_vs_sarima": -0.10495,
+      "n": 375
+    },
+    {
+      "period": "2020-2025",
+      "model": "hybs5",
+      "lead": 6,
+      "skill_vs_sarima": -0.08818,
+      "n": 370
+    },
+    {
+      "period": "2020-2025",
+      "model": "ridge",
+      "lead": 1,
+      "skill_vs_sarima": 0.04134,
+      "n": 395
+    },
+    {
+      "period": "2020-2025",
+      "model": "ridge",
+      "lead": 2,
+      "skill_vs_sarima": 0.05589,
+      "n": 390
+    },
+    {
+      "period": "2020-2025",
+      "model": "ridge",
+      "lead": 3,
+      "skill_vs_sarima": 0.06241,
+      "n": 385
+    },
+    {
+      "period": "2020-2025",
+      "model": "ridge",
+      "lead": 4,
+      "skill_vs_sarima": 0.08463,
+      "n": 380
+    },
+    {
+      "period": "2020-2025",
+      "model": "ridge",
+      "lead": 5,
+      "skill_vs_sarima": 0.08241,
+      "n": 375
+    },
+    {
+      "period": "2020-2025",
+      "model": "ridge",
+      "lead": 6,
+      "skill_vs_sarima": 0.08356,
+      "n": 370
+    }
+  ],
+  "training_sequences_start_of_period_approx": {
+    "2005-2012": 432,
+    "2013-2019": 1008,
+    "2020-2025": 1512
+  },
+  "station_tests": [
+    {
+      "station": "KIAMO-Accra",
+      "lead": 1,
+      "best_reference": "sarima",
+      "skill": 0.28519,
+      "p": 4e-05,
+      "n": 231,
+      "p_holm": 0.00129,
+      "gain": true
+    },
+    {
+      "station": "KIAMO-Accra",
+      "lead": 2,
+      "best_reference": "trend_clim",
+      "skill": 0.28077,
+      "p": 0.00031,
+      "n": 230,
+      "p_holm": 0.01073,
+      "gain": true
+    },
+    {
+      "station": "KIAMO-Accra",
+      "lead": 3,
+      "best_reference": "trend_clim",
+      "skill": 0.22384,
+      "p": 0.0021,
+      "n": 229,
+      "p_holm": 0.0566,
+      "gain": false
+    },
+    {
+      "station": "KIAMO-Accra",
+      "lead": 4,
+      "best_reference": "trend_clim",
+      "skill": 0.20506,
+      "p": 0.00122,
+      "n": 228,
+      "p_holm": 0.03768,
+      "gain": true
+    },
+    {
+      "station": "KIAMO-Accra",
+      "lead": 5,
+      "best_reference": "trend_clim",
+      "skill": 0.17302,
+      "p": 0.00428,
+      "n": 227,
+      "p_holm": 0.10689,
+      "gain": false
+    },
+    {
+      "station": "KIAMO-Accra",
+      "lead": 6,
+      "best_reference": "trend_clim",
+      "skill": 0.16949,
+      "p": 0.00713,
+      "n": 226,
+      "p_holm": 0.16401,
+      "gain": false
+    },
+    {
+      "station": "Koforidua",
+      "lead": 1,
+      "best_reference": "sarima",
+      "skill": 0.30739,
+      "p": 0.00054,
+      "n": 223,
+      "p_holm": 0.01789,
+      "gain": true
+    },
+    {
+      "station": "Koforidua",
+      "lead": 2,
+      "best_reference": "trend_clim",
+      "skill": 0.19719,
+      "p": 0.00729,
+      "n": 222,
+      "p_holm": 0.16401,
+      "gain": false
+    },
+    {
+      "station": "Koforidua",
+      "lead": 3,
+      "best_reference": "trend_clim",
+      "skill": 0.15041,
+      "p": 0.03582,
+      "n": 221,
+      "p_holm": 0.5373,
+      "gain": false
+    },
+    {
+      "station": "Koforidua",
+      "lead": 4,
+      "best_reference": "trend_clim",
+      "skill": 0.15672,
+      "p": 0.01933,
+      "n": 220,
+      "p_holm": 0.34793,
+      "gain": false
+    },
+    {
+      "station": "Koforidua",
+      "lead": 5,
+      "best_reference": "trend_clim",
+      "skill": 0.15632,
+      "p": 0.01481,
+      "n": 219,
+      "p_holm": 0.29622,
+      "gain": false
+    },
+    {
+      "station": "Koforidua",
+      "lead": 6,
+      "best_reference": "trend_clim",
+      "skill": 0.19551,
+      "p": 0.01277,
+      "n": 218,
+      "p_holm": 0.26825,
+      "gain": false
+    },
+    {
+      "station": "Kumasi",
+      "lead": 1,
+      "best_reference": "sarima",
+      "skill": 0.26254,
+      "p": 0.00034,
+      "n": 247,
+      "p_holm": 0.01147,
+      "gain": true
+    },
+    {
+      "station": "Kumasi",
+      "lead": 2,
+      "best_reference": "sarima",
+      "skill": 0.26631,
+      "p": 0.00192,
+      "n": 246,
+      "p_holm": 0.05387,
+      "gain": false
+    },
+    {
+      "station": "Kumasi",
+      "lead": 3,
+      "best_reference": "trend_clim",
+      "skill": 0.22128,
+      "p": 0.00172,
+      "n": 245,
+      "p_holm": 0.04977,
+      "gain": true
+    },
+    {
+      "station": "Kumasi",
+      "lead": 4,
+      "best_reference": "trend_clim",
+      "skill": 0.23295,
+      "p": 0.00085,
+      "n": 244,
+      "p_holm": 0.02722,
+      "gain": true
+    },
+    {
+      "station": "Kumasi",
+      "lead": 5,
+      "best_reference": "trend_clim",
+      "skill": 0.23317,
+      "p": 0.00131,
+      "n": 243,
+      "p_holm": 0.03915,
+      "gain": true
+    },
+    {
+      "station": "Kumasi",
+      "lead": 6,
+      "best_reference": "trend_clim",
+      "skill": 0.2525,
+      "p": 0.00358,
+      "n": 242,
+      "p_holm": 0.09304,
+      "gain": false
+    },
+    {
+      "station": "Navrongo",
+      "lead": 1,
+      "best_reference": "sarima",
+      "skill": 0.13528,
+      "p": 0.05173,
+      "n": 247,
+      "p_holm": 0.72422,
+      "gain": false
+    },
+    {
+      "station": "Navrongo",
+      "lead": 2,
+      "best_reference": "sarima",
+      "skill": 0.01998,
+      "p": 0.72707,
+      "n": 246,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Navrongo",
+      "lead": 3,
+      "best_reference": "sarima",
+      "skill": -0.00999,
+      "p": 0.88902,
+      "n": 245,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Navrongo",
+      "lead": 4,
+      "best_reference": "sarima",
+      "skill": -0.02862,
+      "p": 0.7067,
+      "n": 244,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Navrongo",
+      "lead": 5,
+      "best_reference": "sarima",
+      "skill": -0.04447,
+      "p": 0.58979,
+      "n": 243,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Navrongo",
+      "lead": 6,
+      "best_reference": "sarima",
+      "skill": -0.02424,
+      "p": 0.77947,
+      "n": 242,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Tamale",
+      "lead": 1,
+      "best_reference": "sarima",
+      "skill": 0.1303,
+      "p": 0.01569,
+      "n": 213,
+      "p_holm": 0.29818,
+      "gain": false
+    },
+    {
+      "station": "Tamale",
+      "lead": 2,
+      "best_reference": "trend_clim",
+      "skill": 0.12738,
+      "p": 0.00544,
+      "n": 212,
+      "p_holm": 0.13068,
+      "gain": false
+    },
+    {
+      "station": "Tamale",
+      "lead": 3,
+      "best_reference": "trend_clim",
+      "skill": 0.09235,
+      "p": 0.02411,
+      "n": 211,
+      "p_holm": 0.40987,
+      "gain": false
+    },
+    {
+      "station": "Tamale",
+      "lead": 4,
+      "best_reference": "trend_clim",
+      "skill": 0.08322,
+      "p": 0.03171,
+      "n": 210,
+      "p_holm": 0.50728,
+      "gain": false
+    },
+    {
+      "station": "Tamale",
+      "lead": 5,
+      "best_reference": "trend_clim",
+      "skill": 0.04107,
+      "p": 0.31207,
+      "n": 209,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Tamale",
+      "lead": 6,
+      "best_reference": "trend_clim",
+      "skill": 0.04478,
+      "p": 0.32567,
+      "n": 208,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Wa",
+      "lead": 1,
+      "best_reference": "sarima",
+      "skill": -0.05641,
+      "p": 0.59678,
+      "n": 225,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Wa",
+      "lead": 2,
+      "best_reference": "sarima",
+      "skill": -0.04293,
+      "p": 0.53541,
+      "n": 224,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Wa",
+      "lead": 3,
+      "best_reference": "sarima",
+      "skill": -0.05796,
+      "p": 0.40095,
+      "n": 223,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Wa",
+      "lead": 4,
+      "best_reference": "sarima",
+      "skill": -0.06311,
+      "p": 0.29599,
+      "n": 222,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Wa",
+      "lead": 5,
+      "best_reference": "sarima",
+      "skill": -0.05156,
+      "p": 0.39604,
+      "n": 221,
+      "p_holm": 1.0,
+      "gain": false
+    },
+    {
+      "station": "Wa",
+      "lead": 6,
+      "best_reference": "sarima",
+      "skill": -0.05731,
+      "p": 0.40479,
+      "n": 220,
+      "p_holm": 1.0,
+      "gain": false
+    }
+  ],
+  "rule4_gain_cells": 8,
+  "ridge_penalties": {
+    "main": {
+      "2005": 2848.035868435799,
+      "2010": 811.1308307896855,
+      "2015": 811.1308307896855,
+      "2020": 2848.035868435799
+    },
+    "all51": {
+      "2005": 2848.035868435799,
+      "2010": 811.1308307896855,
+      "2015": 811.1308307896855,
+      "2020": 2848.035868435799
+    },
+    "m10": {
+      "2005": 2848.035868435799,
+      "2010": 811.1308307896855,
+      "2015": 811.1308307896855,
+      "2020": 811.1308307896855
+    },
+    "sys5": {
+      "2005": 2848.035868435799,
+      "2010": 811.1308307896855,
+      "2015": 811.1308307896855,
+      "2020": 2848.035868435799
+    }
+  }
+}
