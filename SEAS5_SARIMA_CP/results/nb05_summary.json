@@ -1,0 +1,1161 @@
+{
+  "notebook": "05_Hybrid_ARIMA_LSTM",
+  "seed": 0,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "epochs": 40,
+  "batch": 128,
+  "lr": 0.003,
+  "configs": 12,
+  "lambdas": [
+    0.0,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "window_months": 12,
+  "tune_years": [
+    2005,
+    2010,
+    2015,
+    2020
+  ],
+  "test_years": [
+    2005,
+    2025
+  ],
+  "independence_check": {
+    "start_months_checked": 18,
+    "test_years_checked": 21,
+    "passed": true,
+    "arima_rebuild_vs_notebook02_max_abs_diff": 0.001650206419142819,
+    "arima_rebuild_vs_notebook02_mean_abs_diff": 3.583351645034654e-05
+  },
+  "tuned_settings": {
+    "2005": {
+      "year": 2005,
+      "cfg": {
+        "hid": 8,
+        "wd": 0.1
+      },
+      "lambda": 0.0,
+      "n_val_targets": 1272
+    },
+    "2010": {
+      "year": 2010,
+      "cfg": {
+        "hid": 16,
+        "wd": 0.1
+      },
+      "lambda": 4.0,
+      "n_val_targets": 1170
+    },
+    "2015": {
+      "year": 2015,
+      "cfg": {
+        "hid": 8,
+        "wd": 0.1
+      },
+      "lambda": 4.0,
+      "n_val_targets": 1146
+    },
+    "2020": {
+      "year": 2020,
+      "cfg": {
+        "hid": 8,
+        "wd": 0.0001
+      },
+      "lambda": 2.0,
+      "n_val_targets": 1212
+    }
+  },
+  "scored_pairs": 8226,
+  "rmse_by_lead_model": [
+    {
+      "lead": 1,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6155,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.5713,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.5657,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Ridge with SEAS5",
+      "key": "ridge",
+      "rmse": 0.5229,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "rmse": 0.5713,
+      "sd_over_seeds": 0.0025
+    },
+    {
+      "lead": 1,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "rmse": 0.5708,
+      "sd_over_seeds": 0.0018
+    },
+    {
+      "lead": 1,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "rmse": 0.5458,
+      "sd_over_seeds": 0.0022
+    },
+    {
+      "lead": 2,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6165,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6142,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.5877,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Ridge with SEAS5",
+      "key": "ridge",
+      "rmse": 0.568,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "rmse": 0.6115,
+      "sd_over_seeds": 0.0006
+    },
+    {
+      "lead": 2,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "rmse": 0.611,
+      "sd_over_seeds": 0.0008
+    },
+    {
+      "lead": 2,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "rmse": 0.5953,
+      "sd_over_seeds": 0.0027
+    },
+    {
+      "lead": 3,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6116,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6252,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.5927,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Ridge with SEAS5",
+      "key": "ridge",
+      "rmse": 0.5786,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "rmse": 0.6224,
+      "sd_over_seeds": 0.002
+    },
+    {
+      "lead": 3,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "rmse": 0.6224,
+      "sd_over_seeds": 0.0024
+    },
+    {
+      "lead": 3,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "rmse": 0.6064,
+      "sd_over_seeds": 0.0041
+    },
+    {
+      "lead": 4,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6132,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6336,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.5988,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Ridge with SEAS5",
+      "key": "ridge",
+      "rmse": 0.5831,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "rmse": 0.6295,
+      "sd_over_seeds": 0.0029
+    },
+    {
+      "lead": 4,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "rmse": 0.6293,
+      "sd_over_seeds": 0.0034
+    },
+    {
+      "lead": 4,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "rmse": 0.6148,
+      "sd_over_seeds": 0.0023
+    },
+    {
+      "lead": 5,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6149,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6384,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.6066,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Ridge with SEAS5",
+      "key": "ridge",
+      "rmse": 0.5905,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "rmse": 0.6366,
+      "sd_over_seeds": 0.002
+    },
+    {
+      "lead": 5,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "rmse": 0.6368,
+      "sd_over_seeds": 0.0012
+    },
+    {
+      "lead": 5,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "rmse": 0.6287,
+      "sd_over_seeds": 0.0022
+    },
+    {
+      "lead": 6,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6173,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6417,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Ridge without SEAS5",
+      "key": "ridge_noseas5",
+      "rmse": 0.612,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Ridge with SEAS5",
+      "key": "ridge",
+      "rmse": 0.5894,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "rmse": 0.6397,
+      "sd_over_seeds": 0.0024
+    },
+    {
+      "lead": 6,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "rmse": 0.6394,
+      "sd_over_seeds": 0.0021
+    },
+    {
+      "lead": 6,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "rmse": 0.6299,
+      "sd_over_seeds": 0.0052
+    }
+  ],
+  "tests_vs_sarima": [
+    {
+      "lead": 1,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "skill_vs_sarima": -0.00745,
+      "skill_vs_trend": 0.13632,
+      "mean_sq_err_diff": 0.00223,
+      "dm": 0.37488,
+      "p": 0.70807,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "skill_vs_sarima": -0.00557,
+      "skill_vs_trend": 0.13793,
+      "mean_sq_err_diff": 0.00165,
+      "dm": 0.29415,
+      "p": 0.76889,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "skill_vs_sarima": 0.06789,
+      "skill_vs_trend": 0.20091,
+      "mean_sq_err_diff": -0.02399,
+      "dm": -1.82824,
+      "p": 0.06872,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "skill_vs_sarima": -0.00102,
+      "skill_vs_trend": 0.01218,
+      "mean_sq_err_diff": -0.0001,
+      "dm": -0.01056,
+      "p": 0.99159,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "skill_vs_sarima": 0.00082,
+      "skill_vs_trend": 0.014,
+      "mean_sq_err_diff": -0.00069,
+      "dm": -0.07685,
+      "p": 0.93881,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "skill_vs_sarima": 0.03819,
+      "skill_vs_trend": 0.05087,
+      "mean_sq_err_diff": -0.01556,
+      "dm": -1.06115,
+      "p": 0.28966,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "skill_vs_sarima": -0.0005,
+      "skill_vs_trend": -0.03531,
+      "mean_sq_err_diff": -0.00058,
+      "dm": -0.04742,
+      "p": 0.96222,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "skill_vs_sarima": -0.00042,
+      "skill_vs_trend": -0.03523,
+      "mean_sq_err_diff": -0.00056,
+      "dm": -0.04656,
+      "p": 0.9629,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "skill_vs_sarima": 0.03862,
+      "skill_vs_trend": 0.00517,
+      "mean_sq_err_diff": -0.016,
+      "dm": -0.94202,
+      "p": 0.34711,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "skill_vs_sarima": 0.00521,
+      "skill_vs_trend": -0.04973,
+      "mean_sq_err_diff": -0.00253,
+      "dm": -0.18988,
+      "p": 0.84956,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "skill_vs_sarima": 0.00599,
+      "skill_vs_trend": -0.0489,
+      "mean_sq_err_diff": -0.00283,
+      "dm": -0.21393,
+      "p": 0.83078,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "skill_vs_sarima": 0.03881,
+      "skill_vs_trend": -0.01428,
+      "mean_sq_err_diff": -0.01624,
+      "dm": -1.01258,
+      "p": 0.31226,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "skill_vs_sarima": -0.00256,
+      "skill_vs_trend": -0.06804,
+      "mean_sq_err_diff": 0.00028,
+      "dm": 0.01879,
+      "p": 0.98502,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "skill_vs_sarima": -0.0026,
+      "skill_vs_trend": -0.06808,
+      "mean_sq_err_diff": 0.00029,
+      "dm": 0.01957,
+      "p": 0.9844,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "skill_vs_sarima": 0.00973,
+      "skill_vs_trend": -0.05495,
+      "mean_sq_err_diff": -0.00572,
+      "dm": -0.30543,
+      "p": 0.7603,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Hybrid ARIMA-LSTM",
+      "key": "hyb",
+      "skill_vs_sarima": -0.00104,
+      "skill_vs_trend": -0.06848,
+      "mean_sq_err_diff": -0.0003,
+      "dm": -0.01949,
+      "p": 0.98446,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Hybrid, season-weighted",
+      "key": "hybw",
+      "skill_vs_sarima": 0.00042,
+      "skill_vs_trend": -0.06692,
+      "mean_sq_err_diff": -0.00087,
+      "dm": -0.05762,
+      "p": 0.9541,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Hybrid with SEAS5",
+      "key": "hybs5",
+      "skill_vs_sarima": 0.02112,
+      "skill_vs_trend": -0.04482,
+      "mean_sq_err_diff": -0.00955,
+      "dm": -0.48954,
+      "p": 0.6249,
+      "p_holm": 1.0,
+      "passes": false
+    }
+  ],
+  "variants_passing_decision_rule": [],
+  "contrasts": [
+    {
+      "contrast": "Weighting, hybrid",
+      "lead": 1,
+      "rmse_a": 0.58088,
+      "rmse_b": 0.58142,
+      "mean_sq_err_diff": -0.00058,
+      "dm": -0.73135,
+      "p": 0.46526,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, hybrid",
+      "lead": 2,
+      "rmse_a": 0.62263,
+      "rmse_b": 0.62321,
+      "mean_sq_err_diff": -0.00059,
+      "dm": -0.58378,
+      "p": 0.55991,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, hybrid",
+      "lead": 3,
+      "rmse_a": 0.6322,
+      "rmse_b": 0.63223,
+      "mean_sq_err_diff": 1e-05,
+      "dm": 0.01388,
+      "p": 0.98893,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, hybrid",
+      "lead": 4,
+      "rmse_a": 0.6379,
+      "rmse_b": 0.63815,
+      "mean_sq_err_diff": -0.0003,
+      "dm": -0.35411,
+      "p": 0.72356,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, hybrid",
+      "lead": 5,
+      "rmse_a": 0.64555,
+      "rmse_b": 0.64553,
+      "mean_sq_err_diff": 1e-05,
+      "dm": 0.0098,
+      "p": 0.99218,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Weighting, hybrid",
+      "lead": 6,
+      "rmse_a": 0.6477,
+      "rmse_b": 0.64818,
+      "mean_sq_err_diff": -0.00057,
+      "dm": -0.46023,
+      "p": 0.64577,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "SEAS5 inputs, hybrid",
+      "lead": 1,
+      "rmse_a": 0.55926,
+      "rmse_b": 0.58142,
+      "mean_sq_err_diff": -0.02622,
+      "dm": -3.11736,
+      "p": 0.00204,
+      "p_holm": 0.01225
+    },
+    {
+      "contrast": "SEAS5 inputs, hybrid",
+      "lead": 2,
+      "rmse_a": 0.61087,
+      "rmse_b": 0.62321,
+      "mean_sq_err_diff": -0.01546,
+      "dm": -1.47067,
+      "p": 0.14266,
+      "p_holm": 0.71329
+    },
+    {
+      "contrast": "SEAS5 inputs, hybrid",
+      "lead": 3,
+      "rmse_a": 0.61973,
+      "rmse_b": 0.63223,
+      "mean_sq_err_diff": -0.01543,
+      "dm": -1.1512,
+      "p": 0.25077,
+      "p_holm": 0.88622
+    },
+    {
+      "contrast": "SEAS5 inputs, hybrid",
+      "lead": 4,
+      "rmse_a": 0.62729,
+      "rmse_b": 0.63815,
+      "mean_sq_err_diff": -0.01371,
+      "dm": -1.22554,
+      "p": 0.22156,
+      "p_holm": 0.88622
+    },
+    {
+      "contrast": "SEAS5 inputs, hybrid",
+      "lead": 5,
+      "rmse_a": 0.64156,
+      "rmse_b": 0.64553,
+      "mean_sq_err_diff": -0.006,
+      "dm": -0.4963,
+      "p": 0.62013,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "SEAS5 inputs, hybrid",
+      "lead": 6,
+      "rmse_a": 0.64095,
+      "rmse_b": 0.64818,
+      "mean_sq_err_diff": -0.00925,
+      "dm": -0.58835,
+      "p": 0.55684,
+      "p_holm": 1.0
+    },
+    {
+      "contrast": "Ridge vs hybrid with SEAS5",
+      "lead": 1,
+      "rmse_a": 0.53714,
+      "rmse_b": 0.55926,
+      "mean_sq_err_diff": -0.02302,
+      "dm": -2.26994,
+      "p": 0.02407,
+      "p_holm": 0.03197
+    },
+    {
+      "contrast": "Ridge vs hybrid with SEAS5",
+      "lead": 2,
+      "rmse_a": 0.58346,
+      "rmse_b": 0.61087,
+      "mean_sq_err_diff": -0.03141,
+      "dm": -3.18434,
+      "p": 0.00164,
+      "p_holm": 0.00983
+    },
+    {
+      "contrast": "Ridge vs hybrid with SEAS5",
+      "lead": 3,
+      "rmse_a": 0.59281,
+      "rmse_b": 0.61973,
+      "mean_sq_err_diff": -0.031,
+      "dm": -2.57346,
+      "p": 0.01066,
+      "p_holm": 0.03197
+    },
+    {
+      "contrast": "Ridge vs hybrid with SEAS5",
+      "lead": 4,
+      "rmse_a": 0.59775,
+      "rmse_b": 0.62729,
+      "mean_sq_err_diff": -0.03471,
+      "dm": -2.85504,
+      "p": 0.00467,
+      "p_holm": 0.02337
+    },
+    {
+      "contrast": "Ridge vs hybrid with SEAS5",
+      "lead": 5,
+      "rmse_a": 0.60555,
+      "rmse_b": 0.64156,
+      "mean_sq_err_diff": -0.04273,
+      "dm": -2.77401,
+      "p": 0.00597,
+      "p_holm": 0.02387
+    },
+    {
+      "contrast": "Ridge vs hybrid with SEAS5",
+      "lead": 6,
+      "rmse_a": 0.60497,
+      "rmse_b": 0.64095,
+      "mean_sq_err_diff": -0.04333,
+      "dm": -2.53882,
+      "p": 0.01175,
+      "p_holm": 0.03197
+    },
+    {
+      "contrast": "Hybrid vs ridge without SEAS5",
+      "lead": 1,
+      "rmse_a": 0.58142,
+      "rmse_b": 0.57635,
+      "mean_sq_err_diff": 0.00501,
+      "dm": 0.56234,
+      "p": 0.5744,
+      "p_holm": 0.5744
+    },
+    {
+      "contrast": "Hybrid vs ridge without SEAS5",
+      "lead": 2,
+      "rmse_a": 0.62321,
+      "rmse_b": 0.59929,
+      "mean_sq_err_diff": 0.02829,
+      "dm": 2.42047,
+      "p": 0.01623,
+      "p_holm": 0.08113
+    },
+    {
+      "contrast": "Hybrid vs ridge without SEAS5",
+      "lead": 3,
+      "rmse_a": 0.63223,
+      "rmse_b": 0.60355,
+      "mean_sq_err_diff": 0.03408,
+      "dm": 2.51271,
+      "p": 0.01262,
+      "p_holm": 0.07574
+    },
+    {
+      "contrast": "Hybrid vs ridge without SEAS5",
+      "lead": 4,
+      "rmse_a": 0.63815,
+      "rmse_b": 0.60956,
+      "mean_sq_err_diff": 0.03458,
+      "dm": 2.32051,
+      "p": 0.02114,
+      "p_holm": 0.08456
+    },
+    {
+      "contrast": "Hybrid vs ridge without SEAS5",
+      "lead": 5,
+      "rmse_a": 0.64553,
+      "rmse_b": 0.6178,
+      "mean_sq_err_diff": 0.0336,
+      "dm": 2.09004,
+      "p": 0.03765,
+      "p_holm": 0.11296
+    },
+    {
+      "contrast": "Hybrid vs ridge without SEAS5",
+      "lead": 6,
+      "rmse_a": 0.64818,
+      "rmse_b": 0.62307,
+      "mean_sq_err_diff": 0.03055,
+      "dm": 1.75797,
+      "p": 0.08002,
+      "p_holm": 0.16003
+    }
+  ],
+  "by_station": [
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "KIAMO-Accra",
+      "lead": 1,
+      "n": 231,
+      "rmse": 0.4237,
+      "rmse_sarima": 0.4457,
+      "skill_vs_sarima": 0.0958
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "KIAMO-Accra",
+      "lead": 3,
+      "n": 229,
+      "rmse": 0.4844,
+      "rmse_sarima": 0.5138,
+      "skill_vs_sarima": 0.1108
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "KIAMO-Accra",
+      "lead": 6,
+      "n": 226,
+      "rmse": 0.5234,
+      "rmse_sarima": 0.5488,
+      "skill_vs_sarima": 0.0902
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Koforidua",
+      "lead": 1,
+      "n": 223,
+      "rmse": 0.4699,
+      "rmse_sarima": 0.4774,
+      "skill_vs_sarima": 0.0308
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Koforidua",
+      "lead": 3,
+      "n": 221,
+      "rmse": 0.4924,
+      "rmse_sarima": 0.512,
+      "skill_vs_sarima": 0.075
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Koforidua",
+      "lead": 6,
+      "n": 218,
+      "rmse": 0.509,
+      "rmse_sarima": 0.5213,
+      "skill_vs_sarima": 0.0466
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Kumasi",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.4687,
+      "rmse_sarima": 0.4713,
+      "skill_vs_sarima": 0.0108
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Kumasi",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.5298,
+      "rmse_sarima": 0.5402,
+      "skill_vs_sarima": 0.0381
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Kumasi",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.5483,
+      "rmse_sarima": 0.5588,
+      "skill_vs_sarima": 0.0372
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Navrongo",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.6399,
+      "rmse_sarima": 0.6374,
+      "skill_vs_sarima": -0.008
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Navrongo",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.6648,
+      "rmse_sarima": 0.6593,
+      "skill_vs_sarima": -0.0166
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Navrongo",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.6536,
+      "rmse_sarima": 0.6463,
+      "skill_vs_sarima": -0.0228
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Tamale",
+      "lead": 1,
+      "n": 213,
+      "rmse": 0.7314,
+      "rmse_sarima": 0.7186,
+      "skill_vs_sarima": -0.0358
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Tamale",
+      "lead": 3,
+      "n": 211,
+      "rmse": 0.8082,
+      "rmse_sarima": 0.7943,
+      "skill_vs_sarima": -0.0352
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Tamale",
+      "lead": 6,
+      "n": 208,
+      "rmse": 0.8319,
+      "rmse_sarima": 0.8145,
+      "skill_vs_sarima": -0.0434
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Wa",
+      "lead": 1,
+      "n": 225,
+      "rmse": 0.6942,
+      "rmse_sarima": 0.6771,
+      "skill_vs_sarima": -0.0512
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Wa",
+      "lead": 3,
+      "n": 223,
+      "rmse": 0.7547,
+      "rmse_sarima": 0.7318,
+      "skill_vs_sarima": -0.0635
+    },
+    {
+      "model": "Hybrid ARIMA-LSTM",
+      "station": "Wa",
+      "lead": 6,
+      "n": 220,
+      "rmse": 0.7721,
+      "rmse_sarima": 0.7602,
+      "skill_vs_sarima": -0.0315
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "KIAMO-Accra",
+      "lead": 1,
+      "n": 231,
+      "rmse": 0.3821,
+      "rmse_sarima": 0.4457,
+      "skill_vs_sarima": 0.2645
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "KIAMO-Accra",
+      "lead": 3,
+      "n": 229,
+      "rmse": 0.4513,
+      "rmse_sarima": 0.5138,
+      "skill_vs_sarima": 0.2284
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "KIAMO-Accra",
+      "lead": 6,
+      "n": 226,
+      "rmse": 0.4918,
+      "rmse_sarima": 0.5488,
+      "skill_vs_sarima": 0.1968
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Koforidua",
+      "lead": 1,
+      "n": 223,
+      "rmse": 0.428,
+      "rmse_sarima": 0.4774,
+      "skill_vs_sarima": 0.1961
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Koforidua",
+      "lead": 3,
+      "n": 221,
+      "rmse": 0.4706,
+      "rmse_sarima": 0.512,
+      "skill_vs_sarima": 0.1552
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Koforidua",
+      "lead": 6,
+      "n": 218,
+      "rmse": 0.4912,
+      "rmse_sarima": 0.5213,
+      "skill_vs_sarima": 0.112
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Kumasi",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.444,
+      "rmse_sarima": 0.4713,
+      "skill_vs_sarima": 0.1124
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Kumasi",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.487,
+      "rmse_sarima": 0.5402,
+      "skill_vs_sarima": 0.187
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Kumasi",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.5292,
+      "rmse_sarima": 0.5588,
+      "skill_vs_sarima": 0.1032
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Navrongo",
+      "lead": 1,
+      "n": 247,
+      "rmse": 0.6054,
+      "rmse_sarima": 0.6374,
+      "skill_vs_sarima": 0.0977
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Navrongo",
+      "lead": 3,
+      "n": 245,
+      "rmse": 0.6559,
+      "rmse_sarima": 0.6593,
+      "skill_vs_sarima": 0.0103
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Navrongo",
+      "lead": 6,
+      "n": 242,
+      "rmse": 0.647,
+      "rmse_sarima": 0.6463,
+      "skill_vs_sarima": -0.0022
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Tamale",
+      "lead": 1,
+      "n": 213,
+      "rmse": 0.6958,
+      "rmse_sarima": 0.7186,
+      "skill_vs_sarima": 0.0625
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Tamale",
+      "lead": 3,
+      "n": 211,
+      "rmse": 0.795,
+      "rmse_sarima": 0.7943,
+      "skill_vs_sarima": -0.0016
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Tamale",
+      "lead": 6,
+      "n": 208,
+      "rmse": 0.8172,
+      "rmse_sarima": 0.8145,
+      "skill_vs_sarima": -0.007
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Wa",
+      "lead": 1,
+      "n": 225,
+      "rmse": 0.7196,
+      "rmse_sarima": 0.6771,
+      "skill_vs_sarima": -0.1296
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Wa",
+      "lead": 3,
+      "n": 223,
+      "rmse": 0.7788,
+      "rmse_sarima": 0.7318,
+      "skill_vs_sarima": -0.1327
+    },
+    {
+      "model": "Hybrid with SEAS5",
+      "station": "Wa",
+      "lead": 6,
+      "n": 220,
+      "rmse": 0.8027,
+      "rmse_sarima": 0.7602,
+      "skill_vs_sarima": -0.115
+    }
+  ]
+}
