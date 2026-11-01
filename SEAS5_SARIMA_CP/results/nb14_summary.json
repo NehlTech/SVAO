@@ -1,0 +1,16 @@
+{
+  "notebook": "14_Final_Numbers_Update",
+  "checks": 54,
+  "all_ok": true,
+  "files_in_manifest": 127,
+  "files_with_observations": [
+    "data/processed/blend_forecasts.csv",
+    "data/processed/conformal_intervals.csv",
+    "data/processed/extra_baselines_forecasts.csv",
+    "data/processed/postprocessed_forecasts.csv",
+    "data/processed/reference_forecasts.csv",
+    "data/processed/seas5_verification_table.csv",
+    "data/processed/sensitivity_forecasts.csv",
+    "data/processed/weighting_forecasts.csv"
+  ]
+}

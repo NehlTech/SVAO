@@ -1,27 +1,36 @@
 notebook,rule,outcome,detail
-03,"Bias-corrected SEAS5 beats the best reference at a lead (Holm DM, 18 tests)",0 of 6 leads,"skill against the best reference -0.171, -0.123, -0.161, -0.138, -0.145, -0.099"
-04,"A post-processing model beats the best reference at a lead (Holm DM, 48 tests)",0 model-lead cells pass,"ridge skill +0.140, +0.123, +0.090, +0.079, +0.060, +0.069; smallest Holm p 0.053"
-05,"A hybrid variant beats seasonal ARIMA at a lead (Holm DM, 18 tests)",0 variant-lead cells pass,
-06,Rule 1: interval within 0.05 of its nominal level at every lead and level,"{""gauss"": false, ""pooled"": true, ""season"": true, ""season_station"": true}",
-06,Rule 2: season-aware interval recommended over pooled,pooled,smaller worst-season error: True; lower interval score and significant in 0 of 12 cells
-06,"Rule 3: ridge intervals better than both references (24 tests, Holm)",5 of 24 cells,"{""sarima"": [12, 0], ""trend"": [12, 5]}"
-07,Variant supports the main ridge result,main: True,mean skill 0.093; lead 1 Holm p 0.012
-07,Variant supports the main ridge result,adj: True,mean skill 0.085; lead 1 Holm p 0.044
-07,Variant supports the main ridge result,tmax: True,mean skill 0.099; lead 1 Holm p 0.018
-07,Variant supports the main ridge result,tmin: True,mean skill 0.055; lead 1 Holm p 0.290
-07,Variant supports the main ridge result,without KIAMO-Accra: True,mean skill 0.079; lead 1 Holm p 0.057
-07,Variant supports the main ridge result,without Koforidua: True,mean skill 0.081; lead 1 Holm p 0.023
-07,Variant supports the main ridge result,without Kumasi: True,mean skill 0.072; lead 1 Holm p 0.041
-07,Variant supports the main ridge result,without Navrongo: True,mean skill 0.113; lead 1 Holm p 0.007
-07,Variant supports the main ridge result,without Tamale: True,mean skill 0.094; lead 1 Holm p 0.031
-07,Variant supports the main ridge result,without Wa: True,mean skill 0.127; lead 1 Holm p 0.000
-07,SEAS5 adds skill at lead 1 for this variable (Holm p < 0.05),tmax: True,skill added 0.114; Holm p 0.0000
-07,SEAS5 adds skill at lead 1 for this variable (Holm p < 0.05),tmin: False,skill added 0.056; Holm p 0.8216
-08,SEAS5 setting equivalent to the main one,all51: True,mean skill difference -0.0003; any lead significant: False
-08,SEAS5 setting equivalent to the main one,m10: True,mean skill difference +0.0009; any lead significant: False
-08,SEAS5 setting equivalent to the main one,sys5: False,mean skill difference -0.0098; any lead significant: True
-08,Trend significant (Holm Kendall p < 0.05 and Sen interval excludes zero),15 of 18 series,
-08,More training data helps the hybrid,hyb: False,skill against seasonal ARIMA -0.005 (2005-2012) to -0.064 (2020-2025)
-08,More training data helps the hybrid,hybw: False,skill against seasonal ARIMA -0.005 (2005-2012) to -0.059 (2020-2025)
-08,More training data helps the hybrid,hybs5: False,skill against seasonal ARIMA +0.029 (2005-2012) to -0.079 (2020-2025)
-08,"Station-lead cell counted as a ridge gain (36 tests, Holm)",8 of 36 cells,"KIAMO-Accra, Koforidua, Kumasi"
+3,"Bias-corrected SEAS5 beats the best reference at a lead (Holm DM, 18 tests)",0 of 6 leads,"skill against the best reference -0.171, -0.123, -0.161, -0.138, -0.145, -0.099"
+4,"A post-processing model beats the best reference at a lead (Holm DM, 48 tests)",0 model-lead cells pass,"ridge skill +0.140, +0.123, +0.090, +0.079, +0.060, +0.069; smallest Holm p 0.053"
+5,"A hybrid variant beats seasonal ARIMA at a lead (Holm DM, 18 tests)",0 variant-lead cells pass,
+6,Rule 1: interval within 0.05 of its nominal level at every lead and level,"{""gauss"": false, ""pooled"": true, ""season"": true, ""season_station"": true}",
+6,Rule 2: season-aware interval recommended over pooled,pooled,smaller worst-season error: True; lower interval score and significant in 0 of 12 cells
+6,"Rule 3: ridge intervals better than both references (24 tests, Holm)",5 of 24 cells,"{""sarima"": [12, 0], ""trend"": [12, 5]}"
+7,Variant supports the main ridge result,main: True,mean skill 0.093; lead 1 Holm p 0.012
+7,Variant supports the main ridge result,adj: True,mean skill 0.085; lead 1 Holm p 0.044
+7,Variant supports the main ridge result,tmax: True,mean skill 0.099; lead 1 Holm p 0.018
+7,Variant supports the main ridge result,tmin: True,mean skill 0.055; lead 1 Holm p 0.290
+7,Variant supports the main ridge result,without KIAMO-Accra: True,mean skill 0.079; lead 1 Holm p 0.057
+7,Variant supports the main ridge result,without Koforidua: True,mean skill 0.081; lead 1 Holm p 0.023
+7,Variant supports the main ridge result,without Kumasi: True,mean skill 0.072; lead 1 Holm p 0.041
+7,Variant supports the main ridge result,without Navrongo: True,mean skill 0.113; lead 1 Holm p 0.007
+7,Variant supports the main ridge result,without Tamale: True,mean skill 0.094; lead 1 Holm p 0.031
+7,Variant supports the main ridge result,without Wa: True,mean skill 0.127; lead 1 Holm p 0.000
+7,SEAS5 adds skill at lead 1 for this variable (Holm p < 0.05),tmax: True,skill added 0.114; Holm p 0.0000
+7,SEAS5 adds skill at lead 1 for this variable (Holm p < 0.05),tmin: False,skill added 0.056; Holm p 0.8216
+8,SEAS5 setting equivalent to the main one,all51: True,mean skill difference -0.0003; any lead significant: False
+8,SEAS5 setting equivalent to the main one,m10: True,mean skill difference +0.0009; any lead significant: False
+8,SEAS5 setting equivalent to the main one,sys5: False,mean skill difference -0.0098; any lead significant: True
+8,Trend significant (Holm Kendall p < 0.05 and Sen interval excludes zero),15 of 18 series,
+8,More training data helps the hybrid,hyb: False,skill against seasonal ARIMA -0.005 (2005-2012) to -0.064 (2020-2025)
+8,More training data helps the hybrid,hybw: False,skill against seasonal ARIMA -0.005 (2005-2012) to -0.059 (2020-2025)
+8,More training data helps the hybrid,hybs5: False,skill against seasonal ARIMA +0.029 (2005-2012) to -0.079 (2020-2025)
+8,"Station-lead cell counted as a ridge gain (36 tests, Holm)",8 of 36 cells,"KIAMO-Accra, Koforidua, Kumasi"
+11,Rule 1: combination chosen on 2008-2014 only,nnls,development MSE 0.2488 against ridge 0.2534
+11,"Rule 2: chosen combination improves on ridge in 2015-2025 (4 or more leads lower, mean skill at least 0.01)",False,"{""lower_error_leads"": 0, ""mean_skill_vs_ridge"": -0.05325937477274397, ""leads_significantly_better"": 0, ""leads_significantly_worse"": 4}"
+12,"Rule 1 (tuned): a variability profile helps (positive at 4 or more leads, Holm p < 0.05 at one lead, above placebo)",profiles that help: none,three profiles tuned to lambda = 0 at every date
+12,"Rule 1 (forced lambda 1, 2, 4): the same test with lambda forced",profile and lambda that help: none,forced analysis added after the first tuned result (stated in the notebook)
+12,Rule 2: weighting helps more in dry or high-variability months (contrast interval excludes zero on the negative side),supporting contrasts: none,"{""dry minus rainy"": {""estimate"": 0.0008711173188610823, ""ci"": [-0.0018402827828784766, 0.0028157973381920014], ""supports_hypothesis"": false, ""excludes_zero"": false}, ""high_var minus low_var"": {""estimate"": 0.0013327155645285358, ""ci"": [-0.001060876362972167, 0.0029370184740342684], ""supports_hypothesis"": false, ""excludes_zero"": false}}"
+12,"Rule 3: if no profile helps, season weighting is reported as adding nothing",True,
+13,"Rule 1: a model beats the best reference at a lead (Holm DM, 24 tests)","models passing: ARIMA-GRU with SEAS5, SVR","[{""lead"": 1, ""model"": ""SVR"", ""key"": ""svr"", ""best_reference"": ""sarima"", ""skill_vs_best_reference"": 0.16279, ""mean_sq_err_diff"": -0.05485, ""dm"": -3.42717, ""p"": 0.00071, ""p_holm"": 0.01643, ""passes"": true}, {""lead"": 1, ""model"": ""ARIMA-GRU with SEAS5"", ""key"": ""gru_s5"", ""best_reference"": ""sarima"", ""skill_vs_best_reference"": 0.10811, ""mean_sq_err_diff"": -0.03662, ""dm"": -4.78314, ""p"": 0.0, ""p_holm"": 7e-05"
+13,"Rule 2: a model beats ridge at a lead (Holm DM, 24 tests)",models beating ridge: none,
+13,"Rule 3: heteroscedastic intervals within 0.05 of nominal and better interval score than pooled conformal at 4 or more leads, both levels",True,"{""80"": {""leads_better_score"": 6, ""coverage_ok_all_leads"": true}, ""90"": {""leads_better_score"": 6, ""coverage_ok_all_leads"": true}}"

@@ -38,5 +38,10 @@ The earlier ARIMA-LSTM and SVAO notebooks (01 to 14) are in the top level of thi
 | 07 | Data sensitivity (adjusted series, Tmax and Tmin, one station out) | sensitivity_forecasts.csv |
 | 08 | SEAS5 settings, trends, hybrid training size, station tests | nb08 results |
 | 09 | Final numbers, decision-rule register, repository check | results/all_paper_numbers.json |
+| 10 | Copies the notebook files into the repository | notebooks/ |
+| 11 | Combination of forecasts | blend_forecasts.csv, blend_weights.csv |
+| 12 | Season weighting, dry and rainy contrast, all variability profiles | weighting_forecasts.csv |
+| 13 | SVR, ARIMA-GRU, heteroscedastic network and its intervals | extra_baselines_forecasts.csv |
+| 14 | Adds Notebooks 11 to 13 to the final numbers file | results/all_paper_numbers.json |
 
 Run the notebooks in order. Raw data (GMet workbook, ERA5-Land and SEAS5 extracts) are kept in Google Drive and are not committed. Every number quoted in the manuscript is read from `results/all_paper_numbers.json`.
