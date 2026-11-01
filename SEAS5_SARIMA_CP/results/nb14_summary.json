@@ -1,8 +1,8 @@
 {
   "notebook": "14_Final_Numbers_Update",
-  "checks": 54,
+  "checks": 56,
   "all_ok": true,
-  "files_in_manifest": 127,
+  "files_in_manifest": 133,
   "files_with_observations": [
     "data/processed/blend_forecasts.csv",
     "data/processed/conformal_intervals.csv",

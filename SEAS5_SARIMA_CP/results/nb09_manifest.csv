@@ -1,5 +1,5 @@
 file,kb,sha256_16
-README.md,2.4,15ec72388d72e915
+README.md,2.8,abd357c04067b80c
 config.json,0.6,f52b7046a5b05882
 data/processed/.gitkeep,0.0,e3b0c44298fc1c14
 data/processed/blend_forecasts.csv,1901.5,ee9f62af605c0928
@@ -50,8 +50,13 @@ notebooks/S06_Conformal_Intervals.ipynb,29.0,5aeea2cadae172a6
 notebooks/S07_Data_Sensitivity.ipynb,32.9,2fbf13dac6c0fd60
 notebooks/S08_SEAS5_Trends_Hybrid_Stations.ipynb,34.4,37d5333e7d5f5f25
 notebooks/S09_Final_Numbers.ipynb,22.9,032209bcb5a160a1
+notebooks/S10_Sync_Notebooks.ipynb,4.5,8f28fc690e0ba3c7
+notebooks/S11_Forecast_Combination.ipynb,26.1,21862a49ab0c921c
+notebooks/S12_Season_Weighting_Dry_Rainy.ipynb,37.3,076560c4e8180ca0
+notebooks/S13_SVR_GRU_Heteroscedastic.ipynb,41.2,a53e23217f7b9356
+notebooks/S14_Final_Numbers_Update.ipynb,18.9,32c7c16a5c403053
 results/.gitkeep,0.0,e3b0c44298fc1c14
-results/all_paper_numbers.json,617.5,831834f467ec5e33
+results/all_paper_numbers.json,617.8,e4a0d2e4cc6424f5
 results/nb01_cleaning_log.csv,0.5,3c0f885fbbce1a44
 results/nb01_coverage_by_year.csv,3.7,21af015e5513a7d8
 results/nb01_era5land_vs_station.csv,0.5,71c403ed25fd5454
@@ -104,7 +109,7 @@ results/nb08_trends.csv,2.3,a9f59e16994289ca
 results/nb08_trends_adjusted.csv,2.4,b8ca0a77adbd27a2
 results/nb08_trends_by_season.csv,1.7,b87aa23ce8259742
 results/nb09_decision_rules.csv,5.2,1697fb14901f1bc0
-results/nb09_manifest.csv,4.5,e45696b24f9c6ea2
+results/nb09_manifest.csv,6.8,85220ad918002c07
 results/nb09_summary.json,1.1,9844703dbf52639b
 results/nb11_by_station.csv,0.3,a795ecaad054a4de
 results/nb11_mean_weights.csv,0.6,5cf18dc1ad7acce4
@@ -125,4 +130,5 @@ results/nb13_rmse_by_lead_model.csv,2.8,f1a5221ac0fc41d9
 results/nb13_summary.json,26.3,82b6176c39bd7d4d
 results/nb13_tests_vs_best_reference.csv,3.1,08b45ef43a339e46
 results/nb13_tests_vs_ridge.csv,2.9,15327164c0b82d2d
+results/nb14_summary.json,0.5,90df9d9b0956095f
 src/.gitkeep,0.0,e3b0c44298fc1c14

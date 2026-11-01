@@ -1,7 +1,7 @@
 {
   "project": "SEAS5_SARIMA_CP",
   "headline": {
-    "n_scored_pairs": 9072,
+    "n_scored_pairs": 8226,
     "seas5_raw_mean_error_by_lead": {
       "1": -1.656919244133849,
       "2": -1.5232833296740287,
@@ -1321,7 +1321,8 @@
           }
         }
       }
-    }
+    },
+    "n_forecast_rows": 9072
   },
   "contributions": {
     "contribution_1_verification": {
@@ -2553,6 +2554,18 @@
       "recomputed": 0.60482,
       "stored": 0.6048,
       "ok": true
+    },
+    {
+      "name": "scored pairs (rows with an observation)",
+      "recomputed": 8226.0,
+      "stored": 8226.0,
+      "ok": true
+    },
+    {
+      "name": "scored pairs, Notebook 13",
+      "recomputed": 8226.0,
+      "stored": 8226.0,
+      "ok": true
     }
   ],
   "environment": {
@@ -2562,12 +2575,12 @@
     "scipy": "1.16.3",
     "statsmodels": "0.15.0",
     "sklearn": "1.6.1",
-    "torch": "2.11.0+cu130",
+    "torch": "2.11.0+cpu",
     "joblib": "1.6.0",
     "matplotlib": "3.10.0",
     "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
     "generated_utc": "2026-10-31 06:24",
-    "generated_utc_update": "2026-11-01 01:26"
+    "generated_utc_update": "2026-11-01 03:35"
   },
   "commits": [
     "e51e56a SEAS5_SARIMA_CP: notebook 08, SEAS5 settings, trends, hybrid size, station tests",
