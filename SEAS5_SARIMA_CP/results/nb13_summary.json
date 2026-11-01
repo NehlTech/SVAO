@@ -1,0 +1,1258 @@
+{
+  "notebook": "13_Extra_Baselines",
+  "seed": 0,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "members_used": 25,
+  "test_years": [
+    2005,
+    2025
+  ],
+  "tune_years": [
+    2005,
+    2010,
+    2015,
+    2020
+  ],
+  "configs_per_family": 12,
+  "epochs_gru": 40,
+  "epochs_hnet": 40,
+  "batch": 128,
+  "lr": 0.003,
+  "interval_eval_from": "2010-01-01",
+  "arima_rebuild_vs_notebook02": {
+    "max_abs_diff": 0.001650206419142819,
+    "mean_abs_diff": 3.583351645034654e-05
+  },
+  "independence_check": {
+    "start_months_checked": 18,
+    "test_years_checked": 21,
+    "passed": true
+  },
+  "tuned_settings": {
+    "2005": {
+      "year": 2005,
+      "svr": {
+        "C": 0.1,
+        "gamma": 0.003
+      },
+      "hnet": {
+        "layers": [
+          8
+        ],
+        "wd": 0.01
+      },
+      "gru": {
+        "hid": 32,
+        "wd": 0.1
+      },
+      "gru_s5": {
+        "hid": 16,
+        "wd": 0.1
+      },
+      "edge_flags": {
+        "svr_C_at_edge": false,
+        "gru_wd_at_edge": true
+      }
+    },
+    "2010": {
+      "year": 2010,
+      "svr": {
+        "C": 0.1,
+        "gamma": 0.03
+      },
+      "hnet": {
+        "layers": [
+          8
+        ],
+        "wd": 0.01
+      },
+      "gru": {
+        "hid": 32,
+        "wd": 0.1
+      },
+      "gru_s5": {
+        "hid": 32,
+        "wd": 0.1
+      },
+      "edge_flags": {
+        "svr_C_at_edge": false,
+        "gru_wd_at_edge": true
+      }
+    },
+    "2015": {
+      "year": 2015,
+      "svr": {
+        "C": 0.1,
+        "gamma": 0.03
+      },
+      "hnet": {
+        "layers": [
+          16,
+          8
+        ],
+        "wd": 0.0001
+      },
+      "gru": {
+        "hid": 8,
+        "wd": 0.1
+      },
+      "gru_s5": {
+        "hid": 16,
+        "wd": 0.1
+      },
+      "edge_flags": {
+        "svr_C_at_edge": false,
+        "gru_wd_at_edge": true
+      }
+    },
+    "2020": {
+      "year": 2020,
+      "svr": {
+        "C": 0.1,
+        "gamma": 0.01
+      },
+      "hnet": {
+        "layers": [
+          16,
+          8
+        ],
+        "wd": 0.0001
+      },
+      "gru": {
+        "hid": 8,
+        "wd": 0.0001
+      },
+      "gru_s5": {
+        "hid": 8,
+        "wd": 0.1
+      },
+      "edge_flags": {
+        "svr_C_at_edge": false,
+        "gru_wd_at_edge": true
+      }
+    }
+  },
+  "decision_rule_3": {
+    "by_level": {
+      "80": {
+        "leads_better_score": 6,
+        "coverage_ok_all_leads": true
+      },
+      "90": {
+        "leads_better_score": 6,
+        "coverage_ok_all_leads": true
+      }
+    },
+    "worth_using": true,
+    "spearman_sigma_abs_error": 0.3008415153717692
+  },
+  "verdict": {
+    "models_passing_rule1": [
+      "ARIMA-GRU with SEAS5",
+      "SVR"
+    ],
+    "models_beating_ridge_rule2": [],
+    "rule3_worth_using_variance": true
+  },
+  "scored_pairs": 8226,
+  "rmse_by_lead_model": [
+    {
+      "lead": 1,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6155,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.5713,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.5426,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Linear (by season)",
+      "key": "ols_season",
+      "rmse": 0.5442,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.5229,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "SVR",
+      "key": "svr",
+      "rmse": 0.5153,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 1,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "rmse": 0.5303,
+      "sd_over_seeds": 0.0028
+    },
+    {
+      "lead": 1,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "rmse": 0.5692,
+      "sd_over_seeds": 0.0018
+    },
+    {
+      "lead": 1,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "rmse": 0.536,
+      "sd_over_seeds": 0.0003
+    },
+    {
+      "lead": 2,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6165,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6142,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.5826,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Linear (by season)",
+      "key": "ols_season",
+      "rmse": 0.5889,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.568,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "SVR",
+      "key": "svr",
+      "rmse": 0.5683,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 2,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "rmse": 0.5799,
+      "sd_over_seeds": 0.0026
+    },
+    {
+      "lead": 2,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "rmse": 0.6095,
+      "sd_over_seeds": 0.0009
+    },
+    {
+      "lead": 2,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "rmse": 0.5784,
+      "sd_over_seeds": 0.0007
+    },
+    {
+      "lead": 3,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6116,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6252,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.5958,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Linear (by season)",
+      "key": "ols_season",
+      "rmse": 0.6028,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.5786,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "SVR",
+      "key": "svr",
+      "rmse": 0.5769,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 3,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "rmse": 0.5954,
+      "sd_over_seeds": 0.0025
+    },
+    {
+      "lead": 3,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "rmse": 0.6209,
+      "sd_over_seeds": 0.0035
+    },
+    {
+      "lead": 3,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "rmse": 0.5899,
+      "sd_over_seeds": 0.0008
+    },
+    {
+      "lead": 4,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6132,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6336,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.5951,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Linear (by season)",
+      "key": "ols_season",
+      "rmse": 0.6034,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.5831,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "SVR",
+      "key": "svr",
+      "rmse": 0.5804,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 4,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "rmse": 0.597,
+      "sd_over_seeds": 0.0039
+    },
+    {
+      "lead": 4,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "rmse": 0.6262,
+      "sd_over_seeds": 0.0047
+    },
+    {
+      "lead": 4,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "rmse": 0.6007,
+      "sd_over_seeds": 0.0006
+    },
+    {
+      "lead": 5,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6149,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6384,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.5992,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Linear (by season)",
+      "key": "ols_season",
+      "rmse": 0.6035,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.5905,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "SVR",
+      "key": "svr",
+      "rmse": 0.588,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 5,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "rmse": 0.6077,
+      "sd_over_seeds": 0.0053
+    },
+    {
+      "lead": 5,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "rmse": 0.6317,
+      "sd_over_seeds": 0.0037
+    },
+    {
+      "lead": 5,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "rmse": 0.6088,
+      "sd_over_seeds": 0.0009
+    },
+    {
+      "lead": 6,
+      "model": "Trend climatology",
+      "key": "trend_clim",
+      "rmse": 0.6173,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Seasonal ARIMA",
+      "key": "sarima",
+      "rmse": 0.6417,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Linear (SEAS5 anomaly)",
+      "key": "ols",
+      "rmse": 0.6002,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Linear (by season)",
+      "key": "ols_season",
+      "rmse": 0.6024,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Ridge",
+      "key": "ridge",
+      "rmse": 0.5894,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "SVR",
+      "key": "svr",
+      "rmse": 0.5875,
+      "sd_over_seeds": 0.0
+    },
+    {
+      "lead": 6,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "rmse": 0.6048,
+      "sd_over_seeds": 0.0036
+    },
+    {
+      "lead": 6,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "rmse": 0.6366,
+      "sd_over_seeds": 0.0048
+    },
+    {
+      "lead": 6,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "rmse": 0.613,
+      "sd_over_seeds": 0.0007
+    }
+  ],
+  "tests_vs_best_reference": [
+    {
+      "lead": 1,
+      "model": "SVR",
+      "key": "svr",
+      "best_reference": "sarima",
+      "skill_vs_best_reference": 0.16279,
+      "mean_sq_err_diff": -0.05485,
+      "dm": -3.42717,
+      "p": 0.00071,
+      "p_holm": 0.01643,
+      "passes": true
+    },
+    {
+      "lead": 1,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "best_reference": "sarima",
+      "skill_vs_best_reference": 0.1092,
+      "mean_sq_err_diff": -0.03805,
+      "dm": -1.43719,
+      "p": 0.15193,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "best_reference": "sarima",
+      "skill_vs_best_reference": 0.0008,
+      "mean_sq_err_diff": -0.00046,
+      "dm": -0.08084,
+      "p": 0.93563,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 1,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "best_reference": "sarima",
+      "skill_vs_best_reference": 0.10811,
+      "mean_sq_err_diff": -0.03662,
+      "dm": -4.78314,
+      "p": 0.0,
+      "p_holm": 7e-05,
+      "passes": true
+    },
+    {
+      "lead": 2,
+      "model": "SVR",
+      "key": "svr",
+      "best_reference": "sarima",
+      "skill_vs_best_reference": 0.11967,
+      "mean_sq_err_diff": -0.0461,
+      "dm": -2.71769,
+      "p": 0.00704,
+      "p_holm": 0.13379,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "best_reference": "sarima",
+      "skill_vs_best_reference": 0.08134,
+      "mean_sq_err_diff": -0.03201,
+      "dm": -1.57799,
+      "p": 0.11585,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "best_reference": "sarima",
+      "skill_vs_best_reference": 0.00523,
+      "mean_sq_err_diff": -0.0026,
+      "dm": -0.26353,
+      "p": 0.79236,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 2,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "best_reference": "sarima",
+      "skill_vs_best_reference": 0.09206,
+      "mean_sq_err_diff": -0.03561,
+      "dm": -2.98901,
+      "p": 0.00308,
+      "p_holm": 0.06473,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "SVR",
+      "key": "svr",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.09258,
+      "mean_sq_err_diff": -0.03454,
+      "dm": -3.20125,
+      "p": 0.00155,
+      "p_holm": 0.03408,
+      "passes": true
+    },
+    {
+      "lead": 3,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.03208,
+      "mean_sq_err_diff": -0.01234,
+      "dm": -0.96388,
+      "p": 0.33606,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": -0.03061,
+      "mean_sq_err_diff": 0.01112,
+      "dm": 1.02729,
+      "p": 0.3053,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 3,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.05677,
+      "mean_sq_err_diff": -0.02172,
+      "dm": -2.5985,
+      "p": 0.00993,
+      "p_holm": 0.17876,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "SVR",
+      "key": "svr",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.08375,
+      "mean_sq_err_diff": -0.03148,
+      "dm": -2.83371,
+      "p": 0.00499,
+      "p_holm": 0.09972,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.02356,
+      "mean_sq_err_diff": -0.00962,
+      "dm": -0.7013,
+      "p": 0.48379,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": -0.03845,
+      "mean_sq_err_diff": 0.01441,
+      "dm": 1.09836,
+      "p": 0.27313,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 4,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.02908,
+      "mean_sq_err_diff": -0.01106,
+      "dm": -1.27618,
+      "p": 0.2031,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "SVR",
+      "key": "svr",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.06428,
+      "mean_sq_err_diff": -0.02456,
+      "dm": -2.28403,
+      "p": 0.02323,
+      "p_holm": 0.37173,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": -0.00776,
+      "mean_sq_err_diff": 0.00103,
+      "dm": 0.06712,
+      "p": 0.94655,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": -0.05216,
+      "mean_sq_err_diff": 0.01942,
+      "dm": 1.37608,
+      "p": 0.17006,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 5,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.00999,
+      "mean_sq_err_diff": -0.00417,
+      "dm": -0.45839,
+      "p": 0.64708,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "SVR",
+      "key": "svr",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.07426,
+      "mean_sq_err_diff": -0.02862,
+      "dm": -2.49288,
+      "p": 0.01334,
+      "p_holm": 0.22679,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.00971,
+      "mean_sq_err_diff": -0.00526,
+      "dm": -0.34112,
+      "p": 0.73331,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": -0.05863,
+      "mean_sq_err_diff": 0.02221,
+      "dm": 1.38331,
+      "p": 0.16784,
+      "p_holm": 1.0,
+      "passes": false
+    },
+    {
+      "lead": 6,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "best_reference": "trend_clim",
+      "skill_vs_best_reference": 0.00728,
+      "mean_sq_err_diff": -0.00315,
+      "dm": -0.3332,
+      "p": 0.73927,
+      "p_holm": 1.0,
+      "passes": false
+    }
+  ],
+  "tests_vs_ridge": [
+    {
+      "lead": 1,
+      "model": "SVR",
+      "key": "svr",
+      "skill_vs_ridge": 0.02629,
+      "mean_sq_err_diff": -0.00784,
+      "dm": -2.44251,
+      "p": 0.01529,
+      "p_holm": 0.32103,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 1,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "skill_vs_ridge": -0.03604,
+      "mean_sq_err_diff": 0.00896,
+      "dm": 0.58674,
+      "p": 0.55792,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 1,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "skill_vs_ridge": -0.16211,
+      "mean_sq_err_diff": 0.04655,
+      "dm": 3.55546,
+      "p": 0.00045,
+      "p_holm": 0.01085,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 1,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "skill_vs_ridge": -0.0373,
+      "mean_sq_err_diff": 0.01039,
+      "dm": 0.96252,
+      "p": 0.33673,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 2,
+      "model": "SVR",
+      "key": "svr",
+      "skill_vs_ridge": -0.00334,
+      "mean_sq_err_diff": 0.00087,
+      "dm": 0.32879,
+      "p": 0.7426,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 2,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "skill_vs_ridge": -0.04702,
+      "mean_sq_err_diff": 0.01496,
+      "dm": 1.36608,
+      "p": 0.17316,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 2,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "skill_vs_ridge": -0.13377,
+      "mean_sq_err_diff": 0.04438,
+      "dm": 3.26752,
+      "p": 0.00124,
+      "p_holm": 0.02851,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 2,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "skill_vs_ridge": -0.03481,
+      "mean_sq_err_diff": 0.01136,
+      "dm": 1.45802,
+      "p": 0.14611,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 3,
+      "model": "SVR",
+      "key": "svr",
+      "skill_vs_ridge": 0.0031,
+      "mean_sq_err_diff": -0.00105,
+      "dm": -0.42854,
+      "p": 0.66863,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 3,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "skill_vs_ridge": -0.06337,
+      "mean_sq_err_diff": 0.02115,
+      "dm": 2.23197,
+      "p": 0.02652,
+      "p_holm": 0.45086,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 3,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "skill_vs_ridge": -0.13224,
+      "mean_sq_err_diff": 0.04461,
+      "dm": 2.62173,
+      "p": 0.0093,
+      "p_holm": 0.20452,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 3,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "skill_vs_ridge": -0.03625,
+      "mean_sq_err_diff": 0.01177,
+      "dm": 1.29724,
+      "p": 0.19577,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 4,
+      "model": "SVR",
+      "key": "svr",
+      "skill_vs_ridge": 0.00515,
+      "mean_sq_err_diff": -0.00171,
+      "dm": -0.74754,
+      "p": 0.45546,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 4,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "skill_vs_ridge": -0.0602,
+      "mean_sq_err_diff": 0.02015,
+      "dm": 2.16612,
+      "p": 0.03127,
+      "p_holm": 0.49219,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 4,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "skill_vs_ridge": -0.12754,
+      "mean_sq_err_diff": 0.04418,
+      "dm": 2.30578,
+      "p": 0.02196,
+      "p_holm": 0.41728,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 4,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "skill_vs_ridge": -0.05421,
+      "mean_sq_err_diff": 0.01871,
+      "dm": 1.78773,
+      "p": 0.07506,
+      "p_holm": 0.97578,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 5,
+      "model": "SVR",
+      "key": "svr",
+      "skill_vs_ridge": 0.00437,
+      "mean_sq_err_diff": -0.00128,
+      "dm": -0.38688,
+      "p": 0.69919,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 5,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "skill_vs_ridge": -0.07227,
+      "mean_sq_err_diff": 0.02431,
+      "dm": 2.37262,
+      "p": 0.01844,
+      "p_holm": 0.36883,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 5,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "skill_vs_ridge": -0.11952,
+      "mean_sq_err_diff": 0.0427,
+      "dm": 2.17281,
+      "p": 0.03076,
+      "p_holm": 0.49219,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 5,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "skill_vs_ridge": -0.0534,
+      "mean_sq_err_diff": 0.01911,
+      "dm": 1.6132,
+      "p": 0.108,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 6,
+      "model": "SVR",
+      "key": "svr",
+      "skill_vs_ridge": 0.00541,
+      "mean_sq_err_diff": -0.00188,
+      "dm": -0.61263,
+      "p": 0.54069,
+      "p_holm": 1.0,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 6,
+      "model": "Heteroscedastic network",
+      "key": "hnet",
+      "skill_vs_ridge": -0.06394,
+      "mean_sq_err_diff": 0.02148,
+      "dm": 2.03145,
+      "p": 0.0433,
+      "p_holm": 0.60623,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 6,
+      "model": "ARIMA-GRU",
+      "key": "gru",
+      "skill_vs_ridge": -0.13736,
+      "mean_sq_err_diff": 0.04895,
+      "dm": 2.27247,
+      "p": 0.02394,
+      "p_holm": 0.43085,
+      "adds_beyond_ridge": false
+    },
+    {
+      "lead": 6,
+      "model": "ARIMA-GRU with SEAS5",
+      "key": "gru_s5",
+      "skill_vs_ridge": -0.06655,
+      "mean_sq_err_diff": 0.02359,
+      "dm": 1.77043,
+      "p": 0.07791,
+      "p_holm": 0.97578,
+      "adds_beyond_ridge": false
+    }
+  ],
+  "intervals": [
+    {
+      "lead": 1,
+      "level": 80,
+      "coverage_hnet": 0.79561,
+      "coverage_conformal": 0.79752,
+      "width_hnet": 1.19278,
+      "width_conformal": 1.18568,
+      "score_hnet": 1.85063,
+      "score_conformal": 1.88939,
+      "n": 1047,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 1,
+      "level": 90,
+      "coverage_hnet": 0.87393,
+      "coverage_conformal": 0.89112,
+      "width_hnet": 1.5309,
+      "width_conformal": 1.59961,
+      "score_hnet": 2.33143,
+      "score_conformal": 2.40123,
+      "n": 1047,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 2,
+      "level": 80,
+      "coverage_hnet": 0.7829,
+      "coverage_conformal": 0.78194,
+      "width_hnet": 1.30572,
+      "width_conformal": 1.25694,
+      "score_hnet": 2.03759,
+      "score_conformal": 2.09016,
+      "n": 1041,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 2,
+      "level": 90,
+      "coverage_hnet": 0.87992,
+      "coverage_conformal": 0.88569,
+      "width_hnet": 1.67585,
+      "width_conformal": 1.75711,
+      "score_hnet": 2.57388,
+      "score_conformal": 2.63664,
+      "n": 1041,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 3,
+      "level": 80,
+      "coverage_hnet": 0.78357,
+      "coverage_conformal": 0.78261,
+      "width_hnet": 1.33632,
+      "width_conformal": 1.29012,
+      "score_hnet": 2.06562,
+      "score_conformal": 2.14817,
+      "n": 1035,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 3,
+      "level": 90,
+      "coverage_hnet": 0.88116,
+      "coverage_conformal": 0.88213,
+      "width_hnet": 1.71513,
+      "width_conformal": 1.778,
+      "score_hnet": 2.58503,
+      "score_conformal": 2.68952,
+      "n": 1035,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 4,
+      "level": 80,
+      "coverage_hnet": 0.77162,
+      "coverage_conformal": 0.77745,
+      "width_hnet": 1.33193,
+      "width_conformal": 1.30524,
+      "score_hnet": 2.0656,
+      "score_conformal": 2.17068,
+      "n": 1029,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 4,
+      "level": 90,
+      "coverage_hnet": 0.88533,
+      "coverage_conformal": 0.88047,
+      "width_hnet": 1.7095,
+      "width_conformal": 1.81259,
+      "score_hnet": 2.59846,
+      "score_conformal": 2.72385,
+      "n": 1029,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 5,
+      "level": 80,
+      "coverage_hnet": 0.77126,
+      "coverage_conformal": 0.78299,
+      "width_hnet": 1.35316,
+      "width_conformal": 1.31214,
+      "score_hnet": 2.14608,
+      "score_conformal": 2.20745,
+      "n": 1023,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 5,
+      "level": 90,
+      "coverage_hnet": 0.87586,
+      "coverage_conformal": 0.88368,
+      "width_hnet": 1.73674,
+      "width_conformal": 1.8306,
+      "score_hnet": 2.67019,
+      "score_conformal": 2.78273,
+      "n": 1023,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 6,
+      "level": 80,
+      "coverage_hnet": 0.77483,
+      "coverage_conformal": 0.78564,
+      "width_hnet": 1.34986,
+      "width_conformal": 1.32143,
+      "score_hnet": 2.15217,
+      "score_conformal": 2.20843,
+      "n": 1017,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    },
+    {
+      "lead": 6,
+      "level": 90,
+      "coverage_hnet": 0.87316,
+      "coverage_conformal": 0.87709,
+      "width_hnet": 1.73251,
+      "width_conformal": 1.76225,
+      "score_hnet": 2.73463,
+      "score_conformal": 2.79563,
+      "n": 1017,
+      "hnet_better_score": true,
+      "hnet_coverage_ok": true
+    }
+  ]
+}
