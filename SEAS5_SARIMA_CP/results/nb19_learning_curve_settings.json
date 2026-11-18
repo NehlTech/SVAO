@@ -1,0 +1,37 @@
+{
+  "subsets": [
+    "Koforidua|Tamale",
+    "Navrongo|Tamale",
+    "Koforidua|Kumasi",
+    "KIAMO-Accra|Koforidua",
+    "KIAMO-Accra|Kumasi",
+    "Koforidua|Wa",
+    "Kumasi|Navrongo|Tamale",
+    "Kumasi|Navrongo|Wa",
+    "KIAMO-Accra|Koforidua|Wa",
+    "Koforidua|Tamale|Wa",
+    "Koforidua|Kumasi|Tamale",
+    "Koforidua|Kumasi|Wa",
+    "Koforidua|Kumasi|Navrongo|Wa",
+    "Koforidua|Kumasi|Navrongo|Tamale",
+    "KIAMO-Accra|Kumasi|Tamale|Wa",
+    "Koforidua|Navrongo|Tamale|Wa",
+    "KIAMO-Accra|Koforidua|Navrongo|Tamale",
+    "KIAMO-Accra|Kumasi|Navrongo|Wa",
+    "KIAMO-Accra|Koforidua|Kumasi|Navrongo|Tamale",
+    "KIAMO-Accra|Koforidua|Kumasi|Navrongo|Wa",
+    "KIAMO-Accra|Koforidua|Kumasi|Tamale|Wa",
+    "KIAMO-Accra|Koforidua|Navrongo|Tamale|Wa",
+    "KIAMO-Accra|Kumasi|Navrongo|Tamale|Wa",
+    "Koforidua|Kumasi|Navrongo|Tamale|Wa",
+    "KIAMO-Accra|Koforidua|Kumasi|Navrongo|Tamale|Wa"
+  ],
+  "hid": 16,
+  "wd": 0.1,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "subset_seed": 2026
+}

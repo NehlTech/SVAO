@@ -1,0 +1,23 @@
+{
+  "tuned": {
+    "hybridge|2005": {
+      "hid": 16,
+      "wd": 0.1
+    },
+    "hybridge|2010": {
+      "hid": 16,
+      "wd": 0.1
+    },
+    "hybridge|2015": {
+      "hid": 8,
+      "wd": 0.1
+    },
+    "hybridge|2020": {
+      "hid": 32,
+      "wd": 0.001
+    }
+  },
+  "models": [
+    "hybridge"
+  ]
+}

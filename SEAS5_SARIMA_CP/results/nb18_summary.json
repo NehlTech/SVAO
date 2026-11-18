@@ -1,0 +1,11 @@
+{
+  "scored_pairs": 8226,
+  "combination_chosen": "comb_eq",
+  "strong_members": [
+    "ridge",
+    "svr",
+    "gru_s5",
+    "newhyb",
+    "hybridge"
+  ]
+}

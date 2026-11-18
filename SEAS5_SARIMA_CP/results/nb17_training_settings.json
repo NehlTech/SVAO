@@ -1,0 +1,57 @@
+{
+  "tuned": {
+    "lstms5sst|2005": {
+      "hid": 16,
+      "wd": 0.1
+    },
+    "lstms5sst|2010": {
+      "hid": 32,
+      "wd": 0.01
+    },
+    "lstms5sst|2015": {
+      "hid": 16,
+      "wd": 0.1
+    },
+    "lstms5sst|2020": {
+      "hid": 16,
+      "wd": 0.1
+    },
+    "hybts5sst|2005": {
+      "hid": 16,
+      "wd": 0.1
+    },
+    "hybts5sst|2010": {
+      "hid": 8,
+      "wd": 0.01
+    },
+    "hybts5sst|2015": {
+      "hid": 16,
+      "wd": 0.1
+    },
+    "hybts5sst|2020": {
+      "hid": 16,
+      "wd": 0.1
+    },
+    "hybs5sst|2005": {
+      "hid": 16,
+      "wd": 0.1
+    },
+    "hybs5sst|2010": {
+      "hid": 8,
+      "wd": 0.1
+    },
+    "hybs5sst|2015": {
+      "hid": 8,
+      "wd": 0.1
+    },
+    "hybs5sst|2020": {
+      "hid": 32,
+      "wd": 0.1
+    }
+  },
+  "models": [
+    "lstms5sst",
+    "hybts5sst",
+    "hybs5sst"
+  ]
+}

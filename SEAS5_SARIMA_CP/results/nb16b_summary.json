@@ -1,0 +1,12 @@
+{
+  "scored_pairs": 8226,
+  "dev_pairs": 3211,
+  "base_chosen": {
+    "1": "sarima",
+    "2": "sarima",
+    "3": "trend_clim",
+    "4": "trend_clim",
+    "5": "trend_clim",
+    "6": "trend_clim"
+  }
+}

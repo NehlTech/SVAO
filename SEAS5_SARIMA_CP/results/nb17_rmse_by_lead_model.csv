@@ -1,0 +1,181 @@
+period,lead,key,model,rmse,n
+all,1,best_ref,Best reference,0.5712514695810847,1386
+all,1,sarima,Seasonal ARIMA,0.5712514695810847,1386
+all,1,lstms5,LSTM alone with SEAS5,0.558278768434516,1386
+all,1,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.5666106505500204,1386
+all,1,newhyb,Lead-aware hybrid with SEAS5,0.5419352667198155,1386
+all,1,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5385048365146368,1386
+all,1,comb_ridge,Hybrid + ridge combination,0.5215157745220009,1386
+all,1,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5219452492766812,1386
+all,1,ridge,Ridge with SEAS5,0.522948077825549,1386
+all,1,svr,SVR,0.5152714670494986,1386
+all,2,best_ref,Best reference,0.6141961587963899,1380
+all,2,sarima,Seasonal ARIMA,0.6141961587963899,1380
+all,2,lstms5,LSTM alone with SEAS5,0.5847809480070177,1380
+all,2,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.5902304499855174,1380
+all,2,newhyb,Lead-aware hybrid with SEAS5,0.5918476675016947,1380
+all,2,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5806224041080595,1380
+all,2,comb_ridge,Hybrid + ridge combination,0.5688191321134756,1380
+all,2,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5681463497182072,1380
+all,2,ridge,Ridge with SEAS5,0.5680364028791068,1380
+all,2,svr,SVR,0.5682931754487646,1380
+all,3,best_ref,Best reference,0.6115885125763058,1374
+all,3,sarima,Seasonal ARIMA,0.6252339538460173,1374
+all,3,lstms5,LSTM alone with SEAS5,0.588457899874472,1374
+all,3,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.6008187472577639,1374
+all,3,newhyb,Lead-aware hybrid with SEAS5,0.5872200623179508,1374
+all,3,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5913642180557426,1374
+all,3,comb_ridge,Hybrid + ridge combination,0.5806784039349316,1374
+all,3,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5816570062336939,1374
+all,3,ridge,Ridge with SEAS5,0.5785996835407438,1374
+all,3,svr,SVR,0.5768577647780291,1374
+all,4,best_ref,Best reference,0.6132119355085704,1368
+all,4,sarima,Seasonal ARIMA,0.633557012842097,1368
+all,4,lstms5,LSTM alone with SEAS5,0.5914521457131051,1368
+all,4,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.6070173261396503,1368
+all,4,newhyb,Lead-aware hybrid with SEAS5,0.5941338765189919,1368
+all,4,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.601236847413895,1368
+all,4,comb_ridge,Hybrid + ridge combination,0.5851831917448742,1368
+all,4,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5874910420984533,1368
+all,4,ridge,Ridge with SEAS5,0.5831333713586627,1368
+all,4,svr,SVR,0.5804003935177403,1368
+all,5,best_ref,Best reference,0.6148991574022217,1362
+all,5,sarima,Seasonal ARIMA,0.6383794835127394,1362
+all,5,lstms5,LSTM alone with SEAS5,0.5984101638684236,1362
+all,5,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.610371629815748,1362
+all,5,newhyb,Lead-aware hybrid with SEAS5,0.6021027258357526,1362
+all,5,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.608331798031761,1362
+all,5,comb_ridge,Hybrid + ridge combination,0.5921417091107047,1362
+all,5,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5947910176592321,1362
+all,5,ridge,Ridge with SEAS5,0.5905145508061334,1362
+all,5,svr,SVR,0.5880082891755342,1362
+all,6,best_ref,Best reference,0.6173217577273552,1356
+all,6,sarima,Seasonal ARIMA,0.6416641240983366,1356
+all,6,lstms5,LSTM alone with SEAS5,0.6013601894529998,1356
+all,6,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.6138982937339071,1356
+all,6,newhyb,Lead-aware hybrid with SEAS5,0.6047170677522276,1356
+all,6,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.6121299597698483,1356
+all,6,comb_ridge,Hybrid + ridge combination,0.591944568760046,1356
+all,6,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5947614112193644,1356
+all,6,ridge,Ridge with SEAS5,0.5893567425957181,1356
+all,6,svr,SVR,0.5874825453287759,1356
+development,1,best_ref,Best reference,0.5617531566167658,536
+development,1,sarima,Seasonal ARIMA,0.5617531566167658,536
+development,1,lstms5,LSTM alone with SEAS5,0.5554947881691905,536
+development,1,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.5471636525531459,536
+development,1,newhyb,Lead-aware hybrid with SEAS5,0.5323295753869165,536
+development,1,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5381981619359691,536
+development,1,comb_ridge,Hybrid + ridge combination,0.5265000631572265,536
+development,1,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5280366128636466,536
+development,1,ridge,Ridge with SEAS5,0.5242544517708223,536
+development,1,svr,SVR,0.5215926832924498,536
+development,2,best_ref,Best reference,0.5634635625794511,535
+development,2,sarima,Seasonal ARIMA,0.5634635625794511,535
+development,2,lstms5,LSTM alone with SEAS5,0.5624405699598866,535
+development,2,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.5652313817978484,535
+development,2,newhyb,Lead-aware hybrid with SEAS5,0.549128671610874,535
+development,2,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5540611172193833,535
+development,2,comb_ridge,Hybrid + ridge combination,0.539764585879409,535
+development,2,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.543205219484831,535
+development,2,ridge,Ridge with SEAS5,0.5419546627686141,535
+development,2,svr,SVR,0.5446720833569724,535
+development,3,best_ref,Best reference,0.5628222386373701,535
+development,3,sarima,Seasonal ARIMA,0.5566084000313648,535
+development,3,lstms5,LSTM alone with SEAS5,0.5493094445485608,535
+development,3,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.5672499164178455,535
+development,3,newhyb,Lead-aware hybrid with SEAS5,0.5426406500196425,535
+development,3,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5504250911400542,535
+development,3,comb_ridge,Hybrid + ridge combination,0.5442196090614947,535
+development,3,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5482702234958378,535
+development,3,ridge,Ridge with SEAS5,0.5411954272798541,535
+development,3,svr,SVR,0.5410780345225464,535
+development,4,best_ref,Best reference,0.5632142546876421,535
+development,4,sarima,Seasonal ARIMA,0.5567241551091778,535
+development,4,lstms5,LSTM alone with SEAS5,0.5532355385550505,535
+development,4,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.5714635981348696,535
+development,4,newhyb,Lead-aware hybrid with SEAS5,0.5483749751315675,535
+development,4,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5549714356570535,535
+development,4,comb_ridge,Hybrid + ridge combination,0.5481836635657594,535
+development,4,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5497628460392083,535
+development,4,ridge,Ridge with SEAS5,0.5437731741739928,535
+development,4,svr,SVR,0.5435951026514876,535
+development,5,best_ref,Best reference,0.5663071791393203,535
+development,5,sarima,Seasonal ARIMA,0.558456334624844,535
+development,5,lstms5,LSTM alone with SEAS5,0.5574225262638522,535
+development,5,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.5708978813030634,535
+development,5,newhyb,Lead-aware hybrid with SEAS5,0.5507949256199678,535
+development,5,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5573756575148616,535
+development,5,comb_ridge,Hybrid + ridge combination,0.5533091553235024,535
+development,5,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5561365059290786,535
+development,5,ridge,Ridge with SEAS5,0.5552298808359614,535
+development,5,svr,SVR,0.5545727231233797,535
+development,6,best_ref,Best reference,0.5684499981051796,535
+development,6,sarima,Seasonal ARIMA,0.5584732154349764,535
+development,6,lstms5,LSTM alone with SEAS5,0.5621354311808516,535
+development,6,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.5687012108251667,535
+development,6,newhyb,Lead-aware hybrid with SEAS5,0.5514288480378734,535
+development,6,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5555479066360726,535
+development,6,comb_ridge,Hybrid + ridge combination,0.555269620264864,535
+development,6,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5567108634623951,535
+development,6,ridge,Ridge with SEAS5,0.5520515906452305,535
+development,6,svr,SVR,0.5525808732843657,535
+confirmation,1,best_ref,Best reference,0.5767086320759867,850
+confirmation,1,sarima,Seasonal ARIMA,0.5767086320759867,850
+confirmation,1,lstms5,LSTM alone with SEAS5,0.5585351935441051,850
+confirmation,1,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.577436781329329,850
+confirmation,1,newhyb,Lead-aware hybrid with SEAS5,0.5479400760731213,850
+confirmation,1,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5391675193893372,850
+confirmation,1,comb_ridge,Hybrid + ridge combination,0.5169449942222452,850
+confirmation,1,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5168897216016948,850
+confirmation,1,ridge,Ridge with SEAS5,0.520278284082054,850
+confirmation,1,svr,SVR,0.5095287435745264,850
+confirmation,2,best_ref,Best reference,0.6434702810075802,845
+confirmation,2,sarima,Seasonal ARIMA,0.6434702810075802,845
+confirmation,2,lstms5,LSTM alone with SEAS5,0.5977661918117724,845
+confirmation,2,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.603827912096803,845
+confirmation,2,newhyb,Lead-aware hybrid with SEAS5,0.6180822402089414,845
+confirmation,2,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.5975656133905285,845
+confirmation,2,comb_ridge,Hybrid + ridge combination,0.5858204858201638,845
+confirmation,2,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.5830392423178967,845
+confirmation,2,ridge,Ridge with SEAS5,0.5827121157555851,845
+confirmation,2,svr,SVR,0.5814964550760137,845
+confirmation,3,best_ref,Best reference,0.6397362001160845,839
+confirmation,3,sarima,Seasonal ARIMA,0.6652155366696694,839
+confirmation,3,lstms5,LSTM alone with SEAS5,0.6116133427858539,839
+confirmation,3,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.6200669241083657,839
+confirmation,3,newhyb,Lead-aware hybrid with SEAS5,0.6141945128927983,839
+confirmation,3,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.6168556360539535,839
+confirmation,3,comb_ridge,Hybrid + ridge combination,0.602302237581987,839
+confirmation,3,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.6020200431549403,839
+confirmation,3,ridge,Ridge with SEAS5,0.6002050734185691,839
+confirmation,3,svr,SVR,0.5973651435770962,839
+confirmation,4,best_ref,Best reference,0.6426000633118779,833
+confirmation,4,sarima,Seasonal ARIMA,0.6785464001988005,833
+confirmation,4,lstms5,LSTM alone with SEAS5,0.6143672075699479,833
+confirmation,4,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.6279026865992748,833
+confirmation,4,newhyb,Lead-aware hybrid with SEAS5,0.6217334579669166,833
+confirmation,4,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.6300687393113834,833
+confirmation,4,comb_ridge,Hybrid + ridge combination,0.6070659454909425,833
+confirmation,4,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.6105135908524771,833
+confirmation,4,ridge,Ridge with SEAS5,0.6059643718005493,833
+confirmation,4,svr,SVR,0.6016363326900428,833
+confirmation,5,best_ref,Best reference,0.6438717334850432,827
+confirmation,5,sarima,Seasonal ARIMA,0.6853919207410031,827
+confirmation,5,lstms5,LSTM alone with SEAS5,0.6236446042792756,827
+confirmation,5,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.6342439828872656,827
+confirmation,5,newhyb,Lead-aware hybrid with SEAS5,0.6336955851120476,827
+confirmation,5,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.6403306727192729,827
+confirmation,5,comb_ridge,Hybrid + ridge combination,0.6159261072013466,827
+confirmation,5,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.6189688660494072,827
+confirmation,5,ridge,Ridge with SEAS5,0.611678507428255,827
+confirmation,5,svr,SVR,0.6080430370200872,827
+confirmation,6,best_ref,Best reference,0.6465422438234467,821
+confirmation,6,sarima,Seasonal ARIMA,0.6907385755613263,821
+confirmation,6,lstms5,LSTM alone with SEAS5,0.6257249683081595,821
+confirmation,6,lstms5sst,LSTM alone with SEAS5 and sea temperature,0.6416519435995697,821
+confirmation,6,newhyb,Lead-aware hybrid with SEAS5,0.6378622886832795,821
+confirmation,6,newhyb_sst,Lead-aware hybrid with SEAS5 and sea temperature,0.6475516551868993,821
+confirmation,6,comb_ridge,Hybrid + ridge combination,0.6146301975825875,821
+confirmation,6,comb_ridge_sst,Hybrid (with sea temperature) + ridge combination,0.6186859951045279,821
+confirmation,6,ridge,Ridge with SEAS5,0.611624814521521,821
+confirmation,6,svr,SVR,0.608350742667564,821

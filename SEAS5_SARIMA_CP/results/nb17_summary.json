@@ -1,0 +1,11 @@
+{
+  "scored_pairs": 8226,
+  "base_chosen": {
+    "1": "sarima",
+    "2": "sarima",
+    "3": "sarima",
+    "4": "sarima",
+    "5": "sarima",
+    "6": "sarima"
+  }
+}
